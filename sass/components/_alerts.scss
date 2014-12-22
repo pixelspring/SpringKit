@@ -1,0 +1,23 @@
+// Alerts:
+// ------------------------------------------------
+
+.alert {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 3px;
+}
+
+.alert.primary {
+    background: #e8eff3;
+    border: 1px #c5d7e3 solid;
+}
+
+.alert.success {
+    background: #daeee4;
+    border: 1px #b6dfca solid;
+}
+
+.alert.danger {
+    background: #fdf4f1;
+    border: 1px #f7cfc4 solid;
+}

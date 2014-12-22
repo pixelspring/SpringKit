@@ -1,0 +1,750 @@
+//////////////////////////////////////////////////
+// About
+//////////////////////////////////////////////////
+//
+// Uniform CSS Grid v.1.0 Beta
+//
+// Last Update: Dec-16-2014 @ 9:39PM EST
+// Copyright (c) 2014 Joseph Leo
+//
+// Special Thanks to:
+// cuddlyogre - reddit.com - v1.0 Beta
+//   Supplying a solution for nested grids
+//
+//////////////////////////////////////////////////
+// Varibles
+//////////////////////////////////////////////////
+
+$gutter-width: 3; // Percent
+
+$base-unit: 16px;
+$base-measure-unit: 120px;
+
+$font-size: $base-unit;
+$font-stack-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-stack: $font-stack-sans;
+
+$line-height: 1;
+$line-height-largest:  ($line-height * 2);
+$line-height-larger:   ($line-height * 1.75);
+$line-height-large:    ($line-height * 1.5);
+$line-height-small:    ($line-height * 1.333);
+$line-height-smaller:  ($line-height * 1.2);
+$line-height-smallest: ($line-height * 1.1);
+
+$font-size-largest:  ($font-size * 3);
+$font-size-larger:   ($font-size * 2);
+$font-size-large:    ($font-size * 1.5);
+$font-size-small:    ($font-size * 0.833);
+$font-size-smaller:  ($font-size * 0.75);
+$font-size-smallest: ($font-size * 0.666);
+
+$color-black: #000;
+$color-white: #fff;
+$color-red: #f00;
+$color-orange: #f80;
+$color-yellow: #ff0;
+$color-lime: #8f0;
+$color-green: #0f0;
+$color-teal: #0f8;
+$color-cyan: #0ff;
+$color-sky: #08f;
+$color-blue: #00f;
+$color-purple: #80f;
+$color-magenta: #f0f;
+$color-pink: #f08;
+
+//////////////////////////////////////////////////
+// Mixins
+//////////////////////////////////////////////////
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+            border-radius: $radius;
+    -webkit-background-clip: padding-box; 
+       -moz-background-clip: padding; 
+            background-clip: padding-box;
+}
+
+@mixin box-sizing($box-model) {
+    -webkit-border-radius: $box-model;
+       -moz-border-radius: $box-model;
+            border-radius: $box-model;
+}
+
+@mixin text-size-adjust($text-adjustment) {
+        -ms-text-size-adjust: $text-adjustment;
+    -webkit-text-size-adjust: $text-adjustment;
+}
+
+//////////////////////////////////////////////////
+// Reset
+//////////////////////////////////////////////////
+
+html, body,
+address, article, aside, footer, header, main, nav, section,
+blockquote, div, figcaption, figure, pre,
+h1, h2, h3, h4, h5, h6, p,
+abbr, b, cite, code, data, del, dfn, em, i,
+ins, kbd, mark, q, samp, small, span, strong,
+sub, sup, time, u, var,
+dl, dt, dd, li, ol, ul,
+table, caption, tbody, tfoot, thead, tr, td, th,
+audio, canvas, embed, iframe, img, object, picture, video,
+details, dialog, menu, menuitem, summary {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+*, :before, :after {
+	@include box-sizing(border-box);
+}
+
+html {
+    font: #{$font-size} / #{$line-height} $font-stack;
+    color: lighten($color-black, 15);
+    @include text-size-adjust(100%);
+}
+
+body {
+    margin: 0;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, main, menu, nav, section, summary {
+    display: block;
+}
+
+::selection {
+    background: hsla(0, 0%, 33%, 1);
+    color: #fff;
+    text-shadow: 0;
+    text-decoration: none;
+}
+::-moz-selection {
+    background: hsla(0, 0%, 33%, 1);
+    color: #fff;
+    text-shadow: 0;
+    text-decoration: none;
+}
+
+// ===========================
+// Embedded Content
+// ===========================
+
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+[hidden], template {
+    display: none;
+}
+
+// ===========================
+// Containers
+// ===========================
+
+pre {
+    overflow: auto;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: "";
+        content: none;
+    }
+
+// ===========================
+// Lists
+// ===========================
+
+nav ul {
+    list-style:none;
+}
+
+// ===========================
+// Tables
+// ===========================
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+// ===========================
+// Input
+// ===========================
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+button {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+input {
+    line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    @include box-sizing(content-box);
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+fieldset {
+    border: 1px solid darken($color-white, 20);
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+}
+
+optgroup {
+    font-weight: bold;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+// ===========================
+// Text
+// ===========================
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: $line-height;
+    margin: 0 0 $font-size;
+}
+
+h1 { font-size: $font-size-largest; }
+h2 { font-size: $font-size-larger; }
+h3 { font-size: $font-size-large; }
+h4 { font-size: $font-size; }
+h5 { font-size: $font-size-small; }
+h6 { font-size: $font-size-smaller; }
+
+p {
+    margin: 0 0 $font-size;
+    line-height: $line-height-larger;
+}
+
+    p:last-child {
+        margin: 0;
+    }
+
+a {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    vertical-align: baseline;
+}
+
+    a:active,
+    a:hover {
+        outline: 0;
+    }
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+dfn {
+    font-style: italic;
+}
+
+ins {
+    background: lighten($color-yellow, 33%);
+    color: lighten($color-black, 10%);
+    text-decoration: none;
+}
+
+mark {
+    background: lighten($color-yellow, 33%);
+    color: lighten($color-black, 10%);
+    font-style: italic;
+    font-weight: bold;
+}
+
+small {
+    font-size: $font-size-smaller;
+}
+
+sub,
+sup {
+    font-size: $font-size-smaller;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: $font-size-small;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid darken($color-white, 15);
+    margin: 1em 0;
+    padding: 0;
+}
+
+//////////////////////////////////////////////////
+// Grid System
+//////////////////////////////////////////////////
+
+.group:after,  .container:after,  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    margin: 0 auto;
+    width: ($base-measure-unit * 8);
+    padding: 0 1px;
+    margin-top: $base-unit;
+}
+
+.container:first-child {
+	margin-top: 0;
+}
+
+.row {
+    *height: 100%;
+    margin-top: $base-unit;
+}
+
+.row:first-child {
+	margin-top: 0;
+}
+
+.row .row {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.span-1, .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12 {
+    float: left;
+    margin-right: -100%;
+}
+
+.show { display: inline; }
+.hide { display: none; }
+
+.span-1  { width: percentage((((100 / 12) *  1) - $gutter-width) * 0.01); *width: percentage(((100 / 12) * 1)  * 0.01); }
+.span-2  { width: percentage((((100 / 12) *  2) - $gutter-width) * 0.01); *width: percentage(((100 / 12) * 2)  * 0.01); }
+.span-3  { width: percentage((((100 / 12) *  3) - $gutter-width) * 0.01); *width: percentage(((100 / 12) * 3)  * 0.01); }
+.span-4  { width: percentage((((100 / 12) *  4) - $gutter-width) * 0.01); *width: percentage(((100 / 12) * 4)  * 0.01); }
+.span-5  { width: percentage((((100 / 12) *  5) - $gutter-width) * 0.01); *width: percentage(((100 / 12) * 5)  * 0.01); }
+.span-6  { width: percentage((((100 / 12) *  6) - $gutter-width) * 0.01); *width: percentage(((100 / 12) * 6)  * 0.01); }
+.span-7  { width: percentage((((100 / 12) *  7) - $gutter-width) * 0.01); *width: percentage(((100 / 12) * 7)  * 0.01); }
+.span-8  { width: percentage((((100 / 12) *  8) - $gutter-width) * 0.01); *width: percentage(((100 / 12) * 8)  * 0.01); }
+.span-9  { width: percentage((((100 / 12) *  9) - $gutter-width) * 0.01); *width: percentage(((100 / 12) * 9)  * 0.01); }
+.span-10 { width: percentage((((100 / 12) * 10) - $gutter-width) * 0.01); *width: percentage(((100 / 12) * 10) * 0.01); }
+.span-11 { width: percentage((((100 / 12) * 11) - $gutter-width) * 0.01); *width: percentage(((100 / 12) * 11) * 0.01); }
+.span-12 { width: percentage((((100 / 12) * 12) - $gutter-width) * 0.01); *width: percentage(((100 / 12) * 12) * 0.01); }
+
+.col-1   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  0); *margin-left: percentage(((100 / 12) * 0) * 0.01) }
+.col-2   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  1); *margin-left: percentage(((100 / 12) * 1) * 0.01) }
+.col-3   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  2); *margin-left: percentage(((100 / 12) * 2) * 0.01) }
+.col-4   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  3); *margin-left: percentage(((100 / 12) * 3) * 0.01) }
+.col-5   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  4); *margin-left: percentage(((100 / 12) * 4) * 0.01) }
+.col-6   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  5); *margin-left: percentage(((100 / 12) * 5) * 0.01) }
+.col-7   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  6); *margin-left: percentage(((100 / 12) * 6) * 0.01) }
+.col-8   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  7); *margin-left: percentage(((100 / 12) * 7) * 0.01) }
+.col-9   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  8); *margin-left: percentage(((100 / 12) * 8) * 0.01) }
+.col-10  { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  9); *margin-left: percentage(((100 / 12) * 9) * 0.01) }
+.col-11  { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) * 10); *margin-left: percentage(((100 / 12) * 10) * 0.01) }
+.col-12  { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) * 11); *margin-left: percentage(((100 / 12) * 11) * 0.01) }
+
+.row .row .span-1  { width: percentage(((100 / 12) *  1) * 0.01)}
+.row .row .span-2  { width: percentage(((100 / 12) *  2) * 0.01)}
+.row .row .span-3  { width: percentage(((100 / 12) *  3) * 0.01)}
+.row .row .span-4  { width: percentage(((100 / 12) *  4) * 0.01)}
+.row .row .span-5  { width: percentage(((100 / 12) *  5) * 0.01)}
+.row .row .span-6  { width: percentage(((100 / 12) *  6) * 0.01)}
+.row .row .span-7  { width: percentage(((100 / 12) *  7) * 0.01)}
+.row .row .span-8  { width: percentage(((100 / 12) *  8) * 0.01)}
+.row .row .span-9  { width: percentage(((100 / 12) *  9) * 0.01)}
+.row .row .span-10 { width: percentage(((100 / 12) * 10) * 0.01)}
+.row .row .span-11 { width: percentage(((100 / 12) * 11) * 0.01)}
+.row .row .span-12 { width: percentage(((100 / 12) * 12) * 0.01)}
+
+.row .row .col-1  { margin-left: percentage(((100 / 12) *  0) * 0.01)}
+.row .row .col-2  { margin-left: percentage(((100 / 12) *  1) * 0.01)}
+.row .row .col-3  { margin-left: percentage(((100 / 12) *  2) * 0.01)}
+.row .row .col-4  { margin-left: percentage(((100 / 12) *  3) * 0.01)}
+.row .row .col-5  { margin-left: percentage(((100 / 12) *  4) * 0.01)}
+.row .row .col-6  { margin-left: percentage(((100 / 12) *  5) * 0.01)}
+.row .row .col-7  { margin-left: percentage(((100 / 12) *  6) * 0.01)}
+.row .row .col-8  { margin-left: percentage(((100 / 12) *  7) * 0.01)}
+.row .row .col-9  { margin-left: percentage(((100 / 12) *  8) * 0.01)}
+.row .row .col-10 { margin-left: percentage(((100 / 12) *  9) * 0.01)}
+.row .row .col-11 { margin-left: percentage(((100 / 12) * 10) * 0.01)}
+.row .row .col-12 { margin-left: percentage(((100 / 12) * 11) * 0.01)}
+
+@media (min-width: ($base-measure-unit * 0)) {
+
+	.container { width: 100%; }
+
+	.xs-show { display: inline; }
+	.xs-hide { display: none; }
+
+	.xs-span-1  { width: percentage((((100 / 12) *  1) - $gutter-width) * 0.01); }
+	.xs-span-2  { width: percentage((((100 / 12) *  2) - $gutter-width) * 0.01); }
+	.xs-span-3  { width: percentage((((100 / 12) *  3) - $gutter-width) * 0.01); }
+	.xs-span-4  { width: percentage((((100 / 12) *  4) - $gutter-width) * 0.01); }
+	.xs-span-5  { width: percentage((((100 / 12) *  5) - $gutter-width) * 0.01); }
+	.xs-span-6  { width: percentage((((100 / 12) *  6) - $gutter-width) * 0.01); }
+	.xs-span-7  { width: percentage((((100 / 12) *  7) - $gutter-width) * 0.01); }
+	.xs-span-8  { width: percentage((((100 / 12) *  8) - $gutter-width) * 0.01); }
+	.xs-span-9  { width: percentage((((100 / 12) *  9) - $gutter-width) * 0.01); }
+	.xs-span-10 { width: percentage((((100 / 12) * 10) - $gutter-width) * 0.01); }
+	.xs-span-11 { width: percentage((((100 / 12) * 11) - $gutter-width) * 0.01); }
+	.xs-span-12 { width: percentage((((100 / 12) * 12) - $gutter-width) * 0.01); }
+
+	.xs-col-1   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  0); }
+	.xs-col-2   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  1); }
+	.xs-col-3   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  2); }
+	.xs-col-4   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  3); }
+	.xs-col-5   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  4); }
+	.xs-col-6   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  5); }
+	.xs-col-7   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  6); }
+	.xs-col-8   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  7); }
+	.xs-col-9   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  8); }
+	.xs-col-10  { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  9); }
+	.xs-col-11  { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) * 10); }
+	.xs-col-12  { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) * 11); }
+
+	.row .row .xs-span-1  { width: percentage(((100 / 12) *  1) * 0.01)}
+	.row .row .xs-span-2  { width: percentage(((100 / 12) *  2) * 0.01)}
+	.row .row .xs-span-3  { width: percentage(((100 / 12) *  3) * 0.01)}
+	.row .row .xs-span-4  { width: percentage(((100 / 12) *  4) * 0.01)}
+	.row .row .xs-span-5  { width: percentage(((100 / 12) *  5) * 0.01)}
+	.row .row .xs-span-6  { width: percentage(((100 / 12) *  6) * 0.01)}
+	.row .row .xs-span-7  { width: percentage(((100 / 12) *  7) * 0.01)}
+	.row .row .xs-span-8  { width: percentage(((100 / 12) *  8) * 0.01)}
+	.row .row .xs-span-9  { width: percentage(((100 / 12) *  9) * 0.01)}
+	.row .row .xs-span-10 { width: percentage(((100 / 12) * 10) * 0.01)}
+	.row .row .xs-span-11 { width: percentage(((100 / 12) * 11) * 0.01)}
+	.row .row .xs-span-12 { width: percentage(((100 / 12) * 12) * 0.01)}
+
+	.row .row .xs-col-1  { margin-left: percentage(((100 / 12) *  0) * 0.01)}
+	.row .row .xs-col-2  { margin-left: percentage(((100 / 12) *  1) * 0.01)}
+	.row .row .xs-col-3  { margin-left: percentage(((100 / 12) *  2) * 0.01)}
+	.row .row .xs-col-4  { margin-left: percentage(((100 / 12) *  3) * 0.01)}
+	.row .row .xs-col-5  { margin-left: percentage(((100 / 12) *  4) * 0.01)}
+	.row .row .xs-col-6  { margin-left: percentage(((100 / 12) *  5) * 0.01)}
+	.row .row .xs-col-7  { margin-left: percentage(((100 / 12) *  6) * 0.01)}
+	.row .row .xs-col-8  { margin-left: percentage(((100 / 12) *  7) * 0.01)}
+	.row .row .xs-col-9  { margin-left: percentage(((100 / 12) *  8) * 0.01)}
+	.row .row .xs-col-10 { margin-left: percentage(((100 / 12) *  9) * 0.01)}
+	.row .row .xs-col-11 { margin-left: percentage(((100 / 12) * 10) * 0.01)}
+	.row .row .xs-col-12 { margin-left: percentage(((100 / 12) * 11) * 0.01)}
+
+}
+
+@media (min-width: ($base-measure-unit * 5)) {
+
+	.container { width: 100%; }
+
+	.sm-show { display: inline; }
+	.sm-hide { display: none; }
+
+	.sm-span-1  { width: percentage((((100 / 12) *  1) - $gutter-width) * 0.01); }
+	.sm-span-2  { width: percentage((((100 / 12) *  2) - $gutter-width) * 0.01); }
+	.sm-span-3  { width: percentage((((100 / 12) *  3) - $gutter-width) * 0.01); }
+	.sm-span-4  { width: percentage((((100 / 12) *  4) - $gutter-width) * 0.01); }
+	.sm-span-5  { width: percentage((((100 / 12) *  5) - $gutter-width) * 0.01); }
+	.sm-span-6  { width: percentage((((100 / 12) *  6) - $gutter-width) * 0.01); }
+	.sm-span-7  { width: percentage((((100 / 12) *  7) - $gutter-width) * 0.01); }
+	.sm-span-8  { width: percentage((((100 / 12) *  8) - $gutter-width) * 0.01); }
+	.sm-span-9  { width: percentage((((100 / 12) *  9) - $gutter-width) * 0.01); }
+	.sm-span-10 { width: percentage((((100 / 12) * 10) - $gutter-width) * 0.01); }
+	.sm-span-11 { width: percentage((((100 / 12) * 11) - $gutter-width) * 0.01); }
+	.sm-span-12 { width: percentage((((100 / 12) * 12) - $gutter-width) * 0.01); }
+
+	.sm-col-1   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  0); }
+	.sm-col-2   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  1); }
+	.sm-col-3   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  2); }
+	.sm-col-4   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  3); }
+	.sm-col-5   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  4); }
+	.sm-col-6   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  5); }
+	.sm-col-7   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  6); }
+	.sm-col-8   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  7); }
+	.sm-col-9   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  8); }
+	.sm-col-10  { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  9); }
+	.sm-col-11  { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) * 10); }
+	.sm-col-12  { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) * 11); }
+
+	.row .row .sm-span-1  { width: percentage(((100 / 12) *  1) * 0.01)}
+	.row .row .sm-span-2  { width: percentage(((100 / 12) *  2) * 0.01)}
+	.row .row .sm-span-3  { width: percentage(((100 / 12) *  3) * 0.01)}
+	.row .row .sm-span-4  { width: percentage(((100 / 12) *  4) * 0.01)}
+	.row .row .sm-span-5  { width: percentage(((100 / 12) *  5) * 0.01)}
+	.row .row .sm-span-6  { width: percentage(((100 / 12) *  6) * 0.01)}
+	.row .row .sm-span-7  { width: percentage(((100 / 12) *  7) * 0.01)}
+	.row .row .sm-span-8  { width: percentage(((100 / 12) *  8) * 0.01)}
+	.row .row .sm-span-9  { width: percentage(((100 / 12) *  9) * 0.01)}
+	.row .row .sm-span-10 { width: percentage(((100 / 12) * 10) * 0.01)}
+	.row .row .sm-span-11 { width: percentage(((100 / 12) * 11) * 0.01)}
+	.row .row .sm-span-12 { width: percentage(((100 / 12) * 12) * 0.01)}
+
+	.row .row .sm-col-1  { margin-left: percentage(((100 / 12) *  0) * 0.01)}
+	.row .row .sm-col-2  { margin-left: percentage(((100 / 12) *  1) * 0.01)}
+	.row .row .sm-col-3  { margin-left: percentage(((100 / 12) *  2) * 0.01)}
+	.row .row .sm-col-4  { margin-left: percentage(((100 / 12) *  3) * 0.01)}
+	.row .row .sm-col-5  { margin-left: percentage(((100 / 12) *  4) * 0.01)}
+	.row .row .sm-col-6  { margin-left: percentage(((100 / 12) *  5) * 0.01)}
+	.row .row .sm-col-7  { margin-left: percentage(((100 / 12) *  6) * 0.01)}
+	.row .row .sm-col-8  { margin-left: percentage(((100 / 12) *  7) * 0.01)}
+	.row .row .sm-col-9  { margin-left: percentage(((100 / 12) *  8) * 0.01)}
+	.row .row .sm-col-10 { margin-left: percentage(((100 / 12) *  9) * 0.01)}
+	.row .row .sm-col-11 { margin-left: percentage(((100 / 12) * 10) * 0.01)}
+	.row .row .sm-col-12 { margin-left: percentage(((100 / 12) * 11) * 0.01)}
+
+}
+
+@media (min-width: (($base-measure-unit * 8) + 32px)) {
+
+	.container { width: ($base-measure-unit * 8); }
+
+	.md-show { display: inline; }
+	.md-hide { display: none; }
+
+	.md-span-1  { width: percentage((((100 / 12) *  1) - $gutter-width) * 0.01); }
+	.md-span-2  { width: percentage((((100 / 12) *  2) - $gutter-width) * 0.01); }
+	.md-span-3  { width: percentage((((100 / 12) *  3) - $gutter-width) * 0.01); }
+	.md-span-4  { width: percentage((((100 / 12) *  4) - $gutter-width) * 0.01); }
+	.md-span-5  { width: percentage((((100 / 12) *  5) - $gutter-width) * 0.01); }
+	.md-span-6  { width: percentage((((100 / 12) *  6) - $gutter-width) * 0.01); }
+	.md-span-7  { width: percentage((((100 / 12) *  7) - $gutter-width) * 0.01); }
+	.md-span-8  { width: percentage((((100 / 12) *  8) - $gutter-width) * 0.01); }
+	.md-span-9  { width: percentage((((100 / 12) *  9) - $gutter-width) * 0.01); }
+	.md-span-10 { width: percentage((((100 / 12) * 10) - $gutter-width) * 0.01); }
+	.md-span-11 { width: percentage((((100 / 12) * 11) - $gutter-width) * 0.01); }
+	.md-span-12 { width: percentage((((100 / 12) * 12) - $gutter-width) * 0.01); }
+
+	.md-col-1   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  0); }
+	.md-col-2   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  1); }
+	.md-col-3   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  2); }
+	.md-col-4   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  3); }
+	.md-col-5   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  4); }
+	.md-col-6   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  5); }
+	.md-col-7   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  6); }
+	.md-col-8   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  7); }
+	.md-col-9   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  8); }
+	.md-col-10  { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  9); }
+	.md-col-11  { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) * 10); }
+	.md-col-12  { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) * 11); }
+
+	.row .row .md-span-1  { width: percentage(((100 / 12) *  1) * 0.01)}
+	.row .row .md-span-2  { width: percentage(((100 / 12) *  2) * 0.01)}
+	.row .row .md-span-3  { width: percentage(((100 / 12) *  3) * 0.01)}
+	.row .row .md-span-4  { width: percentage(((100 / 12) *  4) * 0.01)}
+	.row .row .md-span-5  { width: percentage(((100 / 12) *  5) * 0.01)}
+	.row .row .md-span-6  { width: percentage(((100 / 12) *  6) * 0.01)}
+	.row .row .md-span-7  { width: percentage(((100 / 12) *  7) * 0.01)}
+	.row .row .md-span-8  { width: percentage(((100 / 12) *  8) * 0.01)}
+	.row .row .md-span-9  { width: percentage(((100 / 12) *  9) * 0.01)}
+	.row .row .md-span-10 { width: percentage(((100 / 12) * 10) * 0.01)}
+	.row .row .md-span-11 { width: percentage(((100 / 12) * 11) * 0.01)}
+	.row .row .md-span-12 { width: percentage(((100 / 12) * 12) * 0.01)}
+
+	.row .row .md-col-1  { margin-left: percentage(((100 / 12) *  0) * 0.01)}
+	.row .row .md-col-2  { margin-left: percentage(((100 / 12) *  1) * 0.01)}
+	.row .row .md-col-3  { margin-left: percentage(((100 / 12) *  2) * 0.01)}
+	.row .row .md-col-4  { margin-left: percentage(((100 / 12) *  3) * 0.01)}
+	.row .row .md-col-5  { margin-left: percentage(((100 / 12) *  4) * 0.01)}
+	.row .row .md-col-6  { margin-left: percentage(((100 / 12) *  5) * 0.01)}
+	.row .row .md-col-7  { margin-left: percentage(((100 / 12) *  6) * 0.01)}
+	.row .row .md-col-8  { margin-left: percentage(((100 / 12) *  7) * 0.01)}
+	.row .row .md-col-9  { margin-left: percentage(((100 / 12) *  8) * 0.01)}
+	.row .row .md-col-10 { margin-left: percentage(((100 / 12) *  9) * 0.01)}
+	.row .row .md-col-11 { margin-left: percentage(((100 / 12) * 10) * 0.01)}
+	.row .row .md-col-12 { margin-left: percentage(((100 / 12) * 11) * 0.01)}
+
+}
+
+@media (min-width: (($base-measure-unit * 10) + 32px)) {
+
+	.container { width: ($base-measure-unit * 10); }
+
+	.lg-show { display: inline; }
+	.lg-hide { display: none; }
+
+	.lg-span-1  { width: percentage((((100 / 12) *  1) - $gutter-width) * 0.01); }
+	.lg-span-2  { width: percentage((((100 / 12) *  2) - $gutter-width) * 0.01); }
+	.lg-span-3  { width: percentage((((100 / 12) *  3) - $gutter-width) * 0.01); }
+	.lg-span-4  { width: percentage((((100 / 12) *  4) - $gutter-width) * 0.01); }
+	.lg-span-5  { width: percentage((((100 / 12) *  5) - $gutter-width) * 0.01); }
+	.lg-span-6  { width: percentage((((100 / 12) *  6) - $gutter-width) * 0.01); }
+	.lg-span-7  { width: percentage((((100 / 12) *  7) - $gutter-width) * 0.01); }
+	.lg-span-8  { width: percentage((((100 / 12) *  8) - $gutter-width) * 0.01); }
+	.lg-span-9  { width: percentage((((100 / 12) *  9) - $gutter-width) * 0.01); }
+	.lg-span-10 { width: percentage((((100 / 12) * 10) - $gutter-width) * 0.01); }
+	.lg-span-11 { width: percentage((((100 / 12) * 11) - $gutter-width) * 0.01); }
+	.lg-span-12 { width: percentage((((100 / 12) * 12) - $gutter-width) * 0.01); }
+
+	.lg-col-1   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  0); }
+	.lg-col-2   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  1); }
+	.lg-col-3   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  2); }
+	.lg-col-4   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  3); }
+	.lg-col-5   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  4); }
+	.lg-col-6   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  5); }
+	.lg-col-7   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  6); }
+	.lg-col-8   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  7); }
+	.lg-col-9   { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  8); }
+	.lg-col-10  { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) *  9); }
+	.lg-col-11  { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) * 10); }
+	.lg-col-12  { margin-left: percentage(($gutter-width / 2) * 0.01) + ((100 / 12) * 11); }
+
+	.row .row .lg-span-1  { width: percentage(((100 / 12) *  1) * 0.01)}
+	.row .row .lg-span-2  { width: percentage(((100 / 12) *  2) * 0.01)}
+	.row .row .lg-span-3  { width: percentage(((100 / 12) *  3) * 0.01)}
+	.row .row .lg-span-4  { width: percentage(((100 / 12) *  4) * 0.01)}
+	.row .row .lg-span-5  { width: percentage(((100 / 12) *  5) * 0.01)}
+	.row .row .lg-span-6  { width: percentage(((100 / 12) *  6) * 0.01)}
+	.row .row .lg-span-7  { width: percentage(((100 / 12) *  7) * 0.01)}
+	.row .row .lg-span-8  { width: percentage(((100 / 12) *  8) * 0.01)}
+	.row .row .lg-span-9  { width: percentage(((100 / 12) *  9) * 0.01)}
+	.row .row .lg-span-10 { width: percentage(((100 / 12) * 10) * 0.01)}
+	.row .row .lg-span-11 { width: percentage(((100 / 12) * 11) * 0.01)}
+	.row .row .lg-span-12 { width: percentage(((100 / 12) * 12) * 0.01)}
+
+	.row .row .lg-col-1  { margin-left: percentage(((100 / 12) *  0) * 0.01)}
+	.row .row .lg-col-2  { margin-left: percentage(((100 / 12) *  1) * 0.01)}
+	.row .row .lg-col-3  { margin-left: percentage(((100 / 12) *  2) * 0.01)}
+	.row .row .lg-col-4  { margin-left: percentage(((100 / 12) *  3) * 0.01)}
+	.row .row .lg-col-5  { margin-left: percentage(((100 / 12) *  4) * 0.01)}
+	.row .row .lg-col-6  { margin-left: percentage(((100 / 12) *  5) * 0.01)}
+	.row .row .lg-col-7  { margin-left: percentage(((100 / 12) *  6) * 0.01)}
+	.row .row .lg-col-8  { margin-left: percentage(((100 / 12) *  7) * 0.01)}
+	.row .row .lg-col-9  { margin-left: percentage(((100 / 12) *  8) * 0.01)}
+	.row .row .lg-col-10 { margin-left: percentage(((100 / 12) *  9) * 0.01)}
+	.row .row .lg-col-11 { margin-left: percentage(((100 / 12) * 10) * 0.01)}
+	.row .row .lg-col-12 { margin-left: percentage(((100 / 12) * 11) * 0.01)}
+
+}
+
+//////////////////////////////////////////////////
+// Helpers
+//////////////////////////////////////////////////
+
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+.justify { text-align: justify; }
+
+.float-left { float: left; }
+.float-right { float: right; }
