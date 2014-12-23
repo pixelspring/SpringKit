@@ -632,7 +632,7 @@ th:first-child, td:first-child {
 th:last-child, td:last-child {
   padding-right: 0; }
 
-tr:hover {
+tbody tr:hover {
   background-color: #d9edf7; }
 
 .button, button, input[type="submit"], input[type="reset"], input[type="button"] {
