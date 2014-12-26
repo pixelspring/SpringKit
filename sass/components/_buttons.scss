@@ -1,6 +1,9 @@
-// Buttons
+// ------------------------------------------------
+// BUTTONS:
+//
 // ------------------------------------------------
 
+// Basic Buttons
 .button,
 button,
 input[type="submit"],
@@ -12,7 +15,7 @@ input[type="button"] {
     border-radius: $global-radius;
     color: #555;
     text-align: center;
-    font-size: 11px;
+    font-size: 1.1rem;
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
@@ -24,8 +27,10 @@ input[type="button"] {
     text-transform: uppercase;
     white-space: nowrap;
     box-sizing: border-box;
+    margin-bottom: 1.6rem; // BOTTOM MARGIN?
 }
 
+// Hover + Focus States
 .button:hover,
 button:hover,
 input[type="submit"]:hover,
@@ -41,6 +46,7 @@ input[type="button"]:focus {
     outline: 0;
 }
 
+// Primary Button
 .button.button-primary,
 button.button-primary,
 input[type="submit"].button-primary,
@@ -51,6 +57,7 @@ input[type="button"].button-primary {
     background-color: $primary-color;
 }
 
+// Primary Button Hover
 .button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,

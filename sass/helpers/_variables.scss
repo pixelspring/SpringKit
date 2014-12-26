@@ -1,4 +1,6 @@
+// ------------------------------------------------
 //  VARIABLES.SCSS:
+//
 //  Define All The Things!
 // ------------------------------------------------
 
@@ -6,44 +8,46 @@
 // ------------------------------------------------
 $font-stack-header: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-stack-body: "Georgia", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-stack-code: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+$font-stack-code: "Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
 
 // Hues & Tints:
 // ------------------------------------------------
 
 // Grayscale
-$white       : #FFFFFF;
-$ghost       : #FAFAFA;
-$snow        : #F9F9F9;
-$vapor       : #F6F6F6;
-$white-smoke : #F5F5F5;
-$silver      : #EFEFEF;
-$smoke       : #EEEEEE;
-$gainsboro   : #DDDDDD;
-$iron        : #CCCCCC;
-$base        : #AAAAAA;
-$aluminum    : #999999;
-$jumbo       : #888888;
-$monsoon     : #777777;
-$steel       : #666666;
-$charcoal    : #555555;
-$tuatara     : #444444;
-$oil         : #333333;
-$jet         : #222222;
-$black       : #000000;
+$white      :       #FFFFFF;
+$ghost      :       #FAFAFA;
+$snow       :       #F9F9F9;
+$vapor      :       #F6F6F6;
+$white-smoke:       #F5F5F5;
+$silver     :       #EFEFEF;
+$smoke      :       #EEEEEE;
+$gainsboro  :       #DDDDDD;
+$iron       :       #CCCCCC;
+$base       :       #AAAAAA;
+$aluminum   :       #999999;
+$jumbo      :       #888888;
+$monsoon    :       #777777;
+$steel      :       #666666;
+$charcoal   :       #555555;
+$tuatara    :       #444444;
+$oil        :       #333333;
+$jet        :       #222222;
+$black      :       #000000;
 
-// Colors
-$primary-color:      #1EAEDB;   // Blue
-$secondary-color:    #e7e7e7;   // Light Gray
-$alert-color:        #f2dede;   // Red
-$success-color:      #dff0d8;   // Green
-$warning-color:      #fffbe6;   // Orange
-$info-color:         #d9edf7;   // Light Blue
+// Color
+$primary-color:     #1EAEDB;   // Blue
+$secondary-color:   #e7e7e7;   // Light Gray
+$alert-color:       #f2dede;   // Red
+$success-color:     #dff0d8;   // Green
+$warning-color:     #fffbe6;   // Orange
+$info-color:        #d9edf7;   // Light Blue
 
 $link-color:        $primary-color;
 $font-color:        $jet;
 $border-color:      $iron;
+
+$highlight-color:   #fff4cc;
 
 
 // Rounded Things:
@@ -57,7 +61,7 @@ $rounded: 1000px;
 // Grid Variables:
 // ------------------------------------------------
 
-$container-width:   960px;                  // 960px
+$row-width:         960px;                  // Row Max-Width
 $total-columns:     12;                     // 12 columns default
 $column-width:      100 / $total-columns;   // Calculates individual column width based off of # of columns
 $column-margin:     4%;                     // Padding between columns
@@ -66,8 +70,9 @@ $row-space:         2rem;                   // Margin-bottom for .row
 
 
 // Breakpoints
-$larger-than-mobile:    400px;
-$larger-than-phablet:   550px;
-$larger-than-tablet:    750px;
-$larger-than-desktop:   1000px;
-$larger-than-desktophd: 1200px;
+$small-range:   (0em, 40em);        /* 0, 640px */
+$medium-range:  (40.063em, 64em);   /* 641px, 1024px */
+$large-range:   (64.063em, 90em);   /* 1025px, 1440px */
+$xlarge-range:  (90.063em, 120em);  /* 1441px, 1920px */
+$xxlarge-range: (120.063em);        /* 1921px */
+

@@ -2,7 +2,6 @@
 //  MAIN.SCSS:
 //
 //  All elements, imports, the whole shebang:
-//  Comment out what isn't needed
 // ------------------------------------------------
 
 // Helpers
@@ -12,6 +11,7 @@
 // Base
 @import "base/_normalize.scss";
 @import "base/_typography.scss";
+@import "base/_media.scss";
 
 // Layout
 @import "layout/_grid.scss";
@@ -22,30 +22,34 @@
 @import "components/_buttons.scss";
 @import "components/_panels.scss";
 @import "components/_alerts.scss";
+@import "components/_navigation.scss";
 
 
 
-// DEMO:
 
-.example-grid .column, .example-grid .columns {
-    background: #EEE;
+// ------------------------------------------------
+// DEMO / DEBUG:
+// ------------------------------------------------
+
+/*
+.example .column,
+.example .columns {
+    background: lightgray;
     text-align: center;
     border-radius: $global-radius;
-    font-size: 1rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
-    // height: 30px;
-    line-height: 30px;
-    // margin-bottom: .75rem;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 1rem;
     font-weight: 600;
     letter-spacing: .1rem;
     font-family: Helvetica;
+    border: 1px solid black;
 }
 
-
-.row {
-    background-color: yellow;
+.example .column:hover,
+.example .columns:hover {
+    background-color: lightyellow;
 }
-.column,
-.columns {
-    background-color: red;
-}
+*/

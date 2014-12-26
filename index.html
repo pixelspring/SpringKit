@@ -2,127 +2,139 @@
 <html lang="en">
 <head>
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>SASSkeleton</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8">
+    <title>SpringKit</title>
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+    <!-- Font Import -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!--
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
 
-  <link rel="stylesheet" href="css/main.css">
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
 
 </head>
+
+
+
 <body>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div id="title" class="container">
-<h1><a href="#">SASSkeleton</a></h1>
+<div id="title" class="row">
+    <div class="small-12 columns">
+        <h1><a href="#">SpringKit</a></h1>
+    </div>
 </div>
 <hr>
 
-<div id="grid" class="container">
-<div class="example-grid">
 
+<section id="grid" class="example">
     <div class="row">
-        <div class="one column">One</div>
-        <div class="eleven columns">Eleven</div>
+    .row
     </div>
-
     <div class="row">
-        <div class="two columns">Two</div>
-        <div class="ten columns">Ten</div>
+        <div class="large-2 columns">2</div>
+        <div class="large-10 columns">10</div>
     </div>
-
     <div class="row">
-        <div class="three columns">Three</div>
-        <div class="nine columns">Nine</div>
+        <div class="large-3 columns">3</div>
+        <div class="large-9 columns">9</div>
     </div>
-
     <div class="row">
-        <div class="four columns">Four</div>
-        <div class="eight columns">Eight</div>
+        <div class="large-4 columns">4</div>
+        <div class="large-8 columns">8</div>
     </div>
-
     <div class="row">
-        <div class="five columns">Five</div>
-        <div class="seven columns">Seven</div>
+        <div class="large-5 columns">5</div>
+        <div class="large-7 columns">7</div>
     </div>
-
     <div class="row">
-        <div class="six columns">Six</div>
-        <div class="six columns">Six</div>
+        <div class="large-6 columns">6</div>
+        <div class="large-6 columns">6</div>
     </div>
-
-    <div class="row">
-        <div class="seven columns">Seven</div>
-        <div class="five columns">Five</div>
-    </div>
-
-    <div class="row">
-        <div class="eight columns">Eight</div>
-        <div class="four  columns">Four</div>
-    </div>
-
-    <div class="row">
-        <div class="nine columns">Nine</div>
-        <div class="three columns">Three</div>
-    </div>
-
-    <div class="row">
-        <div class="ten columns">Ten</div>
-        <div class="two columns">Two</div>
-    </div>
-
-    <div class="row">
-        <div class="eleven columns">Eleven</div>
-        <div class="one column">One</div>
-    </div>
-
-</div>
+</section>
 </div>
 <hr>
 
-<div id="panels" class="container">
-<h3>Panels:</h3>
+<section id="non-collapse">
     <div class="row">
-
-        <div class="one-half column panel">
-            One-Half Panel
+        <h3>Normal:</h3>
+        <div class="medium-3 columns">
+            <img src="http://placehold.it/400x150/eeeeee/666666">
         </div>
-        <div class="one-half column panel">
-            One-Half Panel
+        <div class="medium-3 columns">
+            <img src="http://placehold.it/400x150/dddddd/666666">
         </div>
+        <div class="medium-3 columns">
+            <img src="http://placehold.it/400x150/cccccc/666666">
+        </div>
+        <div class="medium-3 columns">
+            <img src="http://placehold.it/400x150/bbbbbb/666666">
+        </div>
+    </div>
+</section>
+
+<section id="collapsed">
+    <div class="row collapse">
+        <h3>Collapsed:</h3>
+        <div class="medium-3 columns">
+            <img src="http://placehold.it/400x150/eeeeee/666666">
+        </div>
+        <div class="medium-3 columns">
+            <img src="http://placehold.it/400x150/dddddd/666666">
+        </div>
+        <div class="medium-3 columns">
+            <img src="http://placehold.it/400x150/cccccc/666666">
+        </div>
+        <div class="medium-3 columns">
+            <img src="http://placehold.it/400x150/bbbbbb/666666">
+        </div>
+    </div>
+</section>
+<hr>
+
+<div id="panels">
+    <div class="row">
+        <div class="small-12 columns">
+            <h3>Panels:</h3>
+        </div>
+
+        <div class="small-6 columns">
+            <div class="panel">
+                One-Half Panel
+            </div>
+        </div>
+            <div class="small-6 columns">
+                <div class="panel">
+                    One-Half Panel
+                </div>
+            </div>
+
+        <div class="small-6 columns">
+            <div class="panel">
+                One-Half Panel
+            </div>
+        </div>
+            <div class="small-6 columns">
+                <div class="panel">
+                    One-Half Panel
+                </div>
+            </div>
 
     </div>
 </div>
 <hr>
 
 
-<div id="type" class="container">
-<h3>Type:</h3>
-    <div class="row">
+<div id="type">
 
-        <div class="one-half column">
+    <div class="row">
+    <h3>Type:</h3>
+
+        <div class="medium-6 columns">
             <h1>Heading 1</h1>
             <h2>Heading 2</h2>
             <h3>Heading 3</h3>
@@ -131,17 +143,21 @@
             <h6>Heading 6</h6>
         </div>
 
-        <div class="one-half column">
+        <div class="medium-6 columns">
             <h5>Paragraph Text:</h5>
-            <p>The base type is 15px over 1.6 line height (24px)</p>
+            <p>The base type is 1.6rem aka 16px over 1.6 line height (24px)</p>
             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
             <code>strong</code> <strong>Bolded</strong><br>
             <code>em</code> <em>Italicized</em><br>
             <code>a</code> <a href="#">Link</a><br>
             <code>u</code> <u>Underlined</u>
+        </div>
+    </div>
 
-            <h5>Unordered List:</h5>
+    <div class="row">
+        <div class="medium-3 columns">
+        <h5>Unordered List:</h5>
             <ul>
                 <li>List Item 1</li>
                 <li>List Item 2</li>
@@ -149,7 +165,8 @@
                 <li>List Item 4</li>
                 <li>List Item 5</li>
             </ul>
-
+        </div>
+        <div class="medium-3 columns">
             <h5>Ordered List:</h5>
             <ol>
                 <li>List Item 1</li>
@@ -159,6 +176,30 @@
                 <li>List Item 5</li>
             </ol>
         </div>
+        <div class="medium-3 columns">
+            <h5>No Bullet:</h5>
+            <ul class="no-bullet">
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+                <li>List Item 4</li>
+                <li>List Item 5</li>
+            </ul>
+        </div>
+        <div class="medium-3 columns">
+            <h5>List-in-list:</h5>
+            <ul>
+                <li>List Item 1</li>
+                <li>List Item 2
+                    <ul>
+                        <li>Sub-Item 1</li>
+                        <li>Sub-Item 2</li>
+                    </ul>
+                </li>
+                <li>List Item 3</li>
+            </ul>
+        </div>
+    </div>
 
     </div>
 
@@ -166,16 +207,17 @@
     <h3>Code:</h3>
         <div class="twelve columns">
             <p>Code styling is kept basic – just wrap anything in a <code>&lt;code&gt;</code> and it will appear like <code>this</code>. For blocks of code, wrap a <code>&lt;code&gt;</code> with a <code>&lt;pre&gt;</code>.</p>
-            <pre><code>.some-class {
-                background-color: red;
-            }</code></pre>
+<pre><code>.some-class {
+    background-color: red;
+}</code></pre>
         </div>
     </div>
+
 </div>
 <hr>
 
 
-<div id="buttons" class="container">
+<div id="buttons">
 
     <div class="row">
 
@@ -201,15 +243,17 @@
 <hr>
 
 
-<div id="forms" class="container">
-<h3>Forms</h3>
+<div id="forms">
     <form>
         <div class="row">
-            <div class="six columns">
+        <div class="small-12 columns">
+            <h3>Forms</h3>
+        </div>
+            <div class="medium-6 columns">
                 <label for="exampleEmailInput">Your email</label>
-                <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+                <input type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
             </div>
-            <div class="six columns">
+            <div class="medium-6 columns">
                 <label for="exampleRecipientInput">Reason for contacting</label>
                 <select class="u-full-width">
                 <option value="Option 1">Questions</option>
@@ -217,60 +261,302 @@
                 <option value="Option 3">Can I get your number?</option>
                 </select>
             </div>
-        </div>
 
-        <label for="exampleMessage">Message</label>
-        <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
-        <label class="example-send-yourself-copy">
-        <input type="checkbox">
-        <span class="label-body">Send a copy to yourself</span>
-        </label>
-        <input class="button-primary" type="submit" value="Submit">
+            <div class="medium-12 columns">
+                <label for="exampleMessage">Message</label>
+                <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+                <label class="example-send-yourself-copy">
+                <input type="checkbox">
+                <span class="label-body">Send a copy to yourself</span>
+                </label>
+                <input class="button-primary" type="submit" value="Submit">
+            </div>
+        </div>
     </form>
 </div>
 <hr>
 
-<div id="tables" class="container">
-<h3>Tables:</h3>
-    <table class="u-full-width">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Sex</th>
-                <th>Location</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Dave Gamache</td>
-                <td>26</td>
-                <td>Male</td>
-                <td>San Francisco</td>
-            </tr>
-            <tr>
-                <td>Dwayne Johnson</td>
-                <td>42</td>
-                <td>Male</td>
-                <td>Hayward</td>
-            </tr>
-            <tr>
-                <td>Fred Gamache</td>
-                <td>26</td>
-                <td>Male</td>
-                <td>San Francisco</td>
-            </tr>
-            <tr>
-                <td>Andy Johnson</td>
-                <td>42</td>
-                <td>Male</td>
-                <td>Hayward</td>
-            </tr>
-        </tbody>
-    </table>
+<div id="tables">
+    <div class="row">
+        <div class="small-12 columns">
+        <h3>Tables:</h3>
+            <table>
+            <caption>Table Caption</caption>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Sex</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dave Rave</td>
+                        <td>29</td>
+                        <td>Male</td>
+                        <td>Townsville</td>
+                    </tr>
+                    <tr>
+                        <td>Fenella Wibblet</td>
+                        <td>31</td>
+                        <td>Female</td>
+                        <td>Ladytown</td>
+                    </tr>
+                    <tr>
+                        <td>Dwayne Johnson</td>
+                        <td>41</td>
+                        <td>Male</td>
+                        <td>Bogtown</td>
+                    </tr>
+                    <tr>
+                        <td>Fred Bloggs</td>
+                        <td>66</td>
+                        <td>Male</td>
+                        <td>San Andreas</td>
+                    </tr>
+                    <tr>
+                        <td>Andy Wibbles-fordson</td>
+                        <td>37</td>
+                        <td>Male</td>
+                        <td>Somewhere</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 <hr>
 
+
+<!--
+<table width="260" border="0" cellspacing="0" cellpadding="0">
+<colgroup>
+<col span="4" width="65"> </colgroup>
+<tbody>
+<tr>
+<td align="right" width="65" height="15">10px</td>
+<td align="right" width="65">0.625rem</td>
+</tr>
+<tr>
+<td align="right" height="15">11px</td>
+<td align="right">0.6875rem</td>
+</tr>
+<tr>
+<td align="right" height="15">12px</td>
+<td align="right">0.75rem</td>
+</tr>
+<tr>
+<td align="right" height="15">13px</td>
+<td align="right">0.8125rem</td>
+</tr>
+<tr>
+<td align="right" height="15">14px</td>
+<td align="right">0.875rem</td>
+</tr>
+<tr>
+<td align="right" height="15">15px</td>
+<td align="right">0.9375rem</td>
+</tr>
+<tr>
+<td align="right" height="15">16px</td>
+<td align="right">1rem</td>
+</tr>
+<tr>
+<td align="right" height="15">17px</td>
+<td align="right">1.0625rem</td>
+</tr>
+<tr>
+<td align="right" height="15">18px</td>
+<td align="right">1.125rem</td>
+</tr>
+<tr>
+<td align="right" height="15">19px</td>
+<td align="right">1.1875rem</td>
+</tr>
+<tr>
+<td align="right" height="15">20px</td>
+<td align="right">1.25rem</td>
+</tr>
+<tr>
+<td align="right" height="15">21px</td>
+<td align="right">1.3125rem</td>
+</tr>
+<tr>
+<td align="right" height="15">22px</td>
+<td align="right">1.375rem</td>
+</tr>
+<tr>
+<td align="right" height="15">23px</td>
+<td align="right">1.4375rem</td>
+</tr>
+<tr>
+<td align="right" height="15">24px</td>
+<td align="right">1.5rem</td>
+</tr>
+<tr>
+<td align="right" height="15">25px</td>
+<td align="right">1.5625rem</td>
+</tr>
+<tr>
+<td align="right" height="15">26px</td>
+<td align="right">1.625rem</td>
+</tr>
+<tr>
+<td align="right" height="15">27px</td>
+<td align="right">1.6875rem</td>
+</tr>
+<tr>
+<td align="right" height="15">28px</td>
+<td align="right">1.75rem</td>
+</tr>
+<tr>
+<td align="right" height="15">29px</td>
+<td align="right">1.8125rem</td>
+</tr>
+<tr>
+<td align="right" height="15">30px</td>
+<td align="right">1.875rem</td>
+</tr>
+<tr>
+<td align="right" height="15">31px</td>
+<td align="right">1.9375rem</td>
+</tr>
+<tr>
+<td align="right" height="15">32px</td>
+<td align="right">2rem</td>
+</tr>
+<tr>
+<td align="right" height="15">33px</td>
+<td align="right">2.0625rem</td>
+</tr>
+<tr>
+<td align="right" height="15">34px</td>
+<td align="right">2.125rem</td>
+</tr>
+<tr>
+<td align="right" height="15">35px</td>
+<td align="right">2.1875rem</td>
+</tr>
+<tr>
+<td align="right" height="15">36px</td>
+<td align="right">2.25rem</td>
+</tr>
+<tr>
+<td align="right" height="15">37px</td>
+<td align="right">2.3125rem</td>
+</tr>
+<tr>
+<td align="right" height="15">38px</td>
+<td align="right">2.375rem</td>
+</tr>
+<tr>
+<td align="right" height="15">39px</td>
+<td align="right">2.4375rem</td>
+</tr>
+<tr>
+<td align="right" height="15">40px</td>
+<td align="right">2.5rem</td>
+</tr>
+<tr>
+<td align="right" height="15">41px</td>
+<td align="right">2.5625rem</td>
+</tr>
+<tr>
+<td align="right" height="15">42px</td>
+<td align="right">2.625rem</td>
+</tr>
+<tr>
+<td align="right" height="15">43px</td>
+<td align="right">2.6875rem</td>
+</tr>
+<tr>
+<td align="right" height="15">44px</td>
+<td align="right">2.75rem</td>
+</tr>
+<tr>
+<td align="right" height="15">45px</td>
+<td align="right">2.8125rem</td>
+</tr>
+<tr>
+<td align="right" height="15">46px</td>
+<td align="right">2.875rem</td>
+</tr>
+<tr>
+<td align="right" height="15">47px</td>
+<td align="right">2.9375rem</td>
+</tr>
+<tr>
+<td align="right" height="15">48px</td>
+<td align="right">3rem</td>
+</tr>
+<tr>
+<td align="right" height="15">49px</td>
+<td align="right">3.0625rem</td>
+</tr>
+<tr>
+<td align="right" height="15">50px</td>
+<td align="right">3.125rem</td>
+</tr>
+<tr>
+<td align="right" height="15">51px</td>
+<td align="right">3.1875rem</td>
+</tr>
+<tr>
+<td align="right" height="15">52px</td>
+<td align="right">3.25rem</td>
+</tr>
+<tr>
+<td align="right" height="15">53px</td>
+<td align="right">3.3125rem</td>
+</tr>
+<tr>
+<td align="right" height="15">54px</td>
+<td align="right">3.375rem</td>
+</tr>
+<tr>
+<td align="right" height="15">55px</td>
+<td align="right">3.4375rem</td>
+</tr>
+<tr>
+<td align="right" height="15">56px</td>
+<td align="right">3.5rem</td>
+</tr>
+<tr>
+<td align="right" height="15">57px</td>
+<td align="right">3.5625rem</td>
+</tr>
+<tr>
+<td align="right" height="15">58px</td>
+<td align="right">3.625rem</td>
+</tr>
+<tr>
+<td align="right" height="15">59px</td>
+<td align="right">3.6875rem</td>
+</tr>
+<tr>
+<td align="right" height="15">60px</td>
+<td align="right">3.75rem</td>
+</tr>
+<tr>
+<td align="right" height="15">61px</td>
+<td align="right">3.8125rem</td>
+</tr>
+<tr>
+<td align="right" height="15">62px</td>
+<td align="right">3.875rem</td>
+</tr>
+<tr>
+<td align="right" height="15">63px</td>
+<td align="right">3.9375rem</td>
+</tr>
+<tr>
+<td align="right" height="15">64px</td>
+<td align="right">4rem</td>
+</tr>
+</tbody>
+</table>
+-->
 
 <!-- End Document
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
