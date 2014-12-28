@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"text",
+				"text-decoration"
+			],
+			[
 				"background-",
 				"background-color"
 			],
@@ -23,6 +27,62 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 15254,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/main.scss",
+			"settings":
+			{
+				"buffer_size": 1183,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/helpers/_variables.scss",
+			"settings":
+			{
+				"buffer_size": 2661,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/components/_alerts.scss",
+			"settings":
+			{
+				"buffer_size": 637,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/layout/_tables.scss",
+			"settings":
+			{
+				"buffer_size": 697,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/base/_typography.scss",
+			"settings":
+			{
+				"buffer_size": 2236,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/components/_navigation.scss",
+			"settings":
+			{
+				"buffer_size": 123,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -69,10 +129,26 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/mikeseaby/github/springkit"
+		"/Users/mikeseaby/github/springkit",
+		"/Users/mikeseaby/github/springkit/sass",
+		"/Users/mikeseaby/github/springkit/sass/base",
+		"/Users/mikeseaby/github/springkit/sass/components",
+		"/Users/mikeseaby/github/springkit/sass/helpers",
+		"/Users/mikeseaby/github/springkit/sass/layout"
 	],
 	"file_history":
 	[
+		"/Users/mikeseaby/github/springkit/sass/layout/_grid.scss",
+		"/Users/mikeseaby/github/springkit/sass/layout/_forms.scss",
+		"/Users/mikeseaby/github/springkit/sass/components/_buttons.scss",
+		"/Users/mikeseaby/github/springkit/sass/base/_media.scss",
+		"/Users/mikeseaby/github/springkit/SOURCES/Foundation/css/app.css",
+		"/Users/mikeseaby/github/springkit/css/main.css",
+		"/Users/mikeseaby/github/springkit/sass/components/_panels.scss",
+		"/Users/mikeseaby/github/springkit/SOURCES/Foundation/bower_components/foundation/scss/foundation/components/_grid.scss",
+		"/Users/mikeseaby/github/springkit/SOURCES/new.sass",
+		"/Users/mikeseaby/github/springkit/sass/helpers/_mixins.scss",
+		"/Users/mikeseaby/github/springkit/sass/layout/_tables.scss",
 		"/Users/mikeseaby/Desktop/Link List",
 		"/Applications/Sublime Text.app/Contents/MacOS/changelog.txt",
 		"/Users/mikeseaby/Sites/duet/phpinfo.php",
@@ -189,22 +265,11 @@
 		"/Applications/MAMP/buddypress/wp-content/themes/JointsWP/home-page.php",
 		"/Applications/MAMP/rsgwp/wp-content/themes/Foundation-master/templates/home-page.php",
 		"/Applications/MAMP/buddypress/wp-content/themes/JointsWP/partials/nav-offcanvas-sidebar.php",
-		"/Users/mikeseaby/Library/Caches/Cleanup At Startup/Transmit/208A878E-DE7C-4B97-9F56-2F6E2A17B160/Settings.php",
-		"/Applications/MAMP/phpBB3/styles/springboard/template/viewtopic_body.html",
-		"/Applications/MAMP/phpBB3/styles/springboard/template/viewonline_whois.html",
-		"/Applications/MAMP/phpBB3/styles/springboard/theme/buttons.css",
-		"/Applications/MAMP/phpBB3/styles/springboard/theme/links.css",
-		"/Applications/MAMP/phpBB3/styles/springboard/theme/colours.css",
-		"/Applications/MAMP/phpBB3/styles/springboard/theme/bootstrap/bootstrap.scss",
-		"/Applications/MAMP/phpBB3/styles/springboard/theme/stylesheet.css",
-		"/Applications/MAMP/phpBB3/styles/prosilver/theme/bootstrap.scss",
-		"/Applications/MAMP/phpBB3/styles/springboard/style.cfg",
-		"/Applications/MAMP/phpBB3/styles/springboard/template/forumlist_body.html",
-		"/Applications/MAMP/phpBB3/styles/springboard/theme/tweaks.css"
+		"/Users/mikeseaby/Library/Caches/Cleanup At Startup/Transmit/208A878E-DE7C-4B97-9F56-2F6E2A17B160/Settings.php"
 	],
 	"find":
 	{
-		"height": 24.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -227,6 +292,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"box-sizing",
 			"LoadModule authz_core_module libexec/apache2/mod_authz_host.so",
 			"add_options_page",
 			"tabs",
@@ -353,8 +419,7 @@
 			"pagesection",
 			"credits",
 			"posting",
-			"collapse",
-			"link"
+			"collapse"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -373,8 +438,211 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15254,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1193,
+								1193
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 337.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sass/main.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1183,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1182,
+								1182
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 221.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sass/helpers/_variables.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2661,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1520,
+								1509
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 259.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sass/components/_alerts.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 637,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								267,
+								267
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sass/layout/_tables.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 697,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								688,
+								688
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 76.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sass/base/_typography.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2236,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2089,
+								2089
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1164.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "sass/components/_navigation.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 123,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								51,
+								51
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -455,7 +723,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 185.0,
+	"side_bar_width": 214.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

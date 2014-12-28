@@ -8,13 +8,28 @@
 }
 
 .alert.primary {
-    background: #e8eff3;
+    background: $primary-color;
     border: 1px #c5d7e3 solid;
 }
 
-.alert.success {
-    background: #daeee4;
+.alert.secondary {
+    background: $secondary-color;
+    border: 1px #c5d7e3 solid;
+}
+
+.alert.info {
+    background: $info-color;
     border: 1px #b6dfca solid;
+}
+
+.alert.success {
+    background: $success-color; // #daeee4;
+    border: 1px #b6dfca solid;
+}
+
+.alert.warning {
+    background: $warning-color;
+    border: 1px #f7cfc4 solid;
 }
 
 .alert.danger {

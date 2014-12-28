@@ -1583,12 +1583,24 @@ tbody tr:hover {
   border-radius: 3px; }
 
 .alert.primary {
-  background: #e8eff3;
+  background: #1EAEDB;
   border: 1px #c5d7e3 solid; }
 
-.alert.success {
-  background: #daeee4;
+.alert.secondary {
+  background: #e7e7e7;
+  border: 1px #c5d7e3 solid; }
+
+.alert.info {
+  background: #d9edf7;
   border: 1px #b6dfca solid; }
+
+.alert.success {
+  background: #dff0d8;
+  border: 1px #b6dfca solid; }
+
+.alert.warning {
+  background: #fffbe6;
+  border: 1px #f7cfc4 solid; }
 
 .alert.danger {
   background: #fdf4f1;
