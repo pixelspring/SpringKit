@@ -1,8 +1,3 @@
-/* 0, 640px */
-/* 641px, 1024px */
-/* 1025px, 1440px */
-/* 1441px, 1920px */
-/* 1921px */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -1580,31 +1575,45 @@ tbody tr:hover {
 .alert {
   padding: 15px;
   margin: 10px 0;
-  border-radius: 3px; }
+  border-radius: 3px;
+  background: #FAFAFA;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: 1px #888888 solid; }
 
 .alert.primary {
   background: #1EAEDB;
+  color: white;
   border: 1px #c5d7e3 solid; }
 
 .alert.secondary {
   background: #e7e7e7;
-  border: 1px #c5d7e3 solid; }
+  border: 1px #414141 solid; }
 
 .alert.info {
   background: #d9edf7;
-  border: 1px #b6dfca solid; }
+  color: #17516d;
+  border: 1px #17516d solid; }
 
 .alert.success {
-  background: #dff0d8;
-  border: 1px #b6dfca solid; }
+  background: #d5ecd9;
+  color: #25512c;
+  border: 1px #25512c solid; }
 
 .alert.warning {
-  background: #fffbe6;
-  border: 1px #f7cfc4 solid; }
+  background: #fff4cc;
+  color: #806400;
+  border: 1px #806400 solid; }
 
 .alert.danger {
-  background: #fdf4f1;
-  border: 1px #f7cfc4 solid; }
+  background: #f8d5d8;
+  color: #6f131a;
+  border: 1px #6f131a solid; }
+
+.alert:hover {
+  -webkit-filter: brightness(95%);
+  border-right: 25px solid #CCCCCC; }
 
 /*
 .example .column,
