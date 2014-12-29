@@ -1,5 +1,5 @@
 // ------------------------------------------------
-// Typography:
+// TYPOGRAPHY:
 //
 // ------------------------------------------------
 
@@ -92,6 +92,17 @@ li {
 
 ul.no-bullet {
     list-style: none;
+}
+
+ul.inline-list {
+    list-style: none;
+}
+
+.inline-list > li {
+list-style: none;
+float: left;
+// margin-left: 1.22222rem;
+display: block;
 }
 
 // Code

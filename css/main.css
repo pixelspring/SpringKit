@@ -420,6 +420,14 @@ li {
 ul.no-bullet {
   list-style: none; }
 
+ul.inline-list {
+  list-style: none; }
+
+.inline-list > li {
+  list-style: none;
+  float: left;
+  display: block; }
+
 code {
   font-family: "Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
   padding: 0.2rem 0.5rem;
@@ -438,6 +446,59 @@ pre > code {
 img {
   max-width: 100%;
   height: auto; }
+
+.th {
+  line-height: 0;
+  display: inline-block;
+  border: solid 4px transparent;
+  max-width: 100%;
+  box-shadow: 0 0 0 1px #CCCCCC; }
+
+.th:hover, .th:focus {
+  box-shadow: 0 0 0 1px #1EAEDB; }
+
+.fleft {
+  float: left !important; }
+
+.fright {
+  float: right !important; }
+
+.radius {
+  border-radius: 4px; }
+
+.rounded {
+  border-radius: 1000px; }
+
+.text-left {
+  text-align: left !important; }
+
+.text-right {
+  text-align: right !important; }
+
+.text-centered {
+  text-align: center !important; }
+
+.text-justify {
+  text-align: justify !important; }
+
+.hidden {
+  display: none;
+  visibility: hidden !important; }
+
+.z1 {
+  z-index: 1; }
+
+.z2 {
+  z-index: 2; }
+
+.z3 {
+  z-index: 3; }
+
+.z4 {
+  z-index: 4; }
+
+.z5 {
+  z-index: 5; }
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -1575,45 +1636,117 @@ tbody tr:hover {
 .alert {
   padding: 15px;
   margin: 10px 0;
-  border-radius: 3px;
   background: #FAFAFA;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
-  border: 1px #888888 solid; }
+  border-radius: 4px; }
 
 .alert.primary {
   background: #1EAEDB;
-  color: white;
-  border: 1px #c5d7e3 solid; }
+  color: white; }
 
 .alert.secondary {
-  background: #e7e7e7;
-  border: 1px #414141 solid; }
+  background: #e7e7e7; }
 
 .alert.info {
   background: #d9edf7;
-  color: #17516d;
-  border: 1px #17516d solid; }
+  color: #17516d; }
 
 .alert.success {
   background: #d5ecd9;
-  color: #25512c;
-  border: 1px #25512c solid; }
+  color: #25512c; }
 
 .alert.warning {
   background: #fff4cc;
-  color: #806400;
-  border: 1px #806400 solid; }
+  color: #806400; }
 
 .alert.danger {
   background: #f8d5d8;
-  color: #6f131a;
-  border: 1px #6f131a solid; }
+  color: #6f131a; }
 
 .alert:hover {
   -webkit-filter: brightness(95%);
   border-right: 25px solid #CCCCCC; }
+
+.top-menu {
+  background: green; }
+
+.toggleMenu {
+  display: none;
+  background: #666;
+  padding: 10px 15px;
+  color: #fff; }
+
+.top-menu ul, .top-menu li {
+  margin: 0; }
+.top-menu .nav {
+  list-style: none;
+  *zoom: 1;
+  background: #175e4c; }
+.top-menu .nav:before, .top-menu .nav:after {
+  content: " ";
+  display: table; }
+.top-menu .nav:after {
+  clear: both; }
+.top-menu .nav ul {
+  list-style: none;
+  width: 9em; }
+.top-menu .nav a {
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none; }
+.top-menu .nav li {
+  position: relative; }
+.top-menu .nav > li {
+  float: left;
+  border-top: 1px solid #104336; }
+.top-menu .nav > li > .parent {
+  background-image: url("images/downArrow.png");
+  background-repeat: no-repeat;
+  background-position: right; }
+.top-menu .nav > li > a {
+  display: block; }
+.top-menu .nav li ul {
+  position: absolute;
+  left: -9999px; }
+.top-menu .nav > li.hover > ul {
+  left: 0; }
+.top-menu .nav li li.hover ul {
+  left: 100%;
+  top: 0; }
+.top-menu .nav li li a {
+  display: block;
+  background: #1d7a62;
+  position: relative;
+  z-index: 100;
+  border-top: 1px solid #175e4c; }
+.top-menu .nav li li li a {
+  background: #249578;
+  z-index: 200;
+  border-top: 1px solid #1d7a62; }
+@media screen and (max-width: 768px) {
+  .top-menu .active {
+    display: block; }
+
+  .top-menu .nav > li {
+    float: none; }
+
+  .top-menu .nav > li > .parent {
+    background-position: 95% 50%; }
+
+  .top-menu .nav li li .parent {
+    background-image: url("images/downArrow.png");
+    background-repeat: no-repeat;
+    background-position: 95% 50%; }
+
+  .top-menu .nav ul {
+    display: block;
+    width: 100%; }
+
+  .top-menu .nav > li.hover > ul, .top-menu .nav li li.hover ul {
+    position: static; }
+ }
 
 /*
 .example .column,

@@ -58,7 +58,6 @@ $rounded: 1000px;
 
 
 
-
 // Grid Variables:
 // ------------------------------------------------
 
@@ -83,4 +82,11 @@ $xxlarge-range: (120.063em);                // 1921px
 
 // Alert Variables:
 // ------------------------------------------------
-$alert-border: true;               // TRUE or FALSE
+$alert-border: false;               // TRUE or FALSE
+$alert-radius: true;                // TRUE or FALSE
+
+
+// Button Variables:
+// ------------------------------------------------
+$button-radius: true;               // TRUE or FALSE
+

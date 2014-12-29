@@ -12,7 +12,9 @@ input[type="button"] {
     font-family: $font-stack-header;
     display: inline-block;
     background-color: transparent;
-    border-radius: $global-radius;
+    @if $button-radius {
+        border-radius: $global-radius;
+    }
     color: #555;
     text-align: center;
     font-size: 1.1rem;
