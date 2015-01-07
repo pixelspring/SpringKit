@@ -10,20 +10,26 @@
 
 // Base
 @import "base/_normalize.scss";
+@import "base/_mediaqueries.scss";
 @import "base/_typography.scss";
 @import "base/_media.scss";
-@import "base/utilityclasses.scss";
+@import "base/_utilityclasses.scss";
 
 // Layout
 @import "layout/_grid.scss";
 @import "layout/_forms.scss";
 @import "layout/_tables.scss";
+@import "layout/_visibility.scss";
 
 // Components:
 @import "components/_buttons.scss";
 @import "components/_panels.scss";
 @import "components/_alerts.scss";
 @import "components/_navigation.scss";
+
+// Vendor
+// @import "vendor/animate/animate.scss";
+
 
 
 

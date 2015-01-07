@@ -7,8 +7,8 @@
 // Font Families:
 // ------------------------------------------------
 $font-stack-header: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-stack-body: "Georgia", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-stack-code: "Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+$font-stack-body: 	"Merriweather", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-stack-code: 	"Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
 
 // Hues & Tints:
@@ -53,6 +53,7 @@ $highlight-color:   #fff4cc;
 
 // Rounded Things:
 // ------------------------------------------------
+
 $global-radius: 4px;
 $rounded: 1000px;
 
@@ -61,20 +62,45 @@ $rounded: 1000px;
 // Grid Variables:
 // ------------------------------------------------
 
-$row-width:         960px;                  // Row Max-Width
-$total-columns:     12;                     // 12 columns default
-$column-width:      100 / $total-columns;   // Calculates individual column width based off of # of columns
-$column-margin:     4%;                     // Padding between columns
-$column-padding:    false;                  // Padding inside columns: either "false" or standard padding value, eg. "1rem, 0.75rem 0"
-$row-space:         2rem;                   // Margin-bottom for .row
+$row-width:             960px;                  // Row Max-Width
+$total-columns:         12;                     // 12 columns default
+$column-width:          100 / $total-columns;   // Calculates individual column width based off of # of columns
+$column-margin:         4%;                     // Padding between columns
+$column-padding:        false;                  // Padding inside columns: either "false" or standard padding value, eg. "1rem, 0.75rem 0"
+$row-space:             2rem;                   // Margin-bottom for .row
 
 
 // Breakpoints
-$small-range:   (0em, 40em);                // 0, 640px
-$medium-range:  (40.063em, 64em);           // 641px, 1024px
-$large-range:   (64.063em, 90em);           // 1025px, 1440px
-$xlarge-range:  (90.063em, 120em);          // 1441px, 1920px
-$xxlarge-range: (120.063em);                // 1921px
+// $small-range:           (0em, 40em);            // 0, 640px
+// $medium-range:          (40.063em, 64em);       // 641px, 1024px
+// $large-range:           (64.063em, 90em);       // 1025px, 1440px
+// $xlarge-range:          (90.063em, 120em);      // 1441px, 1920px
+// $xxlarge-range:         (120.063em);            // 1921px
+
+// $small-range:				640px;		// Extra small devices (phones, less than 768px) 	0px - 768px
+// $medium-range:				768px;		// Small devices (tablets, 768px and up) 			768px - 991px
+// $large-range:				992px;		// Medium devices (desktops, 992px and up) 			992px - 1199px
+// $x-large-range:				1200px;		// Large devices (large desktops, 1200px and up) 	1200px +
+
+// Here we define the lower and upper bounds for each media size
+$small-range: (0em, 40em); /* 0, 640px */
+$medium-range: (40.063em, 64em); /* 641px, 1024px */
+$large-range: (64.063em, 90em); /* 1025px, 1440px */
+$xlarge-range: (90.063em, 120em); /* 1441px, 1920px */
+$xxlarge-range: (120.063em); /* 1921px */
+
+// Media Queries
+$mq-mobile-portrait     : 320px;
+$mq-mobile-landscape    : 480px;
+$mq-tablet-portrait     : 768px;
+$mq-tablet-landscape    : 1024px;
+$mq-desktop             : 1382px;
+
+
+// Options:
+$push-pull-classes:     false;
+$offset-classes:        false;
+$centered-classes:      false;
 
 
 
@@ -82,11 +108,28 @@ $xxlarge-range: (120.063em);                // 1921px
 
 // Alert Variables:
 // ------------------------------------------------
-$alert-border: false;               // TRUE or FALSE
-$alert-radius: true;                // TRUE or FALSE
+
+$alert-border: false;				// TRUE or FALSE
+$alert-radius: true; 				// TRUE or FALSE
 
 
 // Button Variables:
 // ------------------------------------------------
+
 $button-radius: true;               // TRUE or FALSE
+
+
+// Navigation Variables:
+// ------------------------------------------------
+
+// Top Menu:
+$top-menu-height:       	50px;
+$top-menu-font-size:    	1.2rem;
+$toggle-menu-bg:        	$jet;
+$top-menu-bg:				$snow;
+$top-menu-link-color:		$primary-color;
+$top-menu-text-transform:	uppercase;
+
+$top-menu-hover-bg:			$gainsboro;
+$top-menu-hover-bg-l3:		$base;
 

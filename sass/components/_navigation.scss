@@ -1,22 +1,30 @@
 // ------------------------------------------------
 // NAVIGATION:
 //
+// Top Bar Menu
+// ------------------------------------------------
+
+
+// Vars:
+// ------------------------------------------------
+// $top-menu-height:       50px;
+// $top-menu-font-size:    1.5rem;
+// $top-menu-bg:           $snow;
+// $toggle-menu-bg:        $jet;
+// $top-menu-link-color:   $primary-color;
+
+
+
+
+// Top Menu:
 // ------------------------------------------------
 
 .top-menu {
-    background: green;
-}
 
-.toggleMenu {
-    display:  none;
-    background: #666;
-    padding: 10px 15px;
-    color: #fff;
-}
-
-
-
-.top-menu {
+    background: $top-menu-bg;
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 2rem;
+    // min-height: $top-menu-height;
 
     ul,
     li {
@@ -27,7 +35,6 @@
     .nav {
         list-style: none;
          *zoom: 1;
-         background:#175e4c;
     }
     .nav:before,
     .nav:after {
@@ -37,29 +44,40 @@
     .nav:after {
         clear: both;
     }
+
     .nav ul {
         list-style: none;
-        width: 9em;
+        white-space: nowrap;
     }
     .nav a {
         padding: 10px 15px;
-        color:#fff;
+        color: $top-menu-link-color;
         text-decoration: none;
+        text-transform: $top-menu-text-transform;
     }
     .nav li {
         position: relative;
+        // min-height: $top-menu-height;
     }
     .nav > li {
         float: left;
-        border-top: 1px solid #104336;
+        // border-top: 1px solid $border-color;
+    }
+    .nav > li:hover {
+        background: $top-menu-hover-bg;
     }
     .nav > li > .parent {
-        background-image: url("images/downArrow.png");
-        background-repeat: no-repeat;
-        background-position: right;
+        // background-image: url("images/downArrow.png");
+        // background-repeat: no-repeat;
+        // background-position: right;
     }
+        .nav > li > .parent:after {
+            content: " ▸";
+        }
+
     .nav > li > a {
         display: block;
+        font-size: $top-menu-font-size;
     }
     .nav li  ul {
         position: absolute;
@@ -68,24 +86,31 @@
     .nav > li.hover > ul {
         left: 0;
     }
+
+
+
     .nav li li.hover ul {
         left: 100%;
         top: 0;
     }
     .nav li li a {
         display: block;
-        background: #1d7a62;
+        background: $top-menu-hover-bg;
         position: relative;
         z-index:100;
-        border-top: 1px solid #175e4c;
+        border-top: 1px solid $border-color;
+        font-size: $top-menu-font-size;
     }
     .nav li li li a {
-        background:#249578;
+        background: $top-menu-hover-bg-l3;
         z-index:200;
-        border-top: 1px solid #1d7a62;
+        border-top: 1px solid $border-color;
+        font-size: $top-menu-font-size;
     }
 
-    @media screen and (max-width: 768px) {
+    // @media screen and (max-width: 768px) {
+    @include mobile-only {
+
         .active {
             display: block;
         }
@@ -96,10 +121,14 @@
             background-position: 95% 50%;
         }
         .nav li li .parent {
-            background-image: url("images/downArrow.png");
-            background-repeat: no-repeat;
-            background-position: 95% 50%;
+            // background-image: url("images/downArrow.png");
+            // background-repeat: no-repeat;
+            // background-position: 95% 50%;
         }
+            .nav li li .parent:after {
+            content: " ▸";
+            }
+
         .nav ul {
             display: block;
             width: 100%;
@@ -108,6 +137,24 @@
             position: static;
         }
 
-    }
+    } // END Media Query
 
 } // END
+
+
+
+
+// Top Menu Toggle for Mobile
+// ------------------------------------------------
+
+.toggleMenu {
+    display:  none;
+    background: $toggle-menu-bg;
+    padding: 10px 15px;
+    color: #fff;
+    width: 100%;
+}
+
+a.toggleMenu {
+    text-decoration: none;
+}
