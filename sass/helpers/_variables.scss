@@ -95,6 +95,7 @@ $mq-mobile-landscape    : 480px;
 $mq-tablet-portrait     : 768px;
 $mq-tablet-landscape    : 1024px;
 $mq-desktop             : 1382px;
+$mq-mega                : 1383px;
 
 
 // Options:
@@ -102,6 +103,29 @@ $push-pull-classes:     false;
 $offset-classes:        false;
 $centered-classes:      false;
 
+
+// Typography Variables:
+// ------------------------------------------------
+
+// General (Paragraph inherits from this):
+$line-height:   1.6rem;
+$font-weight:   400;
+
+// Headers:
+$header-font-color: $font-color;
+$header-font-weight: 300;
+
+//Subheaders:
+$subheader-font-color: scale-color($header-font-color, $lightness: 45%);
+$subheader-font-weight: 300;
+$subheader-top-margin: .2rem;
+$subheader-bottom-margin: .5rem;
+
+// Blockquotes:
+$blockquote-font-size:  1.4rem;
+$blockquote-font-color: $font-color;
+$blockquote-border:     5px solid $gainsboro; // Left border
+$blockquote-bg:         $ghost;
 
 
 

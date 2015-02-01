@@ -373,7 +373,7 @@ h6 {
   line-height: 1.6;
   letter-spacing: 0; }
 
-@media (min-width: 550px) {
+@media (min-width: 768px) {
   h1 {
     font-size: 5rem; }
   h2 {
@@ -387,6 +387,12 @@ h6 {
   h6 {
     font-size: 1.6rem; } }
 
+.subheader {
+  color: #858585;
+  font-weight: 300;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem; }
+
 p {
   margin-top: 0; }
 
@@ -394,18 +400,17 @@ p {
   font-size: 1.1em; }
 
 blockquote {
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.6rem 0;
   padding: 1rem 2rem;
   border-left: 5px solid #DDDDDD;
   color: #222222;
-  font-size: 0.9em;
+  font-size: 1.4rem;
   background: #FAFAFA; }
   blockquote cite {
     display: block;
-    font-size: 0.9em;
-    color: #222222; }
-    blockquote cite:before {
-      content: "\2014 \0020"; }
+    font-size: 0.8em;
+    color: #222222;
+    font-style: oblique; }
 
 a {
   color: #1EAEDB; }
@@ -459,6 +464,13 @@ pre > code {
   display: block;
   padding: 1rem 1.5rem;
   white-space: pre; }
+
+hr {
+  border: solid #CCCCCC;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.6rem 0;
+  height: 0; }
 
 img {
   max-width: 100%;
@@ -527,7 +539,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 2rem;
   max-width: 960px; }
 
 .row:before, .row:after {
@@ -799,7 +811,8 @@ input[type="email"], input[type="search"], input[type="text"], input[type="passw
   border-radius: 4px;
   box-shadow: none;
   background: #fff;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 1.6rem; }
 
 /* Removes awkard default styles on some inputs */
 input[type="email"], input[type="search"], input[type="text"], textarea {
@@ -826,7 +839,8 @@ fieldset {
   padding: 0; }
 
 input[type="checkbox"], input[type="radio"] {
-  display: inline; }
+  display: inline;
+  margin-bottom: 1.6rem; }
 
 label > .label-body {
   display: inline-block;
@@ -869,9 +883,14 @@ tbody tr:hover {
   .show-for-small-only, .show-for-desktop-only {
     display: none !important; } }
 
-/* large displays */
+/* desktop displays */
 @media only screen and (min-width: 1025px) and (max-width: 1382px) {
   .show-for-small-only, .show-for-medium-only {
+    display: none !important; } }
+
+/* desktop displays */
+@media only screen and (min-width: 1383px) {
+  .show-for-small-only, .show-for-medium-only, .show-for-desktop-only {
     display: none !important; } }
 
 .button, button, input[type="submit"], input[type="reset"], input[type="button"] {

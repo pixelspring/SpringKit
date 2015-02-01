@@ -27,11 +27,22 @@
 
  }
 
-/* large displays */
+/* desktop displays */
 @include desktop-only {
 
 	.show-for-small-only,
 	.show-for-medium-only {
+    	display: none !important;
+	}
+
+ }
+
+ /* desktop displays */
+@include mega-only {
+
+	.show-for-small-only,
+	.show-for-medium-only,
+	.show-for-desktop-only {
     	display: none !important;
 	}
 

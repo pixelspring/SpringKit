@@ -10,6 +10,11 @@ $mq-mobile-landscape    : 480px !default;
 $mq-tablet-portrait     : 768px !default;
 $mq-tablet-landscape    : 1024px !default;
 $mq-desktop             : 1382px !default;
+$mq-mega                : 1383px !default;
+
+
+// Mobile
+// ------------------------------------------------
 
 // Both portrait and landscape
 @mixin mobile-only {
@@ -61,6 +66,10 @@ $mq-desktop             : 1382px !default;
     }
 }
 
+
+// Tablet:
+// ------------------------------------------------
+
 // Both the portrait and landscape width of the tablet
 // Larger than a landscape mobile but less than or equal to a landscape tablet
 @mixin tablet-only {
@@ -111,6 +120,10 @@ $mq-desktop             : 1382px !default;
     }
 }
 
+
+// Desktop:
+// ------------------------------------------------
+
 // Everything larger than a landscape tablet
 @mixin desktop-and-up {
     @media only screen and (min-width : $mq-tablet-landscape + 1) {
@@ -131,6 +144,21 @@ $mq-desktop             : 1382px !default;
         @content;
     }
 }
+
+
+// Mega (Very Wide):
+// ------------------------------------------------
+
+// Everything larger than a desktop
+@mixin mega-only {
+    @media only screen and (min-width : $mq-desktop + 1) {
+        @content;
+    }
+}
+
+
+// RETINA:
+// ------------------------------------------------
 
 // Retina screens have a 1.5 pixel ratio, not 2
 @mixin retina {
