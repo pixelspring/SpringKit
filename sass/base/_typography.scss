@@ -50,6 +50,9 @@ p {
     font-size: 1.1em;
 }
 
+// Small Tag: Covered in Normalize.css (font-size: 80%) but override here if needed
+// small {font-size: 80%}
+
 
 // Links
 // ------------------------------------------------
@@ -121,6 +124,7 @@ code {
     border: 1px solid $border-color;
     border-radius: $global-radius;
     white-space: nowrap;
+    overflow: auto;
 }
 pre > code {
     display: block;
