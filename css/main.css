@@ -393,6 +393,20 @@ p {
 .lead-text {
   font-size: 1.1em; }
 
+blockquote {
+  margin: 0 0 1rem 0;
+  padding: 1rem 2rem;
+  border-left: 5px solid #DDDDDD;
+  color: #222222;
+  font-size: 0.9em;
+  background: #FAFAFA; }
+  blockquote cite {
+    display: block;
+    font-size: 0.9em;
+    color: #222222; }
+    blockquote cite:before {
+      content: "\2014 \0020"; }
+
 a {
   color: #1EAEDB; }
 

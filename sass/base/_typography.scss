@@ -53,6 +53,26 @@ p {
 // Small Tag: Covered in Normalize.css (font-size: 80%) but override here if needed
 // small {font-size: 80%}
 
+// Blockquotes:
+
+blockquote {
+    margin: 0 0 1rem 0;
+    padding: 1rem 2rem;
+    border-left: 5px solid $gainsboro;
+    color: $font-color;
+    font-size: 0.9em;
+    background: $ghost;
+
+    cite {
+        display: block;
+        font-size: 0.9em;
+        color: $font-color;
+            &:before {
+              content: "\2014 \0020";
+            }
+    }
+
+}
 
 // Links
 // ------------------------------------------------
