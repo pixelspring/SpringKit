@@ -973,7 +973,9 @@ tbody tr:hover {
 .top-menu {
   background: #F9F9F9;
   border-bottom: 1px solid #CCCCCC;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  min-height: 30px;
+  line-height: 30px; }
   .top-menu ul, .top-menu li {
     margin: 0; }
   .top-menu .nav {
@@ -1023,7 +1025,7 @@ tbody tr:hover {
     z-index: 200;
     border-top: 1px solid #CCCCCC;
     font-size: 1.2rem; }
-  @media (max-width: 480px) {
+  @media only screen and (max-width: 768px) {
     .top-menu .active {
       display: block; }
     .top-menu .nav > li {
@@ -1037,6 +1039,12 @@ tbody tr:hover {
       width: 100%; }
     .top-menu .nav > li.hover > ul, .top-menu .nav li li.hover ul {
       position: static; } }
+
+@media only screen and (min-width: 481px) {
+  .top-menu-contained {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 960px; } }
 
 .toggleMenu {
   display: none;

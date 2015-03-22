@@ -24,7 +24,8 @@
     background: $top-menu-bg;
     border-bottom: 1px solid $border-color;
     margin-bottom: 2rem;
-    // min-height: $top-menu-height;
+    min-height: $top-menu-height;
+    line-height: $top-menu-height;
 
     ul,
     li {
@@ -55,6 +56,11 @@
         text-decoration: none;
         text-transform: $top-menu-text-transform;
     }
+
+    // .nav a:hover {
+    //     background: red;
+    // }
+
     .nav li {
         position: relative;
         // min-height: $top-menu-height;
@@ -83,11 +89,11 @@
         position: absolute;
         left: -9999px;
     }
+
+
     .nav > li.hover > ul {
         left: 0;
     }
-
-
 
     .nav li li.hover ul {
         left: 100%;
@@ -108,8 +114,7 @@
         font-size: $top-menu-font-size;
     }
 
-    // @media screen and (max-width: 768px) {
-    @include mobile-only {
+    @include tablet-portrait-and-below {
 
         .active {
             display: block;
@@ -142,6 +147,17 @@
 } // END
 
 
+
+// Top Menu Contained to row width
+// ------------------------------------------------
+
+.top-menu-contained {
+    @include tablet-portrait-and-up {
+        width: 100%;
+        margin: 0 auto;
+        max-width: $row-width;
+    }
+}
 
 
 // Top Menu Toggle for Mobile
