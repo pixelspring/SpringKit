@@ -156,7 +156,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -270,8 +269,6 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -530,8 +527,6 @@ img {
   z-index: 5; }
 
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 .row {
@@ -970,105 +965,170 @@ tbody tr:hover {
   -webkit-filter: brightness(95%);
   border-right: 25px solid #CCCCCC; }
 
+/*
 .top-menu {
-  background: #F9F9F9;
-  border-bottom: 1px solid #CCCCCC;
-  margin-bottom: 2rem;
-  min-height: 30px;
-  line-height: 30px; }
-  .top-menu ul, .top-menu li {
-    margin: 0; }
-  .top-menu .nav {
-    list-style: none;
-    *zoom: 1; }
-  .top-menu .nav:before, .top-menu .nav:after {
-    content: " ";
-    display: table; }
-  .top-menu .nav:after {
-    clear: both; }
-  .top-menu .nav ul {
-    list-style: none;
-    white-space: nowrap; }
-  .top-menu .nav a {
-    padding: 10px 15px;
-    color: #1EAEDB;
-    text-decoration: none;
-    text-transform: uppercase; }
-  .top-menu .nav li {
-    position: relative; }
-  .top-menu .nav > li {
-    float: left; }
-  .top-menu .nav > li:hover {
-    background: #DDDDDD; }
-  .top-menu .nav > li > .parent:after {
-    content: " ▸"; }
-  .top-menu .nav > li > a {
-    display: block;
-    font-size: 1.2rem; }
-  .top-menu .nav li ul {
-    position: absolute;
-    left: -9999px; }
-  .top-menu .nav > li.hover > ul {
-    left: 0; }
-  .top-menu .nav li li.hover ul {
-    left: 100%;
-    top: 0; }
-  .top-menu .nav li li a {
-    display: block;
-    background: #DDDDDD;
-    position: relative;
-    z-index: 100;
-    border-top: 1px solid #CCCCCC;
-    font-size: 1.2rem; }
-  .top-menu .nav li li li a {
-    background: #AAAAAA;
-    z-index: 200;
-    border-top: 1px solid #CCCCCC;
-    font-size: 1.2rem; }
-  @media only screen and (max-width: 768px) {
-    .top-menu .active {
-      display: block; }
-    .top-menu .nav > li {
-      float: none; }
-    .top-menu .nav > li > .parent {
-      background-position: 95% 50%; }
-    .top-menu .nav li li .parent:after {
-      content: " ▸"; }
-    .top-menu .nav ul {
-      display: block;
-      width: 100%; }
-    .top-menu .nav > li.hover > ul, .top-menu .nav li li.hover ul {
-      position: static; } }
 
-@media only screen and (min-width: 481px) {
-  .top-menu-contained {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 960px; } }
+    background: $top-menu-bg;
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 2rem;
+    min-height: $top-menu-height;
+    line-height: $top-menu-height;
+
+    ul,
+    li {
+        margin: 0;
+    }
+
+
+    .nav {
+        list-style: none;
+         *zoom: 1;
+    }
+    .nav:before,
+    .nav:after {
+        content: " ";
+        display: table;
+    }
+    .nav:after {
+        clear: both;
+    }
+
+    .nav ul {
+        list-style: none;
+        white-space: nowrap;
+    }
+    .nav a {
+        padding: 10px 15px;
+        color: $top-menu-link-color;
+        text-decoration: none;
+        text-transform: $top-menu-text-transform;
+    }
+
+    // .nav a:hover {
+    //     background: red;
+    // }
+
+    .nav li {
+        position: relative;
+        // min-height: $top-menu-height;
+    }
+    .nav > li {
+        float: left;
+        // border-top: 1px solid $border-color;
+    }
+    .nav > li:hover {
+        background: $top-menu-hover-bg;
+        // transition: all 0.5s ease;
+    }
+    .nav > li > .parent {
+        // background-image: url("images/downArrow.png");
+        // background-repeat: no-repeat;
+        // background-position: right;
+    }
+        .nav > li > .parent:after {
+            content: " ▸";
+        }
+
+    .nav > li > a {
+        display: block;
+        font-size: $top-menu-font-size;
+    }
+    .nav li ul {
+        position: absolute;
+        left: -9999px;
+        // transition: all 0.25s ease; // TRANSITION
+    }
+
+
+    .nav > li.hover > ul {
+        left: 0;
+    }
+
+    .nav li li.hover ul {
+        left: 100%;
+        top: 0;
+    }
+    .nav li li a {
+        display: block;
+        background: $top-menu-hover-bg;
+        position: relative;
+        z-index:100;
+        border-top: 1px solid $border-color;
+        font-size: $top-menu-font-size;
+    }
+    .nav li li li a {
+        background: $top-menu-hover-bg-l3;
+        z-index:200;
+        border-top: 1px solid $border-color;
+        font-size: $top-menu-font-size;
+    }
+
+    @include tablet-portrait-and-below {
+
+        .active {
+            display: block;
+        }
+        .nav > li {
+            float: none;
+        }
+        .nav > li > .parent {
+            background-position: 95% 50%;
+        }
+        .nav li li .parent {
+            // background-image: url("images/downArrow.png");
+            // background-repeat: no-repeat;
+            // background-position: 95% 50%;
+        }
+            .nav li li .parent:after {
+            content: " ▸";
+            }
+
+        .nav ul {
+            display: block;
+            width: 100%;
+        }
+       .nav > li.hover > ul , .nav li li.hover ul {
+            position: static;
+        }
+
+    } // END Media Query
+
+} // END
+
+
+
+// Top Menu Contained to row width
+// ------------------------------------------------
+
+.top-menu-contained {
+    @include tablet-portrait-and-up {
+        width: 100%;
+        margin: 0 auto;
+        max-width: $row-width;
+    }
+}
+
+
+// Top Menu Toggle for Mobile
+// ------------------------------------------------
 
 .toggleMenu {
-  display: none;
-  background: #222222;
-  padding: 10px 15px;
-  color: #fff;
-  width: 100%; }
+    display:  none;
+    background: $toggle-menu-bg;
+    padding: 10px 15px;
+    color: #fff;
+    width: 100%;
+}
 
 a.toggleMenu {
-  text-decoration: none; }
+    text-decoration: none;
+}
 
-/* Menu style */
+*/
 ul.top-nav-menu {
-  margin: 0 auto;
-  padding: 0px 10px;
-  width: 960px;
-  background: #eee;
+  background: #F9F9F9;
   height: 50px;
-  font-size: 14px;
-  /*  Dropdown shadow */
-  /*
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
-    */ }
+  font-size: 1.2rem; }
 
 ul.top-nav-menu li {
   list-style: none;
@@ -1081,10 +1141,11 @@ ul.top-nav-menu li {
   text-transform: uppercase; }
 
 ul.top-nav-menu li a {
-  color: darkblue;
+  color: #1EAEDB;
   padding: 0px 15px;
   margin: 0px 0px;
-  display: block; }
+  display: block;
+  text-decoration: none; }
 
 ul.top-nav-menu li:hover {
   background: #ddd; }
@@ -1098,11 +1159,7 @@ ul.top-nav-menu li:hover {
   top: 50px;
   left: 0px;
   display: none;
-  /*  Dropdown shadow */
-  /*
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
-    */ }
+  z-index: 1; }
 
 .top-nav-menu ul.submenu ul {
   position: absolute;
@@ -1116,8 +1173,7 @@ ul.top-nav-menu li:hover {
   display: block;
   float: none;
   border-bottom: 1px solid #eee;
-  line-height: 40px;
-  text-transform: none; }
+  line-height: 40px; }
 
 .top-nav-menu ul.submenu li:last-child {
   border: none; }
@@ -1155,15 +1211,13 @@ ul.top-nav-menu ul li.parent:after {
 /* Hover Animation Stuff */
 .top-nav-menu li:hover > ul {
   display: block;
-  -moz-animation: fadeInDown .3s ease-in;
-  -webkit-animation: fadeInDown .3s ease-in;
-  animation: fadeInDown .3s ease-in; }
+  -webkit-animation: fadeInDown .1s ease-in;
+          animation: fadeInDown .1s ease-in; }
 
 .top-nav-menu ul li:hover > ul {
   display: block;
-  -moz-animation: fadeInLeft .3s ease-in;
-  -webkit-animation: fadeInLeft .3s ease-in;
-  animation: fadeInLeft .3s ease-in; }
+  -webkit-animation: fadeInLeft .1s ease-in;
+          animation: fadeInLeft .1s ease-in; }
 
 /* Animation: */
 @-webkit-keyframes fadeInDown {

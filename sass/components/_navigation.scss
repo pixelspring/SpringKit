@@ -19,6 +19,7 @@
 // Top Nav Menu:
 // ------------------------------------------------
 
+/*
 .top-menu {
 
     background: $top-menu-bg;
@@ -177,29 +178,18 @@ a.toggleMenu {
     text-decoration: none;
 }
 
-
+*/
 
 
 // ------------------------------------------------
-// NEW STUFF:
+// Top Nav Menu::
 // ------------------------------------------------
-
-
-/* Menu style */
 
 ul.top-nav-menu{
-    margin: 0 auto;
-    padding: 0px 10px;
-    width: 960px;
-    background: #eee;
-    height: 50px;
-    font-size: 14px;
-
-    /*  Dropdown shadow */
-    /*
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
-    */
+    background: $top-menu-bg;
+    height: $top-menu-height;
+    font-size: $top-menu-font-size;
+    // box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
 }
 
 ul.top-nav-menu li{
@@ -207,17 +197,18 @@ ul.top-nav-menu li{
     float: left;
     padding: 0px 0px;
     margin: 0px 0px;
-    line-height: 50px;
+    line-height: $top-menu-height;
     display: block;
     position: relative;
-    text-transform: uppercase;
+    text-transform: $top-menu-text-transform;
 }
 
 ul.top-nav-menu li a{
-    color: darkblue;
+    color: $top-menu-link-color;
     padding: 0px 15px;
     margin: 0px 0px;
     display: block;
+    text-decoration: none;
 }
 
 ul.top-nav-menu li:hover{
@@ -230,15 +221,11 @@ ul.top-nav-menu li:hover{
     margin: 0px;
     background: #ddd;
     position: absolute;
-    top:50px;
-    left:0px;
+    top: $top-menu-height;
+    left: 0px;
     display:none;
-
-    /*  Dropdown shadow */
-    /*
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
-    */
+    z-index: 1; // Appear above page content
+    // box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
 }
 
 .top-nav-menu ul.submenu ul{
@@ -255,7 +242,6 @@ ul.top-nav-menu li:hover{
     float: none;
     border-bottom: 1px solid #eee;
     line-height: 40px;
-    text-transform: none;
 }
 
 .top-nav-menu ul.submenu li:last-child{
@@ -303,16 +289,12 @@ ul.top-nav-menu ul li.parent:after{
 
 .top-nav-menu li:hover > ul{
     display:block;
-    -moz-animation: fadeInDown .3s ease-in ;
-    -webkit-animation: fadeInDown .3s ease-in ;
-    animation:fadeInDown .3s ease-in ;
+    animation:fadeInDown .2s ease-in ;
 }
 
 .top-nav-menu ul li:hover > ul{
     display:block;
-    -moz-animation: fadeInLeft .3s ease-in ;
-    -webkit-animation: fadeInLeft .3s ease-in ;
-    animation:fadeInLeft .3s ease-in ;
+    animation:fadeInLeft .2s ease-in ;
 }
 
 /* Animation: */
