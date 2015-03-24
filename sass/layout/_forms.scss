@@ -14,6 +14,8 @@ select {
     border-radius: $global-radius;
     box-shadow: none;
     background: #fff;
+    width: 100%;
+    margin-bottom: $line-height;
 }
 
 /* Removes awkard default styles on some inputs */
@@ -56,6 +58,7 @@ fieldset {
 input[type="checkbox"],
 input[type="radio"] {
     display: inline;
+    margin-bottom: $line-height;
 }
 
 label > .label-body {

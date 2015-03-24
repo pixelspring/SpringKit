@@ -1,23 +1,86 @@
-// Alerts:
+// ------------------------------------------------
+// ALERTS:
+//
 // ------------------------------------------------
 
 .alert {
-    padding: 15px;
+    padding: 1.4rem;
     margin: 10px 0;
-    border-radius: 3px;
+
+
+    background: $ghost;
+    font-family: $font-stack-header;
+    font-size: 1.4rem;
+    font-weight: 600;
+
+        @if $alert-border {
+            border: 1px $jumbo solid;
+        }
+
+        @if $alert-radius {
+            border-radius: $global-radius;
+        }
 }
 
 .alert.primary {
-    background: #e8eff3;
-    border: 1px #c5d7e3 solid;
+    background: $primary-color;
+    color: lighten($primary-color, 75%);
+
+        @if $alert-border {
+            border: 1px #c5d7e3 solid;
+        }
+}
+
+.alert.secondary {
+    background: $secondary-color;
+
+        @if $alert-border {
+            border: 1px darken($secondary-color, 65%) solid;
+        }
+}
+
+.alert.info {
+    background: $info-color;
+    color: darken($info-color, 65%);
+
+        @if $alert-border {
+            border: 1px darken($info-color, 65%) solid;
+        }
 }
 
 .alert.success {
-    background: #daeee4;
-    border: 1px #b6dfca solid;
+    background: $success-color;
+    color: darken($success-color, 65%);
+
+        @if $alert-border {
+            border: 1px darken($success-color, 65%) solid;
+        }
+}
+
+.alert.warning {
+    background: $warning-color;
+    color: darken($warning-color, 65%);
+
+        @if $alert-border {
+            border: 1px darken($warning-color, 65%) solid;
+        }
+
 }
 
 .alert.danger {
-    background: #fdf4f1;
-    border: 1px #f7cfc4 solid;
+    background: $danger-color;
+    color: darken($danger-color, 65%);
+
+        @if $alert-border {
+            border: 1px darken($danger-color, 65%) solid;
+        }
+}
+
+
+
+// Alert Hover States:
+// ------------------------------------------------
+.alert:hover {
+    -webkit-filter: brightness(95%);
+    border-right: 25px solid $iron;
 }
