@@ -935,7 +935,7 @@ tbody tr:hover {
   margin-bottom: 1em; }
 
 .alert {
-  padding: 15px;
+  padding: 1.4rem;
   margin: 10px 0;
   background: #FAFAFA;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;

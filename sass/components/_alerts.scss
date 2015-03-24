@@ -4,7 +4,7 @@
 // ------------------------------------------------
 
 .alert {
-    padding: 15px;
+    padding: 1.4rem;
     margin: 10px 0;
 
 
@@ -12,60 +12,68 @@
     font-family: $font-stack-header;
     font-size: 1.4rem;
     font-weight: 600;
-    @if $alert-border {
-        border: 1px $jumbo solid;
-    }
-    @if $alert-radius {
-        border-radius: $global-radius;
-    }
+
+        @if $alert-border {
+            border: 1px $jumbo solid;
+        }
+
+        @if $alert-radius {
+            border-radius: $global-radius;
+        }
 }
 
 .alert.primary {
     background: $primary-color;
     color: lighten($primary-color, 75%);
-    @if $alert-border {
-        border: 1px #c5d7e3 solid;
-    }
+
+        @if $alert-border {
+            border: 1px #c5d7e3 solid;
+        }
 }
 
 .alert.secondary {
     background: $secondary-color;
-    @if $alert-border {
-        border: 1px darken($secondary-color, 65%) solid;
-    }
+
+        @if $alert-border {
+            border: 1px darken($secondary-color, 65%) solid;
+        }
 }
 
 .alert.info {
     background: $info-color;
     color: darken($info-color, 65%);
-    @if $alert-border {
-        border: 1px darken($info-color, 65%) solid;
-    }
+
+        @if $alert-border {
+            border: 1px darken($info-color, 65%) solid;
+        }
 }
 
 .alert.success {
-    background: $success-color; // #daeee4;
+    background: $success-color;
     color: darken($success-color, 65%);
-    @if $alert-border {
-        border: 1px darken($success-color, 65%) solid;
-    }
+
+        @if $alert-border {
+            border: 1px darken($success-color, 65%) solid;
+        }
 }
 
 .alert.warning {
     background: $warning-color;
     color: darken($warning-color, 65%);
-    @if $alert-border {
-        border: 1px darken($warning-color, 65%) solid;
-    }
+
+        @if $alert-border {
+            border: 1px darken($warning-color, 65%) solid;
+        }
 
 }
 
 .alert.danger {
     background: $danger-color;
     color: darken($danger-color, 65%);
-    @if $alert-border {
-        border: 1px darken($danger-color, 65%) solid;
-    }
+
+        @if $alert-border {
+            border: 1px darken($danger-color, 65%) solid;
+        }
 }
 
 
