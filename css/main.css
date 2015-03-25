@@ -1148,13 +1148,14 @@ ul.top-nav-menu li a {
   text-decoration: none; }
 
 ul.top-nav-menu li:hover {
-  background: #ddd; }
+  background: #DDDDDD; }
 
 .top-nav-menu ul.submenu {
-  min-width: 180px;
+  min-width: 100%;
+  white-space: nowrap;
   padding: 0px 0px;
   margin: 0px;
-  background: #ddd;
+  background: #DDDDDD;
   position: absolute;
   top: 50px;
   left: 0px;
@@ -1165,7 +1166,7 @@ ul.top-nav-menu li:hover {
   position: absolute;
   left: 100%;
   top: 0;
-  background: #ccc; }
+  background: #AAAAAA; }
 
 .top-nav-menu ul.submenu li {
   padding: 0px;
@@ -1182,16 +1183,7 @@ ul.top-nav-menu li:hover {
 ul.top-nav-menu li.parent a {
   padding: 0px 20px 0px 15px; }
 
-ul.top-nav-menu li.parent:after {
-  /*
-    font-family: 'Fontawesome';
-    content:"\f0d7";
-    color:#999;
-    position: absolute;
-    right: 5px;
-    top:0px;
-    margin-left: 5px;
-    */
+ul.top-nav-menu li.parent:after, ul.top-nav-menu ul li.parent:after {
   content: " ▸";
   color: #999;
   position: absolute;
@@ -1199,25 +1191,21 @@ ul.top-nav-menu li.parent:after {
   top: 0px;
   margin-left: 5px; }
 
-ul.top-nav-menu ul li.parent:after {
-  font-family: 'Fontawesome';
-  content: "\f0da";
-  color: #999;
-  position: absolute;
-  right: 10px;
-  top: 0px;
-  margin-left: 5px; }
-
 /* Hover Animation Stuff */
 .top-nav-menu li:hover > ul {
   display: block;
-  -webkit-animation: fadeInDown .1s ease-in;
-          animation: fadeInDown .1s ease-in; }
+  -webkit-animation: fadeInDown .2s ease-in;
+          animation: fadeInDown .2s ease-in; }
 
 .top-nav-menu ul li:hover > ul {
   display: block;
-  -webkit-animation: fadeInLeft .1s ease-in;
-          animation: fadeInLeft .1s ease-in; }
+  -webkit-animation: fadeInLeft .2s ease-in;
+          animation: fadeInLeft .2s ease-in; }
+
+ul.top-nav-menu li.parent:hover:after {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg); }
 
 /* Animation: */
 @-webkit-keyframes fadeInDown {
