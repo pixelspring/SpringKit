@@ -290,10 +290,17 @@ ul.top-nav-menu ul li.parent:after {
     animation:fadeInLeft .2s ease-in ;
 }
 
-ul.top-nav-menu li.parent:hover:after{
     // Arrow Effects & Snazzyfabness
-    transform: rotate(90deg);
-}
+    // Parent arrow:
+    ul.top-nav-menu li.parent:hover:after{
+        transform: rotate(90deg);
+    }
+
+    // Child arrow:
+    ul.top-nav-menu ul li.parent:hover:after{
+        transform: none;
+        color: black;
+    }
 
 /* Animation: */
 

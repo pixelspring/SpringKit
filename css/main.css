@@ -1207,6 +1207,12 @@ ul.top-nav-menu li.parent:hover:after {
       -ms-transform: rotate(90deg);
           transform: rotate(90deg); }
 
+ul.top-nav-menu ul li.parent:hover:after {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  color: black; }
+
 /* Animation: */
 @-webkit-keyframes fadeInDown {
   0% {
