@@ -250,7 +250,8 @@ ul.top-nav-menu li:hover{
 }
 
 
-/* Add arrows */
+// Add arrows
+// ------------------------------------------------
 
 ul.top-nav-menu li.parent a{
     padding: 0px 20px 0px 15px;
@@ -278,7 +279,8 @@ ul.top-nav-menu ul li.parent:after {
 
 
 
-/* Hover Animation Stuff */
+// Hover Animation Stuff
+// ------------------------------------------------
 
 .top-nav-menu li:hover > ul{
     display:block;
@@ -291,6 +293,8 @@ ul.top-nav-menu ul li.parent:after {
 }
 
     // Arrow Effects & Snazzyfabness
+    // ------------------------------------------------
+
     // Parent arrow:
     ul.top-nav-menu li.parent:hover:after{
         transform: rotate(90deg);
@@ -302,7 +306,9 @@ ul.top-nav-menu ul li.parent:after {
         color: black;
     }
 
-/* Animation: */
+// Animation:
+// TODO: Use linked AnimationCss instead..
+// ------------------------------------------------
 
 @-webkit-keyframes fadeInDown {
   0% {

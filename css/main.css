@@ -1179,7 +1179,6 @@ ul.top-nav-menu li:hover {
 .top-nav-menu ul.submenu li:last-child {
   border: none; }
 
-/* Add arrows */
 ul.top-nav-menu li.parent a {
   padding: 0px 20px 0px 15px; }
 
@@ -1191,7 +1190,6 @@ ul.top-nav-menu li.parent:after, ul.top-nav-menu ul li.parent:after {
   top: 0px;
   margin-left: 5px; }
 
-/* Hover Animation Stuff */
 .top-nav-menu li:hover > ul {
   display: block;
   -webkit-animation: fadeInDown .2s ease-in;
@@ -1213,7 +1211,6 @@ ul.top-nav-menu ul li.parent:hover:after {
           transform: none;
   color: black; }
 
-/* Animation: */
 @-webkit-keyframes fadeInDown {
   0% {
     opacity: 0;
