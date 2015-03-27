@@ -1125,8 +1125,10 @@ a.toggleMenu {
 }
 
 */
+nav.top-menu {
+  background: #F9F9F9; }
+
 ul.top-nav-menu {
-  background: #F9F9F9;
   height: 50px;
   font-size: 1.2rem; }
 
@@ -1266,6 +1268,12 @@ ul.top-nav-menu ul li.parent:hover:after {
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft; }
+
+@media only screen and (min-width: 481px) {
+  .top-menu-contained {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 960px; } }
 
 /*
 .example .column,
