@@ -7,11 +7,19 @@
 
 // Vars:
 // ------------------------------------------------
-// $top-menu-height:       50px;
-// $top-menu-font-size:    1.5rem;
-// $top-menu-bg:           $snow;
-// $toggle-menu-bg:        $jet;
-// $top-menu-link-color:   $primary-color;
+// $top-menu-height:           50px;
+// $top-menu-font-size:        1.2rem;
+// $toggle-menu-bg:            $jet;
+// $top-menu-bg:               $gainsboro;
+// $top-menu-bg-l2:            $base;
+// $top-menu-bg-l3:            $aluminum;
+// $top-menu-bg-l4:            $jumbo;
+
+// $top-menu-link-color:       $primary-color;
+// $top-menu-text-transform:   uppercase;
+
+// $top-menu-hover-bg:         $snow;
+// $top-menu-hover-bg-gc:      $base;
 
 
 
@@ -19,380 +27,166 @@
 // Top Nav Menu:
 // ------------------------------------------------
 
-/*
-.top-menu {
-
-    background: $top-menu-bg;
-    border-bottom: 1px solid $border-color;
-    margin-bottom: 2rem;
-    min-height: $top-menu-height;
+// Mobile Toggle:
+a.menu-link {
+    display: block;
+    padding: 1rem;
+    color: red;
+    font-size: $top-menu-font-size;
     line-height: $top-menu-height;
-
-    ul,
-    li {
-        margin: 0;
-    }
-
-
-    .nav {
-        list-style: none;
-         *zoom: 1;
-    }
-    .nav:before,
-    .nav:after {
-        content: " ";
-        display: table;
-    }
-    .nav:after {
-        clear: both;
-    }
-
-    .nav ul {
-        list-style: none;
-        white-space: nowrap;
-    }
-    .nav a {
-        padding: 10px 15px;
-        color: $top-menu-link-color;
-        text-decoration: none;
-        text-transform: $top-menu-text-transform;
-    }
-
-    // .nav a:hover {
-    //     background: red;
-    // }
-
-    .nav li {
-        position: relative;
-        // min-height: $top-menu-height;
-    }
-    .nav > li {
-        float: left;
-        // border-top: 1px solid $border-color;
-    }
-    .nav > li:hover {
-        background: $top-menu-hover-bg;
-        // transition: all 0.5s ease;
-    }
-    .nav > li > .parent {
-        // background-image: url("images/downArrow.png");
-        // background-repeat: no-repeat;
-        // background-position: right;
-    }
-        .nav > li > .parent:after {
-            content: " ▸";
-        }
-
-    .nav > li > a {
-        display: block;
-        font-size: $top-menu-font-size;
-    }
-    .nav li ul {
-        position: absolute;
-        left: -9999px;
-        // transition: all 0.25s ease; // TRANSITION
-    }
-
-
-    .nav > li.hover > ul {
-        left: 0;
-    }
-
-    .nav li li.hover ul {
-        left: 100%;
-        top: 0;
-    }
-    .nav li li a {
-        display: block;
-        background: $top-menu-hover-bg;
-        position: relative;
-        z-index:100;
-        border-top: 1px solid $border-color;
-        font-size: $top-menu-font-size;
-    }
-    .nav li li li a {
-        background: $top-menu-hover-bg-l3;
-        z-index:200;
-        border-top: 1px solid $border-color;
-        font-size: $top-menu-font-size;
-    }
-
-    @include tablet-portrait-and-below {
-
-        .active {
-            display: block;
-        }
-        .nav > li {
-            float: none;
-        }
-        .nav > li > .parent {
-            background-position: 95% 50%;
-        }
-        .nav li li .parent {
-            // background-image: url("images/downArrow.png");
-            // background-repeat: no-repeat;
-            // background-position: 95% 50%;
-        }
-            .nav li li .parent:after {
-            content: " ▸";
-            }
-
-        .nav ul {
-            display: block;
-            width: 100%;
-        }
-       .nav > li.hover > ul , .nav li li.hover ul {
-            position: static;
-        }
-
-    } // END Media Query
-
-} // END
-
-
-
-// Top Menu Contained to row width
-// ------------------------------------------------
-
-.top-menu-contained {
-    @include tablet-portrait-and-up {
-        width: 100%;
-        margin: 0 auto;
-        max-width: $row-width;
-    }
-}
-
-
-// Top Menu Toggle for Mobile
-// ------------------------------------------------
-
-.toggleMenu {
-    display:  none;
+    text-decoration: none;
+    text-transform: $top-menu-text-transform;
     background: $toggle-menu-bg;
-    padding: 10px 15px;
-    color: #fff;
     width: 100%;
 }
 
-a.toggleMenu {
-    text-decoration: none;
+// Mobile Up:
+.top-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
 }
 
-*/
+.top-menu li {
+    padding: 0;
+    margin: 0;
+}
 
-
-// ------------------------------------------------
-// Top Nav Menu::
-// ------------------------------------------------
-
-nav.top-menu {
+.top-menu,
+.top-menu > ul ul {
+    clear: both;
+    transition: all 0.3s ease-out;
+    z-index: 1;
+    // border-bottom: 1px solid red;
+    // border-left: 1px solid yellow;
     background: $top-menu-bg;
 }
 
-ul.top-nav-menu {
-    height: $top-menu-height;
-    font-size: $top-menu-font-size;
-    // box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
+.js .top-menu, .js .top-menu > ul ul {
+    overflow: hidden;
+    max-height: 0;
+    background: $top-menu-bg;
 }
 
-ul.top-nav-menu li {
-    list-style: none;
-    float: left;
-    padding: 0px 0px;
-    margin: 0px 0px;
-    line-height: $top-menu-height;
-    display: block;
-    position: relative;
-    text-transform: $top-menu-text-transform;
+.top-menu.active, .js .top-menu > ul ul.active {
+    max-height: 55em;
 }
 
-ul.top-nav-menu li a {
+.top-menu > ul {
+    border-top: 1px solid $primary-color;
+}
+
+.top-menu li a {
     color: $top-menu-link-color;
-    padding: 0px 15px;
-    margin: 0px 0px;
     display: block;
+    padding: 0 $top-menu-font-size;
+    border-bottom: 1px solid #808080;
+    position: relative;
+
+    text-transform: $top-menu-text-transform;
     text-decoration: none;
+
+    font-size: $top-menu-font-size;
+    line-height: $top-menu-height;
 }
 
-ul.top-nav-menu li:hover{
-    background: $top-menu-hover-bg;
-}
-
-.top-nav-menu ul.submenu {
-    min-width: 100%; // 180px;
-    white-space: nowrap;
-    padding: 0px 0px;
-    margin: 0px;
-    background: $top-menu-hover-bg;
+.top-menu li.has-subnav > a:after {
+    content: '+';
     position: absolute;
-    top: $top-menu-height;
-    left: 0px;
-    display:none;
-    z-index: 1; // Appear above page content
-    // box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
-}
-
-.top-nav-menu ul.submenu ul {
-    position: absolute;
-    left: 100%;
-    top:0;
-    background: $top-menu-hover-bg-gc;
-}
-
-.top-nav-menu ul.submenu li {
-    padding: 0px;
-    margin: 0px;
+    top: 0;
+    right: 0;
     display: block;
-    float: none;
-    border-bottom: 1px solid #eee;
-    line-height: 40px;
+    font-size: $top-menu-font-size; // 1.5em;
+    padding: 0.25em 0.5em;
 }
 
-.top-nav-menu ul.submenu li:last-child {
-    border: none;
+.top-menu li.has-subnav > a.active:after {
+    content: "-";
 }
 
-
-// Add arrows
-// ------------------------------------------------
-
-ul.top-nav-menu li.parent a {
-    padding: 0px 20px 0px 15px;
+// Child Colours:
+.top-menu ul.level-2.active  {
+  background: $top-menu-bg-l2;
+  border-left: 1.5rem solid gray;
 }
 
-ul.top-nav-menu li.parent:after,
-ul.top-nav-menu ul li.parent:after {
-    // Icon Font
-    // font-family: 'Fontawesome';
-    // content:"\f0d7";
-    // color:#999;
-    // position: absolute;
-    // right: 5px;
-    // top:0px;
-    // margin-left: 5px;
-
-    // Non-icon font:
-    content: " ▸";
-    color:#999;
-    position: absolute;
-    right: 5px;
-    top:0px;
-    margin-left: 5px;
+.top-menu ul.level-3.active  {
+  background: $top-menu-bg-l3;
+  border-left: 1.5rem solid gray;
 }
 
-
-
-// Hover Animation Stuff
-// ------------------------------------------------
-
-.top-nav-menu li:hover > ul {
-    display:block;
-    animation:fadeInDown .2s ease-in ;
+.top-menu ul.level-4.active  {
+  background: $top-menu-bg-l4;
+  border-left: 1.5rem solid gray;
 }
 
-.top-nav-menu ul li:hover > ul {
-    display:block;
-    animation:fadeInLeft .2s ease-in ;
-}
+// Tablet & Up:
+@include tablet-landscape-and-up {
 
-    // Arrow Effects & Snazzyfabness
-    // ------------------------------------------------
-
-    // Parent arrow:
-    ul.top-nav-menu li.parent:hover:after{
-        transform: rotate(90deg);
+    a.menu-link {
+       display: none;
     }
 
-    // Child arrow:
-    ul.top-nav-menu ul li.parent:hover:after{
-        transform: none;
-        color: black;
-    }
-
-// Animation:
-// TODO: Use linked AnimationCss instead..
-// ------------------------------------------------
-
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-}
-
-
-@-webkit-keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-20px);
-    transform: translateX(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-20px);
-    -ms-transform: translateX(-20px);
-    transform: translateX(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-.fadeInLeft {
-  -webkit-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
-}
-
-
-
-// Top Menu Contained to row width
-// ------------------------------------------------
-
-.top-menu-contained {
-    @include tablet-portrait-and-up {
+    .contained {
         width: 100%;
         margin: 0 auto;
         max-width: $row-width;
+    }
+
+    .js .top-menu, .js .top-menu > ul ul {
+        max-height: none;
+        overflow: visible;
+        background: $top-menu-bg;
+    }
+    .js .top-menu > ul ul {
+        background: $top-menu-bg;
+        display: none;
+    }
+    .js .top-menu > ul li:hover > ul {
+        display: block;
+    }
+    .top-menu ul {
+        margin: 0; // 0 0 0 -0.25em;
+        border: 0;
+    }
+    .top-menu li a {
+        border: 0;
+    }
+
+    .top-menu li a:hover {
+        background: $top-menu-hover-bg; // EDIT
+    }
+
+    .top-menu li.has-subnav > a {
+        padding-right: 2em;
+    }
+    .top-menu li.has-subnav > a:after {
+        content: "▸";
+        font-size: $top-menu-font-size;
+        padding: 0 $top-menu-font-size;
+    }
+    .top-menu .level-1 > li.has-subnav > a:after {
+        content: "▸";
+    }
+    .top-menu > ul li {
+        // margin: 0 0.25em;
+    }
+    .top-menu > ul > li {
+        display: inline-block;
+        position: relative;
+    }
+    .top-menu > ul ul {
+        position: absolute;
+        top: 0;
+        left: 12em;
+        width: 12em;
+    }
+    .top-menu > ul ul li {
+        position: relative;
+    }
+    .top-menu > ul ul.level-2 {
+        top: $top-menu-height; // 3em;
+        left: 0;
     }
 }
