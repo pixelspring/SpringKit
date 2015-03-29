@@ -8,6 +8,7 @@
 // Vars:
 // ------------------------------------------------
 // $top-menu-height:           50px;
+// $top-menu-bottom-margin:    30px;
 // $top-menu-font-size:        1.2rem;
 // $toggle-menu-bg:            $jet;
 // $top-menu-bg:               $gainsboro;
@@ -18,8 +19,10 @@
 // $top-menu-link-color:       $primary-color;
 // $top-menu-text-transform:   uppercase;
 
-// $top-menu-hover-bg:         $snow;
+// $top-menu-hover-bg:         $iron;
 // $top-menu-hover-bg-gc:      $base;
+
+// $top-menu-mb-border-color:  $jet;
 
 
 
@@ -31,7 +34,7 @@
 a.menu-link {
     display: block;
     padding: 1rem;
-    color: red;
+    color: $top-menu-link-color;
     font-size: $top-menu-font-size;
     line-height: $top-menu-height;
     text-decoration: none;
@@ -39,6 +42,18 @@ a.menu-link {
     background: $toggle-menu-bg;
     width: 100%;
 }
+
+a.menu-link:before {
+    content:'\2261';
+    padding-right: 1rem;
+    font-size: 200%;
+    vertical-align:middle;
+}
+
+.top-menu {
+    margin-bottom: $top-menu-bottom-margin;
+}
+
 
 // Mobile Up:
 .top-menu ul {
@@ -97,8 +112,8 @@ a.menu-link {
     top: 0;
     right: 0;
     display: block;
-    font-size: $top-menu-font-size; // 1.5em;
-    padding: 0.25em 0.5em;
+    padding-right: 1rem;
+    font-size: 200%;
 }
 
 .top-menu li.has-subnav > a.active:after {
@@ -108,17 +123,17 @@ a.menu-link {
 // Child Colours:
 .top-menu ul.level-2.active  {
   background: $top-menu-bg-l2;
-  border-left: 1.5rem solid gray;
+  border-left: 1.5rem solid $top-menu-mb-border-color;
 }
 
 .top-menu ul.level-3.active  {
   background: $top-menu-bg-l3;
-  border-left: 1.5rem solid gray;
+  border-left: 1.5rem solid $top-menu-mb-border-color;
 }
 
 .top-menu ul.level-4.active  {
   background: $top-menu-bg-l4;
-  border-left: 1.5rem solid gray;
+  border-left: 1.5rem solid $top-menu-mb-border-color;
 }
 
 // Tablet & Up:
@@ -132,6 +147,7 @@ a.menu-link {
         width: 100%;
         margin: 0 auto;
         max-width: $row-width;
+        margin-bottom: $top-menu-bottom-margin;
     }
 
     .js .top-menu, .js .top-menu > ul ul {
@@ -139,54 +155,68 @@ a.menu-link {
         overflow: visible;
         background: $top-menu-bg;
     }
+
     .js .top-menu > ul ul {
         background: $top-menu-bg;
         display: none;
     }
+
     .js .top-menu > ul li:hover > ul {
         display: block;
     }
+
     .top-menu ul {
         margin: 0; // 0 0 0 -0.25em;
         border: 0;
     }
+
     .top-menu li a {
         border: 0;
     }
 
     .top-menu li a:hover {
-        background: $top-menu-hover-bg; // EDIT
+        background: $top-menu-hover-bg;
     }
 
     .top-menu li.has-subnav > a {
         padding-right: 2em;
     }
+
     .top-menu li.has-subnav > a:after {
         content: "▸";
         font-size: $top-menu-font-size;
         padding: 0 $top-menu-font-size;
     }
+
     .top-menu .level-1 > li.has-subnav > a:after {
         content: "▸";
     }
+
+    /*
     .top-menu > ul li {
-        // margin: 0 0.25em;
+        border-bottom: 1px solid $border-color;
     }
+    */
+
     .top-menu > ul > li {
         display: inline-block;
         position: relative;
     }
+
     .top-menu > ul ul {
         position: absolute;
         top: 0;
         left: 12em;
         width: 12em;
     }
+
     .top-menu > ul ul li {
         position: relative;
+        border-bottom: 1px solid $border-color;
     }
+
     .top-menu > ul ul.level-2 {
-        top: $top-menu-height; // 3em;
+        top: $top-menu-height;
         left: 0;
     }
 }

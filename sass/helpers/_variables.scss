@@ -148,6 +148,7 @@ $button-radius: true;               // TRUE or FALSE
 
 // Top Menu:
 $top-menu-height:       	50px;
+$top-menu-bottom-margin:    30px;
 $top-menu-font-size:    	1.2rem;
 $toggle-menu-bg:        	$jet;
 $top-menu-bg:				$gainsboro;
@@ -160,4 +161,6 @@ $top-menu-text-transform:	uppercase;
 
 $top-menu-hover-bg:			$iron;
 $top-menu-hover-bg-gc:		$base;
+
+$top-menu-mb-border-color:  $toggle-menu-bg;
 

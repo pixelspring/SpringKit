@@ -968,13 +968,22 @@ tbody tr:hover {
 a.menu-link {
   display: block;
   padding: 1rem;
-  color: red;
+  color: #1EAEDB;
   font-size: 1.2rem;
   line-height: 50px;
   text-decoration: none;
   text-transform: uppercase;
   background: #222222;
   width: 100%; }
+
+a.menu-link:before {
+  content: '\2261';
+  padding-right: 1rem;
+  font-size: 200%;
+  vertical-align: middle; }
+
+.top-menu {
+  margin-bottom: 30px; }
 
 .top-menu ul {
   list-style: none;
@@ -1021,23 +1030,23 @@ a.menu-link {
   top: 0;
   right: 0;
   display: block;
-  font-size: 1.2rem;
-  padding: 0.25em 0.5em; }
+  padding-right: 1rem;
+  font-size: 200%; }
 
 .top-menu li.has-subnav > a.active:after {
   content: "-"; }
 
 .top-menu ul.level-2.active {
   background: #AAAAAA;
-  border-left: 1.5rem solid gray; }
+  border-left: 1.5rem solid #222222; }
 
 .top-menu ul.level-3.active {
   background: #999999;
-  border-left: 1.5rem solid gray; }
+  border-left: 1.5rem solid #222222; }
 
 .top-menu ul.level-4.active {
   background: #888888;
-  border-left: 1.5rem solid gray; }
+  border-left: 1.5rem solid #222222; }
 
 @media only screen and (min-width: 769px) {
   a.menu-link {
@@ -1045,7 +1054,8 @@ a.menu-link {
   .contained {
     width: 100%;
     margin: 0 auto;
-    max-width: 960px; }
+    max-width: 960px;
+    margin-bottom: 30px; }
   .js .top-menu, .js .top-menu > ul ul {
     max-height: none;
     overflow: visible;
@@ -1070,6 +1080,11 @@ a.menu-link {
     padding: 0 1.2rem; }
   .top-menu .level-1 > li.has-subnav > a:after {
     content: "▸"; }
+  /*
+    .top-menu > ul li {
+        border-bottom: 1px solid $border-color;
+    }
+    */
   .top-menu > ul > li {
     display: inline-block;
     position: relative; }
@@ -1079,7 +1094,8 @@ a.menu-link {
     left: 12em;
     width: 12em; }
   .top-menu > ul ul li {
-    position: relative; }
+    position: relative;
+    border-bottom: 1px solid #CCCCCC; }
   .top-menu > ul ul.level-2 {
     top: 50px;
     left: 0; } }
