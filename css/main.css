@@ -1100,6 +1100,44 @@ a.menu-link:before {
     top: 50px;
     left: 0; } }
 
+.sidebar-nav {
+  background: black;
+  width: 20%;
+  min-height: 100%;
+  z-index: 1;
+  position: fixed;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease; }
+
+.sidebar-nav ul {
+  list-style: none; }
+
+.sidebar-nav li {
+  padding: 5px 10px; }
+
+.sidebar-nav li a {
+  text-decoration: none;
+  display: block; }
+
+li.sidebar-brand {
+  padding: 25px 10px;
+  font-size: 2.5rem; }
+
+.sidebar-nav li:hover {
+  background: #222222; }
+
+.sbp-content {
+  margin-left: 20%;
+  padding: 0 50px; }
+
+@media only screen and (max-width: 640px) {
+  .sbp-content {
+    padding: 0; }
+  .sidebar-nav {
+    position: relative;
+    width: 100%; } }
+
 /*
 .example .column,
 .example .columns {

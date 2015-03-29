@@ -1,0 +1,74 @@
+// ------------------------------------------------
+//  SIDEBAR.SCSS:
+//
+//  Sidebar Nav:
+// ------------------------------------------------
+
+// Vars:
+// ------------------------------------------------
+$sidebar-width:         20%; // 250px;
+$sbp-content-padding:   0 50px;
+
+
+
+// Sidebar Nav:
+// ------------------------------------------------
+
+.sidebar-nav {
+    background: black;
+    width: $sidebar-width;
+    min-height: 100%;
+
+    z-index: 1;
+    position: fixed;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav li {
+    padding: 5px 10px;
+}
+
+.sidebar-nav li a {
+    text-decoration: none;
+    display: block;
+}
+
+li.sidebar-brand {
+    padding: 25px 10px;
+    font-size: 2.5rem;
+}
+
+.sidebar-nav li:hover {
+    background: $jet;
+}
+
+
+
+// Sidebar Page Content:
+// ------------------------------------------------
+
+.sbp-content {
+    margin-left: $sidebar-width;
+    padding: $sbp-content-padding;
+}
+
+
+
+@media only screen and (max-width: 640px) {
+
+
+    .sbp-content {
+        padding: 0;
+    }
+
+    .sidebar-nav {
+        position: relative;
+        width: 100%;
+    }
+
+}
