@@ -1,7 +1,7 @@
 // ------------------------------------------------
 // APP.JS
 //
-// (1)  Nav Menu
+// (1)  Top Nav Menu
 // (2)  ???
 // (3)  Profit...
 // ------------------------------------------------
@@ -10,7 +10,7 @@
 
 
 // ------------------------------------------------
-// (1)  Nav Menu:
+// (1)  Top Nav Menu:
 // ------------------------------------------------
 
 $(document).ready(function() {
@@ -32,5 +32,15 @@ $(document).ready(function() {
         $this.toggleClass('active').next('ul').toggleClass('active');
     });
 
+});
 
+
+// ------------------------------------------------
+// (2)  Sidenav:
+// ------------------------------------------------
+
+
+$("#toggleSidenav").click(function(){
+    $("#sb_nav").toggleClass("active");
+    // $("#sbp_content").toggleClass("pushed");
 });

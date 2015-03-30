@@ -2,73 +2,95 @@
 //  SIDEBAR.SCSS:
 //
 //  Sidebar Nav:
+//  (1) Vars
+//  (2) Sidebar Nav
+//  (3) Sidebar Page Content
 // ------------------------------------------------
 
 // Vars:
 // ------------------------------------------------
-$sidebar-width:         20%; // 250px;
-$sbp-content-padding:   0 50px;
-
+$sidebar-width:                 250px; // 20%
+$sbp-content-padding:           30px 0 0 0;
+$sidebar-nav-bg:                $jet;
+$sidebar-nav-bg-hover-color:    $black;
+$sidebar-nav-font-size:         1.4rem;
 
 
 // Sidebar Nav:
 // ------------------------------------------------
-
-.sidebar-nav {
-    background: black;
-    width: $sidebar-width;
-    min-height: 100%;
-
-    z-index: 1;
+.sb-nav {
     position: fixed;
-    overflow: hidden;
-    transition: all 0.5s ease;
-}
+    left:   -$sidebar-width;
+    width:  $sidebar-width;
+    height: 100%;
+    z-index: 1;
 
-.sidebar-nav ul {
-    list-style: none;
-}
+    background: $sidebar-nav-bg;
+    font-size: $sidebar-nav-font-size;
 
-.sidebar-nav li {
-    padding: 5px 10px;
-}
+    ul {
+        list-style: none;
+    }
 
-.sidebar-nav li a {
+    li {
+        padding: 5px 15px;
+    }
+
+    li a {
     text-decoration: none;
     display: block;
+    }
+
+    li.sidebar-brand {
+        padding: 25px 15px;
+        font-size: 2.5rem;
+    }
+
+    li:hover {
+        background: $sidebar-nav-bg-hover-color;
+    }
+
 }
 
-li.sidebar-brand {
-    padding: 25px 10px;
-    font-size: 2.5rem;
+.sb-nav.active {
+    // left: 0;
+    transform: translate3d($sidebar-width, 0, 0);
 }
 
-.sidebar-nav li:hover {
-    background: $jet;
+.sb-nav {
+    transition: 100ms ease-in all;
 }
-
-
 
 // Sidebar Page Content:
 // ------------------------------------------------
-
 .sbp-content {
-    margin-left: $sidebar-width;
+    position: relative;
     padding: $sbp-content-padding;
 }
 
+/*
+.sbp-content.pushed {
+    left:   $sidebar-width;
+    overflow: hidden;
+}
+*/
 
+// Media Queries:
+// ------------------------------------------------
+@include tablet-landscape-and-up {
 
-@media only screen and (max-width: 640px) {
-
-
-    .sbp-content {
-        padding: 0;
+    .toggle-sidenav {
+        display: none;
     }
 
-    .sidebar-nav {
+    .sb-nav {
+        left: 0;
+    }
+
+    .sbp-content {
+        margin-left: $sidebar-width;
         position: relative;
-        width: 100%;
+        padding: 0 30px;
     }
 
 }
