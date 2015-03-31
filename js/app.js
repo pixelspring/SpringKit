@@ -39,7 +39,6 @@ $(document).ready(function() {
 // (2)  Sidenav:
 // ------------------------------------------------
 
-
 $("#toggleSidenav").click(function(){
     $("#sb_nav").toggleClass("active");
     // $("#sbp_content").toggleClass("pushed");
