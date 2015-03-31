@@ -147,13 +147,26 @@ $button-radius: true;               // TRUE or FALSE
 // ------------------------------------------------
 
 // Top Menu:
-$top-menu-height:       	30px;
+$top-menu-height:       	50px;
+$top-menu-bottom-margin:    30px;
 $top-menu-font-size:    	1.2rem;
 $toggle-menu-bg:        	$jet;
-$top-menu-bg:				$snow;
+$top-menu-bg:				$gainsboro;
+$top-menu-bg-l2:            $base;
+$top-menu-bg-l3:            $aluminum;
+$top-menu-bg-l4:            $jumbo;
+
 $top-menu-link-color:		$primary-color;
 $top-menu-text-transform:	uppercase;
 
-$top-menu-hover-bg:			$gainsboro;
-$top-menu-hover-bg-l3:		$base;
+$top-menu-hover-bg:			$iron;
+$top-menu-hover-bg-gc:		$base;
 
+$top-menu-mb-border-color:  $toggle-menu-bg;
+
+// Sidebar Nav:
+$sidebar-width:                 250px;
+$sbp-content-padding-top:       30px;
+$sidebar-nav-bg:                $jet;
+$sidebar-nav-bg-hover-color:    $black;
+$sidebar-nav-font-size:         1.4rem;

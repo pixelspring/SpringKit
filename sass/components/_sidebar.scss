@@ -1,0 +1,101 @@
+// ------------------------------------------------
+//  SIDEBAR.SCSS:
+//
+//  Sidebar Nav:
+//  (1) Vars
+//  (2) Sidebar Nav
+//  (3) Sidebar Page Content
+// ------------------------------------------------
+
+// Vars:
+// ------------------------------------------------
+// $sidebar-width:                 250px; // 20%
+// $sbp-content-padding-top:       30px;
+// $sidebar-nav-bg:                $jet;
+// $sidebar-nav-bg-hover-color:    $black;
+// $sidebar-nav-font-size:         1.4rem;
+
+
+// Sidebar Nav:
+// ------------------------------------------------
+.sb-nav {
+    position: fixed;
+    left:   -$sidebar-width;
+    width:  $sidebar-width;
+    height: 100%;
+    z-index: 1;
+
+    background: $sidebar-nav-bg;
+    font-size: $sidebar-nav-font-size;
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        padding: 10px 15px;
+        margin: 0;
+    }
+
+    li.sidebar-brand {
+        padding: 25px 15px;
+        font-size: 2.5rem;
+    }
+
+    li a {
+        text-decoration: none;
+        display: block;
+    }
+
+    li a:hover {
+        color: $link-color;
+    }
+
+    li:hover {
+        background: $sidebar-nav-bg-hover-color;
+    }
+
+}
+
+.sb-nav.active {
+    // left: 0;
+    transform: translate3d($sidebar-width, 0, 0);
+}
+
+.sb-nav {
+    transition: 100ms ease-in all;
+}
+
+// Sidebar Page Content:
+// ------------------------------------------------
+.sbp-content {
+    position: relative;
+    padding-top: $sbp-content-padding-top;
+}
+
+/*
+.sbp-content.pushed {
+    left:   $sidebar-width;
+    overflow: hidden;
+}
+*/
+
+// Media Queries:
+// ------------------------------------------------
+@include tablet-landscape-and-up {
+
+    .toggle-sidenav {
+        display: none;
+    }
+
+    .sb-nav {
+        left: 0;
+    }
+
+    .sbp-content {
+        margin-left: $sidebar-width;
+        position: relative;
+        padding: $sbp-content-padding-top 30px 0;
+    }
+
+}

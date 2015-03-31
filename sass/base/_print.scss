@@ -1,0 +1,48 @@
+// ------------------------------------------------
+//  PRINT.SCSS:
+//
+//  Styles for printing:
+//  (1) Base
+//  (2) Visibility
+//  (3) Typography
+//  (4) Images
+//  (5) Tables
+// ------------------------------------------------
+
+@media print {
+
+    // Base
+    // --------------------------------------------
+    @page {
+        margin: 0.5cm;
+    }
+
+    // Visibility
+    // --------------------------------------------
+    #header,
+    #footer,
+    #navigation,
+    #rightSideBar,
+    #leftSideBar
+    {
+        display:none;
+    }
+
+
+    // Typography
+    // --------------------------------------------
+    h1,h2,h3,h4,h5,h6 { page-break-after:avoid; }
+
+
+    // Images
+    // --------------------------------------------
+    img {
+        display: none;
+    }
+
+
+    // Tables
+    // --------------------------------------------
+    table {}
+
+}
