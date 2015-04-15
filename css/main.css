@@ -511,6 +511,11 @@ img {
   display: none;
   visibility: hidden !important; }
 
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden; }
+
 .z1 {
   z-index: 1; }
 
