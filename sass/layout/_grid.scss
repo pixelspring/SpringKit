@@ -1,1047 +1,305 @@
 // ------------------------------------------------
 // GRID:
 //
+// Based on Foundation 5
 // ------------------------------------------------
 
-// Box-Sizing:
-// ------------------------------------------------
+// ------------------------------------------------------------------
+// Variables
+// ------------------------------------------------------------------
+$output-generic-grid:   true;
 
-*,
-*:before,
-*:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+$row-width:             960px;
+$total-columns:         12 !default;
+
+$last-child-float:      right;
+$default-float:         left;
+$opposite-direction:    right;
+
+$total-columns:         12;
+$column-gutter:         30px;
+
+$small-breakpoint:      640px;
+$medium-breakpoint:     1024px;
+$large-breakpoint:      1440px;
+$xlarge-breakpoint:     1920px;
+
+$screen: "only screen";
+
+
+$small-up:      $screen;
+$medium-up:     "#{$screen} and (min-width: #{$small-breakpoint})";
+$large-up:      "#{$screen} and (min-width: #{$medium-breakpoint})";
+
+
+
+// ------------------------------------------------------------------
+// Grid Functions
+// ------------------------------------------------------------------
+
+@function grid-calc($colNumber, $totalColumns) {
+    $result: percentage(($colNumber / $totalColumns));
+    @if $result == 0% { $result: 0; }
+    @return $result;
 }
 
+
+// ------------------------------------------------------------------
 // Rows:
-// ------------------------------------------------
-.row {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: $row-space;
-    max-width: $row-width; // 62.5rem;
-}
-  .row:before, .row:after {
-    content: " ";
-    display: table; }
-  .row:after {
-    clear: both; }
-  .row.collapse > .column, .row.collapse > .columns {
-    padding-left: 0;
-    padding-right: 0; }
-  .row.collapse .row {
-    margin-left: 0;
-    margin-right: 0; }
-  .row .row {
+// ------------------------------------------------------------------
+
+// For creating container, nested, and collapsed rows.
+// $behavior - Any special behavior for this row? Default: false. Options: nest, collapse, nest-collapse, false.
+@mixin grid-row($behavior: false) {
+
+  // use @include grid-row(nest); to include a nested row
+  @if $behavior == nest {
+    margin: 0 (-($column-gutter/2));
+    max-width: none;
     width: auto;
-    margin-left: -0.9375rem;
-    margin-right: -0.9375rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    max-width: none; }
-    .row .row:before, .row .row:after {
-      content: " ";
-      display: table; }
-    .row .row:after {
-      clear: both; }
-    .row .row.collapse {
-      width: auto;
-      margin: 0;
-      max-width: none; }
-      .row .row.collapse:before, .row .row.collapse:after {
-        content: " ";
-        display: table; }
-      .row .row.collapse:after {
-        clear: both; }
+  }
 
-.column, .columns {
-  padding-left: 1rem; // 0.9375rem;
-  padding-right: 1rem; // 0.9375rem;
-  width: 100%;
-  float: left; }
+  // use @include grid-row(collapse); to collapsed a container row margins
+  @else if $behavior == collapse {
+    margin: 0;
+    max-width: $row-width;
+    width: 100%;
+  }
 
-[class*="column"] + [class*="column"]:last-child {
-  float: right; }
+  // use @include grid-row(nest-collapse); to collapse outer margins on a nested row
+  @else if $behavior == nest-collapse {
+    margin: 0;
+    max-width: none;
+    width: auto;
+  }
 
-[class*="column"] + [class*="column"].end {
-  float: left; }
+  // use @include grid-row; to use a container row
+  @else {
+    margin: 0 auto;
+    max-width: $row-width;
+    width: 100%;
+  }
 
-// Mobile Up:
-@media only screen {
-    @if $push-pull-classes {
+  // Clearfix for all rows
+  @include clearfix();
+}
 
-        .small-push-0 {
-        position: relative;
-        left: 0%;
-        right: auto; }
 
-        .small-pull-0 {
-        position: relative;
-        right: 0%;
-        left: auto; }
+// ------------------------------------------------------------------
+// Columns
+// ------------------------------------------------------------------
 
-        .small-push-1 {
-        position: relative;
-        left: 8.3333333333%;
-        right: auto; }
+// Creates a column, should be used inside of a media query to control layouts
+//
+// $columns - The number of columns this should be
+// $last-column - Is this the last column? Default: false.
+// $center - Center these columns? Default: false.
+// $offset - # of columns to offset. Default: false.
+// $push - # of columns to push. Default: false.
+// $pull - # of columns to pull. Default: false.
+// $collapse - Get rid of gutter padding on column? Default: false.
+// $float - Should this float? Default: true. Options: true, false, left, right.
+@mixin grid-column(
+  $columns:false,
+  $last-column:false,
+  $center:false,
+  $offset:false,
+  $push:false,
+  $pull:false,
+  $collapse:false,
+  $float:true,
+  $position:false) {
 
-        .small-pull-1 {
-        position: relative;
-        right: 8.3333333333%;
-        left: auto; }
-
-        .small-push-2 {
-        position: relative;
-        left: 16.6666666667%;
-        right: auto; }
-
-        .small-pull-2 {
-        position: relative;
-        right: 16.6666666667%;
-        left: auto; }
-
-        .small-push-3 {
-        position: relative;
-        left: 25%;
-        right: auto; }
-
-        .small-pull-3 {
-        position: relative;
-        right: 25%;
-        left: auto; }
-
-        .small-push-4 {
-        position: relative;
-        left: 33.3333333333%;
-        right: auto; }
-
-        .small-pull-4 {
-        position: relative;
-        right: 33.3333333333%;
-        left: auto; }
-
-        .small-push-5 {
-        position: relative;
-        left: 41.6666666667%;
-        right: auto; }
-
-        .small-pull-5 {
-        position: relative;
-        right: 41.6666666667%;
-        left: auto; }
-
-        .small-push-6 {
-        position: relative;
-        left: 50%;
-        right: auto; }
-
-        .small-pull-6 {
-        position: relative;
-        right: 50%;
-        left: auto; }
-
-        .small-push-7 {
-        position: relative;
-        left: 58.3333333333%;
-        right: auto; }
-
-        .small-pull-7 {
-        position: relative;
-        right: 58.3333333333%;
-        left: auto; }
-
-        .small-push-8 {
-        position: relative;
-        left: 66.6666666667%;
-        right: auto; }
-
-        .small-pull-8 {
-        position: relative;
-        right: 66.6666666667%;
-        left: auto; }
-
-        .small-push-9 {
-        position: relative;
-        left: 75%;
-        right: auto; }
-
-        .small-pull-9 {
-        position: relative;
-        right: 75%;
-        left: auto; }
-
-        .small-push-10 {
-        position: relative;
-        left: 83.3333333333%;
-        right: auto; }
-
-        .small-pull-10 {
-        position: relative;
-        right: 83.3333333333%;
-        left: auto; }
-
-        .small-push-11 {
-        position: relative;
-        left: 91.6666666667%;
-        right: auto; }
-
-        .small-pull-11 {
-        position: relative;
-        right: 91.6666666667%;
-        left: auto; }
-    } // END if push/pull
-
-  .column, .columns {
+  // If positioned for default .column, include relative position
+  // push and pull require position set
+  @if $position or $push or $pull {
     position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    float: left; }
+  }
 
-  .small-1 {
-    width: 8.3333333333%; }
-
-  .small-2 {
-    width: 16.6666666667%; }
-
-  .small-3 {
-    width: 25%; }
-
-  .small-4 {
-    width: 33.3333333333%; }
-
-  .small-5 {
-    width: 41.6666666667%; }
-
-  .small-6 {
-    width: 50%; }
-
-  .small-7 {
-    width: 58.3333333333%; }
-
-  .small-8 {
-    width: 66.6666666667%; }
-
-  .small-9 {
-    width: 75%; }
-
-  .small-10 {
-    width: 83.3333333333%; }
-
-  .small-11 {
-    width: 91.6666666667%; }
-
-  .small-12 {
-    width: 100%; }
-
-    @if $offset-classes {
-        .small-offset-0 {
-        margin-left: 0% !important; }
-
-        .small-offset-1 {
-        margin-left: 8.3333333333% !important; }
-
-        .small-offset-2 {
-        margin-left: 16.6666666667% !important; }
-
-        .small-offset-3 {
-        margin-left: 25% !important; }
-
-        .small-offset-4 {
-        margin-left: 33.3333333333% !important; }
-
-        .small-offset-5 {
-        margin-left: 41.6666666667% !important; }
-
-        .small-offset-6 {
-        margin-left: 50% !important; }
-
-        .small-offset-7 {
-        margin-left: 58.3333333333% !important; }
-
-        .small-offset-8 {
-        margin-left: 66.6666666667% !important; }
-
-        .small-offset-9 {
-        margin-left: 75% !important; }
-
-        .small-offset-10 {
-        margin-left: 83.3333333333% !important; }
-
-        .small-offset-11 {
-        margin-left: 91.6666666667% !important; }
-
-    } // END if Offset
-
-  .small-reset-order {
-    margin-left: 0;
-    margin-right: 0;
-    left: auto;
-    right: auto;
-    float: left; }
-
-  .column.small-centered, .columns.small-centered {
-    margin-left: auto;
-    margin-right: auto;
-    float: none; }
-
-  .column.small-uncentered, .columns.small-uncentered {
-    margin-left: 0;
-    margin-right: 0;
-    float: left; }
-
-  .column.small-centered:last-child, .columns.small-centered:last-child {
-    float: none; }
-
-  .column.small-uncentered:last-child, .columns.small-uncentered:last-child {
-    float: left; }
-
-  .column.small-uncentered.opposite, .columns.small-uncentered.opposite {
-    float: right; }
-
-  .row.small-collapse > .column, .row.small-collapse > .columns {
+  // If collapsed, get rid of gutter padding
+  @if $collapse {
     padding-left: 0;
-    padding-right: 0; }
-  .row.small-collapse .row {
-    margin-left: 0;
-    margin-right: 0; }
-  .row.small-uncollapse > .column, .row.small-uncollapse > .columns {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    float: left; }
- }
-
-@media only screen and (min-width:40.063em) {
-
-    @if $push-pull-classes {
-        .medium-push-0 {
-        position: relative;
-        left: 0%;
-        right: auto; }
-
-        .medium-pull-0 {
-        position: relative;
-        right: 0%;
-        left: auto; }
-
-        .medium-push-1 {
-        position: relative;
-        left: 8.3333333333%;
-        right: auto; }
-
-        .medium-pull-1 {
-        position: relative;
-        right: 8.3333333333%;
-        left: auto; }
-
-        .medium-push-2 {
-        position: relative;
-        left: 16.6666666667%;
-        right: auto; }
-
-        .medium-pull-2 {
-        position: relative;
-        right: 16.6666666667%;
-        left: auto; }
-
-        .medium-push-3 {
-        position: relative;
-        left: 25%;
-        right: auto; }
-
-        .medium-pull-3 {
-        position: relative;
-        right: 25%;
-        left: auto; }
-
-        .medium-push-4 {
-        position: relative;
-        left: 33.3333333333%;
-        right: auto; }
-
-        .medium-pull-4 {
-        position: relative;
-        right: 33.3333333333%;
-        left: auto; }
-
-        .medium-push-5 {
-        position: relative;
-        left: 41.6666666667%;
-        right: auto; }
-
-        .medium-pull-5 {
-        position: relative;
-        right: 41.6666666667%;
-        left: auto; }
-
-        .medium-push-6 {
-        position: relative;
-        left: 50%;
-        right: auto; }
-
-        .medium-pull-6 {
-        position: relative;
-        right: 50%;
-        left: auto; }
-
-        .medium-push-7 {
-        position: relative;
-        left: 58.3333333333%;
-        right: auto; }
-
-        .medium-pull-7 {
-        position: relative;
-        right: 58.3333333333%;
-        left: auto; }
-
-        .medium-push-8 {
-        position: relative;
-        left: 66.6666666667%;
-        right: auto; }
-
-        .medium-pull-8 {
-        position: relative;
-        right: 66.6666666667%;
-        left: auto; }
-
-        .medium-push-9 {
-        position: relative;
-        left: 75%;
-        right: auto; }
-
-        .medium-pull-9 {
-        position: relative;
-        right: 75%;
-        left: auto; }
-
-        .medium-push-10 {
-        position: relative;
-        left: 83.3333333333%;
-        right: auto; }
-
-        .medium-pull-10 {
-        position: relative;
-        right: 83.3333333333%;
-        left: auto; }
-
-        .medium-push-11 {
-        position: relative;
-        left: 91.6666666667%;
-        right: auto; }
-
-        .medium-pull-11 {
-        position: relative;
-        right: 91.6666666667%;
-        left: auto; }
-    } // END push/pull
-
-
-  .column, .columns {
-    position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    float: left; }
-
-  .medium-1 {
-    width: 8.3333333333%; }
-
-  .medium-2 {
-    width: 16.6666666667%; }
-
-  .medium-3 {
-    width: 25%; }
-
-  .medium-4 {
-    width: 33.3333333333%; }
-
-  .medium-5 {
-    width: 41.6666666667%; }
-
-  .medium-6 {
-    width: 50%; }
-
-  .medium-7 {
-    width: 58.3333333333%; }
-
-  .medium-8 {
-    width: 66.6666666667%; }
-
-  .medium-9 {
-    width: 75%; }
-
-  .medium-10 {
-    width: 83.3333333333%; }
-
-  .medium-11 {
-    width: 91.6666666667%; }
-
-  .medium-12 {
-    width: 100%; }
-
-    @if $offset-classes {
-        .medium-offset-0 {
-        margin-left: 0% !important; }
-
-        .medium-offset-1 {
-        margin-left: 8.3333333333% !important; }
-
-        .medium-offset-2 {
-        margin-left: 16.6666666667% !important; }
-
-        .medium-offset-3 {
-        margin-left: 25% !important; }
-
-        .medium-offset-4 {
-        margin-left: 33.3333333333% !important; }
-
-        .medium-offset-5 {
-        margin-left: 41.6666666667% !important; }
-
-        .medium-offset-6 {
-        margin-left: 50% !important; }
-
-        .medium-offset-7 {
-        margin-left: 58.3333333333% !important; }
-
-        .medium-offset-8 {
-        margin-left: 66.6666666667% !important; }
-
-        .medium-offset-9 {
-        margin-left: 75% !important; }
-
-        .medium-offset-10 {
-        margin-left: 83.3333333333% !important; }
-
-        .medium-offset-11 {
-        margin-left: 91.6666666667% !important; }
-
-    } // END if Offset Classes
-
-  .medium-reset-order {
-    margin-left: 0;
-    margin-right: 0;
-    left: auto;
-    right: auto;
-    float: left; }
-
-  .column.medium-centered, .columns.medium-centered {
-    margin-left: auto;
-    margin-right: auto;
-    float: none; }
-
-  .column.medium-uncentered, .columns.medium-uncentered {
-    margin-left: 0;
-    margin-right: 0;
-    float: left; }
-
-  .column.medium-centered:last-child, .columns.medium-centered:last-child {
-    float: none; }
-
-  .column.medium-uncentered:last-child, .columns.medium-uncentered:last-child {
-    float: left; }
-
-  .column.medium-uncentered.opposite, .columns.medium-uncentered.opposite {
-    float: right; }
-
-  .row.medium-collapse > .column, .row.medium-collapse > .columns {
-    padding-left: 0;
-    padding-right: 0; }
-  .row.medium-collapse .row {
-    margin-left: 0;
-    margin-right: 0; }
-  .row.medium-uncollapse > .column, .row.medium-uncollapse > .columns {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    float: left; }
-
-
-    @if $push-pull-classes {
-        .push-0 {
-        position: relative;
-        left: 0%;
-        right: auto; }
-
-        .pull-0 {
-        position: relative;
-        right: 0%;
-        left: auto; }
-
-        .push-1 {
-        position: relative;
-        left: 8.3333333333%;
-        right: auto; }
-
-        .pull-1 {
-        position: relative;
-        right: 8.3333333333%;
-        left: auto; }
-
-        .push-2 {
-        position: relative;
-        left: 16.6666666667%;
-        right: auto; }
-
-        .pull-2 {
-        position: relative;
-        right: 16.6666666667%;
-        left: auto; }
-
-        .push-3 {
-        position: relative;
-        left: 25%;
-        right: auto; }
-
-        .pull-3 {
-        position: relative;
-        right: 25%;
-        left: auto; }
-
-        .push-4 {
-        position: relative;
-        left: 33.3333333333%;
-        right: auto; }
-
-        .pull-4 {
-        position: relative;
-        right: 33.3333333333%;
-        left: auto; }
-
-        .push-5 {
-        position: relative;
-        left: 41.6666666667%;
-        right: auto; }
-
-        .pull-5 {
-        position: relative;
-        right: 41.6666666667%;
-        left: auto; }
-
-        .push-6 {
-        position: relative;
-        left: 50%;
-        right: auto; }
-
-        .pull-6 {
-        position: relative;
-        right: 50%;
-        left: auto; }
-
-        .push-7 {
-        position: relative;
-        left: 58.3333333333%;
-        right: auto; }
-
-        .pull-7 {
-        position: relative;
-        right: 58.3333333333%;
-        left: auto; }
-
-        .push-8 {
-        position: relative;
-        left: 66.6666666667%;
-        right: auto; }
-
-        .pull-8 {
-        position: relative;
-        right: 66.6666666667%;
-        left: auto; }
-
-        .push-9 {
-        position: relative;
-        left: 75%;
-        right: auto; }
-
-        .pull-9 {
-        position: relative;
-        right: 75%;
-        left: auto; }
-
-        .push-10 {
-        position: relative;
-        left: 83.3333333333%;
-        right: auto; }
-
-        .pull-10 {
-        position: relative;
-        right: 83.3333333333%;
-        left: auto; }
-
-        .push-11 {
-        position: relative;
-        left: 91.6666666667%;
-        right: auto; }
-
-        .pull-11 {
-        position: relative;
-        right: 91.6666666667%;
-        left: auto; }
-
-    } // END if Push/Pull
+    padding-right: 0;
+  }
+
+  // Gutter padding whenever a column isn't set to collapse
+  // (use $collapse:null to do nothing)
+  @else if $collapse == false {
+    padding-left: ($column-gutter / 2);
+    padding-right: ($column-gutter / 2);
+  }
+
+  // If a column number is given, calculate width
+  @if $columns {
+    width: grid-calc($columns, $total-columns);
+
+    // If last column, float naturally instead of to the right
+    @if $last-column { float: $opposite-direction; }
+  }
+
+  // Source Ordering, adds left/right depending on which you use.
+  @if $push { #{$default-float}: grid-calc($push, $total-columns); #{$opposite-direction}: auto; }
+  @if $pull { #{$opposite-direction}: grid-calc($pull, $total-columns); #{$default-float}: auto; }
+
+  @if $float {
+    @if $float == left or $float == true { float: $default-float; }
+    @else if $float == right { float: $opposite-direction; }
+    @else { float: none; }
+  }
+
+  // If centered, get rid of float and add appropriate margins
+  @if $center {
+    margin-#{$default-float}: auto;
+    margin-#{$opposite-direction}: auto;
+    float: none;
+  }
+
+  // If offset, calculate appropriate margins
+  @if $offset { margin-#{$default-float}: grid-calc($offset, $total-columns) !important; }
 
 }
 
-@media only screen and (min-width:64.063em) {
 
-    @if $push-pull-classes {
-        .large-push-0 {
-        position: relative;
-        left: 0%;
-        right: auto; }
 
-        .large-pull-0 {
-        position: relative;
-        right: 0%;
-        left: auto; }
 
-        .large-push-1 {
-        position: relative;
-        left: 8.3333333333%;
-        right: auto; }
+// ------------------------------------------------------------------
+// Generate Classes:
+// ------------------------------------------------------------------
 
-        .large-pull-1 {
-        position: relative;
-        right: 8.3333333333%;
-        left: auto; }
+// Create presentational classes for grid
+//
+// $size - Name of class to use, i.e. "large" will generate .large-1, .large-2, etc.
+@mixin grid-html-classes($size) {
 
-        .large-push-2 {
-        position: relative;
-        left: 16.6666666667%;
-        right: auto; }
+  @for $i from 0 through $total-columns - 1 {
+    .#{$size}-push-#{$i} {
+      @include grid-column($push:$i, $collapse:null, $float:false);
+    }
+    .#{$size}-pull-#{$i} {
+      @include grid-column($pull:$i, $collapse:null, $float:false);
+    }
+  }
 
-        .large-pull-2 {
-        position: relative;
-        right: 16.6666666667%;
-        left: auto; }
+  .column,
+  .columns { @include grid-column($columns:false, $position:true); }
 
-        .large-push-3 {
-        position: relative;
-        left: 25%;
-        right: auto; }
 
-        .large-pull-3 {
-        position: relative;
-        right: 25%;
-        left: auto; }
+  @for $i from 1 through $total-columns {
+    .#{$size}-#{$i} { @include grid-column($columns:$i, $collapse:null, $float:false); }
+  }
 
-        .large-push-4 {
-        position: relative;
-        left: 33.3333333333%;
-        right: auto; }
+  @for $i from 0 through $total-columns - 1 {
+    .#{$size}-offset-#{$i} { @include grid-column($offset:$i, $collapse:null, $float:false); }
+  }
 
-        .large-pull-4 {
-        position: relative;
-        right: 33.3333333333%;
-        left: auto; }
-
-        .large-push-5 {
-        position: relative;
-        left: 41.6666666667%;
-        right: auto; }
-
-        .large-pull-5 {
-        position: relative;
-        right: 41.6666666667%;
-        left: auto; }
-
-        .large-push-6 {
-        position: relative;
-        left: 50%;
-        right: auto; }
-
-        .large-pull-6 {
-        position: relative;
-        right: 50%;
-        left: auto; }
-
-        .large-push-7 {
-        position: relative;
-        left: 58.3333333333%;
-        right: auto; }
-
-        .large-pull-7 {
-        position: relative;
-        right: 58.3333333333%;
-        left: auto; }
-
-        .large-push-8 {
-        position: relative;
-        left: 66.6666666667%;
-        right: auto; }
-
-        .large-pull-8 {
-        position: relative;
-        right: 66.6666666667%;
-        left: auto; }
-
-        .large-push-9 {
-        position: relative;
-        left: 75%;
-        right: auto; }
-
-        .large-pull-9 {
-        position: relative;
-        right: 75%;
-        left: auto; }
-
-        .large-push-10 {
-        position: relative;
-        left: 83.3333333333%;
-        right: auto; }
-
-        .large-pull-10 {
-        position: relative;
-        right: 83.3333333333%;
-        left: auto; }
-
-        .large-push-11 {
-        position: relative;
-        left: 91.6666666667%;
-        right: auto; }
-
-        .large-pull-11 {
-        position: relative;
-        right: 91.6666666667%;
-        left: auto; }
-
-    } // END Push/Pull Classes
-
-  .column, .columns {
-    position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    float: left; }
-
-  .large-1 {
-    width: 8.3333333333%; }
-
-  .large-2 {
-    width: 16.6666666667%; }
-
-  .large-3 {
-    width: 25%; }
-
-  .large-4 {
-    width: 33.3333333333%; }
-
-  .large-5 {
-    width: 41.6666666667%; }
-
-  .large-6 {
-    width: 50%; }
-
-  .large-7 {
-    width: 58.3333333333%; }
-
-  .large-8 {
-    width: 66.6666666667%; }
-
-  .large-9 {
-    width: 75%; }
-
-  .large-10 {
-    width: 83.3333333333%; }
-
-  .large-11 {
-    width: 91.6666666667%; }
-
-  .large-12 {
-    width: 100%; }
-
-  .large-offset-0 {
-    margin-left: 0% !important; }
-
-  .large-offset-1 {
-    margin-left: 8.3333333333% !important; }
-
-  .large-offset-2 {
-    margin-left: 16.6666666667% !important; }
-
-  .large-offset-3 {
-    margin-left: 25% !important; }
-
-  .large-offset-4 {
-    margin-left: 33.3333333333% !important; }
-
-  .large-offset-5 {
-    margin-left: 41.6666666667% !important; }
-
-  .large-offset-6 {
-    margin-left: 50% !important; }
-
-  .large-offset-7 {
-    margin-left: 58.3333333333% !important; }
-
-  .large-offset-8 {
-    margin-left: 66.6666666667% !important; }
-
-  .large-offset-9 {
-    margin-left: 75% !important; }
-
-  .large-offset-10 {
-    margin-left: 83.3333333333% !important; }
-
-  .large-offset-11 {
-    margin-left: 91.6666666667% !important; }
-
-  .large-reset-order {
-    margin-left: 0;
-    margin-right: 0;
+  .#{$size}-reset-order {
+    float: $default-float;
     left: auto;
+    margin-#{$default-float}: 0;
+    margin-#{$opposite-direction}: 0;
     right: auto;
-    float: left; }
+  }
 
-  .column.large-centered, .columns.large-centered {
-    margin-left: auto;
-    margin-right: auto;
-    float: none; }
+  .column.#{$size}-centered,
+  .columns.#{$size}-centered { @include grid-column($center:true, $collapse:null, $float:false); }
 
-  .column.large-uncentered, .columns.large-uncentered {
-    margin-left: 0;
-    margin-right: 0;
-    float: left; }
+  .column.#{$size}-uncentered,
+  .columns.#{$size}-uncentered {
+    float: $default-float;
+    margin-#{$default-float}: 0;
+    margin-#{$opposite-direction}: 0;
+  }
 
-  .column.large-centered:last-child, .columns.large-centered:last-child {
-    float: none; }
+  // Fighting [class*="column"] + [class*="column"]:last-child
+  .column.#{$size}-centered:last-child,
+  .columns.#{$size}-centered:last-child{
+    float: none;
+  }
 
-  .column.large-uncentered:last-child, .columns.large-uncentered:last-child {
-    float: left; }
+  // Fighting .column.<previous-size>-centered:last-child
+  .column.#{$size}-uncentered:last-child,
+  .columns.#{$size}-uncentered:last-child {
+    float: $default-float;
+  }
 
-  .column.large-uncentered.opposite, .columns.large-uncentered.opposite {
-    float: right; }
+  .column.#{$size}-uncentered.opposite,
+  .columns.#{$size}-uncentered.opposite {
+    float: $opposite-direction;
+  }
 
-  .row.large-collapse > .column, .row.large-collapse > .columns {
-    padding-left: 0;
-    padding-right: 0; }
-  .row.large-collapse .row {
-    margin-left: 0;
-    margin-right: 0; }
-  .row.large-uncollapse > .column, .row.large-uncollapse > .columns {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    float: left; }
+    .row {
+        &.#{$size}-collapse {
+            > .column,
+            > .columns { @include grid-column($collapse:true, $float:false); }
 
-@if $push-pull-classes {
-    .push-0 {
-    position: relative;
-    left: 0%;
-    right: auto; }
+            .row {margin-left:0; margin-right:0;}
+        }
+        &.#{$size}-uncollapse {
+            > .column,
+            > .columns {
+                @include grid-column;
+            }
+        }
+    }
+}
 
-    .pull-0 {
-    position: relative;
-    right: 0%;
-    left: auto; }
 
-    .push-1 {
-    position: relative;
-    left: 8.3333333333%;
-    right: auto; }
+  @if $output-generic-grid {
+    .row {
+      @include grid-row;
 
-    .pull-1 {
-    position: relative;
-    right: 8.3333333333%;
-    left: auto; }
+      &.collapse {
+         > .column,
+         > .columns { @include grid-column($collapse:true, $float:false); }
 
-    .push-2 {
-    position: relative;
-    left: 16.6666666667%;
-    right: auto; }
+        .row {margin-left:0; margin-right:0;}
+      }
 
-    .pull-2 {
-    position: relative;
-    right: 16.6666666667%;
-    left: auto; }
-
-    .push-3 {
-    position: relative;
-    left: 25%;
-    right: auto; }
-
-    .pull-3 {
-    position: relative;
-    right: 25%;
-    left: auto; }
-
-    .push-4 {
-    position: relative;
-    left: 33.3333333333%;
-    right: auto; }
-
-    .pull-4 {
-    position: relative;
-    right: 33.3333333333%;
-    left: auto; }
-
-    .push-5 {
-    position: relative;
-    left: 41.6666666667%;
-    right: auto; }
-
-    .pull-5 {
-    position: relative;
-    right: 41.6666666667%;
-    left: auto; }
-
-    .push-6 {
-    position: relative;
-    left: 50%;
-    right: auto; }
-
-    .pull-6 {
-    position: relative;
-    right: 50%;
-    left: auto; }
-
-    .push-7 {
-    position: relative;
-    left: 58.3333333333%;
-    right: auto; }
-
-    .pull-7 {
-    position: relative;
-    right: 58.3333333333%;
-    left: auto; }
-
-    .push-8 {
-    position: relative;
-    left: 66.6666666667%;
-    right: auto; }
-
-    .pull-8 {
-    position: relative;
-    right: 66.6666666667%;
-    left: auto; }
-
-    .push-9 {
-    position: relative;
-    left: 75%;
-    right: auto; }
-
-    .pull-9 {
-    position: relative;
-    right: 75%;
-    left: auto; }
-
-    .push-10 {
-    position: relative;
-    left: 83.3333333333%;
-    right: auto; }
-
-    .pull-10 {
-    position: relative;
-    right: 83.3333333333%;
-    left: auto; }
-
-    .push-11 {
-    position: relative;
-    left: 91.6666666667%;
-    right: auto; }
-
-    .pull-11 {
-    position: relative;
-    right: 91.6666666667%;
-    left: auto; }
+      .row { @include grid-row($behavior:nest);
+        &.collapse { @include grid-row($behavior:nest-collapse); }
+      }
     }
 
-} // END @if Push/Pull Classes
+    .column,
+    .columns { @include grid-column($columns:$total-columns); }
+
+    .column,
+    .columns {
+      & + &:last-child {
+        float: $last-child-float;
+      }
+      & + &.end {
+        float: $default-float;
+      }
+    }
+
+    @media #{$small-up} {
+      @include grid-html-classes($size:small);
+    }
+
+    @media #{$medium-up} {
+      @include grid-html-classes($size:medium);
+            // Old push and pull classes
+            // @for $i from 0 through $total-columns - 1 {
+            //   .push-#{$i} {
+            //     @include grid-column($push:$i, $collapse:null, $float:false);
+            //   }
+            //   .pull-#{$i} {
+            //     @include grid-column($pull:$i, $collapse:null, $float:false);
+            //   }
+            // }
+    }
+    @media #{$large-up} {
+      @include grid-html-classes($size:large);
+      // @for $i from 0 through $total-columns - 1 {
+      //   .push-#{$i} {
+      //     @include grid-column($push:$i, $collapse:null, $float:false);
+      //   }
+      //   .pull-#{$i} {
+      //     @include grid-column($pull:$i, $collapse:null, $float:false);
+      //   }
+      // }
+    }
+
+
+  }
