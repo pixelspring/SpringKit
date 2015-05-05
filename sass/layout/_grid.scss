@@ -7,22 +7,22 @@
 // ------------------------------------------------------------------
 // Variables
 // ------------------------------------------------------------------
-$output-generic-grid:   true;
+$output-generic-grid:   true !default;
 
-$row-width:             960px;
+$row-width:             960px !default;
 $total-columns:         12 !default;
 
-$last-child-float:      right;
-$default-float:         left;
-$opposite-direction:    right;
+$last-child-float:      right !default;
+$default-float:         left !default;
+$opposite-direction:    right !default;
 
-$total-columns:         12;
-$column-gutter:         30px;
+$total-columns:         12 !default;
+$column-gutter:         30px !default;
 
-$small-breakpoint:      640px;
-$medium-breakpoint:     1024px;
-$large-breakpoint:      1440px;
-$xlarge-breakpoint:     1920px;
+$small-breakpoint:      640px !default;
+$medium-breakpoint:     1024px !default;
+$large-breakpoint:      1440px !default;
+$xlarge-breakpoint:     1920px !default;
 
 $screen: "only screen";
 
