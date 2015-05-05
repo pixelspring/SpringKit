@@ -7,7 +7,7 @@
 // ------------------------------------------------------------------
 // Variables
 // ------------------------------------------------------------------
-$include-html-grid-classes: true;
+$output-generic-grid:   true;
 
 $row-width:             960px;
 $total-columns:         12 !default;
@@ -244,7 +244,7 @@ $large-up:      "#{$screen} and (min-width: #{$medium-breakpoint})";
 }
 
 
-  @if $include-html-grid-classes {
+  @if $output-generic-grid {
     .row {
       @include grid-row;
 
