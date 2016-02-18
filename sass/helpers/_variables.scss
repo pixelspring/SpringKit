@@ -88,9 +88,9 @@ $large-up:              "#{$screen} and (min-width: #{$medium-breakpoint})";
 $output-generic-grid:   true;
 
 // Options:
-$push-pull-classes:     false;
-$offset-classes:        false;
-$centered-classes:      false;
+// $push-pull-classes:     false;
+// $offset-classes:        false;
+// $centered-classes:      false;
 
 
 // Typography Variables:
@@ -159,3 +159,9 @@ $sbp-content-padding-top:       30px;
 $sidebar-nav-bg:                $jet;
 $sidebar-nav-bg-hover-color:    $black;
 $sidebar-nav-font-size:         1.4rem;
+
+// Scrollbar Variables:
+// ------------------------------------------------
+$scrollbar-foreground-color: $primary-color;
+$scrollbar-background-color: slategray;
+$scrollbar-size: 8px;

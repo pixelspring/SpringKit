@@ -222,7 +222,8 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -469,8 +470,8 @@ ul.inline-list {
 
 code {
   font-family: "Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-  padding: 0.2rem 0.5rem;
-  margin: 0 0.2rem;
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
   font-size: 90%;
   background: #F1F1F1;
   border: 1px solid #CCCCCC;
@@ -610,11 +611,17 @@ img {
   float: left; }
 
 .column + .column:last-child,
-.columns + .columns:last-child {
+.columns + .column:last-child, .column +
+.columns:last-child,
+.columns +
+.columns:last-child {
   float: right; }
 
 .column + .column.end,
-.columns + .columns.end {
+.columns + .column.end, .column +
+.columns.end,
+.columns +
+.columns.end {
   float: left; }
 
 @media only screen {
@@ -993,7 +1000,103 @@ img {
   .row.medium-uncollapse > .columns {
     padding-left: 15px;
     padding-right: 15px;
-    float: left; } }
+    float: left; }
+  .push-0 {
+    position: relative;
+    left: 0;
+    right: auto; }
+  .pull-0 {
+    position: relative;
+    right: 0;
+    left: auto; }
+  .push-1 {
+    position: relative;
+    left: 8.3333333333%;
+    right: auto; }
+  .pull-1 {
+    position: relative;
+    right: 8.3333333333%;
+    left: auto; }
+  .push-2 {
+    position: relative;
+    left: 16.6666666667%;
+    right: auto; }
+  .pull-2 {
+    position: relative;
+    right: 16.6666666667%;
+    left: auto; }
+  .push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+  .pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+  .push-4 {
+    position: relative;
+    left: 33.3333333333%;
+    right: auto; }
+  .pull-4 {
+    position: relative;
+    right: 33.3333333333%;
+    left: auto; }
+  .push-5 {
+    position: relative;
+    left: 41.6666666667%;
+    right: auto; }
+  .pull-5 {
+    position: relative;
+    right: 41.6666666667%;
+    left: auto; }
+  .push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+  .pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+  .push-7 {
+    position: relative;
+    left: 58.3333333333%;
+    right: auto; }
+  .pull-7 {
+    position: relative;
+    right: 58.3333333333%;
+    left: auto; }
+  .push-8 {
+    position: relative;
+    left: 66.6666666667%;
+    right: auto; }
+  .pull-8 {
+    position: relative;
+    right: 66.6666666667%;
+    left: auto; }
+  .push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+  .pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+  .push-10 {
+    position: relative;
+    left: 83.3333333333%;
+    right: auto; }
+  .pull-10 {
+    position: relative;
+    right: 83.3333333333%;
+    left: auto; }
+  .push-11 {
+    position: relative;
+    left: 91.6666666667%;
+    right: auto; }
+  .pull-11 {
+    position: relative;
+    right: 91.6666666667%;
+    left: auto; } }
 
 @media only screen and (min-width: 1024px) {
   .large-push-0 {
@@ -1182,7 +1285,103 @@ img {
   .row.large-uncollapse > .columns {
     padding-left: 15px;
     padding-right: 15px;
-    float: left; } }
+    float: left; }
+  .push-0 {
+    position: relative;
+    left: 0;
+    right: auto; }
+  .pull-0 {
+    position: relative;
+    right: 0;
+    left: auto; }
+  .push-1 {
+    position: relative;
+    left: 8.3333333333%;
+    right: auto; }
+  .pull-1 {
+    position: relative;
+    right: 8.3333333333%;
+    left: auto; }
+  .push-2 {
+    position: relative;
+    left: 16.6666666667%;
+    right: auto; }
+  .pull-2 {
+    position: relative;
+    right: 16.6666666667%;
+    left: auto; }
+  .push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+  .pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+  .push-4 {
+    position: relative;
+    left: 33.3333333333%;
+    right: auto; }
+  .pull-4 {
+    position: relative;
+    right: 33.3333333333%;
+    left: auto; }
+  .push-5 {
+    position: relative;
+    left: 41.6666666667%;
+    right: auto; }
+  .pull-5 {
+    position: relative;
+    right: 41.6666666667%;
+    left: auto; }
+  .push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+  .pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+  .push-7 {
+    position: relative;
+    left: 58.3333333333%;
+    right: auto; }
+  .pull-7 {
+    position: relative;
+    right: 58.3333333333%;
+    left: auto; }
+  .push-8 {
+    position: relative;
+    left: 66.6666666667%;
+    right: auto; }
+  .pull-8 {
+    position: relative;
+    right: 66.6666666667%;
+    left: auto; }
+  .push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+  .pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+  .push-10 {
+    position: relative;
+    left: 83.3333333333%;
+    right: auto; }
+  .pull-10 {
+    position: relative;
+    right: 83.3333333333%;
+    left: auto; }
+  .push-11 {
+    position: relative;
+    left: 91.6666666667%;
+    right: auto; }
+  .pull-11 {
+    position: relative;
+    right: 91.6666666667%;
+    left: auto; } }
 
 input[type="email"],
 input[type="search"],
@@ -1394,7 +1593,7 @@ input[type="button"].button-primary:focus {
 
 .alert.danger {
   background: #f8d5d8;
-  color: #6f121a; }
+  color: #6f131a; }
 
 .alert:hover {
   -webkit-filter: brightness(95%);
@@ -1434,7 +1633,7 @@ a.menu-link:before {
 .top-menu > ul ul {
   clear: both;
   -webkit-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   z-index: 1;
   background: #DDDDDD; }
 
@@ -1485,6 +1684,9 @@ a.menu-link:before {
   border-left: 1.5rem solid #222222; }
 
 @media only screen and (min-width: 769px) {
+  .menu-logo {
+    font-weight: bold;
+    float: left; }
   a.menu-link {
     display: none; }
   .contained {
@@ -1566,7 +1768,7 @@ a.menu-link:before {
 
 .sb-nav {
   -webkit-transition: 100ms ease-in all;
-          transition: 100ms ease-in all; }
+  transition: 100ms ease-in all; }
 
 .sbp-content {
   position: relative;
@@ -1587,6 +1789,20 @@ a.menu-link:before {
     margin-left: 250px;
     position: relative;
     padding: 30px 30px 0; } }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; }
+
+::-webkit-scrollbar-thumb {
+  background: #1EAEDB; }
+
+::-webkit-scrollbar-track {
+  background: slategray; }
+
+body {
+  scrollbar-face-color: #1EAEDB;
+  scrollbar-track-color: slategray; }
 
 /*
 .example .column,

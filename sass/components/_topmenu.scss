@@ -139,10 +139,17 @@ a.menu-link:before {
 // Tablet & Up:
 @include tablet-landscape-and-up {
 
+    // Logo in topMenu:
+    .menu-logo {
+        font-weight: bold;
+        float: left;
+    }
+
     a.menu-link {
        display: none;
     }
 
+    // Contain menu to grid width:
     .contained {
         width: 100%;
         margin: 0 auto;
