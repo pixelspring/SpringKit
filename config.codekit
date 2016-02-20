@@ -1794,6 +1794,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 1
 		},
+	"\/sass\/vendor\/brand-colors\/_brand-colors.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/vendor\/brand-colors\/_brand-colors.scss",
+		"outputAbbreviatedPath": "\/sass\/vendor\/css\/_brand-colors.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0,
+		"useLibsass": 1
+		},
 	"\/sidebar.html": {
 		"fileType": 8192,
 		"ignore": 0,
