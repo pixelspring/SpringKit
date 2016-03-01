@@ -100,7 +100,7 @@ $output-generic-grid:   true;
 // ------------------------------------------------
 
 // General (Paragraph inherits from this):
-$line-height:   1.6rem;
+$line-height:   1.6em;
 $font-weight:   400;
 
 // Headers:
@@ -110,11 +110,9 @@ $header-font-weight: 300;
 //Subheaders:
 $subheader-font-color: scale-color($header-font-color, $lightness: 45%);
 $subheader-font-weight: 300;
-$subheader-top-margin: .2rem;
-$subheader-bottom-margin: .5rem;
 
 // Blockquotes:
-$blockquote-font-size:  1.4rem;
+$blockquote-font-size:  1.1em;
 $blockquote-font-color: $font-color;
 $blockquote-border:     5px solid $gainsboro; // Left border
 $blockquote-bg:         $ghost;
