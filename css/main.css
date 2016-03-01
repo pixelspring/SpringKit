@@ -595,7 +595,7 @@ html {
  *
  */
 .row {
-  max-width: 960px;
+  max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
   width: 100%; }
@@ -612,7 +612,7 @@ html {
     margin-right: -20px; }
 
 .rowcolumn {
-  max-width: 960px;
+  max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -1316,25 +1316,16 @@ body {
   scrollbar-face-color: #1EAEDB;
   scrollbar-track-color: slategray; }
 
-/*
-.example .column,
-.example .columns {
-    background: lightgray;
-    text-align: center;
-    border-radius: $global-radius;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    height: 40px;
-    line-height: 40px;
-    margin-bottom: 1rem;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    font-family: Helvetica;
-    border: 1px solid black;
-}
+.example .row,
+.example .rowcolumn {
+  background: lightgray;
+  margin-bottom: 15px; }
 
-.example .column:hover,
-.example .columns:hover {
-    background-color: lightyellow;
-}
-*/
+.grid-example {
+  background: tomato;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  height: 40px;
+  line-height: 40px; }

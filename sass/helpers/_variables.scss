@@ -58,19 +58,22 @@ $global-radius: 4px;
 $rounded: 1000px;
 
 
+// Breakpoints:
+// ------------------------------------------------
+$mq-breakpoints: (
+    mobile:  320px,
+    tablet:  740px,
+    desktop: 980px,
+    wide:    1300px
+);
+
 
 // Grid Variables:
 // ------------------------------------------------
 
-$row-width:             960px;
+$row-width:             1120px;
 $total-columns:         12 !default;
-
-$last-child-float:      right;
-$default-float:         left;
-$opposite-direction:    right;
-
-$total-columns:         12;
-$column-gutter:         30px;
+$column-gutter:         0.5;
 
 $small-breakpoint:      640px;
 $medium-breakpoint:     1024px;
