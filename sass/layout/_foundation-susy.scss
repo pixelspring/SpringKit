@@ -97,14 +97,10 @@ $include-xxlarge:   false;
 }
 
 .rowcolumn {
-
     @include container;
     width: 100%;
-    // padding-left: (gutter() / 2);
-    // padding-right: (gutter() / 2);
     padding-left:  gutter();
     padding-right: gutter();
-
 }
 
 // Set up columns, defaulted to full-width and with gutters
