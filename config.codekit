@@ -713,15 +713,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 1
 		},
-	"\/sass\/layout\/skeleton.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/layout\/skeleton.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/sass\/main.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
