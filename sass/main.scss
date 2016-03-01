@@ -10,14 +10,15 @@
 
 // Base
 @import "base/_normalize.scss";
-@import "base/_mediaqueries.scss";
+// @import "base/_mediaqueries.scss";
 @import "base/_typography.scss";
 @import "base/_media.scss";
 @import "base/_utilityclasses.scss";
 @import "base/_print.scss";
 
 // Layout
-@import "layout/_grid.scss";
+// @import "layout/_grid.scss";
+@import "layout/_foundation-susy.scss";
 @import "layout/_forms.scss";
 @import "layout/_tables.scss";
 @import "layout/_visibility.scss";
@@ -26,14 +27,16 @@
 @import "components/_buttons.scss";
 @import "components/_panels.scss";
 @import "components/_alerts.scss";
-@import "components/_topmenu.scss";
-@import "components/_sidebar.scss";
+// @import "components/_topmenu.scss"; // TODO: Breakpoints
+// @import "components/_sidebar.scss"; // TODO: Breakpoints
 @import "components/_scrollbars.scss";
 
 // Vendor
 // @import "vendor/animate/animate.scss";
 // @import "vendor/brand-colors/brand-colors.scss";
-
+@import "vendor/susy/_susy.scss";
+@import "vendor/sass-mq/_mq.scss";
+// @import "layout/_foundation-susy.scss";
 
 
 
@@ -42,25 +45,18 @@
 // DEMO / DEBUG:
 // ------------------------------------------------
 
-/*
-.example .column,
-.example .columns {
+.example .row,
+.example .rowcolumn {
     background: lightgray;
+    margin-bottom: 15px;
+}
+
+.grid-example {
+    background: tomato;
     text-align: center;
     border-radius: $global-radius;
     font-size: 1.6rem;
     text-transform: uppercase;
     height: 40px;
     line-height: 40px;
-    margin-bottom: 1rem;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    font-family: Helvetica;
-    border: 1px solid black;
 }
-
-.example .column:hover,
-.example .columns:hover {
-    background-color: lightyellow;
-}
-*/
