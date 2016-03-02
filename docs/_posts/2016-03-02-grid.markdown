@@ -5,9 +5,7 @@ date:   2016-03-02 15:31:56 +0000
 categories: base
 ---
 
-Grid.
-
-<section id="grid">
+<section id="foundsusy-grid">
     <div class="rowcolumn">
         <h3>FoundSusy Grid Example:</h3>
     </div>
@@ -36,4 +34,70 @@ Grid.
                 <div class="large-6 columns"><div class="grid-example">6</div></div>
             </div>
         </div>
+</section>
+
+<section id="non-collapse">
+    <div class="row">
+        <div class="small-12 columns">
+            <h3>Normal:</h3>
+        </div>
+        <div class="medium-3 columns">
+            <img src="/images/400x150.gif">
+        </div>
+        <div class="medium-3 columns">
+            <img src="/images/400x150.gif">
+        </div>
+        <div class="medium-3 columns">
+            <img src="/images/400x150.gif">
+        </div>
+        <div class="medium-3 columns">
+            <img src="/images/400x150.gif">
+        </div>
+    </div>
+</section>
+
+<section id="collapsed">
+    <div class="row collapse">
+        <h3>Collapsed:</h3>
+        <div class="medium-3 columns">
+            <img src="/images/400x150.gif">
+        </div>
+        <div class="medium-3 columns">
+            <img src="/images/400x150.gif">
+        </div>
+        <div class="medium-3 columns">
+            <img src="/images/400x150.gif">
+        </div>
+        <div class="medium-3 columns">
+            <img src="/images/400x150.gif">
+        </div>
+    </div>
+</section>
+
+<section id="thumbnails">
+    <div class="row">
+        <div class="small-12 columns">
+            <h3>Thumbnails:</h3>
+        </div>
+        <div class="medium-3 columns">
+            <a class="th" href="">
+                <img src="/images/400x150.gif">
+            </a>
+        </div>
+        <div class="medium-3 columns">
+            <a class="th" href="">
+                <img src="/images/400x150.gif">
+            </a>
+        </div>
+        <div class="medium-3 columns">
+            <a class="th" href="">
+                <img src="/images/400x150.gif">
+            </a>
+        </div>
+        <div class="medium-3 columns">
+            <a class="th" href="">
+                <img src="/images/400x150.gif">
+            </a>
+        </div>
+    </div>
 </section>

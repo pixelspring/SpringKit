@@ -1,13 +1,23 @@
 <header class="site-header">
+
+<style>
+    li.section-link {
+        float: right;
+        padding: 0 0 0 10px;
+    }
+</style>
+
     <div class="rowcolumn">
-        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
         <nav class="site-nav">
-            {% for my_page in site.pages %}
-            {% if my_page.title %}
-                <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-            {% endif %}
-            {% endfor %}
+            <ul class="inline-list">
+                <li><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></li>
+                {% for post in site.posts | sort: 'title' %}
+                    <li class="section-link">
+                        <a class="" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
         </nav>
     </div>
 </header>

@@ -15,5 +15,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 
+permalink: none # Set permalink to page title
+
 # Build settings
 markdown: kramdown
