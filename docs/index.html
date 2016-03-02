@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="home rowcolumn">
+
+    <hr>
+    <h1><a href="#">SpringKit</a><img class="fright" src="/images/springkitpup.png" width="200px"></h1>
+    <h2>CSS Framework for website development</h2>
+    <hr>
+
+
+    <ul class="no-bullet">
+        {% for post in site.posts %}
+            <li>
+                <h3>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </h3>
+            </li>
+        {% endfor %}
+    </ul>
+
+
+</div>

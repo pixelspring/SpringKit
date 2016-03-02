@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Alerts"
+date:   2016-03-02 15:31:56 +0000
+categories: base
+---
+
+<div class="rowcolumn">
+
+    <div class="alert">
+        Basic Alert
+    </div>
+    <div class="alert primary">
+        Primary alert
+    </div>
+    <div class="alert secondary">
+        Secondary alert
+    </div>
+    <div class="alert info">
+        Info alert
+    </div>
+    <div class="alert success">
+        Success alert
+    </div>
+    <div class="alert warning">
+        Warning alert
+    </div>
+    <div class="alert danger">
+        Danger alert
+    </div>
+
+</div>
