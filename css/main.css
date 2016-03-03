@@ -338,53 +338,52 @@ th {
   padding: 0; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 100%; }
 
 body {
-  font-size: 1.6em;
-  /* ems, 'cause chrome bug - 16px */
-  line-height: 1.6em;
+  line-height: 1.6;
   font-weight: 400;
   font-family: "Merriweather", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222222; }
 
 h1 {
-  font-size: 3.157em; }
+  font-size: 3.157rem; }
 
 h2 {
-  font-size: 2.369em; }
+  font-size: 2.369rem; }
 
 h3 {
-  font-size: 1.777em; }
+  font-size: 1.777rem; }
 
 h4 {
-  font-size: 1.333em; }
+  font-size: 1.333rem; }
 
 h5 {
-  font-size: 1.222em; }
+  font-size: 1.222rem; }
 
 h6 {
-  font-size: 1.111em; }
+  font-size: 1.111rem; }
 
 h1, h2,
 h3, h4,
 h5, h6 {
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.1;
-  margin: 1em 0 0.5em;
-  background: red; }
+  line-height: 1.2;
+  margin: 2rem 0 1rem; }
 
 .subheader {
   color: #858585;
   font-weight: 300; }
 
 p {
-  line-height: 1.5;
-  margin: 0 0 1.3em; }
+  margin: 0 0 1.6rem; }
 
 .lead-text {
   font-size: 1.3em; }
+
+small {
+  font-size: 0.8rem; }
 
 blockquote {
   margin: 0 0 1.6em 0;
@@ -427,11 +426,10 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
-  font-size: 90%; }
+  margin-left: 2rem; }
 
 li {
-  margin-bottom: 1rem; }
+  margin: 0.5rem 0; }
 
 ul.no-bullet {
   list-style: none; }

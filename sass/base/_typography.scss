@@ -5,12 +5,12 @@
 
 
 html {
-    font-size: 62.5%; //100%; //62.5%;
+    font-size: 100%; //62.5%;
 }
 
 body {
-    font-size:      1.6em; /* ems, 'cause chrome bug - 16px */
-    line-height:    1.6em;
+    // font-size:      1.6em; /* ems, 'cause chrome bug - 16px */
+    line-height:    1.6;
     font-weight:    $font-weight;
     font-family:    $font-stack-body; // "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color:          $font-color;
@@ -19,23 +19,22 @@ body {
 
 // Headers
 // ------------------------------------------------
-h1      { font-size: 3.157em; }
-h2      { font-size: 2.369em; }
-h3      { font-size: 1.777em; }
-h4      { font-size: 1.333em; }
-h5      { font-size: 1.222em; }
-h6      { font-size: 1.111em; }
+
+h1      { font-size: 3.157rem; }
+h2      { font-size: 2.369rem; }
+h3      { font-size: 1.777rem; }
+h4      { font-size: 1.333rem; }
+h5      { font-size: 1.222rem; }
+h6      { font-size: 1.111rem; }
 
 h1, h2,
 h3, h4,
 h5, h6 {
     font-family: $font-stack-header;
     font-weight: 300;
-    line-height: 1.1;
-    margin: 1em 0 0.5em;
-    background: red;
+    line-height: 1.2;
+    margin: 2rem 0 1rem;
 }
-
 
 // Subheaders
 // ------------------------------------------------
@@ -49,8 +48,7 @@ h5, h6 {
 // Paragraphs:
 // ------------------------------------------------
 p {
-    line-height: 1.5;
-    margin: 0 0 1.3em;
+    margin: 0 0 1.6rem;
 }
 
 
@@ -61,7 +59,7 @@ p {
 
 // Small Tag: Covered in Normalize.css (font-size: 80%) but override here if needed
 // ------------------------------------------------
-// small {font-size: 80%}
+small {font-size: 0.8rem}
 
 // Blockquotes:
 // ------------------------------------------------
@@ -123,11 +121,11 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-    margin: 1.5rem 0 1.5rem 3rem;
-    font-size: 90%;}
+    margin-left: 2rem;
+}
 
 li {
-    margin-bottom: 1rem;}
+    margin: 0.5rem 0;}
 
 ul.no-bullet {
     list-style: none;
@@ -138,10 +136,9 @@ ul.inline-list {
 }
 
 .inline-list > li {
-list-style: none;
-float: left;
-// margin-left: 1.22222rem;
-display: block;
+    list-style: none;
+    float: left;
+    display: block;
 }
 
 
