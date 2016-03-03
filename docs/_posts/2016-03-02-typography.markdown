@@ -7,19 +7,16 @@ categories: base
 
 <div class="rowcolumn">
 
-<h1>Heading One</h1>
-
-<h2>Heading Two</h2>
-
-<h3>Heading Three</h3>
+<h1>Heading 1 <span class="subheader">subheader</span></h1>
+<h2>Heading 2 <span class="subheader">subheader</span></h2>
+<h3>Heading 3 <span class="subheader">subheader</span></h3>
+<h4>Heading 4 <span class="subheader">subheader</span></h4>
+<h5>Heading 5 <span class="subheader">subheader</span></h5>
+<h6>Heading 6 <span class="subheader">subheader</span></h6>
 
 <p class="lead-text">This is the "lead-text" class. You can use it for introduction text, or whenever you need to make the text a little larger then standard. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna <a href="foo.html">aliquam</a> erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exercitation ulliam corper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
 
 <p>This is standard paragraph text. Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc., li tot Europa usa li sam vocabularium. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilitá de un nov lingua franca: on refusa continuar payar custosi traductores. It solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.</p>
-
-<h4>Heading Four</h4>
-<h5>Heading Five</h5>
-<h6>Heading Six</h6>
 
 <p>Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental: in fact, it va esser Occidental. A un Angleso it va semblar un simplificat Angles, quam un skeptic Cambridge amico dit me que Occidental es.</p>
 

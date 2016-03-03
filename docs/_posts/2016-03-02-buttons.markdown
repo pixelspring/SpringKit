@@ -5,22 +5,45 @@ date:   2016-03-02 15:31:56 +0000
 categories: base
 ---
 
-<div class="row">
+<div class="rowcolumn">
+    <p>Buttons are currently of two types:</p>
+    <ul>
+        <li>Standard (outline)</li>
+        <li>Primary (solid primary color background)</li>
+    </ul>
+    <p>Use them as you would normally use a button - anchor links, input, submit etc..</p>
+</div>
 
-    <div class="small-12 columns">
-        <h4>Standard:</h4>
-        <a class="button" href="#">Anchor button</a>
-        <button>Button element</button>
-        <input type="submit" value="submit input">
-        <input type="button" value="button input">
-    </div>
+<div class="rowcolumn">
+    <h4>Standard:</h4>
+    <a class="button" href="#">Anchor button</a>
+    <button>Button element</button>
+    <input type="submit" value="submit input">
+    <input type="button" value="button input">
+</div>
 
-    <div class="small-12 columns">
-        <h4>Primary:</h4>
-        <a class="button button-primary" href="#">Anchor button</a>
-        <button class="button-primary">Button element</button>
-        <input class="button-primary" type="submit" value="submit input">
-        <input class="button-primary" type="button" value="button input">
-    </div>
+<div class="rowcolumn">
+    <h4>Primary:</h4>
+    <a class="button button-primary" href="#">Anchor button</a>
+    <button class="button-primary">Button element</button>
+    <input class="button-primary" type="submit" value="submit input">
+    <input class="button-primary" type="button" value="button input">
+</div>
 
+
+<div class="rowcolumn">
+<h4>Example Code:</h4>
+{% highlight html %}
+<!-- Outline Buttons: -->
+<a class="button" href="#">Anchor button</a>
+<button>Button element</button>
+<input type="submit" value="submit input">
+<input type="button" value="button input">
+
+<!-- Primary Buttons: -->
+<a class="button button-primary" href="#">Anchor button</a>
+<button class="button-primary">Button element</button>
+<input class="button-primary" type="submit" value="submit input">
+<input class="button-primary" type="button" value="button input">
+{% endhighlight %}
 </div>
