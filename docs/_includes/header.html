@@ -1,0 +1,15 @@
+<header class="site-header">
+    <div class="rowcolumn">
+
+        <nav class="site-nav">
+            <ul class="inline-list">
+                <li><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></li>
+                {% for post in site.posts | sort: 'title' %}
+                    <li class="section-link">
+                        <a class="" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>

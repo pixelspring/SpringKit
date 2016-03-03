@@ -1,0 +1,65 @@
+---
+layout: post
+title:  "Tables"
+date:   2016-03-02 15:31:56 +0000
+categories: base
+---
+
+<div class="rowcolumn">
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+</div>
+
+<div class="rowcolumn">
+
+    <table>
+    <caption>Table Caption</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dave Rave</td>
+                <td>29</td>
+                <td>Male</td>
+                <td>Townsville</td>
+            </tr>
+            <tr>
+                <td>Fenella Wibblet</td>
+                <td>31</td>
+                <td>Female</td>
+                <td>Ladytown</td>
+            </tr>
+            <tr>
+                <td>Dwayne Johnson</td>
+                <td>41</td>
+                <td>Male</td>
+                <td>Bogtown</td>
+            </tr>
+            <tr>
+                <td>Fred Bloggs</td>
+                <td>66</td>
+                <td>Male</td>
+                <td>San Andreas</td>
+            </tr>
+            <tr>
+                <td>Andy Wibbles-Fordson</td>
+                <td>37</td>
+                <td>Male</td>
+                <td>Somewhere</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<div class="rowcolumn">
+<h4>Example Code:</h4>
+{% highlight html %}
+<!-- Tables: -->
+{% endhighlight %}
+</div>
