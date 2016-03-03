@@ -26,12 +26,14 @@ h4      { font-size: 1.333em; }
 h5      { font-size: 1.222em; }
 h6      { font-size: 1.111em; }
 
-h1, h2, h3,
-h4, h5,
-h6 {
+h1, h2,
+h3, h4,
+h5, h6 {
     font-family: $font-stack-header;
     font-weight: 300;
-    margin: 0.5em 0 1em;
+    line-height: 1.1;
+    margin: 1em 0 0.5em;
+    background: red;
 }
 
 

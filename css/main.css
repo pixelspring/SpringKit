@@ -366,12 +366,14 @@ h5 {
 h6 {
   font-size: 1.111em; }
 
-h1, h2, h3,
-h4, h5,
-h6 {
+h1, h2,
+h3, h4,
+h5, h6 {
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  margin: 0.5em 0 1em; }
+  line-height: 1.1;
+  margin: 1em 0 0.5em;
+  background: red; }
 
 .subheader {
   color: #858585;
