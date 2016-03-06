@@ -5,20 +5,18 @@
 // ------------------------------------------------
 
 // Helpers
-@import "helpers/_variables.scss";
 @import "helpers/_mixins.scss";
+@import "helpers/_variables.scss";
 
 // Base
 @import "base/_normalize.scss";
-// @import "base/_mediaqueries.scss";
 @import "base/_typography.scss";
 @import "base/_media.scss";
 @import "base/_utilityclasses.scss";
 @import "base/_print.scss";
 
 // Layout
-@import "layout/_grid.scss";
-// @import "layout/_foundation-susy.scss";
+// Grid defined in _variables.scss
 @import "layout/_forms.scss";
 @import "layout/_tables.scss";
 @import "layout/_visibility.scss";
