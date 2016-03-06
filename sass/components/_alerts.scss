@@ -5,12 +5,12 @@
 
 .alert {
     padding: 1.4rem;
-    margin: 10px 0;
+    margin: 0 0 1rem 0;
 
 
     background: $ghost;
     font-family: $font-stack-header;
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: 600;
 
         @if $alert-border {
