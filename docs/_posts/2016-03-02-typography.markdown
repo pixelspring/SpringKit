@@ -5,7 +5,7 @@ date:   2016-03-02 15:31:56 +0000
 categories: base
 ---
 
-<div class="rowcolumn">
+<div class="row column">
 
 <h1>Heading 1 <span class="subheader">subheader</span></h1>
 <h2>Heading 2 <span class="subheader">subheader</span></h2>
@@ -81,7 +81,7 @@ lines</pre>
 
 </div>
 
-<div class="rowcolumn">
+<div class="row column">
     <h1>Johannes Gutenberg: The&nbsp;Birth of Movable Type</h1>
     <p class="lead-text">German inventor Johannes Gutenberg developed a method of movable type and used it to create one of the western world’s first major printed books, the “Forty–Two–Line” Bible.</p>
     <p><strong>Johannes Gensfleisch zur Laden zum Gutenberg</strong> (c. 1398 – 1468) was a German blacksmith, goldsmith, printer, and publisher who introduced printing to Europe. His invention of mechanical movable type printing started the Printing Revolution and is widely regarded as the most important event of the modern period. It played a key role in the development of the Renaissance, Reformation, the Age of <a href="http://en.wikipedia.org/wiki/Johannes_Gutenberg">Enlightenment</a>, and the <a href="test">Scientific revolution</a> and laid the material basis for the modern knowledge-based economy and the spread of learning to the masses.</p>

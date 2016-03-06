@@ -5,7 +5,7 @@ date:   2016-03-02 15:31:56 +0000
 categories: base
 ---
 
-<div class="rowcolumn">
+<div class="row column">
     <p>Buttons are currently of two types:</p>
     <ul>
         <li>Standard (outline)</li>
@@ -14,7 +14,7 @@ categories: base
     <p>Use them as you would normally use a button - anchor links, input, submit etc..</p>
 </div>
 
-<div class="rowcolumn">
+<div class="row column">
     <h4>Standard:</h4>
     <a class="button" href="#">Anchor button</a>
     <button>Button element</button>
@@ -22,7 +22,7 @@ categories: base
     <input type="button" value="button input">
 </div>
 
-<div class="rowcolumn">
+<div class="row column">
     <h4>Primary:</h4>
     <a class="button button-primary" href="#">Anchor button</a>
     <button class="button-primary">Button element</button>
@@ -31,7 +31,7 @@ categories: base
 </div>
 
 
-<div class="rowcolumn">
+<div class="row column">
 <h4>Example Code:</h4>
 {% highlight html %}
 <!-- Outline Buttons: -->

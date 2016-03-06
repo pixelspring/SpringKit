@@ -5,39 +5,39 @@ date:   2016-03-02 15:31:56 +0000
 categories: base
 ---
 
-<div class="rowcolumn">
+<div class="row column">
     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 </div>
 
-<section id="foundsusy-grid">
-    <div class="rowcolumn">
-        <h3>FoundSusy Grid Example:</h3>
+<section id="grid">
+    <div class="row column">
+        <h3>Grid Example:</h3>
     </div>
-        <div class="example">
-            <div class="rowcolumn">
-                <div class="grid-example">.rowcolumn</div>
-            </div>
-            <div class="row">
-                <div class="large-2 columns"><div class="grid-example">2</div></div>
-                <div class="large-10 columns"><div class="grid-example">10</div></div>
-            </div>
-            <div class="row">
-                <div class="large-3 columns"><div class="grid-example">3</div></div>
-                <div class="large-9 columns"><div class="grid-example">9</div></div>
-            </div>
-            <div class="row">
-                <div class="large-4 columns"><div class="grid-example">4</div></div>
-                <div class="large-8 columns"><div class="grid-example">8</div></div>
-            </div>
-            <div class="row">
-                <div class="large-5 columns"><div class="grid-example">5</div></div>
-                <div class="large-7 columns"><div class="grid-example">7</div></div>
-            </div>
-            <div class="row">
-                <div class="large-6 columns"><div class="grid-example">6</div></div>
-                <div class="large-6 columns"><div class="grid-example">6</div></div>
-            </div>
+    <div class="example">
+        <div class="row column">
+            <div class="grid-example">.row .column</div>
         </div>
+        <div class="row">
+            <div class="large-2 columns"><div class="grid-example">2</div></div>
+            <div class="large-10 columns"><div class="grid-example">10</div></div>
+        </div>
+        <div class="row">
+            <div class="large-3 columns"><div class="grid-example">3</div></div>
+            <div class="large-9 columns"><div class="grid-example">9</div></div>
+        </div>
+        <div class="row">
+            <div class="large-4 columns"><div class="grid-example">4</div></div>
+            <div class="large-8 columns"><div class="grid-example">8</div></div>
+        </div>
+        <div class="row">
+            <div class="large-5 columns"><div class="grid-example">5</div></div>
+            <div class="large-7 columns"><div class="grid-example">7</div></div>
+        </div>
+        <div class="row">
+            <div class="large-6 columns"><div class="grid-example">6</div></div>
+            <div class="large-6 columns"><div class="grid-example">6</div></div>
+        </div>
+    </div>
 </section>
 
 <section id="non-collapse">
@@ -106,7 +106,7 @@ categories: base
     </div>
 </section>
 
-<div class="rowcolumn">
+<div class="row column">
 <h4>Example Code:</h4>
 {% highlight html %}
 <!-- Grid: -->
