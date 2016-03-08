@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .row {
   max-width: 75rem;
   margin-left: auto;
@@ -1121,6 +1122,18 @@ p {
 
 small {
   font-size: 0.8rem; }
+
+q:before {
+  content: '“'; }
+
+q:after {
+  content: '”'; }
+
+q q:before {
+  content: '‘'; }
+
+q q:after {
+  content: '’'; }
 
 blockquote {
   margin: 0 0 1.6em 0;

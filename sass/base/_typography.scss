@@ -61,6 +61,13 @@ p {
 // ------------------------------------------------
 small {font-size: 0.8rem}
 
+// Quotes:
+// ------------------------------------------------
+q:before   { content: '“'}
+q:after    { content: '”'}
+q q:before { content: '‘'}
+q q:after  { content: '’'}
+
 // Blockquotes:
 // ------------------------------------------------
 blockquote {
