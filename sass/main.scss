@@ -9,7 +9,8 @@
 @import "helpers/_variables.scss";
 
 // Base
-@import "base/_normalize.scss";
+// @import "base/_normalize.scss";
+@import "base/_sanitize.scss";
 @import "base/_typography.scss";
 @import "base/_media.scss";
 @import "base/_utilityclasses.scss";
