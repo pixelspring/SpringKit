@@ -1,0 +1,47 @@
+// Panels
+// ------------------------------------------------
+
+// Vars:
+$card-radius: true!default;
+$card-border: true!default;
+
+$card-background: $ghost!default;
+$card-padding: 1rem!default;
+
+$card-header-bg: $gainsboro!default;
+$card-footer-bg: $gainsboro!default;
+
+
+
+.card {
+    background: $card-background;
+    margin-bottom: 1rem;
+
+    @if $card-radius {
+        border-radius: $global-radius;
+    }
+
+    @if $card-border {
+        border: 1px solid $border-color;
+    }
+
+    header {
+        background: $card-header-bg;
+        padding: $card-padding;
+            @if $card-border {
+                border-bottom: 1px solid $border-color;
+            }
+    }
+
+    .card-content {
+        padding: $card-padding;
+    }
+
+    footer {
+        background: $card-footer-bg;
+        padding: $card-padding;
+            @if $card-border {
+                border-top: 1px solid $border-color;
+            }
+    }
+}

@@ -143,6 +143,17 @@ $alert-radius: true; 				// TRUE or FALSE
 $button-radius: true;               // TRUE or FALSE
 
 
+// Card Variables:
+// ------------------------------------------------
+$card-radius: true;                // TRUE or FALSE
+$card-border: true;                // TRUE or FALSE
+
+$card-background: $ghost;
+$card-padding: 1rem;
+$card-header-bg: $gainsboro;
+$card-footer-bg: $gainsboro;
+
+
 // Navigation Variables:
 // ------------------------------------------------
 

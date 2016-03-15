@@ -1340,10 +1340,21 @@ input[type="button"].button-primary:focus {
   border-color: #157998;
   color: #FFF; }
 
-.panel {
-  background: #F6F6F6;
-  padding: 1em;
-  margin-bottom: 1em; }
+.card {
+  background: #FAFAFA;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: 1px solid #CCCCCC; }
+  .card header {
+    background: #DDDDDD;
+    padding: 1rem;
+    border-bottom: 1px solid #CCCCCC; }
+  .card .card-content {
+    padding: 1rem; }
+  .card footer {
+    background: #DDDDDD;
+    padding: 1rem;
+    border-top: 1px solid #CCCCCC; }
 
 .alert {
   padding: 1.4rem;
