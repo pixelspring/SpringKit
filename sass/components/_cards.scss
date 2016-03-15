@@ -1,18 +1,38 @@
-// Panels
+// ------------------------------------------------
+// Cards
 // ------------------------------------------------
 
-// Vars:
+////
+/// @author Mike Seaby
+/// @group components
+////
+
+/// Set a radius on the card
+/// @type Boolean
 $card-radius: true!default;
+
+/// Set borders on the card
+/// @type Boolean
 $card-border: true!default;
 
+/// Card Background color
+/// @type Color
 $card-background: $ghost!default;
+
+/// Card element padding
+/// @type Number
 $card-padding: 1rem!default;
 
+/// Card Header Background color
+/// @type Color
 $card-header-bg: $gainsboro!default;
+
+/// Card Footer Background color
+/// @type Color
 $card-footer-bg: $gainsboro!default;
 
 
-
+/// Construct the card component
 .card {
     background: $card-background;
     margin-bottom: 1rem;
