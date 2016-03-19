@@ -4,17 +4,29 @@
 //  Define All The Things!
 // ------------------------------------------------
 
-// Font Families:
-// ------------------------------------------------
+////
+/// @group helpers
+////
+
+/// Font Families
+
+/// Sets the Font stack for headers
+/// @type List
 $font-stack-header: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/// Sets the Font stack for body text
+/// @type List
 $font-stack-body: 	"Merriweather", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/// Sets the Font stack for code elements
+/// @type List
 $font-stack-code: 	"Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
-
-// Hues & Tints:
 // ------------------------------------------------
 
-// Grayscale
+/// Hues & Tints
+
+/// 1: Grayscale
 $white      :       #FFFFFF;
 $ghost      :       #FAFAFA;
 $snow       :       #F9F9F9;
@@ -35,7 +47,7 @@ $oil        :       #333333;
 $jet        :       #222222;
 $black      :       #000000;
 
-// Color
+/// 2: Color
 $primary-color:     #1EAEDB;   // Blue
 $secondary-color:   #e7e7e7;   // Light Gray
 
@@ -50,22 +62,27 @@ $border-color:      $iron;
 
 $highlight-color:   #fff4cc;
 
-
-// Rounded Things:
 // ------------------------------------------------
+
+/// Rounded Things
 
 $global-radius: 4px;
 $rounded: 1000px;
 
-
-// Grid Variables:
 // ------------------------------------------------
 
+/// Grid Variables
+
+/// Set global font size
+/// @type Number
 $global-font-size: 100%;
 
+/// Set max width of rows
+/// @type Number
 $global-width: rem-calc(1200);
 
-// Breakpoint definitions:
+/// Breakpoint definitions:
+/// @type Map
 $breakpoints: (
     small: 0,
     medium: 640px,
@@ -74,116 +91,124 @@ $breakpoints: (
     xxlarge: 1440px,
 );
 
-// Classes to output for prototyping grid
+/// Classes to output for prototyping grid
+/// @type Map
 $breakpoint-classes: (small medium large);
 
-// The maximum width of a row
+/// The maximum width of a row
+/// @type Number
 $grid-row-width: $global-width;
 
-// Default column count of the grid
+/// Default column count of the grid
+/// @type Number
 $grid-column-count: 12;
 
-// The amount of space between columns at different screen sizes. To use just one size, set the variable to a number instead of a map.
+/// The amount of space between columns at different screen sizes. To use just one size, set the variable to a number instead of a map.
+/// @type Map
 $grid-column-gutter: (
     small: 20px,
     medium: 30px,
 );
 
-// If true, the last column in a row will align to the opposite edge of the row
+/// If true, the last column in a row will align to the opposite edge of the row
+/// @type Boolean
 $grid-column-align-edge: true;
 
-// The highest number of .x-up classes available when using the block grid CSS
+/// The highest number of .x-up classes available when using the block grid CSS
+/// @type Number
 $block-grid-max: 8;
 
-// Bring on the grid:
-// @import 'grid/grid';
 
-// Generate either the standard or the flex-grid classes for prototyping:
-// @include foundation-grid;
-// OR:
-// @include foundation-flex-grid;
+/// Generate either the standard or the flex-grid classes for prototyping:
+/// @include foundation-grid;
+/// OR:
+/// @include foundation-flex-grid;
 @import "../layout/grid/_grid.scss";
 @include foundation-grid;
 
-
-// Typography Variables:
 // ------------------------------------------------
 
-// General (Paragraph inherits from this):
+/// Typography Variables
+
+/// General (Paragraph inherits from this):
 $line-height:   1.6em;
 $font-weight:   400;
 
-// Headers:
+/// Headers:
 $header-font-color: $font-color;
 $header-font-weight: 300;
 
-//Subheaders:
+/// Subheaders:
 $subheader-font-color: scale-color($header-font-color, $lightness: 45%);
 $subheader-font-weight: 300;
 
-// Blockquotes:
+/// Blockquotes:
 $blockquote-font-size:  1.1em;
 $blockquote-font-color: $font-color;
 $blockquote-border:     5px solid $gainsboro; // Left border
 $blockquote-bg:         $ghost;
 
 
-
-
-// Alert Variables:
 // ------------------------------------------------
 
-$alert-border: false;				// TRUE or FALSE
-$alert-radius: true; 				// TRUE or FALSE
+/// Alert Variables
 
+/// Set border on alerts
+/// @type Boolean
+$alert-border: false;
 
-// Button Variables:
+/// Use Rounded alerts
+/// @type Boolean
+$alert-radius: true;
+
 // ------------------------------------------------
 
-$button-radius: true;               // TRUE or FALSE
+/// Button Variables
 
+/// Use Rounded buttons
+/// @type Boolean
+$button-radius: true;
 
-// Card Variables:
 // ------------------------------------------------
-$card-radius: true;                // TRUE or FALSE
-$card-border: true;                // TRUE or FALSE
 
-$card-background: $ghost;
+/// Card Variables
+
+/// Set radius on cards
+/// @type Boolean
+$card-radius: true;
+
+/// Set border on cards
+/// @type Boolean
+$card-border: true;
+
+/// Set card padding
+/// @type Number
 $card-padding: 1rem;
+
+/// Set Card main background color
+/// @type Color
+$card-background: $ghost;
+
+/// Card Header Background color
+/// @type Color
 $card-header-bg: $gainsboro;
+
+/// Card Footer Background color
+/// @type Color
 $card-footer-bg: $gainsboro;
 
-
-// Navigation Variables:
 // ------------------------------------------------
 
-// Top Menu:
-$top-menu-height:       	50px;
-$top-menu-bottom-margin:    30px;
-$top-menu-font-size:    	1.2rem;
-$toggle-menu-bg:        	$jet;
-$top-menu-bg:				$gainsboro;
-$top-menu-bg-l2:            $base;
-$top-menu-bg-l3:            $aluminum;
-$top-menu-bg-l4:            $jumbo;
+/// Scrollbar Variables
 
-$top-menu-link-color:		$primary-color;
-$top-menu-text-transform:	uppercase;
-
-$top-menu-hover-bg:			$iron;
-$top-menu-hover-bg-gc:		$base;
-
-$top-menu-mb-border-color:  $toggle-menu-bg;
-
-// Sidebar Nav:
-$sidebar-width:                 250px;
-$sbp-content-padding-top:       30px;
-$sidebar-nav-bg:                $jet;
-$sidebar-nav-bg-hover-color:    $black;
-$sidebar-nav-font-size:         1.4rem;
-
-// Scrollbar Variables:
-// ------------------------------------------------
+/// Scrollbar foreground color (ie. draggable area)
+/// @type Color
 $scrollbar-foreground-color: $primary-color;
+
+/// Scrollbar background color
+/// @type Color
 $scrollbar-background-color: slategray;
+
+/// Scrollbar size (width)
+/// @type Number
 $scrollbar-size: 8px;

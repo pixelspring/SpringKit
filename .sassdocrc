@@ -1,0 +1,5 @@
+theme: "default"
+groups:
+    undefined: "General Stuff"
+verbose: "true"
+dest: "./sassdocs"
