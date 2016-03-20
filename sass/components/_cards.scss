@@ -1,47 +1,75 @@
-// Panels
+// ------------------------------------------------
+// Cards
 // ------------------------------------------------
 
-// Vars:
+////
+/// Cards allow you to present information in a card format
+/// @group cards
+////
+
+
+/// Set a radius on the card
+/// @type Boolean
 $card-radius: true!default;
+
+/// Set borders on the card
+/// @type Boolean
 $card-border: true!default;
 
+/// Card Background color
+/// @type Color
 $card-background: $ghost!default;
+
+/// Card element padding
+/// @type Number
 $card-padding: 1rem!default;
 
+/// Card Header Background color
+/// @type Color
 $card-header-bg: $gainsboro!default;
+
+/// Card Footer Background color
+/// @type Color
 $card-footer-bg: $gainsboro!default;
 
 
+/// @example Semantic Card Mixin Usage
+///    .semantic-card-class {
+///        @include card();
+///    }
+@mixin card {
+    .card {
+        background: $card-background;
+        margin-bottom: 1rem;
 
-.card {
-    background: $card-background;
-    margin-bottom: 1rem;
+        @if $card-radius {
+            border-radius: $global-radius;
+        }
 
-    @if $card-radius {
-        border-radius: $global-radius;
-    }
+        @if $card-border {
+            border: 1px solid $border-color;
+        }
 
-    @if $card-border {
-        border: 1px solid $border-color;
-    }
+        header {
+            background: $card-header-bg;
+            padding: $card-padding;
+                @if $card-border {
+                    border-bottom: 1px solid $border-color;
+                }
+        }
 
-    header {
-        background: $card-header-bg;
-        padding: $card-padding;
-            @if $card-border {
-                border-bottom: 1px solid $border-color;
-            }
-    }
+        .card-content {
+            padding: $card-padding;
+        }
 
-    .card-content {
-        padding: $card-padding;
-    }
-
-    footer {
-        background: $card-footer-bg;
-        padding: $card-padding;
-            @if $card-border {
-                border-top: 1px solid $border-color;
-            }
+        footer {
+            background: $card-footer-bg;
+            padding: $card-padding;
+                @if $card-border {
+                    border-top: 1px solid $border-color;
+                }
+        }
     }
 }
+
+.card { @include card; }

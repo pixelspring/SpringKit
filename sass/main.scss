@@ -4,12 +4,12 @@
 //  All elements, imports, the whole shebang:
 // ------------------------------------------------
 
+
 // Helpers
 @import "helpers/_mixins.scss";
 @import "helpers/_variables.scss";
 
 // Base
-// @import "base/_normalize.scss";
 @import "base/_sanitize.scss";
 @import "base/_typography.scss";
 @import "base/_media.scss";
@@ -33,7 +33,6 @@
 // Vendor
 // @import "vendor/animate/animate.scss";
 // @import "vendor/brand-colors/brand-colors.scss";
-// @import "vendor/susy/_susy.scss";
 // @import "vendor/sass-mq/_mq.scss";
 
 

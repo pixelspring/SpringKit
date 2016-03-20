@@ -4,11 +4,13 @@
 //
 // ------------------------------------------------
 
+////
+/// Mixins provide functionality for various elements
+/// @group helpers
+////
 
 
-
-// Clearfix:
-// ------------------------------------------------
+/// Clearfix:
 /// Applies the micro clearfix hack popularized by Nicolas Gallagher. Include this mixin on a container if its children are all floated, to give the container a proper height.
 /// The clearfix is augmented with specific styles to prevent borders in flexbox environments
 /// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix Hack
@@ -27,9 +29,10 @@
     }
 }
 
-// Debug Mixin:
-// Can pass color if wanted, defaults to blue.
-// ------------------------------------------------
+/// Debug Mixin:
+///
+/// Can pass color if wanted, defaults to blue.
+/// @param {Color} $bg - Color to use
 @mixin debug($bg: blue) {
     * {
         background: rgba($bg, 0.2);
@@ -43,7 +46,6 @@
 /// Removes the unit (e.g. px, em, rem) from a value, returning the number only.
 ///
 /// @param {Number} $num - Number to strip unit from.
-///
 /// @returns {Number} The same number, sans unit.
 @function strip-unit($num) {
     @return $num / ($num * 0 + 1);
@@ -53,7 +55,6 @@
 ///
 /// @param {Number|List} $values - One or more values to convert. Be sure to separate them with spaces and not commas. If you need to convert a comma-separated list, wrap the list in parentheses.
 /// @param {Number} $base [null] - The base value to use when calculating the `rem`. If you're using Foundation out of the box, this is 16px. If this parameter is `null`, the function will reference the `$base-font-size` variable as the base.
-///
 /// @returns {List} A list of converted values.
 @function rem-calc($values, $base: null) {
     $rem-values: ();
@@ -81,7 +82,7 @@
     @return $rem-values;
 }
 
-// Converts a unitless, pixel, or rem value to em, for use in breakpoints.
+/// Converts a unitless, pixel, or rem value to em, for use in breakpoints.
 @function -zf-bp-to-em($value) {
     // Pixel and unitless values are converted to rems
     @if unit($value) == 'px' or unitless($value) {

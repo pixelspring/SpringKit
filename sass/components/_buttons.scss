@@ -3,6 +3,16 @@
 //
 // ------------------------------------------------
 
+////
+/// Buttons
+/// @group buttons
+////
+
+/// Use Rounded buttons
+/// @type Boolean
+$button-radius: true!default;
+
+
 // Basic Buttons
 .button,
 button,

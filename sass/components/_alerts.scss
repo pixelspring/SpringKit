@@ -3,6 +3,21 @@
 //
 // ------------------------------------------------
 
+////
+/// Alerts
+/// @group alerts
+////
+
+/// Set border on alerts
+/// @type Boolean
+$alert-border: false!default;
+
+/// Use Rounded alerts
+/// @type Boolean
+$alert-radius: true!default;
+
+
+
 .alert {
     padding: 1.4rem;
     margin: 0 0 1rem 0;

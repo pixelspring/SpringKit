@@ -1067,7 +1067,7 @@ ol {
   list-style: decimal inside; }
 
 ol, ul {
-  margin-top: 0;
+  margin: 0 0 1.6rem;
   padding-left: 0; }
 
 ul ul,
@@ -1340,18 +1340,18 @@ input[type="button"].button-primary:focus {
   border-color: #157998;
   color: #FFF; }
 
-.card {
+.card .card {
   background: #FAFAFA;
   margin-bottom: 1rem;
   border-radius: 4px;
   border: 1px solid #CCCCCC; }
-  .card header {
+  .card .card header {
     background: #DDDDDD;
     padding: 1rem;
     border-bottom: 1px solid #CCCCCC; }
-  .card .card-content {
+  .card .card .card-content {
     padding: 1rem; }
-  .card footer {
+  .card .card footer {
     background: #DDDDDD;
     padding: 1rem;
     border-top: 1px solid #CCCCCC; }

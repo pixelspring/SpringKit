@@ -3,6 +3,53 @@
 //
 // ------------------------------------------------
 
+////
+/// Typography
+/// @group typography
+////
+
+/// Define the line height
+/// @type Number
+$line-height:   1.6em!default;
+
+/// Define the font weight
+/// @type String
+$font-weight:   400!default;
+
+/// Set the header color
+/// @type Color
+$header-font-color: $font-color!default;
+
+/// Define the header font weight
+/// @type String
+$header-font-weight: 300!default;
+
+/// Set the subheader color
+/// @type Color
+$subheader-font-color: scale-color($header-font-color, $lightness: 45%)!default;
+
+/// Define the subheader font weight
+/// @type String
+$subheader-font-weight: 300!default;
+
+/// Blockquotes:
+/// Define the line height
+/// @type Number
+$blockquote-font-size:  1.1em!default;
+
+/// Define blockquotes text color
+/// @type Color
+$blockquote-font-color: $font-color!default;
+
+/// Set the blockquotes border
+/// @type String
+$blockquote-border:     5px solid $gainsboro!default; // Left border
+
+/// Define blockquotes background color
+/// @type Color
+$blockquote-bg:         $ghost!default;
+
+
 
 html {
     font-size: 100%; //62.5%;
@@ -120,7 +167,7 @@ ol {
 }
 
 ol, ul {
-    margin-top: 0;
+    margin: 0 0 1.6rem;
     padding-left: 0;
 }
 
