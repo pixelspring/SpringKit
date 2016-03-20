@@ -1067,7 +1067,7 @@ ol {
   list-style: decimal inside; }
 
 ol, ul {
-  margin-top: 0;
+  margin: 0 0 1.6rem;
   padding-left: 0; }
 
 ul ul,
@@ -1325,33 +1325,115 @@ input[type="button"].button-primary {
   color: #FFF;
   border-color: #1EAEDB;
   background-color: #1EAEDB; }
+  .button.button-primary:hover, .button.button-primary:focus,
+  button.button-primary:hover,
+  button.button-primary:focus,
+  input[type="submit"].button-primary:hover,
+  input[type="submit"].button-primary:focus,
+  input[type="reset"].button-primary:hover,
+  input[type="reset"].button-primary:focus,
+  input[type="button"].button-primary:hover,
+  input[type="button"].button-primary:focus {
+    background-color: #157998;
+    border-color: #157998;
+    color: #FFF; }
 
-.button.button-primary:hover,
-button.button-primary:hover,
-input[type="submit"].button-primary:hover,
-input[type="reset"].button-primary:hover,
-input[type="button"].button-primary:hover,
-.button.button-primary:focus,
-button.button-primary:focus,
-input[type="submit"].button-primary:focus,
-input[type="reset"].button-primary:focus,
-input[type="button"].button-primary:focus {
-  background-color: #157998;
-  border-color: #157998;
-  color: #FFF; }
+.button.button-success,
+button.button-success,
+input[type="submit"].button-success,
+input[type="reset"].button-success,
+input[type="button"].button-success {
+  color: #FFF;
+  border-color: #6cbc7a;
+  background-color: #6cbc7a; }
+  .button.button-success:hover, .button.button-success:focus,
+  button.button-success:hover,
+  button.button-success:focus,
+  input[type="submit"].button-success:hover,
+  input[type="submit"].button-success:focus,
+  input[type="reset"].button-success:hover,
+  input[type="reset"].button-success:focus,
+  input[type="button"].button-success:hover,
+  input[type="button"].button-success:focus {
+    background-color: #449753;
+    border-color: #449753;
+    color: #FFF; }
 
-.card {
+.button.button-warning,
+button.button-warning,
+input[type="submit"].button-warning,
+input[type="reset"].button-warning,
+input[type="button"].button-warning {
+  color: #FFF;
+  border-color: #ffd333;
+  background-color: #ffd333; }
+  .button.button-warning:hover, .button.button-warning:focus,
+  button.button-warning:hover,
+  button.button-warning:focus,
+  input[type="submit"].button-warning:hover,
+  input[type="submit"].button-warning:focus,
+  input[type="reset"].button-warning:hover,
+  input[type="reset"].button-warning:focus,
+  input[type="button"].button-warning:hover,
+  input[type="button"].button-warning:focus {
+    background-color: #e6b400;
+    border-color: #e6b400;
+    color: #FFF; }
+
+.button.button-danger,
+button.button-danger,
+input[type="submit"].button-danger,
+input[type="reset"].button-danger,
+input[type="button"].button-danger {
+  color: #FFF;
+  border-color: #e2525e;
+  background-color: #e2525e; }
+  .button.button-danger:hover, .button.button-danger:focus,
+  button.button-danger:hover,
+  button.button-danger:focus,
+  input[type="submit"].button-danger:hover,
+  input[type="submit"].button-danger:focus,
+  input[type="reset"].button-danger:hover,
+  input[type="reset"].button-danger:focus,
+  input[type="button"].button-danger:hover,
+  input[type="button"].button-danger:focus {
+    background-color: #c6212f;
+    border-color: #c6212f;
+    color: #FFF; }
+
+.button.button-info,
+button.button-info,
+input[type="submit"].button-info,
+input[type="reset"].button-info,
+input[type="button"].button-info {
+  color: #FFF;
+  border-color: #5bb1dc;
+  background-color: #5bb1dc; }
+  .button.button-info:hover, .button.button-info:focus,
+  button.button-info:hover,
+  button.button-info:focus,
+  input[type="submit"].button-info:hover,
+  input[type="submit"].button-info:focus,
+  input[type="reset"].button-info:hover,
+  input[type="reset"].button-info:focus,
+  input[type="button"].button-info:hover,
+  input[type="button"].button-info:focus {
+    background-color: #298fc2;
+    border-color: #298fc2;
+    color: #FFF; }
+
+.card .card {
   background: #FAFAFA;
   margin-bottom: 1rem;
   border-radius: 4px;
   border: 1px solid #CCCCCC; }
-  .card header {
+  .card .card header {
     background: #DDDDDD;
     padding: 1rem;
     border-bottom: 1px solid #CCCCCC; }
-  .card .card-content {
+  .card .card .card-content {
     padding: 1rem; }
-  .card footer {
+  .card .card footer {
     background: #DDDDDD;
     padding: 1rem;
     border-top: 1px solid #CCCCCC; }
