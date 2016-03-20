@@ -1486,6 +1486,18 @@ body {
   scrollbar-face-color: #1EAEDB;
   scrollbar-track-color: slategray; }
 
+.label {
+  display: inline-block;
+  padding: 0.2em 0.5rem;
+  font-size: 75%;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: default;
+  border-radius: 4px;
+  vertical-align: baseline;
+  background: #666666;
+  color: white; }
+
 .example .row,
 .example .rowcolumn {
   background: lightgray;
