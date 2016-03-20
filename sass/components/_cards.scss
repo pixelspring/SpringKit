@@ -4,9 +4,9 @@
 
 ////
 /// Cards allow you to present information in a card format
-/// @author Mike Seaby
-/// @group components
+/// @group cards
 ////
+
 
 /// Set a radius on the card
 /// @type Boolean
@@ -33,7 +33,13 @@ $card-header-bg: $gainsboro!default;
 $card-footer-bg: $gainsboro!default;
 
 
-/// Construct the card component
+/// @example Semantic Card Mixin Usage
+///    .semantic-card-class {
+///        @include card();
+///    }
+
+@mixin card {}
+
 .card {
     background: $card-background;
     margin-bottom: 1rem;

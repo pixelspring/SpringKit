@@ -120,9 +120,9 @@ $block-grid-max: 8;
 
 
 /// Generate either the standard or the flex-grid classes for prototyping:
-/// @include foundation-grid;
-/// OR:
-/// @include foundation-flex-grid;
+///   @include foundation-grid;
+///   OR:
+///   @include foundation-flex-grid;
 @import "../layout/grid/_grid.scss";
 @include foundation-grid;
 
@@ -173,19 +173,19 @@ $button-radius: true;
 
 /// Card Variables
 
-/// Set radius on cards
+/// Set the corner radius on cards
 /// @type Boolean
 $card-radius: true;
 
-/// Set border on cards
+/// Set a border on cards
 /// @type Boolean
 $card-border: true;
 
-/// Set card padding
+/// Set the cards padding
 /// @type Number
 $card-padding: 1rem;
 
-/// Set Card main background color
+/// Set Cards main background color
 /// @type Color
 $card-background: $ghost;
 
