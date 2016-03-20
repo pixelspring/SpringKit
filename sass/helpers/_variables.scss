@@ -26,7 +26,7 @@ $font-stack-code: 	"Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console"
 
 /// Hues & Tints
 
-/// 1: Grayscale
+// Grayscale
 $white      :       #FFFFFF;
 $ghost      :       #FAFAFA;
 $snow       :       #F9F9F9;
@@ -47,26 +47,56 @@ $oil        :       #333333;
 $jet        :       #222222;
 $black      :       #000000;
 
-/// 2: Color
+
+/// Primary color, used for links etc
+/// @type Color
 $primary-color:     #1EAEDB;   // Blue
+
+/// Secondary Color
+/// @type Color
 $secondary-color:   #e7e7e7;   // Light Gray
 
+/// Success Color (green)
+/// @type Color
 $success-color:     #d5ecd9;   // Green
+
+/// Warning Color (orange/yellow)
+/// @type Color
 $warning-color:     #fff4cc;   // OrangeYellow
+
+/// Info Color (light blue)
+/// @type Color
 $info-color:        #d9edf7;   // Light Blue
+
+/// Danger Color (red / pink)
+/// @type Color
 $danger-color:      #f8d5d8;   // Red
 
+/// Link Color ($primary)
+/// @type Color
 $link-color:        $primary-color;
+
+/// Font Color, used for body text
+/// @type Color
 $font-color:        $jet;
+
+/// Border Color, sets borders
+/// @type Color
 $border-color:      $iron;
 
+/// Highlight Color, used for highlighting elements
+/// @type Color
 $highlight-color:   #fff4cc;
 
 // ------------------------------------------------
 
 /// Rounded Things
-
+/// Set global radius, for rounded corners etc
+/// @type Number
 $global-radius: 4px;
+
+/// Set global rounded value, turn a square into a corcle for instance
+/// @type Number
 $rounded: 1000px;
 
 // ------------------------------------------------
@@ -153,7 +183,7 @@ $blockquote-bg:         $ghost;
 
 /// Alert Variables
 
-/// Set border on alerts
+/// Set border on alerts, coloured to match alert type
 /// @type Boolean
 $alert-border: false;
 
