@@ -6,10 +6,14 @@ categories: base
 ---
 
 <div class="row column">
-    <p>Buttons are currently of two types:</p>
+    <p>Buttons are of six types:</p>
     <ul>
         <li>Standard (outline)</li>
         <li>Primary (solid primary color background)</li>
+        <li>Success (solid darkened success color background)</li>
+        <li>Warning (solid darkened warning color background)</li>
+        <li>Danger (solid darkened danger color background)</li>
+        <li>Info (solid darkened info color background)</li>
     </ul>
     <p>Use them as you would normally use a button - anchor links, input, submit etc..</p>
 </div>
@@ -28,6 +32,38 @@ categories: base
     <button class="button-primary">Button element</button>
     <input class="button-primary" type="submit" value="submit input">
     <input class="button-primary" type="button" value="button input">
+</div>
+
+<div class="row column">
+    <h4>Success:</h4>
+    <a class="button button-success" href="#">Anchor button</a>
+    <button class="button-success">Button element</button>
+    <input class="button-success" type="submit" value="submit input">
+    <input class="button-success" type="button" value="button input">
+</div>
+
+<div class="row column">
+    <h4>Warning:</h4>
+    <a class="button button-warning" href="#">Anchor button</a>
+    <button class="button-warning">Button element</button>
+    <input class="button-warning" type="submit" value="submit input">
+    <input class="button-warning" type="button" value="button input">
+</div>
+
+<div class="row column">
+    <h4>Danger:</h4>
+    <a class="button button-danger" href="#">Anchor button</a>
+    <button class="button-danger">Button element</button>
+    <input class="button-danger" type="submit" value="submit input">
+    <input class="button-danger" type="button" value="button input">
+</div>
+
+<div class="row column">
+    <h4>Info:</h4>
+    <a class="button button-info" href="#">Anchor button</a>
+    <button class="button-info">Button element</button>
+    <input class="button-info" type="submit" value="submit input">
+    <input class="button-info" type="button" value="button input">
 </div>
 
 

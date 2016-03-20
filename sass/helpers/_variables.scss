@@ -199,6 +199,14 @@ $alert-radius: true;
 /// @type Boolean
 $button-radius: true;
 
+$button-success-color: darken($success-color, 30);
+
+$button-warning-color: darken($warning-color, 30);
+
+$button-info-color: darken($info-color, 30);
+
+$button-danger-color: darken($danger-color, 30);
+
 // ------------------------------------------------
 
 /// Card Variables
