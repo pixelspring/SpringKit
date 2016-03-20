@@ -37,38 +37,39 @@ $card-footer-bg: $gainsboro!default;
 ///    .semantic-card-class {
 ///        @include card();
 ///    }
+@mixin card {
+    .card {
+        background: $card-background;
+        margin-bottom: 1rem;
 
-@mixin card {}
+        @if $card-radius {
+            border-radius: $global-radius;
+        }
 
-.card {
-    background: $card-background;
-    margin-bottom: 1rem;
+        @if $card-border {
+            border: 1px solid $border-color;
+        }
 
-    @if $card-radius {
-        border-radius: $global-radius;
-    }
+        header {
+            background: $card-header-bg;
+            padding: $card-padding;
+                @if $card-border {
+                    border-bottom: 1px solid $border-color;
+                }
+        }
 
-    @if $card-border {
-        border: 1px solid $border-color;
-    }
+        .card-content {
+            padding: $card-padding;
+        }
 
-    header {
-        background: $card-header-bg;
-        padding: $card-padding;
-            @if $card-border {
-                border-bottom: 1px solid $border-color;
-            }
-    }
-
-    .card-content {
-        padding: $card-padding;
-    }
-
-    footer {
-        background: $card-footer-bg;
-        padding: $card-padding;
-            @if $card-border {
-                border-top: 1px solid $border-color;
-            }
+        footer {
+            background: $card-footer-bg;
+            padding: $card-padding;
+                @if $card-border {
+                    border-top: 1px solid $border-color;
+                }
+        }
     }
 }
+
+.card { @include card; }

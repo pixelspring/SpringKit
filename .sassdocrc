@@ -1,5 +1,6 @@
-theme: "default"
-groups:
-    undefined: "General Stuff"
-verbose: "true"
-dest: "./sassdocs"
+{
+    "theme": "./sassdoc-springkit-theme",
+    "verbose": "true",
+    "dest": "./sassdoc",
+    "descriptionPath": "./Readme.md"
+}
