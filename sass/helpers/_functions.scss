@@ -18,24 +18,35 @@
 //     @return map-get(map-get($color-palettes, $palette), $variant);
 // }
 
-$scotch-color-key: 'base' !default;
+// $color-key: 'base' !default;
+//
+// @function palette(
+//     $name: 'primary',
+//     $variant: $color-key,
+//     $opacity: 1
+//     ) {
+//     $color: null;
+//
+//     // Get the color spectrum
+//     $color-spectrum: map-get($color-palettes, $name);
+//
+//     // Get the color variant
+//     @if $color-spectrum {
+//     $color: map-get($color-spectrum, $variant);
+//     }
+//
+//     @return $color;
+// }
 
-@function palette(
-  $name: 'primary',
-  $variant: $scotch-color-key,
-  $opacity: 1
-) {
-  $color: null;
+@function palette($palette, $tone: 'base') {
 
-  // Get the color spectrum
-  $color-spectrum: map-get($color-palettes, $name);
+    @if map-has-key($color-palettes, $palette) {
+        @return map-get(map-get($color-palettes, $palette), $tone);
+    }
 
-  // Get the color variant
-  @if $color-spectrum {
-    $color: map-get($color-spectrum, $variant);
-  }
+    @warn "Unknown `#{$palette}` in $color-palettes.";
+    @return null;
 
-  @return $color;
 }
 
 

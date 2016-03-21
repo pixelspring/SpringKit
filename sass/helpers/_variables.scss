@@ -27,28 +27,28 @@ $font-stack-code: 	"Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console"
 /// Hues & Tints
 
 // Grayscale
-$white      :       #FFFFFF;
-$ghost      :       #FAFAFA;
-$snow       :       #F9F9F9;
-$vapor      :       #F6F6F6;
-$white-smoke:       #F5F5F5;
-$silver     :       #EFEFEF;
-$smoke      :       #EEEEEE;
-$gainsboro  :       #DDDDDD;
-$iron       :       #CCCCCC;
-$base       :       #AAAAAA;
-$aluminum   :       #999999;
-$jumbo      :       #888888;
-$monsoon    :       #777777;
-$steel      :       #666666;
-$charcoal   :       #555555;
-$tuatara    :       #444444;
-$oil        :       #333333;
-$jet        :       #222222;
-$black      :       #000000;
+$white      :     #FFFFFF;
+$ghost      :     #FAFAFA;
+$snow       :     #F9F9F9;
+$vapor      :     #F6F6F6;
+$white-smoke:     #F5F5F5;
+$silver     :     #EFEFEF;
+$smoke      :     #EEEEEE;
+$gainsboro  :     #DDDDDD;
+$iron       :     #CCCCCC;
+$base       :     #AAAAAA;
+$aluminum   :     #999999;
+$jumbo      :     #888888;
+$monsoon    :     #777777;
+$steel      :     #666666;
+$charcoal   :     #555555;
+$tuatara    :     #444444;
+$oil        :     #333333;
+$jet        :     #222222;
+$black      :     #000000;
 
 
-/// Colors used for buttons, callouts, links, etc. There must always be a color called `primary`.
+/// Multidimensional Color map used for buttons, callouts, links, etc.
 /// @type Map
 $color-palettes: (
     'primary': (
@@ -87,6 +87,9 @@ $color-palettes: (
         'dark':   #1F9FF3
         )
 );
+
+$no-color: palette(non-existant);
+
 
 /// Link Color ($primary)
 /// @type Color

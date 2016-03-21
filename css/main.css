@@ -1488,7 +1488,7 @@ body {
 
 .label {
   padding: 0.2em 0.5rem;
-  font-size: 80%;
+  font-size: 75%;
   line-height: 1;
   white-space: nowrap;
   cursor: default;
@@ -1534,3 +1534,18 @@ body {
   width: 20%;
   float: left;
   text-align: center; }
+
+.example-primary {
+  background: #1EAEDB; }
+
+.example-secondary {
+  background: #e7e7e7; }
+
+.example-success {
+  background: #6cbc7a; }
+
+.example-warning {
+  background: #f39c12; }
+
+.example-danger {
+  background: #e2525e; }

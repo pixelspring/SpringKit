@@ -3,7 +3,10 @@
 //
 //  Official color codes for the worlds biggest brands:
 //  http://brandcolors.net
-//  https://github.com/reimertz/brand-colors
+//  https://github.com/reimertz/brand-
+//
+//  @example
+//  color: map-get($brand-colors, $bc-etsy); // etsy
 // ------------------------------------------------
 
 $brand-colors: (
