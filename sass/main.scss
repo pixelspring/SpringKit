@@ -4,9 +4,9 @@
 //  All elements, imports, the whole shebang:
 // ------------------------------------------------
 
-
 // Helpers
 @import "helpers/_mixins.scss";
+@import "helpers/_functions.scss";
 @import "helpers/_variables.scss";
 
 // Base
@@ -39,6 +39,7 @@
 
 
 
+
 // ------------------------------------------------
 // DEMO / DEBUG:
 // ------------------------------------------------
@@ -58,3 +59,16 @@
     height: 40px;
     line-height: 40px;
 }
+
+.color-example {
+    padding: 30px;
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+
+// .example-primary    {background: palette(primary);}
+// .example-secondary  {background: palette(secondary);}
+// .example-success    {background: palette(success);}
+// .example-warning    {background: palette(warning);}
+// .example-danger     {background: palette(danger);}//

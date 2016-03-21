@@ -140,11 +140,11 @@ blockquote {
 // Links
 // ------------------------------------------------
 a {
-    color: $primary-color;
+    color: $link-color;
 }
 
 a:hover {
-    color: darken($primary-color, 15);
+    color: darken($link-color, 15);
 }
 
 h1 a,

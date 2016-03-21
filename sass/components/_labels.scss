@@ -17,7 +17,7 @@ $label-color: white!default;
 
 /// Default font size for labels.
 /// @type Number
-$label-font-size: 75% !default;
+$label-font-size: 80% !default;
 
 /// Default padding inside labels.
 /// @type Number
@@ -29,7 +29,7 @@ $label-radius: $global-radius !default;
 
 /// Generates base styles for a label.
 @mixin label {
-    display: inline-block;
+    // display: inline-block;
     padding: $label-padding;
     font-size: $label-font-size;
     line-height: 1;
@@ -46,3 +46,10 @@ $label-radius: $global-radius !default;
     background: $label-background;
     color: $label-color;
 }
+
+.label-primary      {background: palette(primary);}
+.label-secondary    {background: palette(secondary);}
+.label-success      {background: palette(success);}
+.label-warning      {background: palette(warning);}
+.label-danger       {background: palette(danger);}
+.label-info         {background: palette(info);}

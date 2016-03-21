@@ -8,25 +8,25 @@
 /// @group buttons
 ////
 
-/// Use Rounded buttons
-/// @type Boolean
-$button-radius: true!default;
-
-/// Success button color
-/// @type Color
-$button-success-color: darken($success-color, 30)!default;
-
-/// Warning button color
-/// @type Color
-$button-warning-color: darken($warning-color, 30)!default;
-
-/// Info button color
-/// @type Color
-$button-info-color: darken($info-color, 30)!default;
-
-/// Danger button color
-/// @type Color
-$button-danger-color: darken($danger-color, 30)!default;
+// /// Use Rounded buttons
+// /// @type Boolean
+// $button-radius: true!default;
+//
+// /// Success button color
+// /// @type Color
+// $button-success-color: darken($success-color, 30)!default;
+//
+// /// Warning button color
+// /// @type Color
+// $button-warning-color: darken($warning-color, 30)!default;
+//
+// /// Info button color
+// /// @type Color
+// $button-info-color: darken($info-color, 30)!default;
+//
+// /// Danger button color
+// /// @type Color
+// $button-danger-color: darken($danger-color, 30)!default;
 
 
 // Basic Buttons
@@ -72,13 +72,13 @@ input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
     color: #FFF;
-    border-color: $primary-color;
-    background-color: $primary-color;
+    border-color: palette(primary);
+    background-color: palette(primary);
 
     &:hover,
     &:focus {
-        background-color: darken($primary-color, 15);
-        border-color: darken($primary-color, 15);
+        background-color: palette(primary, dark);
+        border-color: palette(primary, dark);
         color: #FFF;
     }
 
@@ -92,13 +92,13 @@ input[type="submit"].button-success,
 input[type="reset"].button-success,
 input[type="button"].button-success {
     color: #FFF;
-    border-color: $button-success-color;
-    background-color: $button-success-color;
+    border-color: palette(success);
+    background-color: palette(success);
 
     &:hover,
     &:focus {
-        background-color: darken($button-success-color, 15);
-        border-color: darken($button-success-color, 15);
+        background-color: palette(success, dark);
+        border-color: palette(success, dark);
         color: #FFF;
     }
 
@@ -113,13 +113,13 @@ input[type="submit"].button-warning,
 input[type="reset"].button-warning,
 input[type="button"].button-warning {
     color: #FFF;
-    border-color: $button-warning-color;
-    background-color: $button-warning-color;
+    border-color: palette(warning);
+    background-color: palette(warning);
 
     &:hover,
     &:focus {
-        background-color: darken($button-warning-color, 15);
-        border-color: darken($button-warning-color, 15);
+        background-color: palette(warning, dark);
+        border-color: palette(warning, dark);
         color: #FFF;
     }
 
@@ -132,13 +132,13 @@ input[type="submit"].button-danger,
 input[type="reset"].button-danger,
 input[type="button"].button-danger {
     color: #FFF;
-    border-color: $button-danger-color;
-    background-color: $button-danger-color;
+    border-color: palette(danger);
+    background-color: palette(danger);
 
     &:hover,
     &:focus {
-        background-color: darken($button-danger-color, 15);
-        border-color: darken($button-danger-color, 15);
+        background-color: palette(danger, dark);
+        border-color: palette(danger, dark);
         color: #FFF;
     }
 
@@ -151,13 +151,13 @@ input[type="submit"].button-info,
 input[type="reset"].button-info,
 input[type="button"].button-info {
     color: #FFF;
-    border-color: $button-info-color;
-    background-color: $button-info-color;
+    border-color: palette(info);
+    background-color: palette(info);
 
     &:hover,
     &:focus {
-        background-color: darken($button-info-color, 15);
-        border-color: darken($button-info-color, 15);
+        background-color: palette(info, dark);
+        border-color: palette(info, dark);
         color: #FFF;
     }
 

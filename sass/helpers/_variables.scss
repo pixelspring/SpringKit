@@ -48,33 +48,49 @@ $jet        :       #222222;
 $black      :       #000000;
 
 
-/// Primary color, used for links etc
-/// @type Color
-$primary-color:     #1EAEDB;   // Blue
+/// Colors used for buttons, callouts, links, etc. There must always be a color called `primary`.
+/// @type Map
+$color-palettes: (
+    'primary': (
+        'base':   #1EAEDB,
+        'light':  #44CCF7,
+        'dark':   #157998
+        ),
 
-/// Secondary Color
-/// @type Color
-$secondary-color:   #e7e7e7;   // Light Gray
+    'secondary': (
+        'base':   #e7e7e7,
+        'light':  #ECEBEB,
+        'dark':   #D0CECE
+        ),
 
-/// Success Color (green)
-/// @type Color
-$success-color:     #d5ecd9;   // Green
+    'success': (
+        'base':   #6cbc7a,
+        'light':  #d5ecd9,
+        'dark':   #449754
+        ),
 
-/// Warning Color (orange/yellow)
-/// @type Color
-$warning-color:     #fff4cc;   // OrangeYellow
+    'warning': (
+        'base':   #f39c12,
+        'light':  #f1c40f,
+        'dark':   #d35400
+        ),
 
-/// Info Color (light blue)
-/// @type Color
-$info-color:        #d9edf7;   // Light Blue
+    'danger': (
+        'base':   #e2525e,
+        'light':  #f8d5d8,
+        'dark':   #c6212f
+        ),
 
-/// Danger Color (red / pink)
-/// @type Color
-$danger-color:      #f8d5d8;   // Red
+    'info': (
+        'base':   #8CCFFB,
+        'light':  #D5EAF8,
+        'dark':   #1F9FF3
+        )
+);
 
 /// Link Color ($primary)
 /// @type Color
-$link-color:        $primary-color;
+$link-color:        palette(primary); //$primary-color;
 
 /// Font Color, used for body text
 /// @type Color
@@ -199,13 +215,10 @@ $alert-radius: true;
 /// @type Boolean
 $button-radius: true;
 
-$button-success-color: darken($success-color, 30);
-
-$button-warning-color: darken($warning-color, 30);
-
-$button-info-color: darken($info-color, 30);
-
-$button-danger-color: darken($danger-color, 30);
+$button-success-color:  palette(success);
+$button-warning-color:  palette(warning);
+$button-info-color:     palette(info);
+$button-danger-color:   palette(danger);
 
 // ------------------------------------------------
 
@@ -241,7 +254,7 @@ $card-footer-bg: $gainsboro;
 
 /// Scrollbar foreground color (ie. draggable area)
 /// @type Color
-$scrollbar-foreground-color: $primary-color;
+$scrollbar-foreground-color: palette(primary);
 
 /// Scrollbar background color
 /// @type Color
