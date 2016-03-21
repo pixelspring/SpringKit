@@ -10,33 +10,16 @@
 ////
 
 
-/// Colors:
+/// Retrieve colors from color map
+///
 /// @example Usage
 ///    color: palette(primary);
 ///    color: palette(primary, light);
-// @function palette($palette, $variant: 'base') {
-//     @return map-get(map-get($color-palettes, $palette), $variant);
-// }
-
-// $color-key: 'base' !default;
-//
-// @function palette(
-//     $name: 'primary',
-//     $variant: $color-key,
-//     $opacity: 1
-//     ) {
-//     $color: null;
-//
-//     // Get the color spectrum
-//     $color-spectrum: map-get($color-palettes, $name);
-//
-//     // Get the color variant
-//     @if $color-spectrum {
-//     $color: map-get($color-spectrum, $variant);
-//     }
-//
-//     @return $color;
-// }
+/*
+@function palette($palette, $variant: 'base') {
+    @return map-get(map-get($color-palettes, $palette), $variant);
+}
+*/
 
 @function palette($palette, $tone: 'base') {
 

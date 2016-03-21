@@ -62,13 +62,28 @@
 
 .color-example {
     padding: 30px;
-    width: 20%;
+    width: 16.6666666667%;
     float: left;
     text-align: center;
 }
+
+.example-primary-light    {background: palette(primary, light);}
+.example-secondary-light  {background: palette(secondary, light);}
+.example-success-light    {background: palette(success, light);}
+.example-warning-light    {background: palette(warning, light);}
+.example-danger-light     {background: palette(danger, light);}
+.example-info-light       {background: palette(info, light);}
 
 .example-primary    {background: palette(primary);}
 .example-secondary  {background: palette(secondary);}
 .example-success    {background: palette(success);}
 .example-warning    {background: palette(warning);}
 .example-danger     {background: palette(danger);}
+.example-info       {background: palette(info);}
+
+.example-primary-dark    {background: palette(primary, dark);}
+.example-secondary-dark  {background: palette(secondary, dark);}
+.example-success-dark    {background: palette(success, dark);}
+.example-warning-dark    {background: palette(warning, dark);}
+.example-danger-dark     {background: palette(danger, dark);}
+.example-info-dark       {background: palette(info, dark);}
