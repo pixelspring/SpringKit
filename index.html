@@ -508,24 +508,29 @@
             <div class="medium-12 columns">
                 <label for="exampleMessage">Message</label>
                 <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
-                <label class="example-send-yourself-copy">
-                <input type="checkbox">
-                <span class="label-body">Send a copy to yourself</span>
-                </label>
+                <label><input type="checkbox">Send a copy to yourself</label>
                 <input class="button-primary" type="submit" value="Submit">
             </div>
 
             <div class="large-6 columns">
-                  <legend>Buttons</legend>
-                  <label for="button1"><input type="radio" name="button" value="one" id="button1" required><span class="label-body">Button One</span></label>
-                  <label for="button2"><input type="radio" name="button" value="two" id="button2"><span class="label-body">Button Two</span></label>
-                  <label for="button3"><input type="radio" name="button" value="three" id="button3"><span class="label-body">Button Three</span></label>
+                  <legend>Radio Buttons</legend>
+                  <label for="button1"><input type="radio" name="button" value="1" id="button1">Button One</label>
+                  <label for="button2"><input type="radio" name="button" value="2" id="button2">Button Two</label>
+                  <label for="button3"><input type="radio" name="button" value="3" id="button3" disabled="disabled">Button Three (disabled)</label>
+
+                  <label class="radio-inline"><input type="radio" name="button">Button One</label>
+                  <label class="radio-inline"><input type="radio" name="button">Button Two</label>
+                  <label class="radio-inline"><input type="radio" name="button" disabled="disabled">Button Three (disabled)</label>
             </div>
             <div class="large-6 columns">
                   <legend>Checkboxes</legend>
-                  <label for="checkbox1"><input id="checkbox1" type="checkbox"><span class="label-body">Checkbox 1</span></label>
-                  <label for="checkbox2"><input id="checkbox2" type="checkbox"><span class="label-body">Checkbox 2</span></label>
-                  <label for="checkbox3"><input id="checkbox3" type="checkbox"><span class="label-body">Checkbox 3</span></label>
+                  <label for="checkbox1"><input id="checkbox1" type="checkbox">Checkbox 1</label>
+                  <label for="checkbox2"><input id="checkbox2" type="checkbox">Checkbox 2</label>
+                  <label for="checkbox3"><input id="checkbox3" type="checkbox" disabled="disabled">Checkbox 3 (disabled)</label>
+
+                  <label class="checkbox-inline"><input type="checkbox">Checkbox 1</label>
+                  <label class="checkbox-inline"><input type="checkbox">Checkbox 2</label>
+                  <label class="checkbox-inline"><input type="checkbox" disabled="disabled">Checkbox 3 (disabled)</label>
             </div>
 
         </div>

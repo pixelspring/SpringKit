@@ -1237,8 +1237,10 @@ select:focus {
 label,
 legend {
   display: block;
-  font-weight: 600;
-  margin-bottom: .5rem; }
+  margin-bottom: 0.8em; }
+  label:disabled,
+  legend:disabled {
+    color: red; }
 
 fieldset {
   border-width: 0;
@@ -1247,12 +1249,15 @@ fieldset {
 input[type="checkbox"],
 input[type="radio"] {
   display: inline;
-  margin-bottom: 1.6em; }
+  margin-right: 0.8em; }
 
-label > .label-body {
+.radio-inline,
+.checkbox-inline {
+  position: relative;
   display: inline-block;
-  font-weight: normal;
-  margin-left: .5rem; }
+  padding-right: 1.6em;
+  margin-bottom: 0;
+  vertical-align: middle; }
 
 table {
   width: 100%; }

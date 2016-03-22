@@ -46,8 +46,11 @@ select:focus {
 label,
 legend {
     display: block;
-    font-weight: 600;
-    margin-bottom: .5rem;
+    // font-weight: 600;
+    // margin-bottom: .5rem;
+    margin-bottom: $line-height/2;
+
+    &:disabled {color:red;}
 }
 
 fieldset {
@@ -55,14 +58,18 @@ fieldset {
     padding: 0;
 }
 
+// Radio Buttons & Checkboxes
 input[type="checkbox"],
 input[type="radio"] {
     display: inline;
-    margin-bottom: $line-height;
+    margin-right: $line-height/2;
 }
 
-label > .label-body {
+.radio-inline,
+.checkbox-inline {
+    position: relative;
     display: inline-block;
-    font-weight: normal;
-    margin-left: .5rem;
+    padding-right: $line-height;
+    margin-bottom: 0;
+    vertical-align: middle;
 }
