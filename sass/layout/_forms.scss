@@ -1,6 +1,9 @@
 // Forms
 // ------------------------------------------------
 
+// Vars:
+$fieldset-radius: true!default;
+$input-radius: true!default;
 
 input[type="email"],
 input[type="search"],
@@ -9,13 +12,16 @@ input[type="password"],
 textarea,
 select {
     border: 1px solid $border-color;
-    height: 36px;
+    min-height: 36px;
     padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
-    border-radius: $global-radius;
     box-shadow: none;
     background: #fff;
     width: 100%;
     margin-bottom: $line-height;
+
+    @if $input-radius {
+        border-radius: $global-radius;
+    }
 }
 
 /* Removes awkard default styles on some inputs */
@@ -46,49 +52,47 @@ select:focus {
 label,
 legend {
     display: block;
-    // font-weight: 600;
-    // margin-bottom: .5rem;
+    font-weight: 600;
     margin-bottom: $line-height/2;
+}
 
-    &:disabled {color:red;}
+legend {
+    padding: 0 6px;
 }
 
 fieldset {
-    border-width: 0;
-    padding: 0;
+    border: 1px solid $border-color;
+    padding: 15px;
+
+    @if $fieldset-radius {
+        border-radius: $global-radius;
+    }
 }
 
 // Radio Buttons & Checkboxes
+
+// Add margin to r/h side of checkbox/radio button:
 input[type="checkbox"],
 input[type="radio"] {
     margin-right: $line-height/2;
 }
 
-// input:disabled {}
-
+// Unchecked:
 input[type="checkbox"] + label,
 input[type="radio"] + label {
-    color: blue;
     display:inline-block;
     margin-right: $line-height/2;
+    font-weight: normal;
 }
 
+// Checked
 input[type="checkbox"]:checked + label,
 input[type="radio"]:checked + label {
-    color: green;
 }
 
+// Disabled
 input[type="checkbox"]:disabled + label,
 input[type="radio"]:disabled + label {
-    color: red;
+    color: lightgray;
     cursor: not-allowed;
-}
-
-.radio-inline,
-.checkbox-inline {
-    position: relative;
-    display: inline-block;
-    padding-right: $line-height;
-    margin-bottom: 0;
-    vertical-align: middle;
 }

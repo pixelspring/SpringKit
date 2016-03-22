@@ -1202,14 +1202,14 @@ input[type="password"],
 textarea,
 select {
   border: 1px solid #CCCCCC;
-  height: 36px;
+  min-height: 36px;
   padding: 6px 10px;
   /* The 6px vertically centers text on FF, ignored by Webkit */
-  border-radius: 4px;
   box-shadow: none;
   background: #fff;
   width: 100%;
-  margin-bottom: 1.6em; }
+  margin-bottom: 1.6em;
+  border-radius: 4px; }
 
 /* Removes awkard default styles on some inputs */
 input[type="email"],
@@ -1237,14 +1237,16 @@ select:focus {
 label,
 legend {
   display: block;
+  font-weight: 600;
   margin-bottom: 0.8em; }
-  label:disabled,
-  legend:disabled {
-    color: red; }
+
+legend {
+  padding: 0 6px; }
 
 fieldset {
-  border-width: 0;
-  padding: 0; }
+  border: 1px solid #CCCCCC;
+  padding: 15px;
+  border-radius: 4px; }
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -1252,26 +1254,14 @@ input[type="radio"] {
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {
-  color: blue;
   display: inline-block;
-  margin-right: 0.8em; }
-
-input[type="checkbox"]:checked + label,
-input[type="radio"]:checked + label {
-  color: green; }
+  margin-right: 0.8em;
+  font-weight: normal; }
 
 input[type="checkbox"]:disabled + label,
 input[type="radio"]:disabled + label {
-  color: red;
+  color: lightgray;
   cursor: not-allowed; }
-
-.radio-inline,
-.checkbox-inline {
-  position: relative;
-  display: inline-block;
-  padding-right: 1.6em;
-  margin-bottom: 0;
-  vertical-align: middle; }
 
 table {
   width: 100%; }
