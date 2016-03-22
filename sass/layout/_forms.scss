@@ -61,8 +61,27 @@ fieldset {
 // Radio Buttons & Checkboxes
 input[type="checkbox"],
 input[type="radio"] {
-    display: inline;
     margin-right: $line-height/2;
+}
+
+// input:disabled {}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    color: blue;
+    display:inline-block;
+    margin-right: $line-height/2;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+    color: green;
+}
+
+input[type="checkbox"]:disabled + label,
+input[type="radio"]:disabled + label {
+    color: red;
+    cursor: not-allowed;
 }
 
 .radio-inline,

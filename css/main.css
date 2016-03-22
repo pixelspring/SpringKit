@@ -1248,8 +1248,22 @@ fieldset {
 
 input[type="checkbox"],
 input[type="radio"] {
-  display: inline;
   margin-right: 0.8em; }
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  color: blue;
+  display: inline-block;
+  margin-right: 0.8em; }
+
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+  color: green; }
+
+input[type="checkbox"]:disabled + label,
+input[type="radio"]:disabled + label {
+  color: red;
+  cursor: not-allowed; }
 
 .radio-inline,
 .checkbox-inline {
