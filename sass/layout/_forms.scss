@@ -2,26 +2,16 @@
 // ------------------------------------------------
 
 // Vars:
+$form-bg: transparent!default;
+$form-element-bg: white!default;
+$form-radius: true!default;
 $fieldset-radius: true!default;
-$input-radius: true!default;
+$fieldset-bg: transparent!default;
 
-input[type="email"],
-input[type="search"],
-input[type="text"],
-input[type="password"],
-textarea,
-select {
-    border: 1px solid $border-color;
-    min-height: 36px;
-    padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
-    box-shadow: none;
-    background: #fff;
-    width: 100%;
-    margin-bottom: $line-height;
 
-    @if $input-radius {
-        border-radius: $global-radius;
-    }
+
+form {
+    background: $form-bg;
 }
 
 /* Removes awkard default styles on some inputs */
@@ -29,25 +19,59 @@ input[type="email"],
 input[type="search"],
 input[type="text"],
 textarea {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+    //appearance: none;
 }
+
+
+input[type="search"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="date"],
+// input[type="datetime"], // Removed from HTML Standards
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"],
+input[type="url"],
+input[type="password"],
+input[type="range"],
+input[type="color"],
+
+textarea,
+select {
+    border: 1px solid $border-color;
+    min-height: 36px;
+    padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+    box-shadow: none;
+    background: $form-element-bg;
+    width: 100%;
+    margin-bottom: $line-height;
+
+    @if $form-radius {
+        border-radius: $global-radius;
+    }
+
+    &:focus {
+        border: 1px solid palette(primary);
+        outline: 0;
+    }
+
+}
+
+
+select {
+
+}
+
+
 textarea {
     min-height: 65px;
     padding-top: 6px;
     padding-bottom: 6px;
 }
 
-input[type="email"]:focus,
-input[type="search"]:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-textarea:focus,
-select:focus {
-    border: 1px solid palette(primary);
-    outline: 0;
-}
+
 
 label,
 legend {
@@ -63,6 +87,7 @@ legend {
 fieldset {
     border: 1px solid $border-color;
     padding: 15px;
+    background: $fieldset-bg;
 
     @if $fieldset-radius {
         border-radius: $global-radius;

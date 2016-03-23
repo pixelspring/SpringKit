@@ -492,6 +492,7 @@
         <div class="small-12 columns">
             <h3>Forms</h3>
         </div>
+        <form>
             <div class="medium-6 columns">
                 <label for="exampleEmailInput">Your email</label>
                 <input type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
@@ -511,6 +512,7 @@
                 <label><input type="checkbox">Send a copy to yourself</label>
                 <input class="button-primary" type="submit" value="Submit">
             </div>
+        </form>
 
             <div class="large-6 columns">
                 <legend>Radio Buttons</legend>
@@ -529,7 +531,20 @@
                 <form action="test.php" method="post">
                     <fieldset>
                         <legend>Fieldset Legend</legend>
-                        <input type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+                        <label for="exampleEmailInput">exampleEmailInput</label><input type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+                        <label for="exampleNumberInput">exampleNumberInput</label><input type="number" value="100" id="exampleNumberInput">
+                        <label for="exampleDateInput">exampleDateInput</label><input type="date" id="exampleDateInput">
+                        <label for="exampleDatetimeInput">exampleDatetimeInput (removed from spec)</label><input type="datetime" id="exampleDatetimeInput">
+                        <label for="exampleDatetimelocalInput">exampleDatetimelocalInput</label><input type="datetime-local" id="exampleDatetimelocalInput">
+                        <label for="exampleMonthInput">exampleMonthInput</label><input type="month" id="exampleMonthInput">
+                        <label for="exampleSearchInput">exampleSearchInput</label><input type="search" id="exampleSearchInput">
+                        <label for="exampleTelInput">exampleTelInput</label><input type="tel" id="exampleTelInput">
+                        <label for="exampleTimeInput">exampleTimeInput</label><input type="time" id="exampleTimeInput">
+                        <label for="exampleUrlInput">exampleUrlInput</label><input type="url" id="exampleUrlInput">
+                        <label for="exampleWeekInput">exampleWeekInput</label><input type="week" id="exampleWeekInput">
+                        <label for="examplePasswordInput">examplePasswordInput</label><input type="password" id="examplePasswordInput">
+                        <label for="exampleColorInput">exampleColorInput</label><input type="color" id="exampleColorInput">
+                        <label for="exampleRangeInput">exampleRangeInput</label><input type="range" id="exampleRangeInput">
                     </fieldset>
                 </form>
             </div>

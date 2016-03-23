@@ -1195,10 +1195,23 @@ img {
   img {
     display: none; } }
 
-input[type="email"],
+form {
+  background: transparent; }
+
+/* Removes awkard default styles on some inputs */
 input[type="search"],
-input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"],
+input[type="url"],
 input[type="password"],
+input[type="range"],
+input[type="color"],
 textarea,
 select {
   border: 1px solid #CCCCCC;
@@ -1206,33 +1219,32 @@ select {
   padding: 6px 10px;
   /* The 6px vertically centers text on FF, ignored by Webkit */
   box-shadow: none;
-  background: #fff;
+  background: white;
   width: 100%;
   margin-bottom: 1.6em;
   border-radius: 4px; }
-
-/* Removes awkard default styles on some inputs */
-input[type="email"],
-input[type="search"],
-input[type="text"],
-textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none; }
+  input[type="search"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="tel"]:focus,
+  input[type="time"]:focus,
+  input[type="date"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="week"]:focus,
+  input[type="month"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  input[type="range"]:focus,
+  input[type="color"]:focus,
+  textarea:focus,
+  select:focus {
+    border: 1px solid #1EAEDB;
+    outline: 0; }
 
 textarea {
   min-height: 65px;
   padding-top: 6px;
   padding-bottom: 6px; }
-
-input[type="email"]:focus,
-input[type="search"]:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-textarea:focus,
-select:focus {
-  border: 1px solid #1EAEDB;
-  outline: 0; }
 
 label,
 legend {
@@ -1246,6 +1258,7 @@ legend {
 fieldset {
   border: 1px solid #CCCCCC;
   padding: 15px;
+  background: transparent;
   border-radius: 4px; }
 
 input[type="checkbox"],
@@ -1388,8 +1401,8 @@ input[type="button"].button-warning {
   input[type="reset"].button-warning:focus,
   input[type="button"].button-warning:hover,
   input[type="button"].button-warning:focus {
-    background-color: #FF8C3F;
-    border-color: #FF8C3F;
+    background-color: #D05C12;
+    border-color: #D05C12;
     color: #FFF; }
 
 .button.button-danger,
@@ -1476,7 +1489,7 @@ input[type="button"].button-info {
 
 .alert.warning {
   background: #FFE080;
-  color: #FF8C3F; }
+  color: #D05C12; }
 
 .alert.danger {
   background: #f8d5d8;
@@ -1595,7 +1608,7 @@ body {
   background: #449754; }
 
 .example-warning-dark {
-  background: #FF8C3F; }
+  background: #D05C12; }
 
 .example-danger-dark {
   background: #c6212f; }
