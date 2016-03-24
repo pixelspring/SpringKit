@@ -1199,6 +1199,14 @@ form {
   background: transparent; }
 
 /* Removes awkard default styles on some inputs */
+input[type="email"],
+input[type="search"],
+input[type="text"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+
 input[type="search"],
 input[type="email"],
 input[type="number"],
@@ -1240,6 +1248,32 @@ select {
   select:focus {
     border: 1px solid #1EAEDB;
     outline: 0; }
+  input[type="search"]:disabled,
+  input[type="email"]:disabled,
+  input[type="number"]:disabled,
+  input[type="tel"]:disabled,
+  input[type="time"]:disabled,
+  input[type="date"]:disabled,
+  input[type="datetime-local"]:disabled,
+  input[type="week"]:disabled,
+  input[type="month"]:disabled,
+  input[type="url"]:disabled,
+  input[type="password"]:disabled,
+  input[type="range"]:disabled,
+  input[type="color"]:disabled,
+  textarea:disabled,
+  select:disabled {
+    background: #ECEBEB;
+    cursor: not-allowed; }
+
+input[type="range"] {
+  padding: 6px 0;
+  cursor: ew-resize; }
+
+select {
+  -webkit-appearance: menulist;
+     -moz-appearance: menulist;
+          appearance: menulist; }
 
 textarea {
   min-height: 65px;
@@ -1249,7 +1283,7 @@ textarea {
 label,
 legend {
   display: block;
-  font-weight: 600;
+  font-weight: bold;
   margin-bottom: 0.8em; }
 
 legend {
@@ -1269,7 +1303,7 @@ input[type="checkbox"] + label,
 input[type="radio"] + label {
   display: inline-block;
   margin-right: 0.8em;
-  font-weight: normal; }
+  font-weight: bold; }
 
 input[type="checkbox"]:disabled + label,
 input[type="radio"]:disabled + label {
@@ -1447,18 +1481,18 @@ input[type="button"].button-info {
     border-color: #1F9FF3;
     color: #FFF; }
 
-.card .card {
+.card {
   background: #FAFAFA;
   margin-bottom: 1rem;
   border-radius: 4px;
   border: 1px solid #CCCCCC; }
-  .card .card header {
+  .card header {
     background: #DDDDDD;
     padding: 1rem;
     border-bottom: 1px solid #CCCCCC; }
-  .card .card .card-content {
+  .card .card-content {
     padding: 1rem; }
-  .card .card footer {
+  .card footer {
     background: #DDDDDD;
     padding: 1rem;
     border-top: 1px solid #CCCCCC; }

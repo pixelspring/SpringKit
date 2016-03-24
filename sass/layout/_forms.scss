@@ -1,12 +1,30 @@
 // Forms
 // ------------------------------------------------
 
-// Vars:
+
+/// Set background color of forms
+/// @type Color
 $form-bg: transparent!default;
+
+/// Set color of inputs etc
+/// @type Color
 $form-element-bg: white!default;
+
+/// Rounds corners of form elements
+/// @type Boolean
 $form-radius: true!default;
+
+/// Rounds corners of fieldsets
+/// @type Boolean
 $fieldset-radius: true!default;
+
+/// Sets the background color of fieldsets
+/// @type Color
 $fieldset-bg: transparent!default;
+
+/// Set the font weight of labels and legends
+/// @type String
+$label-font-weight: bold!default;
 
 
 
@@ -19,7 +37,7 @@ input[type="email"],
 input[type="search"],
 input[type="text"],
 textarea {
-    //appearance: none;
+    appearance: none;
 }
 
 
@@ -37,7 +55,6 @@ input[type="url"],
 input[type="password"],
 input[type="range"],
 input[type="color"],
-
 textarea,
 select {
     border: 1px solid $border-color;
@@ -57,11 +74,21 @@ select {
         outline: 0;
     }
 
+    &:disabled {
+        background: palette(secondary, light);
+        cursor: not-allowed;
+    }
+
+}
+
+input[type="range"] {
+    padding: 6px 0;
+    cursor: ew-resize;
 }
 
 
 select {
-
+    appearance: menulist;
 }
 
 
@@ -76,7 +103,7 @@ textarea {
 label,
 legend {
     display: block;
-    font-weight: 600;
+    font-weight: $label-font-weight;
     margin-bottom: $line-height/2;
 }
 
@@ -107,7 +134,7 @@ input[type="checkbox"] + label,
 input[type="radio"] + label {
     display:inline-block;
     margin-right: $line-height/2;
-    font-weight: normal;
+    font-weight: $label-font-weight;
 }
 
 // Checked
