@@ -492,6 +492,7 @@
         <div class="small-12 columns">
             <h3>Forms</h3>
         </div>
+        <form>
             <div class="medium-6 columns">
                 <label for="exampleEmailInput">Your email</label>
                 <input type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
@@ -508,24 +509,51 @@
             <div class="medium-12 columns">
                 <label for="exampleMessage">Message</label>
                 <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
-                <label class="example-send-yourself-copy">
-                <input type="checkbox">
-                <span class="label-body">Send a copy to yourself</span>
-                </label>
+                <label><input type="checkbox">Send a copy to yourself</label>
                 <input class="button-primary" type="submit" value="Submit">
+            </div>
+        </form>
+
+            <div class="large-6 columns">
+                <legend>Radio Buttons</legend>
+                <input type="radio" name="button" value="1" id="button1"><label for="button1">Button One</label>
+                <input type="radio" name="button" value="2" id="button2"><label for="button2">Button Two</label>
+                <input type="radio" name="button" value="3" id="button3" disabled="disabled"><label for="button3">Button Three (disabled)</label>
+            </div>
+            <div class="large-6 columns">
+                <legend>Checkboxes</legend>
+                <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+                <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+                <input id="checkbox3" type="checkbox" disabled="disabled"><label for="checkbox3">Checkbox 3 (disabled)</label>
             </div>
 
             <div class="large-6 columns">
-                  <legend>Buttons</legend>
-                  <label for="button1"><input type="radio" name="button" value="one" id="button1" required><span class="label-body">Button One</span></label>
-                  <label for="button2"><input type="radio" name="button" value="two" id="button2"><span class="label-body">Button Two</span></label>
-                  <label for="button3"><input type="radio" name="button" value="three" id="button3"><span class="label-body">Button Three</span></label>
-            </div>
-            <div class="large-6 columns">
-                  <legend>Checkboxes</legend>
-                  <label for="checkbox1"><input id="checkbox1" type="checkbox"><span class="label-body">Checkbox 1</span></label>
-                  <label for="checkbox2"><input id="checkbox2" type="checkbox"><span class="label-body">Checkbox 2</span></label>
-                  <label for="checkbox3"><input id="checkbox3" type="checkbox"><span class="label-body">Checkbox 3</span></label>
+                <form action="test.php" method="post">
+                    <fieldset>
+                        <legend>Fieldset Legend</legend>
+                        <label for="exampleEmailInput">exampleEmailInput</label><input type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+                        <label for="exampleNumberInput">exampleNumberInput</label><input type="number" value="100" id="exampleNumberInput">
+
+                        <label for="exampleDateInput">exampleDateInput</label><input type="date" id="exampleDateInput" list="days">
+                        <!-- http://demo.agektmr.com/datalist/ -->
+                        <datalist id="days">
+                            <option label="Someones Birthday">1980-08-26</option>
+                            <option label="Apollo 11 Moon Landing">1969-07-20</option>
+                            <option label="D-Day">1944-06-06</option>
+                        </datalist>
+
+                        <label for="exampleDatetimelocalInput">exampleDatetimelocalInput</label><input type="datetime-local" id="exampleDatetimelocalInput">
+                        <label for="exampleMonthInput">exampleMonthInput</label><input type="month" id="exampleMonthInput">
+                        <label for="exampleSearchInput">exampleSearchInput</label><input type="search" id="exampleSearchInput" placeholder="search here">
+                        <label for="exampleTelInput">exampleTelInput</label><input type="tel" id="exampleTelInput" value="01234567890">
+                        <label for="exampleTimeInput">exampleTimeInput</label><input type="time" id="exampleTimeInput">
+                        <label for="exampleUrlInput">exampleUrlInput</label><input type="url" id="exampleUrlInput" value="http://www.domain.com">
+                        <label for="exampleWeekInput">exampleWeekInput</label><input type="week" id="exampleWeekInput">
+                        <label for="examplePasswordInput">examplePasswordInput</label><input type="password" id="examplePasswordInput" value="password">
+                        <label for="exampleColorInput">exampleColorInput</label><input type="color" id="exampleColorInput" value="#ff0000">
+                        <label for="exampleRangeInput">exampleRangeInput</label><input type="range" id="exampleRangeInput" min="0" max="100" value="50" step="1">
+                    </fieldset>
+                </form>
             </div>
 
         </div>

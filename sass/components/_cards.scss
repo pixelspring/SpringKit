@@ -72,4 +72,4 @@ $card-footer-bg: $gainsboro!default;
     }
 }
 
-.card { @include card; }
+@include card;
