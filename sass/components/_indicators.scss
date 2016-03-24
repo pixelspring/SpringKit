@@ -3,7 +3,21 @@
 //
 // ------------------------------------------------
 
+////
+/// Indicator provide visual indications of actions
+/// @group indicators
+////
 
+
+
+
+$loading-indicator-width: 40px!default;
+$loading-indicator-height: 40px!default;
+$loading-indicator-border-radius: 100%!default;
+$loading-indicator-bg-color: palette(primary);
+
+
+// Progress element:
 progress {
     appearance: none;
     background-color: palette(secondary, light);
@@ -24,4 +38,25 @@ progress::-webkit-progress-value {
 progress::-moz-progress-bar {
     background: palette(primary);
     border-radius: $global-radius;
+}
+
+
+
+// Loading Indicator
+.loading-indicator {
+    width: $loading-indicator-width;
+    height: $loading-indicator-height;
+    border-radius: $loading-indicator-border-radius;
+    margin: 0 auto;
+    background-color: $loading-indicator-bg-color;
+    animation: loading-indicator-scaleout 1.0s infinite ease-in-out;
+}
+
+@keyframes loading-indicator-scaleout {
+    0% {
+        transform: scale(0);
+    } 100% {
+        transform: scale(1.0);
+        opacity: 0;
+    }
 }
