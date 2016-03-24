@@ -1576,6 +1576,29 @@ body {
 .label-info {
   background: #8CCFFB; }
 
+progress {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #ECEBEB;
+  border: 1px solid #CCCCCC;
+  width: 100%;
+  height: 16px;
+  border-radius: 4px;
+  margin-bottom: 1.6em; }
+
+progress::-webkit-progress-bar {
+  background-color: #ECEBEB;
+  border-radius: 4px; }
+
+progress::-webkit-progress-value {
+  background: #1EAEDB;
+  border-radius: 4px; }
+
+progress::-moz-progress-bar {
+  background: #1EAEDB;
+  border-radius: 4px; }
+
 .example .row,
 .example .rowcolumn {
   background: lightgray;
