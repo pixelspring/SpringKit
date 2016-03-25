@@ -35,6 +35,35 @@ categories: base
 
 </div>
 
+
+<div class="row column">
+    <h2>Sass Configuration:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>$alert-border</td>
+                <td>Boolean</td>
+                <td><code>false</code></td>
+                <td>Set border on alerts</td>
+            </tr>
+            <tr>
+                <td>$alert-radius</td>
+                <td>true</td>
+                <td><code>White</code></td>
+                <td>Set radius on alerts</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 <div class="row column">
 <h4>Example Code:</h4>
 {% highlight html %}

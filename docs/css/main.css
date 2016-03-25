@@ -1339,6 +1339,38 @@ tbody tr:nth-child(odd) {
 tbody tr:hover {
   background-color: #fff4cc; }
 
+.alert {
+  padding: 1.4rem;
+  margin: 0 0 1.6em 0;
+  background: #FAFAFA;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px; }
+
+.alert.primary {
+  background: #44CCF7;
+  color: #157998; }
+
+.alert.secondary {
+  background: #e7e7e7; }
+
+.alert.info {
+  background: #D5EAF8;
+  color: #1F9FF3; }
+
+.alert.success {
+  background: #d5ecd9;
+  color: #449754; }
+
+.alert.warning {
+  background: #FFE080;
+  color: #D05C12; }
+
+.alert.danger {
+  background: #f8d5d8;
+  color: #c6212f; }
+
 .button,
 button,
 input[type="submit"],
@@ -1497,95 +1529,16 @@ input[type="button"].button-info {
     padding: 1rem;
     border-top: 1px solid #CCCCCC; }
 
-.alert {
-  padding: 1.4rem;
-  margin: 0 0 1rem 0;
-  background: #FAFAFA;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 4px; }
-
-.alert.primary {
-  background: #44CCF7;
-  color: #157998; }
-
-.alert.secondary {
-  background: #e7e7e7; }
-
-.alert.info {
-  background: #D5EAF8;
-  color: #1F9FF3; }
-
-.alert.success {
-  background: #d5ecd9;
-  color: #449754; }
-
-.alert.warning {
-  background: #FFE080;
-  color: #D05C12; }
-
-.alert.danger {
-  background: #f8d5d8;
-  color: #c6212f; }
-
-.alert:hover {
-  -webkit-filter: brightness(95%);
-  border-right: 25px solid #CCCCCC; }
-
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px; }
-
-::-webkit-scrollbar-thumb {
-  background: #1EAEDB; }
-
-::-webkit-scrollbar-track {
-  background: slategray; }
-
-body {
-  scrollbar-face-color: #1EAEDB;
-  scrollbar-track-color: slategray; }
-
-.label {
-  padding: 0.2em 0.5rem;
-  font-size: 75%;
-  line-height: 1;
-  white-space: nowrap;
-  cursor: default;
-  border-radius: 4px;
-  vertical-align: baseline;
-  background: #666666;
-  color: white; }
-
-.label-primary {
-  background: #1EAEDB; }
-
-.label-secondary {
-  background: #e7e7e7; }
-
-.label-success {
-  background: #6cbc7a; }
-
-.label-warning {
-  background: #f39c12; }
-
-.label-danger {
-  background: #e2525e; }
-
-.label-info {
-  background: #8CCFFB; }
-
 progress {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   background-color: #ECEBEB;
-  border: 1px solid #CCCCCC;
   width: 100%;
-  height: 16px;
-  border-radius: 4px;
-  margin-bottom: 1.6em; }
+  height: 0.8em;
+  margin-bottom: 1.6em;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px; }
 
 progress::-webkit-progress-bar {
   background-color: #ECEBEB;
@@ -1625,6 +1578,49 @@ progress::-moz-progress-bar {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 0; } }
+
+.label {
+  padding: 0.2em 0.5rem;
+  font-size: 75%;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: default;
+  border-radius: 4px;
+  vertical-align: baseline;
+  background: #666666;
+  color: white; }
+
+.label-primary {
+  background: #1EAEDB; }
+
+.label-secondary {
+  background: #e7e7e7; }
+
+.label-success {
+  background: #6cbc7a; }
+
+.label-warning {
+  background: #f39c12; }
+
+.label-danger {
+  background: #e2525e; }
+
+.label-info {
+  background: #8CCFFB; }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; }
+
+::-webkit-scrollbar-thumb {
+  background: #1EAEDB; }
+
+::-webkit-scrollbar-track {
+  background: slategray; }
+
+body {
+  scrollbar-face-color: #1EAEDB;
+  scrollbar-track-color: slategray; }
 
 .example .row,
 .example .rowcolumn {
@@ -1686,7 +1682,7 @@ progress::-moz-progress-bar {
   background: #157998; }
 
 .example-secondary-dark {
-  background: #D0CECE; }
+  background: #C5C5C5; }
 
 .example-success-dark {
   background: #449754; }
