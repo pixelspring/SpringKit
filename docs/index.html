@@ -1,5 +1,6 @@
 ---
 layout: default
+title:  "Home"
 ---
 
 <div class="home">
@@ -15,17 +16,20 @@ layout: default
         </div>
     </div>
 
-    <div class="row column">
-        <ul class="no-bullet">
-            {% for post in site.posts %}
-                <li>
-                    <h3>
-                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                    </h3>
-                </li>
+    <section class="fp-block-links">
+        <div class="row medium-up-2 large-up-4">
+            {% for post in site.posts | sort: 'title' %}
+                <div class="column">
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                        <div class="fp-component-block">
+                            <h3>
+                                {{ post.title }}
+                            </h3>
+                        </div>
+                    </a>
+                </div>
             {% endfor %}
-        </ul>
-    </div>
-
+        </div>
+    </section>
 
 </div>
