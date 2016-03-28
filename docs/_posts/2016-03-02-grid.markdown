@@ -106,6 +106,54 @@ categories: base
     </div>
 </section>
 
+<section id="block_grid">
+    <div class="row column">
+        <h3>Block Grid:</h3>
+    </div>
+    <div class="row medium-up-2 large-up-4">
+        <div class="column">
+            <h4>Block Grid:<br>
+            <span class="subheader">medium-up-2 large-up-4</span></h4>
+            <img src="/images/400x150.gif">
+        </div>
+        <div class="column">
+            <h4>Block Grid:<br>
+            <span class="subheader">medium-up-2 large-up-4</span></h4>
+            <img src="/images/400x150.gif">
+        </div>
+        <div class="column">
+            <h4>Block Grid:<br>
+            <span class="subheader">medium-up-2 large-up-4</span></h4>
+            <img src="/images/400x150.gif">
+        </div>
+        <div class="column">
+            <h4>Block Grid:<br>
+            <span class="subheader">medium-up-2 large-up-4</span></h4>
+            <img src="/images/400x150.gif">
+        </div>
+        <div class="column">
+            <h4>Block Grid:<br>
+            <span class="subheader">medium-up-2 large-up-4</span></h4>
+            <img src="/images/400x150.gif">
+        </div>
+        <div class="column">
+            <h4>Block Grid:<br>
+            <span class="subheader">medium-up-2 large-up-4</span></h4>
+            <img src="/images/400x150.gif">
+        </div>
+        <div class="column">
+            <h4>Block Grid:<br>
+            <span class="subheader">medium-up-2 large-up-4</span></h4>
+            <img src="/images/400x150.gif">
+        </div>
+        <div class="column">
+            <h4>Block Grid:<br>
+            <span class="subheader">medium-up-2 large-up-4</span></h4>
+            <img src="/images/400x150.gif">
+        </div>
+    </div>
+</section>
+
 <div class="row column">
 <h4>Example Code:</h4>
 {% highlight html %}
