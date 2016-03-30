@@ -2,7 +2,8 @@
 layout: post
 title:  "Colors"
 date:   2016-03-02 15:31:56 +0000
-categories: base
+categories: helpers
+sassbase: helpers/_variables.scss
 ---
 
 <div class="row column">

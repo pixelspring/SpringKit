@@ -2,7 +2,8 @@
 layout: post
 title:  "Grid"
 date:   2016-03-02 15:31:56 +0000
-categories: base
+categories: layout
+sassbase: layout/grid/_grid.scss
 ---
 
 <div class="row column">

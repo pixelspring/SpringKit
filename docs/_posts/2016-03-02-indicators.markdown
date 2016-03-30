@@ -2,7 +2,8 @@
 layout: post
 title:  "Indicators"
 date:   2016-03-02 15:31:56 +0000
-categories: base
+categories: components
+sassbase: components/_indicators.scss
 ---
 
 <div class="row column">

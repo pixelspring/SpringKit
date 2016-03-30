@@ -3,6 +3,7 @@ layout: post
 title:  "Buttons"
 date:   2016-03-02 15:31:56 +0000
 categories: base
+sassbase: components/_buttons.scss
 ---
 
 <div class="row column">

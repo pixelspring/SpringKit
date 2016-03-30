@@ -2,7 +2,8 @@
 layout: post
 title:  "Tables"
 date:   2016-03-02 15:31:56 +0000
-categories: base
+categories: layout
+sassbase: layout/_tables.scss
 ---
 
 <div class="row column">

@@ -3,6 +3,7 @@ layout: post
 title:  "Utilities"
 date:   2016-03-02 15:31:56 +0000
 categories: base
+sassbase: base/_utilityclasses.scss
 ---
 
 <div class="row column">
