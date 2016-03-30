@@ -14,6 +14,21 @@ li.section-link {
     padding: 0 0 0 10px;
 }
 
+/* Homepage */
+.fp-intro {
+    margin-top: 32px;
+    margin-bottom: 64px;
+}
+.fp-block-links {
+    margin-top: 32px;
+}
+    .fp-component-block {
+        background: #f9fafb;
+        padding: 8px 8px 16px 8px;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
 
 
 .site-footer {

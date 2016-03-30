@@ -1,0 +1,55 @@
+// ------------------------------------------------
+// LABELS:
+//
+// ------------------------------------------------
+
+////
+/// @group labels
+////
+
+/// Default background color for labels.
+/// @type Color
+$label-background: $steel!default;
+
+/// Default text color for labels.
+/// @type Color
+$label-color: white!default;
+
+/// Default font size for labels.
+/// @type Number
+$label-font-size: 75% !default;
+
+/// Default padding inside labels.
+/// @type Number
+$label-padding: 0.2em 0.5rem !default;
+
+/// Default radius of labels.
+/// @type Number
+$label-radius: $global-radius !default;
+
+/// Generates base styles for a label.
+@mixin label {
+    // display: inline-block;
+    padding: $label-padding;
+    font-size: $label-font-size;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: default;
+    border-radius: $label-radius;
+    vertical-align: baseline;
+}
+
+
+.label {
+    @include label;
+
+    background: $label-background;
+    color: $label-color;
+}
+
+.label-primary      {background: palette(primary);}
+.label-secondary    {background: palette(secondary);}
+.label-success      {background: palette(success);}
+.label-warning      {background: palette(warning);}
+.label-danger       {background: palette(danger);}
+.label-info         {background: palette(info);}

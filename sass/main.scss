@@ -5,37 +5,40 @@
 // ------------------------------------------------
 
 // Helpers
-@import "helpers/_variables.scss";
 @import "helpers/_mixins.scss";
+@import "helpers/_functions.scss";
+@import "helpers/_variables.scss";
 
 // Base
-@import "base/_normalize.scss";
-// @import "base/_mediaqueries.scss";
+@import "base/_sanitize.scss";
 @import "base/_typography.scss";
 @import "base/_media.scss";
 @import "base/_utilityclasses.scss";
 @import "base/_print.scss";
 
 // Layout
-// @import "layout/_grid.scss";
-@import "layout/_foundation-susy.scss";
+// Grid defined in _variables.scss
 @import "layout/_forms.scss";
 @import "layout/_tables.scss";
 @import "layout/_visibility.scss";
 
 // Components:
-@import "components/_buttons.scss";
-@import "components/_panels.scss";
 @import "components/_alerts.scss";
+@import "components/_buttons.scss";
+@import "components/_cards.scss";
+@import "components/_indicators.scss";
+@import "components/_labels.scss";
 // @import "components/_topmenu.scss"; // TODO: Breakpoints
 // @import "components/_sidebar.scss"; // TODO: Breakpoints
 @import "components/_scrollbars.scss";
 
+
+
 // Vendor
 // @import "vendor/animate/animate.scss";
 // @import "vendor/brand-colors/brand-colors.scss";
-@import "vendor/susy/_susy.scss";
-@import "vendor/sass-mq/_mq.scss";
+// @import "vendor/sass-mq/_mq.scss";
+
 
 
 
@@ -59,3 +62,31 @@
     height: 40px;
     line-height: 40px;
 }
+
+.color-example {
+    padding: 30px;
+    width: 16.6666666667%;
+    float: left;
+    text-align: center;
+}
+
+.example-primary-light    {background: palette(primary, light);}
+.example-secondary-light  {background: palette(secondary, light);}
+.example-success-light    {background: palette(success, light);}
+.example-warning-light    {background: palette(warning, light);}
+.example-danger-light     {background: palette(danger, light);}
+.example-info-light       {background: palette(info, light);}
+
+.example-primary    {background: palette(primary);}
+.example-secondary  {background: palette(secondary);}
+.example-success    {background: palette(success);}
+.example-warning    {background: palette(warning);}
+.example-danger     {background: palette(danger);}
+.example-info       {background: palette(info);}
+
+.example-primary-dark    {background: palette(primary, dark);}
+.example-secondary-dark  {background: palette(secondary, dark);}
+.example-success-dark    {background: palette(success, dark);}
+.example-warning-dark    {background: palette(warning, dark);}
+.example-danger-dark     {background: palette(danger, dark);}
+.example-info-dark       {background: palette(info, dark);}

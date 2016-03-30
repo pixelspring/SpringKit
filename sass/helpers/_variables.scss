@@ -4,165 +4,265 @@
 //  Define All The Things!
 // ------------------------------------------------
 
-// Font Families:
-// ------------------------------------------------
+////
+/// @group helpers
+////
+
+/// Font Families
+
+/// Sets the Font stack for headers
+/// @type List
 $font-stack-header: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/// Sets the Font stack for body text
+/// @type List
 $font-stack-body: 	"Merriweather", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/// Sets the Font stack for code elements
+/// @type List
 $font-stack-code: 	"Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
-
-// Hues & Tints:
 // ------------------------------------------------
+
+/// Hues & Tints
 
 // Grayscale
-$white      :       #FFFFFF;
-$ghost      :       #FAFAFA;
-$snow       :       #F9F9F9;
-$vapor      :       #F6F6F6;
-$white-smoke:       #F5F5F5;
-$silver     :       #EFEFEF;
-$smoke      :       #EEEEEE;
-$gainsboro  :       #DDDDDD;
-$iron       :       #CCCCCC;
-$base       :       #AAAAAA;
-$aluminum   :       #999999;
-$jumbo      :       #888888;
-$monsoon    :       #777777;
-$steel      :       #666666;
-$charcoal   :       #555555;
-$tuatara    :       #444444;
-$oil        :       #333333;
-$jet        :       #222222;
-$black      :       #000000;
-
-// Color
-$primary-color:     #1EAEDB;   // Blue
-$secondary-color:   #e7e7e7;   // Light Gray
-
-$success-color:     #d5ecd9;   // Green
-$warning-color:     #fff4cc;   // OrangeYellow
-$info-color:        #d9edf7;   // Light Blue
-$danger-color:      #f8d5d8;   // Red
-
-$link-color:        $primary-color;
-$font-color:        $jet;
-$border-color:      $iron;
-
-$highlight-color:   #fff4cc;
+$white      :     #FFFFFF;
+$ghost      :     #FAFAFA;
+$snow       :     #F9F9F9;
+$vapor      :     #F6F6F6;
+$white-smoke:     #F5F5F5;
+$silver     :     #EFEFEF;
+$smoke      :     #EEEEEE;
+$gainsboro  :     #DDDDDD;
+$iron       :     #CCCCCC;
+$base       :     #AAAAAA;
+$aluminum   :     #999999;
+$jumbo      :     #888888;
+$monsoon    :     #777777;
+$steel      :     #666666;
+$charcoal   :     #555555;
+$tuatara    :     #444444;
+$oil        :     #333333;
+$jet        :     #222222;
+$black      :     #000000;
 
 
-// Rounded Things:
-// ------------------------------------------------
+/// Multidimensional Color map used for buttons, callouts, links, etc.
+/// @type Map
+$color-palettes: (
+    'primary': (
+        'base':   #1EAEDB,
+        'light':  #44CCF7,
+        'dark':   #157998
+        ),
 
-$global-radius: 4px;
-$rounded: 1000px;
+    'secondary': (
+        'base':   #e7e7e7,
+        'light':  #ECEBEB,
+        'dark':   #C5C5C5
+        ),
 
+    'success': (
+        'base':   #6cbc7a,
+        'light':  #d5ecd9,
+        'dark':   #449754
+        ),
 
-// Breakpoints:
-// ------------------------------------------------
-$mq-breakpoints: (
-    mobile:  320px,
-    tablet:  740px,
-    desktop: 980px,
-    wide:    1300px
+    'warning': (
+        'base':   #f39c12,
+        'light':  #FFE080,
+        'dark':   #D05C12
+        ),
+
+    'danger': (
+        'base':   #e2525e,
+        'light':  #f8d5d8,
+        'dark':   #c6212f
+        ),
+
+    'info': (
+        'base':   #8CCFFB,
+        'light':  #D5EAF8,
+        'dark':   #1F9FF3
+        )
 );
 
+$no-color: palette(non-existant);
 
-// Grid Variables:
+
+/// Link Color ($primary)
+/// @type Color
+$link-color:        palette(primary); //$primary-color;
+
+/// Font Color, used for body text
+/// @type Color
+$font-color:        $jet;
+
+/// Border Color, sets borders
+/// @type Color
+$border-color:      $iron;
+
+/// Highlight Color, used for highlighting elements
+/// @type Color
+$highlight-color:   #fff4cc;
+
 // ------------------------------------------------
 
-$row-width:             1120px;
-$total-columns:         12 !default;
-$column-gutter:         0.5;
+/// Rounded Things
+/// Set global radius, for rounded corners etc
+/// @type Number
+$global-radius: 4px;
 
-$small-breakpoint:      640px;
-$medium-breakpoint:     1024px;
-$large-breakpoint:      1440px;
-$xlarge-breakpoint:     1920px;
+/// Set global rounded value, turn a square into a corcle for instance
+/// @type Number
+$rounded: 1000px;
 
-$screen: "only screen";
-
-
-$small-up:              $screen;
-$medium-up:             "#{$screen} and (min-width: #{$small-breakpoint})";
-$large-up:              "#{$screen} and (min-width: #{$medium-breakpoint})";
-
-// Generate generic grid classes for prototyping?
-$output-generic-grid:   true;
-
-// Options:
-// $push-pull-classes:     false;
-// $offset-classes:        false;
-// $centered-classes:      false;
-
-
-// Typography Variables:
 // ------------------------------------------------
 
-// General (Paragraph inherits from this):
+/// Grid Variables
+
+/// Set global font size
+/// @type Number
+$global-font-size: 100%;
+
+/// Set max width of rows
+/// @type Number
+$global-width: rem-calc(1200);
+
+/// Breakpoint definitions:
+/// @type Map
+$breakpoints: (
+    small: 0,
+    medium: 640px,
+    large: 1024px,
+    xlarge: 1200px,
+    xxlarge: 1440px,
+);
+
+/// Classes to output for prototyping grid
+/// @type Map
+$breakpoint-classes: (small medium large);
+
+/// The maximum width of a row
+/// @type Number
+$grid-row-width: $global-width;
+
+/// Default column count of the grid
+/// @type Number
+$grid-column-count: 12;
+
+/// The amount of space between columns at different screen sizes. To use just one size, set the variable to a number instead of a map.
+/// @type Map
+$grid-column-gutter: (
+    small: 20px,
+    medium: 30px,
+);
+
+/// If true, the last column in a row will align to the opposite edge of the row
+/// @type Boolean
+$grid-column-align-edge: true;
+
+/// The highest number of .x-up classes available when using the block grid CSS
+/// @type Number
+$block-grid-max: 8;
+
+
+/// Generate either the standard or the flex-grid classes for prototyping:
+///   @include foundation-grid;
+///   OR:
+///   @include foundation-flex-grid;
+@import "../layout/grid/_grid.scss";
+@include foundation-grid;
+
+// ------------------------------------------------
+
+/// Typography Variables
+
+/// General (Paragraph inherits from this):
 $line-height:   1.6em;
 $font-weight:   400;
 
-// Headers:
+/// Headers:
 $header-font-color: $font-color;
 $header-font-weight: 300;
 
-//Subheaders:
+/// Subheaders:
 $subheader-font-color: scale-color($header-font-color, $lightness: 45%);
 $subheader-font-weight: 300;
 
-// Blockquotes:
+/// Blockquotes:
 $blockquote-font-size:  1.1em;
 $blockquote-font-color: $font-color;
 $blockquote-border:     5px solid $gainsboro; // Left border
 $blockquote-bg:         $ghost;
 
 
-
-
-// Alert Variables:
 // ------------------------------------------------
 
-$alert-border: false;				// TRUE or FALSE
-$alert-radius: true; 				// TRUE or FALSE
+/// Alert Variables
 
+/// Set border on alerts, coloured to match alert type
+/// @type Boolean
+$alert-border: false;
 
-// Button Variables:
+/// Use Rounded alerts
+/// @type Boolean
+$alert-radius: true;
+
 // ------------------------------------------------
 
-$button-radius: true;               // TRUE or FALSE
+/// Button Variables
 
+/// Use Rounded buttons
+/// @type Boolean
+$button-radius: true;
 
-// Navigation Variables:
+$button-success-color:  palette(success);
+$button-warning-color:  palette(warning);
+$button-info-color:     palette(info);
+$button-danger-color:   palette(danger);
+
 // ------------------------------------------------
 
-// Top Menu:
-$top-menu-height:       	50px;
-$top-menu-bottom-margin:    30px;
-$top-menu-font-size:    	1.2rem;
-$toggle-menu-bg:        	$jet;
-$top-menu-bg:				$gainsboro;
-$top-menu-bg-l2:            $base;
-$top-menu-bg-l3:            $aluminum;
-$top-menu-bg-l4:            $jumbo;
+/// Card Variables
 
-$top-menu-link-color:		$primary-color;
-$top-menu-text-transform:	uppercase;
+/// Set the corner radius on cards
+/// @type Boolean
+$card-radius: true;
 
-$top-menu-hover-bg:			$iron;
-$top-menu-hover-bg-gc:		$base;
+/// Set a border on cards
+/// @type Boolean
+$card-border: true;
 
-$top-menu-mb-border-color:  $toggle-menu-bg;
+/// Set the cards padding
+/// @type Number
+$card-padding: 1rem;
 
-// Sidebar Nav:
-$sidebar-width:                 250px;
-$sbp-content-padding-top:       30px;
-$sidebar-nav-bg:                $jet;
-$sidebar-nav-bg-hover-color:    $black;
-$sidebar-nav-font-size:         1.4rem;
+/// Set Cards main background color
+/// @type Color
+$card-background: $ghost;
 
-// Scrollbar Variables:
+/// Card Header Background color
+/// @type Color
+$card-header-bg: $gainsboro;
+
+/// Card Footer Background color
+/// @type Color
+$card-footer-bg: $gainsboro;
+
 // ------------------------------------------------
-$scrollbar-foreground-color: $primary-color;
+
+/// Scrollbar Variables
+
+/// Scrollbar foreground color (ie. draggable area)
+/// @type Color
+$scrollbar-foreground-color: palette(primary);
+
+/// Scrollbar background color
+/// @type Color
 $scrollbar-background-color: slategray;
+
+/// Scrollbar size (width)
+/// @type Number
 $scrollbar-size: 8px;

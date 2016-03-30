@@ -3,14 +3,61 @@
 //
 // ------------------------------------------------
 
+////
+/// Typography
+/// @group typography
+////
+
+/// Define the line height
+/// @type Number
+$line-height:   1.6em!default;
+
+/// Define the font weight
+/// @type String
+$font-weight:   400!default;
+
+/// Set the header color
+/// @type Color
+$header-font-color: $font-color!default;
+
+/// Define the header font weight
+/// @type String
+$header-font-weight: 300!default;
+
+/// Set the subheader color
+/// @type Color
+$subheader-font-color: scale-color($header-font-color, $lightness: 45%)!default;
+
+/// Define the subheader font weight
+/// @type String
+$subheader-font-weight: 300!default;
+
+/// Blockquotes:
+/// Define the line height
+/// @type Number
+$blockquote-font-size:  1.1em!default;
+
+/// Define blockquotes text color
+/// @type Color
+$blockquote-font-color: $font-color!default;
+
+/// Set the blockquotes border
+/// @type String
+$blockquote-border:     5px solid $gainsboro!default; // Left border
+
+/// Define blockquotes background color
+/// @type Color
+$blockquote-bg:         $ghost!default;
+
+
 
 html {
-    font-size: 62.5%; //100%; //62.5%;
+    font-size: 100%; //62.5%;
 }
 
 body {
-    font-size:      1.6em; /* ems, 'cause chrome bug - 16px */
-    line-height:    1.6em;
+    // font-size:      1.6em; /* ems, 'cause chrome bug - 16px */
+    line-height:    1.6;
     font-weight:    $font-weight;
     font-family:    $font-stack-body; // "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color:          $font-color;
@@ -19,21 +66,22 @@ body {
 
 // Headers
 // ------------------------------------------------
-h1      { font-size: 3.157em; }
-h2      { font-size: 2.369em; }
-h3      { font-size: 1.777em; }
-h4      { font-size: 1.333em; }
-h5      { font-size: 1.222em; }
-h6      { font-size: 1.111em; }
 
-h1, h2, h3,
-h4, h5,
-h6 {
+h1      { font-size: 3.157rem; }
+h2      { font-size: 2.369rem; }
+h3      { font-size: 1.777rem; }
+h4      { font-size: 1.333rem; }
+h5      { font-size: 1.222rem; }
+h6      { font-size: 1.111rem; }
+
+h1, h2,
+h3, h4,
+h5, h6 {
     font-family: $font-stack-header;
     font-weight: 300;
-    margin: 0.5em 0 1em;
+    line-height: 1.2;
+    margin: 2rem 0 1rem;
 }
-
 
 // Subheaders
 // ------------------------------------------------
@@ -47,8 +95,7 @@ h6 {
 // Paragraphs:
 // ------------------------------------------------
 p {
-    line-height: 1.5;
-    margin: 0 0 1.3em;
+    margin: 0 0 1.6rem;
 }
 
 
@@ -59,7 +106,14 @@ p {
 
 // Small Tag: Covered in Normalize.css (font-size: 80%) but override here if needed
 // ------------------------------------------------
-// small {font-size: 80%}
+small {font-size: 0.8rem}
+
+// Quotes:
+// ------------------------------------------------
+q:before   { content: '“'}
+q:after    { content: '”'}
+q q:before { content: '‘'}
+q q:after  { content: '’'}
 
 // Blockquotes:
 // ------------------------------------------------
@@ -86,11 +140,11 @@ blockquote {
 // Links
 // ------------------------------------------------
 a {
-    color: $primary-color;
+    color: $link-color;
 }
 
 a:hover {
-    color: darken($primary-color, 15);
+    color: darken($link-color, 15);
 }
 
 h1 a,
@@ -113,7 +167,7 @@ ol {
 }
 
 ol, ul {
-    margin-top: 0;
+    margin: 0 0 1.6rem;
     padding-left: 0;
 }
 
@@ -121,11 +175,11 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-    margin: 1.5rem 0 1.5rem 3rem;
-    font-size: 90%;}
+    margin-left: 2rem;
+}
 
 li {
-    margin-bottom: 1rem;}
+    margin: 0.5rem 0;}
 
 ul.no-bullet {
     list-style: none;
@@ -136,10 +190,9 @@ ul.inline-list {
 }
 
 .inline-list > li {
-list-style: none;
-float: left;
-// margin-left: 1.22222rem;
-display: block;
+    list-style: none;
+    float: left;
+    display: block;
 }
 
 

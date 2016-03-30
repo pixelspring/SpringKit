@@ -5,11 +5,11 @@ date:   2016-03-02 15:31:56 +0000
 categories: base
 ---
 
-<div class="rowcolumn">
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+<div class="row column">
+    <p>Alerts are available in a range of styles. They span 100% width.</p>
 </div>
 
-<div class="rowcolumn">
+<div class="row column">
 
     <div class="alert">
         Basic Alert
@@ -35,7 +35,36 @@ categories: base
 
 </div>
 
-<div class="rowcolumn">
+
+<div class="row column">
+    <h2>Sass Configuration:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>$alert-border</td>
+                <td>Boolean</td>
+                <td><code>false</code></td>
+                <td>Set border on alerts</td>
+            </tr>
+            <tr>
+                <td>$alert-radius</td>
+                <td>true</td>
+                <td><code>White</code></td>
+                <td>Set radius on alerts</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="row column">
 <h4>Example Code:</h4>
 {% highlight html %}
 <div class="alert"><!-- Basic Alert --></div>

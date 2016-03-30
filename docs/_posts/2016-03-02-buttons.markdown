@@ -5,45 +5,106 @@ date:   2016-03-02 15:31:56 +0000
 categories: base
 ---
 
-<div class="rowcolumn">
-    <p>Buttons are currently of two types:</p>
+<div class="row column">
+    <p>Buttons are of six types:</p>
     <ul>
         <li>Standard (outline)</li>
         <li>Primary (solid primary color background)</li>
+        <li>Success (solid success color background)</li>
+        <li>Warning (solid warning color background)</li>
+        <li>Danger (solid danger color background)</li>
+        <li>Info (solid info color background)</li>
     </ul>
     <p>Use them as you would normally use a button - anchor links, input, submit etc..</p>
 </div>
 
-<div class="rowcolumn">
+<div class="row column">
     <h4>Standard:</h4>
-    <a class="button" href="#">Anchor button</a>
-    <button>Button element</button>
-    <input type="submit" value="submit input">
-    <input type="button" value="button input">
+    <a class="button" href="#">Anchor button standard</a>
+    <button>Button element standard</button>
+    <input type="submit" value="submit input standard">
+    <input type="button" value="button input standard">
 </div>
 
-<div class="rowcolumn">
+<div class="row column">
     <h4>Primary:</h4>
-    <a class="button button-primary" href="#">Anchor button</a>
-    <button class="button-primary">Button element</button>
-    <input class="button-primary" type="submit" value="submit input">
-    <input class="button-primary" type="button" value="button input">
+    <a class="button button-primary" href="#">Anchor button primary</a>
+    <button class="button-primary">Button element primary</button>
+    <input class="button-primary" type="submit" value="submit input primary">
+    <input class="button-primary" type="button" value="button input primary">
+</div>
+
+<div class="row column">
+    <h4>Success:</h4>
+    <a class="button button-success" href="#">Anchor button success</a>
+    <button class="button-success">Button element success</button>
+    <input class="button-success" type="submit" value="submit input success">
+    <input class="button-success" type="button" value="button input success">
+</div>
+
+<div class="row column">
+    <h4>Warning:</h4>
+    <a class="button button-warning" href="#">Anchor button warning</a>
+    <button class="button-warning">Button element warning</button>
+    <input class="button-warning" type="submit" value="submit input warning">
+    <input class="button-warning" type="button" value="button input warning">
+</div>
+
+<div class="row column">
+    <h4>Danger:</h4>
+    <a class="button button-danger" href="#">Anchor button danger</a>
+    <button class="button-danger">Button element danger</button>
+    <input class="button-danger" type="submit" value="submit input danger">
+    <input class="button-danger" type="button" value="button input danger">
+</div>
+
+<div class="row column">
+    <h4>Info:</h4>
+    <a class="button button-info" href="#">Anchor button info</a>
+    <button class="button-info">Button element info</button>
+    <input class="button-info" type="submit" value="submit input info">
+    <input class="button-info" type="button" value="button input info">
 </div>
 
 
-<div class="rowcolumn">
+<div class="row column">
 <h4>Example Code:</h4>
 {% highlight html %}
-<!-- Outline Buttons: -->
-<a class="button" href="#">Anchor button</a>
-<button>Button element</button>
-<input type="submit" value="submit input">
-<input type="button" value="button input">
+<!-- Outline (Standard) Buttons: -->
+<a class="button" href="#">Anchor button standard</a>
+<button>Button element standard</button>
+<input type="submit" value="submit input standard">
+<input type="button" value="button input standard">
 
 <!-- Primary Buttons: -->
-<a class="button button-primary" href="#">Anchor button</a>
-<button class="button-primary">Button element</button>
-<input class="button-primary" type="submit" value="submit input">
-<input class="button-primary" type="button" value="button input">
+<a class="button button-primary" href="#">Anchor button primary</a>
+<button class="button-primary">Button element primary</button>
+<input class="button-primary" type="submit" value="submit input primary">
+<input class="button-primary" type="button" value="button input primary">
+</div>
+
+<!-- Success Buttons: -->
+<a class="button button-success" href="#">Anchor button success</a>
+<button class="button-success">Button element success</button>
+<input class="button-success" type="submit" value="submit input success">
+<input class="button-success" type="button" value="button input success">
+
+<!-- Warning Buttons: -->
+<a class="button button-warning" href="#">Anchor button warning</a>
+<button class="button-warning">Button element warning</button>
+<input class="button-warning" type="submit" value="submit input warning">
+<input class="button-warning" type="button" value="button input warning">
+
+<!-- Danger Buttons: -->
+<a class="button button-danger" href="#">Anchor button danger</a>
+<button class="button-danger">Button element danger</button>
+<input class="button-danger" type="submit" value="submit input danger">
+<input class="button-danger" type="button" value="button input danger">
+
+<!-- info Buttons: -->
+<a class="button button-info" href="#">Anchor button info</a>
+<button class="button-info">Button element info</button>
+<input class="button-info" type="submit" value="submit input info">
+<input class="button-info" type="button" value="button input info">
 {% endhighlight %}
 </div>

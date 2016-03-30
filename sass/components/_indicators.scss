@@ -1,0 +1,110 @@
+// ------------------------------------------------
+//  INDICATORS.SCSS:
+//
+// ------------------------------------------------
+
+////
+/// Indicator provide visual indications of actions
+/// @group indicators
+////
+
+/// Sets the background color of the progress bar
+/// @type Color
+$progress-bg-color: palette(secondary, light)!default;
+
+/// Sets the color of the actual progress bar
+/// @type Color
+$progress-bar-color: palette(primary)!default;
+
+/// Sets the progress bar to have a radius
+/// @type Boolean
+$progress-bar-radius: true!default;
+
+/// Sets the progress bar to have a border
+/// @type Boolean
+$progress-bar-border: true!default;
+
+/// Sets the height of the progress bar
+/// @type Number
+$progress-bar-height: $line-height/2!default;
+
+
+
+
+
+/// Sets the width of the loading indicator
+/// @type Number
+$loading-indicator-width: 40px!default;
+
+/// Sets the height of the loading indicator
+/// @type Number
+$loading-indicator-height: 40px!default;
+
+/// Sets the radius of the loading indicator. Use 0% for square, 100% for round
+/// @type Number
+$loading-indicator-border-radius: 100%!default;
+
+/// Sets the color of the loading indicator
+/// @type Color
+$loading-indicator-bg-color: palette(primary);
+
+
+// Progress element:
+progress {
+    appearance: none;
+    background-color: $progress-bg-color;
+    width: 100%;
+    height: $progress-bar-height;
+    margin-bottom: $line-height;
+
+    @if $progress-bar-border {
+        border: 1px solid $border-color;
+    }
+
+    @if $progress-bar-radius {
+        border-radius: $global-radius;
+    }
+
+}
+progress::-webkit-progress-bar {
+    background-color: $progress-bg-color;
+
+    @if $progress-bar-radius {
+        border-radius: $global-radius;
+    }
+}
+progress::-webkit-progress-value {
+    background: palette(primary);
+
+    @if $progress-bar-radius {
+        border-radius: $global-radius;
+    }
+}
+progress::-moz-progress-bar {
+    background: palette(primary);
+
+    @if $progress-bar-radius {
+        border-radius: $global-radius;
+    }
+}
+
+
+
+// Loading Indicator
+.loading-indicator {
+    width: $loading-indicator-width;
+    height: $loading-indicator-height;
+    border-radius: $loading-indicator-border-radius;
+    margin: 0 auto;
+    background-color: $loading-indicator-bg-color;
+    animation: loading-indicator-scaleout 1.0s infinite ease-in-out;
+}
+
+@keyframes loading-indicator-scaleout {
+    0% {
+        transform: scale(0);
+    } 100% {
+        transform: scale(1.0);
+        opacity: 0;
+    }
+}

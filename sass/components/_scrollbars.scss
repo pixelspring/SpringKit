@@ -5,17 +5,36 @@
 // https://css-tricks.com/custom-scrollbars-in-webkit/
 // ------------------------------------------------
 
+
+////
+/// @group scrollbars
+////
+
+/// Scrollbar foreground color (ie. draggable area)
+/// @type Color
+$scrollbar-foreground-color: $primary-color!default;
+
+/// Scrollbar background color
+/// @type Color
+$scrollbar-background-color: slategray!default;
+
+/// Scrollbar size (width)
+/// @type Number
+$scrollbar-size: 8px!default;
+
+
+
 ::-webkit-scrollbar {
-        width:  $scrollbar-size;
-        height: $scrollbar-size;
+    width:  $scrollbar-size;
+    height: $scrollbar-size;
 }
 
 ::-webkit-scrollbar-thumb {
-        background: $scrollbar-foreground-color;
+    background: $scrollbar-foreground-color;
 }
 
 ::-webkit-scrollbar-track {
-        background: $scrollbar-background-color;
+    background: $scrollbar-background-color;
 }
 
 // For Internet Explorer

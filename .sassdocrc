@@ -1,0 +1,6 @@
+{
+    "theme": "./sassdoc-springkit-theme",
+    "verbose": "true",
+    "dest": "./sassdoc",
+    "descriptionPath": "./Readme.md"
+}

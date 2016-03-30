@@ -1,31 +1,37 @@
 ---
 layout: default
+title:  "Home"
 ---
 
 <div class="home">
 
-    <div class="row">
-        <div class="medium-9 columns">
-            <h1><a href="#">SpringKit</a></h1>
-            <h2>CSS Framework for website development</h2>
-        </div>
+    <section class="fp-intro">
+        <div class="row">
+            <div class="medium-9 columns">
+                <h1><a href="#">SpringKit</a></h1>
+                <h2>CSS Framework for website development</h2>
+            </div>
 
-        <div class="medium-3 columns">
-            <img class="fright" src="/images/springkitpup.png" width="200px">
+            <div class="medium-3 columns">
+                <img class="fright" src="/images/springkitpup.png" width="200px">
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="rowcolumn">
-        <ul class="no-bullet">
-            {% for post in site.posts %}
-                <li>
-                    <h3>
-                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                    </h3>
-                </li>
+    <section class="fp-block-links">
+        <div class="row medium-up-2 large-up-4">
+            {% for post in site.posts | sort: 'title' %}
+                <div class="column">
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                        <div class="fp-component-block">
+                            <h3>
+                                {{ post.title }}
+                            </h3>
+                        </div>
+                    </a>
+                </div>
             {% endfor %}
-        </ul>
-    </div>
-
+        </div>
+    </section>
 
 </div>

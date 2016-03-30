@@ -4,12 +4,57 @@
 //
 // ------------------------------------------------
 
+////
+/// Mixins provide functionality for various elements
+/// @group helpers
+////
 
 
-
-// Clearfix:
-// ------------------------------------------------
+/// Clearfix:
+/// Applies the micro clearfix hack popularized by Nicolas Gallagher. Include this mixin on a container if its children are all floated, to give the container a proper height.
+/// The clearfix is augmented with specific styles to prevent borders in flexbox environments
+/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix Hack
+/// @link http://danisadesigner.com/blog/flexbox-clear-fix-pseudo-elements/ Flexbox fix
 @mixin clearfix {
-    &:before, &:after { content: " "; display: table; }
-    &:after { clear: both; }
+    &::before,
+    &::after {
+        content: ' ';
+        display: table;
+        flex-basis: 0;
+        order: 1;
+    }
+
+    &::after {
+        clear: both;
+    }
+}
+
+/// Debug Mixin:
+///
+/// Can pass color if wanted, defaults to blue.
+/// @param {Color} $bg - Color to use
+@mixin debug($bg: blue) {
+    * {
+        background: rgba($bg, 0.2);
+    }
+}
+
+
+/// Iterates through breakpoints defined in `$breakpoint-classes` and prints the CSS inside the mixin at each breakpoint's media query. Use this with the grid, or any other component that has responsive classes.
+///
+/// @param {Boolean} $small [true] - If `false`, the mixin will skip the `small` breakpoint. Use this with components that don't prefix classes with `small-`, only `medium-` and up.
+@mixin -zf-each-breakpoint($small: true) {
+    $map: $breakpoint-classes;
+
+    @if not $small {
+        $map: map-remove($map, small);
+    }
+
+    @each $size in $map {
+        $-zf-size: $size !global;
+
+        @include breakpoint($size) {
+            @content;
+        }
+    }
 }
