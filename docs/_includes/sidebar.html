@@ -1,0 +1,15 @@
+<aside class="site-aside">
+    <nav class="site-nav">
+
+        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a><br>
+
+        <ul class="main-nav">
+            {% for post in site.posts | sort: 'title' %}
+                <li>
+                    <a class="" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+
+    </nav>
+</aside>

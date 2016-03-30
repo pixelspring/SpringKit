@@ -6,7 +6,7 @@ categories: base
 ---
 
 <div class="row column">
-    <p>Alerts are available in a range of styles. They span 100% width.</p>
+    <p class="lead-text">Alerts are available in a range of styles. They span 100% width.</p>
 </div>
 
 <div class="row column">

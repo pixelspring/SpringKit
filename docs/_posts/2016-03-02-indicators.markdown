@@ -6,7 +6,7 @@ categories: base
 ---
 
 <div class="row column">
-    <p>Indicator provide visual indications of actions</p>
+    <p class="lead-text">Indicators provide visual indications of actions</p>
 </div>
 
 <div class="row">

@@ -6,7 +6,7 @@ categories: base
 ---
 
 <div class="row column">
-    <p>Labels are of six types:</p>
+    <p class="lead-text">Labels are of six types:</p>
     <ul>
         <li>Standard (gray background)</li>
         <li>Primary (solid primary color background)</li>

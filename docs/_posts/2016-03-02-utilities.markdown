@@ -6,7 +6,7 @@ categories: base
 ---
 
 <div class="row column">
-    <p>Utilities are small helper classes, available in the following categories:</p>
+    <p class="lead-text">Utilities are small helper classes, available in the following categories:</p>
     <ul>
         <li>Floats</li>
         <li>Rounding</li>
