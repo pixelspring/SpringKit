@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "Mixins"
+date:   2016-03-02 15:31:56 +0000
+categories: helpers
+sassbase: helpers/_mixins.scss
+---
+
+<div class="row column">
+    <p class="lead-text">Mixins provide functionality for various elements</p>
+</div>
+
+<div class="row column">
+    <ul>
+        <li>Clearfix</li>
+        <li>Debug</li>
+        <li>Etc</li>
+    </ul>
+</div>
+
+
+<div class="row column">
+<h4>Example Code:</h4>
+{% highlight html %}
+<!-- ToDo: -->
+{% endhighlight %}
+</div>
