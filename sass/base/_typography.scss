@@ -32,6 +32,18 @@ $subheader-font-color: scale-color($header-font-color, $lightness: 45%)!default;
 /// @type String
 $subheader-font-weight: 300!default;
 
+/// Define the paragraph margin
+/// @type String
+$paragraph-margin: 0 0 $line-height!default;
+
+/// Define the paragraph font-weight
+/// @type String
+$paragraph-font-weight: $font-weight!default;
+
+/// Define the size of the small tag
+/// @type String
+$small-size: 0.8rem!default;
+
 /// Blockquotes:
 /// Define the line height
 /// @type Number
@@ -96,6 +108,7 @@ h5, h6 {
 // ------------------------------------------------
 p {
     margin: $paragraph-margin;
+    font-weight: $paragraph-font-weight;
 }
 
 
@@ -104,9 +117,9 @@ p {
     font-size: 1.3em;
 }
 
-// Small Tag: Covered in Normalize.css (font-size: 80%) but override here if needed
+// Small Tag:
 // ------------------------------------------------
-small {font-size: 0.8rem}
+small {font-size: $small-size;}
 
 // Quotes:
 // ------------------------------------------------
