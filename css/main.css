@@ -982,7 +982,7 @@ html {
   font-size: 100%; }
 
 body {
-  line-height: 1.6;
+  line-height: 1.6em;
   font-weight: 400;
   font-family: "Merriweather", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222222; }
@@ -1018,7 +1018,7 @@ h5, h6 {
   font-weight: 300; }
 
 p {
-  margin: 0 0 1.6rem; }
+  margin: 0 0 1.6em; }
 
 .lead-text {
   font-size: 1.3em; }
@@ -1121,6 +1121,14 @@ hr {
 img {
   max-width: 100%;
   height: auto; }
+
+figure {
+  margin-bottom: 1.6em; }
+
+figcaption {
+  margin: .3rem 0;
+  font-size: 0.8rem;
+  font-style: italic; }
 
 .th {
   line-height: 0;

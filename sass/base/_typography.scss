@@ -57,7 +57,7 @@ html {
 
 body {
     // font-size:      1.6em; /* ems, 'cause chrome bug - 16px */
-    line-height:    1.6;
+    line-height:    $line-height;
     font-weight:    $font-weight;
     font-family:    $font-stack-body; // "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color:          $font-color;
@@ -95,7 +95,7 @@ h5, h6 {
 // Paragraphs:
 // ------------------------------------------------
 p {
-    margin: 0 0 1.6rem;
+    margin: $paragraph-margin;
 }
 
 

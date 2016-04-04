@@ -16,6 +16,16 @@ img {
   height: auto;
 }
 
+figure {
+    margin-bottom: $line-height;
+}
+
+figcaption {
+    margin: .3rem 0;
+    font-size: $small-size;
+    font-style: italic;
+}
+
 // Image Thumbnails:
 // ------------------------------------------------
 .th {

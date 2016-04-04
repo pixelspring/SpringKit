@@ -191,6 +191,12 @@ $header-font-weight: 300;
 $subheader-font-color: scale-color($header-font-color, $lightness: 45%);
 $subheader-font-weight: 300;
 
+// Paragraph Text:
+$paragraph-margin: 0 0 $line-height;
+
+// Small:
+$small-size: 0.8rem;
+
 /// Blockquotes:
 $blockquote-font-size:  1.1em;
 $blockquote-font-color: $font-color;
