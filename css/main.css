@@ -1555,50 +1555,23 @@ input[type="button"].button-info {
     color: #FFF; }
 
 .breadcrumb {
-  margin: 0;
-  list-style: none;
+  padding: 8px 15px;
   margin-bottom: 1.6em;
+  list-style: none;
+  background-color: #ECEBEB;
   font-size: 0.8rem;
-  color: rgba(0, 0, 0, 0.5); }
+  border-radius: 4px; }
 
-.breadcrumb:after {
-  content: "";
-  display: block;
-  clear: both; }
+.breadcrumb > li {
+  display: inline-block; }
 
-.breadcrumb li {
-  float: left; }
+.breadcrumb > li + li:before {
+  padding: 0 5px;
+  color: #ccc;
+  content: ">"; }
 
-.breadcrumb a {
-  position: relative;
-  margin-right: 8px;
-  padding-right: 13px;
-  color: #000;
-  text-decoration: none; }
-
-.breadcrumb a:hover {
-  -webkit-transition: all linear 0.2s;
-  transition: all linear 0.2s;
-  color: rgba(0, 0, 0, 0.6);
-  text-decoration: underline; }
-
-.breadcrumb a:before {
-  position: absolute;
-  top: -5px;
-  right: 0;
-  content: " > ";
-  color: rgba(0, 0, 0, 0.4);
-  font-size: 12px; }
-
-.breadcrumb.breadcrumb-path a:before {
-  content: " / ";
-  top: -4px; }
-
-.breadcrumb span,
-.breadcrumb a.active:hover {
-  text-decoration: none;
-  cursor: text;
-  color: rgba(0, 0, 0, 0.4); }
+.breadcrumb > .active {
+  color: #777; }
 
 .card {
   background: #FAFAFA;

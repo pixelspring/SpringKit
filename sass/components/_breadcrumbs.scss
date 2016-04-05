@@ -7,66 +7,54 @@
 
 /// Define size of breadcrumb elements
 /// @type Number
-$breadcrumb-size: $small-size;
+$breadcrumb-size: $small-size!default;
 
-/// Define color of breadcrumb elements
-/// @type Number
+/// Do you want a radius on the breadcrumb background
+/// @type Boolean
+$breadcrumb-radius: true;
+
+/// Define color of breadcrumb background
+/// @type Color
+$breadcrumb-bg-color: palette(secondary, light);
+
+/// Define color of breadcrumb seperators
+/// @type Color
+$breadcrumb-seperator-color: #ccc;
+
+/// Define color of active breadcrumb elements
+/// @type Color
+$breadcrumb-active-color: #777;
+
+/// Set the breadcrumb seperator
+/// @type String
+$breadcrumb-seperator: ">";
 
 
 
 @mixin breadcrumb {}
 
-
 .breadcrumb {
-    margin: 0;
-    list-style: none;
+    padding: 8px 15px;
     margin-bottom: $line-height;
+    list-style: none;
+    background-color: $breadcrumb-bg-color;
     font-size: $breadcrumb-size;
-    color: rgba(0,0,0,0.5);
+
+    @if $breadcrumb-radius {
+        border-radius: $global-radius;
+    }
 }
 
-.breadcrumb:after {
-    content: "";
-    display: block;
-    clear: both;
+.breadcrumb > li {
+    display: inline-block;
 }
 
-.breadcrumb li {
-    float: left;
+.breadcrumb > li + li:before {
+    padding: 0 5px;
+    color: $breadcrumb-seperator-color;
+    content: $breadcrumb-seperator;
 }
 
-.breadcrumb a {
-    position: relative;
-    margin-right: 8px;
-    padding-right: 13px;
-    color: #000;
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    -moz-transition: all linear 0.2s;
-    transition: all linear 0.2s;
-    color: rgba(0,0,0,0.6);
-    text-decoration: underline;
-}
-
-.breadcrumb a:before {
-    position: absolute;
-    top: -5px;
-    right: 0;
-    content: " > ";
-    color: rgba(0,0,0,0.4);
-    font-size: 12px;
-}
-
-.breadcrumb.breadcrumb-path a:before {
-    content: " / ";
-    top: -4px;
-}
-
-.breadcrumb span,
-.breadcrumb a.active:hover {
-    text-decoration: none;
-    cursor: text;
-    color: rgba(0,0,0,0.4);
+.breadcrumb > .active {
+    color: $breadcrumb-active-color;
 }
