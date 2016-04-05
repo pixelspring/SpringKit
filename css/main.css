@@ -1398,10 +1398,10 @@ table caption {
   text-align: left; }
 
 tbody tr:nth-child(odd) {
-  background-color: #f8f8f8; }
+  background-color: #ECEBEB; }
 
 tbody tr:hover {
-  background-color: #fff4cc; }
+  background-color: #FFFEE2; }
 
 .alert {
   padding: 1.4rem;

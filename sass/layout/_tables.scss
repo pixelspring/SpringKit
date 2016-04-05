@@ -49,7 +49,7 @@ table caption {
 
 // Table Row Striping:
 tbody tr:nth-child(odd) {
-    background-color: #f8f8f8;
+    background-color: palette(secondary, light);
 }
 
 // Table Row Hover:
