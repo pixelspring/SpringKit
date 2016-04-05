@@ -3,52 +3,72 @@
 //
 // ------------------------------------------------
 
+/// Set background color of current item
+/// @type Color
+$pagination-current-bg: palette(secondary, light)!default;
+
+/// Set text color of current item
+/// @type Color
+$pagination-current-color: $font-color!default;
+
+/// Set hover background color of pagination link
+/// @type Color
+$pagination-hover-bg: palette(primary)!default;
+
+/// Set hover text color of pagination link
+/// @type Color
+$pagination-hover-color: white!default;
+
+/// Set size of pagination link text
+/// @type Number
+$pagination-font-size: $small-size!default;
+
+/// Set padding of pagination linka
+/// @type String
+$pagination-padding: 3px 10px!default;
+
+/// Define whether border radoius is used on pagination links
+/// @type Boolean
+$pagination-radius: true!default;
+
+
 .pagination {
-    list-style: none;
-    margin: 0;
-    margin-left: 2px;
-    margin-bottom: 24px;
-    font-size: 94%;
+    margin-left: 0;
+    margin-bottom: $line-height;
 }
 
-.pagination:after {
-    content: "";
-    display: block;
+.pagination::after {
     clear: both;
 }
 
 .pagination li {
-    float: left;
+    font-size: $pagination-font-size;
+    display: inline-block;
 }
 
-.pagination a,.pagination span {
-    padding: 4px 8px;
-    line-height: 24px;
-    margin-right: 2px;
-    border-radius: 2px;
-    color: #000;
-    text-decoration: none;
+.pagination a {
+    color: $font-color;
+    display: block;
+    padding: $pagination-padding;
+    @if pagination-radius {
+        border-radius: $global-radius/2;
+    }
 }
 
-.pagination span,.pagination a.active,.pagination a.active:hover {
-    color: rgba(0,0,0,0.6);
-    background-color: rgba(0,0,0,0.1);
-    cursor: text;
+.pagination a:hover {
+    background: $pagination-hover-bg;
+    color: $pagination-hover-color;
 }
 
-.pagination a:focus,.pagination a:hover {
-    -moz-transition: all linear 0.2s;
-    transition: all linear 0.2s;
-    text-decoration: none;
-    background-color: rgba(0,0,0,0.1);
-    color: rgba(0,0,0,0.6);
+.pagination .current {
+    padding: $pagination-padding;
+    background: $pagination-current-bg;
+    color: $pagination-current-color;
+    @if pagination-radius {
+        border-radius: $global-radius/2;
+    }
 }
 
 .pagination.centered {
     text-align: center;
-}
-
-.pagination.centered li {
-    float: none;
-    display: inline-block;
 }

@@ -7,13 +7,27 @@ sassbase: components/_pagination.scss
 ---
 
 <div class="row column">
-    <p class="lead-text">Pagination:</p>
+    <p class="lead-text">Pagination is a form of navigation. Example use cases include moving between search results pages or navigating article split into seperate pages.</p>
 </div>
 
 <div class="row column">
+    <h4>Pagination Example:</h4>
     <ul class="pagination">
         <li><a href="#">&larr;</a></li>
-        <li><span>1</span></li>
+        <li class="current">1</li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&rarr;</a></li>
+    </ul>
+</div>
+
+<div class="row column">
+    <h4>Centered Pagination Example:</h4>
+    <ul class="pagination centered">
+        <li><a href="#">&larr;</a></li>
+        <li class="current">1</li>
         <li><a href="#">2</a></li>
         <li><a href="#">3</a></li>
         <li><a href="#">4</a></li>
@@ -30,7 +44,18 @@ sassbase: components/_pagination.scss
 <!-- Pagination: -->
 <ul class="pagination">
     <li><a href="#">&larr;</a></li>
-    <li><span>1</span></li>
+    <li class="current">1</li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&rarr;</a></li>
+</ul>
+
+<!-- Centered Pagination: -->
+<ul class="pagination centered">
+    <li><a href="#">&larr;</a></li>
+    <li class="current">1</li>
     <li><a href="#">2</a></li>
     <li><a href="#">3</a></li>
     <li><a href="#">4</a></li>
