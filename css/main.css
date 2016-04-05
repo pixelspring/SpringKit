@@ -1342,7 +1342,8 @@ label,
 legend {
   display: block;
   font-weight: bold;
-  margin-bottom: 0.8em; }
+  margin-bottom: 0.8em;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 legend {
   padding: 0 6px; }
