@@ -2,11 +2,12 @@
 layout: post
 title:  "Tables"
 date:   2016-03-02 15:31:56 +0000
-categories: base
+categories: layout
+sassbase: layout/_tables.scss
 ---
 
 <div class="row column">
-    <p>Tables. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    <p class="lead-text">Tables. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 </div>
 
 <div class="row column">

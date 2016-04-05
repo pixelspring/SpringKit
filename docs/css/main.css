@@ -1270,6 +1270,38 @@ input[type="range"] {
   padding: 6px 0;
   cursor: ew-resize; }
 
+.input-validate[required],
+.input-validate:invalid,
+.input-validate:valid {
+  padding-right: 2.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.input-validate:invalid,
+.input-validate:valid {
+  background-repeat: no-repeat;
+  background-size: 0.8rem;
+  background-position: right 1rem center; }
+
+.input-validate.textarea[required],
+.input-validate.textarea:invalid,
+.input-validate.textarea:valid {
+  background-position: right 1rem top 1rem; }
+
+.input-validate[required] {
+  background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M14.83 9.604L12.06 8l2.77-1.604c.635-.365.854-1.188.49-1.823l-.667-1.146c-.365-.635-1.188-.854-1.823-.49l-2.77 1.594V1.334C10.06.603 9.454 0 8.724 0H7.392C6.662 0 6.06.604 6.06 1.333V4.53L3.287 2.938c-.635-.364-1.458-.145-1.823.49L.798 4.573c-.364.635-.145 1.458.49 1.823L4.058 8 1.29 9.604c-.635.365-.854 1.188-.49 1.823l.667 1.146c.365.635 1.188.854 1.823.49l2.77-1.594v3.197c0 .73.605 1.333 1.334 1.333h1.333c.73 0 1.334-.604 1.334-1.333V11.47l2.77 1.592c.635.365 1.458.146 1.823-.49l.666-1.145c.364-.635.145-1.458-.49-1.823z" fill="#e2525e" fill-rule="evenodd"/></svg>'); }
+
+.input-validate:focus:invalid {
+  background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M11.97 10.354c0 .177-.074.354-.2.48l-.937.937c-.125.126-.302.2-.48.2-.176 0-.343-.074-.468-.2L8 9.886 6.115 11.77c-.125.126-.292.2-.47.2-.176 0-.353-.074-.478-.2l-.938-.937c-.126-.125-.2-.302-.2-.48 0-.176.074-.343.2-.468L6.114 8 4.23 6.115c-.126-.125-.2-.292-.2-.47 0-.176.074-.353.2-.478l.937-.938c.125-.126.302-.2.48-.2.176 0 .343.074.468.2L8 6.114 9.885 4.23c.125-.126.292-.2.47-.2.176 0 .353.074.478.2l.938.937c.126.125.2.302.2.48 0 .176-.074.343-.2.468L9.886 8l1.886 1.885c.126.125.2.292.2.47zM16 8c0-4.417-3.583-8-8-8S0 3.583 0 8s3.583 8 8 8 8-3.583 8-8z" fill="#f39c12" fill-rule="evenodd"/></svg>'); }
+
+.input-validate:valid {
+  background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M7.135 12.198c-.26.26-.677.26-.937 0l-3.73-3.73c-.26-.26-.26-.676 0-.937l1.063-1.06c.262-.262.678-.262.94 0l2.197 2.197 4.864-4.865c.262-.26.678-.26.94 0l1.06 1.063c.262.26.262.677 0 .937l-6.395 6.396zM16 3c0-1.656-1.344-3-3-3H3C1.344 0 0 1.344 0 3v10c0 1.656 1.344 3 3 3h10c1.656 0 3-1.344 3-3V3z" fill="#6cbc7a" fill-rule="evenodd"/></svg>'); }
+
+.input[novalidate],
+.input.novalidate,
+.input.hide-validate-icon {
+  background-image: none; }
+
 select {
   -webkit-appearance: menulist;
      -moz-appearance: menulist;

@@ -1,22 +1,45 @@
 /* Documentation Specific CSS Styles */
 
-.site-header {
+.site-aside {
     background: #f9fafb;
     padding: 20px 0;
+    width: 200px;
+    position: fixed;
+    height: 100vh;
 }
 
-.site-header a {
-    text-decoration: none;
-}
+    .site-title {
+        margin-top: 2rem;
+        font-size: 20px;
+    }
 
-li.section-link {
-    float: right;
-    padding: 0 0 0 10px;
+    .site-aside a {
+        text-decoration: none;
+        padding: 0 8px 0 16px;
+        display: block;
+    }
+
+    .category-title a {
+        color: #157998;
+        border-top: 1px solid #cccccc;
+        padding-top: 15px;
+        text-transform: uppercase;
+        font-size: 65%;
+    }
+
+    .post-title a {}
+
+
+
+
+
+.page-wrap {
+    margin-left: 200px;
+    padding: 0 50px;
 }
 
 /* Homepage */
 .fp-intro {
-    margin-top: 32px;
     margin-bottom: 64px;
 }
 .fp-block-links {
@@ -35,6 +58,11 @@ li.section-link {
     background: #f9fafb;
     padding: 20px 0;
     margin-top: 40px;
+}
+
+h1.post-title {
+    border-bottom: 3px solid lightgray;
+    width: 100%;
 }
 
 /* Syntax Highlighting */

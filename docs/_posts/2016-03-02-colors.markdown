@@ -2,39 +2,48 @@
 layout: post
 title:  "Colors"
 date:   2016-03-02 15:31:56 +0000
-categories: base
+categories: helpers
+sassbase: helpers/_variables.scss
 ---
 
 <div class="row column">
-    <p>Colours are defined in a multidimensional map, with base, light &amp; dark variants.</p>
+    <p class="lead-text">Colours are defined in a multidimensional map, with base, light &amp; dark variants.<br>Set colors with the <code>palette()</code> helper function in Sass.</p>
 </div>
 
 <div class="row column">
-    <div class="color-example example-primary-light">primary light</div>
-    <div class="color-example example-secondary-light">secondary light</div>
-    <div class="color-example example-success-light">success light</div>
-    <div class="color-example example-warning-light">warning light</div>
-    <div class="color-example example-danger-light">danger light</div>
-    <div class="color-example example-info-light">info light</div>
+    <div class="color-example example-primary-light">primary<br>light</div>
+    <div class="color-example example-secondary-light">secondary<br>light</div>
+    <div class="color-example example-success-light">success<br>light</div>
+    <div class="color-example example-warning-light">warning<br>light</div>
+    <div class="color-example example-danger-light">danger<br>light</div>
+    <div class="color-example example-info-light">info<br>light</div>
 
-    <div class="color-example example-primary">primary base</div>
-    <div class="color-example example-secondary">secondary base</div>
-    <div class="color-example example-success">success base</div>
-    <div class="color-example example-warning">warning base</div>
-    <div class="color-example example-danger">danger base</div>
-    <div class="color-example example-info">info base</div>
+    <div class="color-example example-primary">primary<br>base</div>
+    <div class="color-example example-secondary">secondary<br>base</div>
+    <div class="color-example example-success">success<br>base</div>
+    <div class="color-example example-warning">warning<br>base</div>
+    <div class="color-example example-danger">danger<br>base</div>
+    <div class="color-example example-info">info<br>base</div>
 
-    <div class="color-example example-primary-dark">primary dark</div>
-    <div class="color-example example-secondary-dark">secondary dark</div>
-    <div class="color-example example-success-dark">success dark</div>
-    <div class="color-example example-warning-dark">warning dark</div>
-    <div class="color-example example-danger-dark">danger dark</div>
-    <div class="color-example example-info-dark">info dark</div>
+    <div class="color-example example-primary-dark">primary<br>dark</div>
+    <div class="color-example example-secondary-dark">secondary<br>dark</div>
+    <div class="color-example example-success-dark">success<br>dark</div>
+    <div class="color-example example-warning-dark">warning<br>dark</div>
+    <div class="color-example example-danger-dark">danger<br>dark</div>
+    <div class="color-example example-info-dark">info<br>dark</div>
 </div>
 
 <div class="row column">
 <h3>Example Code:</h3>
 {% highlight html %}
-<!-- TODO -->
+<!-- Set element to primary color bg -->
+.element-primary {
+    background: palette(primary);
+}
+
+<!-- Set element to primary light color bg -->
+.element-primary-light {
+    background: palette(primary, light);
+}
 {% endhighlight %}
 </div>

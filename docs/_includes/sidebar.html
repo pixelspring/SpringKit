@@ -1,0 +1,20 @@
+<aside class="site-aside">
+    <nav class="site-nav">
+
+        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a><br>
+
+        <ul class="main-nav">
+            {% for category in site.categories %}
+                <li class="category-title"><a name="{{ category | first }}">{{ category | first }}</a></li>
+
+                {% for posts in category %}
+                    {% for post in posts reversed %}
+                        <li class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                {% endfor %}
+
+            {% endfor %}
+        </ul>
+
+    </nav>
+</aside>

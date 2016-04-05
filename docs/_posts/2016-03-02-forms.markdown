@@ -2,11 +2,12 @@
 layout: post
 title:  "Forms"
 date:   2016-03-02 15:31:56 +0000
-categories: base
+categories: layout
+sassbase: layout/_forms.scss
 ---
 
 <div class="row column">
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    <p class="lead-text">Forms are used to accept user input</p>
 </div>
 
 <div id="form_example">
@@ -40,6 +41,19 @@ categories: base
 
         </div>
     </fieldset>
+    </form>
+</div>
+</div>
+
+<div id="form_validation_example">
+<div class="row column">
+    <h3>Form Validation:</h3>
+    <form>
+        <label for="exampleEmailInputValidation">Your email</label>
+        <input class="input-validate" type="email" placeholder="enter a valid email address" id="exampleEmailInputValidation" required>
+
+        <label for="exampleMessageValidation">Message</label>
+        <textarea class="input-validate" placeholder="enter some text" id="exampleMessageValidation" required></textarea>
     </form>
 </div>
 </div>
