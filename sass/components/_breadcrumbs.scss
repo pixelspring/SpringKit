@@ -5,36 +5,40 @@
 
 // Breadcrumb Variables:
 
+/// Set the padding of the breadcrumb list in the container
+/// @type String
+$breadcrumb-padding: 8px 15px!default;
+
 /// Define size of breadcrumb elements
 /// @type Number
 $breadcrumb-size: $small-size!default;
 
 /// Do you want a radius on the breadcrumb background
 /// @type Boolean
-$breadcrumb-radius: true;
+$breadcrumb-radius: true!default;
 
 /// Define color of breadcrumb background
 /// @type Color
-$breadcrumb-bg-color: palette(secondary, light);
+$breadcrumb-bg-color: palette(secondary, light)!default;
 
 /// Define color of breadcrumb seperators
 /// @type Color
-$breadcrumb-seperator-color: #ccc;
+$breadcrumb-seperator-color: #ccc!default;
 
 /// Define color of active breadcrumb elements
 /// @type Color
-$breadcrumb-active-color: #777;
+$breadcrumb-active-color: #777!default;
 
 /// Set the breadcrumb seperator
 /// @type String
-$breadcrumb-seperator: ">";
+$breadcrumb-seperator: ">"!default;
 
 
 
 @mixin breadcrumb {}
 
 .breadcrumb {
-    padding: 8px 15px;
+    padding: $breadcrumb-padding;
     margin-bottom: $line-height;
     list-style: none;
     background-color: $breadcrumb-bg-color;
