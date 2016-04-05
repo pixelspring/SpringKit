@@ -12,6 +12,7 @@ sassbase: base/_utilityclasses.scss
         <li>Floats</li>
         <li>Rounding</li>
         <li>Text-Align</li>
+        <li>Image Helpers</li>
         <li>Visibility</li>
         <li>Z-Index</li>
     </ul>
@@ -53,6 +54,25 @@ sassbase: base/_utilityclasses.scss
 
 .text-justify {
     text-align: justify !important;
+}
+
+<!-- Image Helpers -->
+.image-left {
+    float: left !important;
+    margin: 0 $line-height $line-height 0;
+}
+
+.image-right {
+    float: right !important;
+    margin: 0  0 $line-height $line-height;
+}
+
+.image-centered {
+    text-align: center !important;
+}
+
+.image-bordered {
+    border: 1px solid $border-color;
 }
 
 <!-- Visibility -->

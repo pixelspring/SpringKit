@@ -1166,6 +1166,20 @@ figcaption {
 .text-justify {
   text-align: justify !important; }
 
+.image-left {
+  float: left !important;
+  margin: 0 1.6em 1.6em 0; }
+
+.image-right {
+  float: right !important;
+  margin: 0 0 1.6em 1.6em; }
+
+.image-centered {
+  text-align: center !important; }
+
+.image-bordered {
+  border: 1px solid #CCCCCC; }
+
 .hidden {
   display: none;
   visibility: hidden !important; }
