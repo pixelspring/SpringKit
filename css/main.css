@@ -1373,6 +1373,12 @@ table {
   width: 100%; }
 
 th,
+tf {
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase; }
+
+th,
 td {
   padding: 12px 15px;
   text-align: left;
@@ -1389,7 +1395,6 @@ td:last-child {
 table caption {
   text-transform: uppercase;
   color: #888888;
-  font-size: 1.2rem;
   text-align: left; }
 
 tbody tr:nth-child(odd) {
