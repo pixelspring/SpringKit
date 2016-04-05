@@ -1554,6 +1554,52 @@ input[type="button"].button-info {
     border-color: #1F9FF3;
     color: #FFF; }
 
+.breadcrumb {
+  margin: 0;
+  list-style: none;
+  margin-bottom: 1.6em;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.5); }
+
+.breadcrumb:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.breadcrumb li {
+  float: left; }
+
+.breadcrumb a {
+  position: relative;
+  margin-right: 8px;
+  padding-right: 13px;
+  color: #000;
+  text-decoration: none; }
+
+.breadcrumb a:hover {
+  -webkit-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: underline; }
+
+.breadcrumb a:before {
+  position: absolute;
+  top: -5px;
+  right: 0;
+  content: " > ";
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 12px; }
+
+.breadcrumb.breadcrumb-path a:before {
+  content: " / ";
+  top: -4px; }
+
+.breadcrumb span,
+.breadcrumb a.active:hover {
+  text-decoration: none;
+  cursor: text;
+  color: rgba(0, 0, 0, 0.4); }
+
 .card {
   background: #FAFAFA;
   margin-bottom: 1rem;
@@ -1648,6 +1694,48 @@ progress::-moz-progress-bar {
 
 .label-info {
   background: #8CCFFB; }
+
+.pagination {
+  list-style: none;
+  margin: 0;
+  margin-left: 2px;
+  margin-bottom: 24px;
+  font-size: 94%; }
+
+.pagination:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.pagination li {
+  float: left; }
+
+.pagination a, .pagination span {
+  padding: 4px 8px;
+  line-height: 24px;
+  margin-right: 2px;
+  border-radius: 2px;
+  color: #000;
+  text-decoration: none; }
+
+.pagination span, .pagination a.active, .pagination a.active:hover {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: text; }
+
+.pagination a:focus, .pagination a:hover {
+  -webkit-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.6); }
+
+.pagination.centered {
+  text-align: center; }
+
+.pagination.centered li {
+  float: none;
+  display: inline-block; }
 
 ::-webkit-scrollbar {
   width: 8px;

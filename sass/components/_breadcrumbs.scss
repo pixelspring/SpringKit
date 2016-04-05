@@ -2,3 +2,71 @@
 // BREADCRUMBS:
 //
 // ------------------------------------------------
+
+// Breadcrumb Variables:
+
+/// Define size of breadcrumb elements
+/// @type Number
+$breadcrumb-size: $small-size;
+
+/// Define color of breadcrumb elements
+/// @type Number
+
+
+
+@mixin breadcrumb {}
+
+
+.breadcrumb {
+    margin: 0;
+    list-style: none;
+    margin-bottom: $line-height;
+    font-size: $breadcrumb-size;
+    color: rgba(0,0,0,0.5);
+}
+
+.breadcrumb:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.breadcrumb li {
+    float: left;
+}
+
+.breadcrumb a {
+    position: relative;
+    margin-right: 8px;
+    padding-right: 13px;
+    color: #000;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    -moz-transition: all linear 0.2s;
+    transition: all linear 0.2s;
+    color: rgba(0,0,0,0.6);
+    text-decoration: underline;
+}
+
+.breadcrumb a:before {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    content: " > ";
+    color: rgba(0,0,0,0.4);
+    font-size: 12px;
+}
+
+.breadcrumb.breadcrumb-path a:before {
+    content: " / ";
+    top: -4px;
+}
+
+.breadcrumb span,
+.breadcrumb a.active:hover {
+    text-decoration: none;
+    cursor: text;
+    color: rgba(0,0,0,0.4);
+}
