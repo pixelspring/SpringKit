@@ -230,6 +230,18 @@ $button-warning-color:  palette(warning);
 $button-info-color:     palette(info);
 $button-danger-color:   palette(danger);
 
+
+// ------------------------------------------------
+
+/// Border Variables
+
+$border-width:      1px;
+$border-color:      $border-color;
+$border-style:      solid;
+$border:            $border-width $border-color $border-style;
+$border-radius:     $global-radius;
+
+
 // ------------------------------------------------
 
 /// Breadcrumb Variables

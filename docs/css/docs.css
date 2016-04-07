@@ -6,6 +6,7 @@
     width: 200px;
     position: fixed;
     height: 100vh;
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
     .site-title {
@@ -31,11 +32,14 @@
 
 
 
-
+.row {
+    padding-left: 60px;
+    padding-right: 60px;
+}
 
 .page-wrap {
     margin-left: 200px;
-    padding: 0 50px;
+    /* padding: 0 50px; */
 }
 
 /* Homepage */
@@ -58,6 +62,7 @@
     background: #f9fafb;
     padding: 20px 0;
     margin-top: 40px;
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1.post-title {

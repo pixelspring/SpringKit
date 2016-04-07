@@ -58,7 +58,7 @@ progress {
     margin-bottom: $line-height;
 
     @if $progress-bar-border {
-        border: 1px solid $border-color;
+        border: $border;
     }
 
     @if $progress-bar-radius {

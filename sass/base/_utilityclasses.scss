@@ -88,3 +88,20 @@
 .z3 { z-index: 3 }
 .z4 { z-index: 4 }
 .z5 { z-index: 5 }
+
+
+// Borders:
+// ------------------------------------------------
+
+// Vars:
+$border-width: 1px !default;
+$border-color: $border-color !default;
+$border-style: solid !default;
+$border: $border-width $border-color $border-style !default;
+$border-radius: $global-radius !default;
+
+.border        { border: $border !important; }
+.border-top    { border-top: $border !important; }
+.border-right  { border-right: $border !important; }
+.border-bottom { border-bottom: $border !important; }
+.border-left   { border-left: $border !important; }

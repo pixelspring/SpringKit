@@ -59,7 +59,7 @@ input[type="range"],
 input[type="color"],
 textarea,
 select {
-    border: 1px solid $border-color;
+    border: $border;
     min-height: 36px;
     padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
     box-shadow: none;
@@ -148,7 +148,7 @@ legend {
 }
 
 fieldset {
-    border: 1px solid $border-color;
+    border: $border;
     padding: 15px;
     background: $fieldset-bg;
 
