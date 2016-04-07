@@ -1178,7 +1178,7 @@ figcaption {
   text-align: center !important; }
 
 .image-bordered {
-  border: 1px solid #CCCCCC; }
+  border: 1px #CCCCCC solid; }
 
 .hidden {
   display: none;
