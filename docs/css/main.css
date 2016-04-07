@@ -1178,7 +1178,7 @@ figcaption {
   text-align: center !important; }
 
 .image-bordered {
-  border: 1px solid #CCCCCC; }
+  border: 1px #CCCCCC solid; }
 
 .hidden {
   display: none;
@@ -1206,6 +1206,21 @@ figcaption {
 
 .z5 {
   z-index: 5; }
+
+.border {
+  border: 1px #CCCCCC solid !important; }
+
+.border-top {
+  border-top: 1px #CCCCCC solid !important; }
+
+.border-right {
+  border-right: 1px #CCCCCC solid !important; }
+
+.border-bottom {
+  border-bottom: 1px #CCCCCC solid !important; }
+
+.border-left {
+  border-left: 1px #CCCCCC solid !important; }
 
 @media print {
   @page {
@@ -1248,7 +1263,7 @@ input[type="range"],
 input[type="color"],
 textarea,
 select {
-  border: 1px solid #CCCCCC;
+  border: 1px #CCCCCC solid;
   min-height: 36px;
   padding: 6px 10px;
   /* The 6px vertically centers text on FF, ignored by Webkit */
@@ -1349,7 +1364,7 @@ legend {
   padding: 0 6px; }
 
 fieldset {
-  border: 1px solid #CCCCCC;
+  border: 1px #CCCCCC solid;
   padding: 15px;
   background: transparent;
   border-radius: 4px; }
@@ -1600,17 +1615,17 @@ input[type="button"].button-info {
   background: #FAFAFA;
   margin-bottom: 1rem;
   border-radius: 4px;
-  border: 1px solid #CCCCCC; }
+  border: 1px #CCCCCC solid; }
   .card header {
     background: #DDDDDD;
     padding: 1rem;
-    border-bottom: 1px solid #CCCCCC; }
+    border-bottom: 1px #CCCCCC solid; }
   .card .card-content {
     padding: 1rem; }
   .card footer {
     background: #DDDDDD;
     padding: 1rem;
-    border-top: 1px solid #CCCCCC; }
+    border-top: 1px #CCCCCC solid; }
 
 progress {
   -webkit-appearance: none;
@@ -1620,7 +1635,7 @@ progress {
   width: 100%;
   height: 0.8em;
   margin-bottom: 1.6em;
-  border: 1px solid #CCCCCC;
+  border: 1px #CCCCCC solid;
   border-radius: 4px; }
 
 progress::-webkit-progress-bar {
@@ -1734,6 +1749,75 @@ progress::-moz-progress-bar {
 body {
   scrollbar-face-color: #1EAEDB;
   scrollbar-track-color: slategray; }
+
+.tabs {
+  list-style: none;
+  margin: 0; }
+  .tabs::before, .tabs::after {
+    content: ' ';
+    display: table;
+    -webkit-flex-basis: 0;
+        -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1; }
+  .tabs::after {
+    clear: both; }
+
+.tabs li {
+  display: inline; }
+
+.tabs li a {
+  color: black;
+  background: #ECEBEB;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  float: left;
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  margin-left: -1px;
+  left: 1px;
+  bottom: -1px;
+  border-top: 1px #CCCCCC solid;
+  border-right: 1px #CCCCCC solid;
+  border-left: 1px #CCCCCC solid; }
+
+.tabs li a.active {
+  border-bottom: 1px solid white;
+  background: white; }
+
+.tabs li a:hover:not(.active) {
+  background: #1EAEDB; }
+
+.js-tabby .tabs-pane {
+  display: none;
+  visibility: hidden; }
+
+.tabs-pane.active {
+  display: block;
+  visibility: visible; }
+
+[data-tabs-content] {
+  margin-bottom: 1.6em; }
+
+[data-tabs-pane] {
+  border: 1px #CCCCCC solid;
+  padding: 10px 20px;
+  background: white; }
+
+.tabs li:first-child a {
+  border-top-left-radius: 4px; }
+
+.tabs li:last-child a {
+  border-top-right-radius: 4px; }
+
+[data-tabs-pane] {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px; }
 
 .example .row,
 .example .rowcolumn {

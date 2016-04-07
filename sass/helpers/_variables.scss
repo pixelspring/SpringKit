@@ -290,3 +290,23 @@ $scrollbar-background-color: slategray;
 /// Scrollbar size (width)
 /// @type Number
 $scrollbar-size: 8px;
+
+// ------------------------------------------------
+
+/// Tab Variables
+
+/// Tab active item & content background color
+/// @type Color
+$tab-bg-color: white !default;
+
+/// Tab navigation link color
+/// @type Color
+$tab-link-color: black !default;
+
+/// Tab navigation background color
+/// @type Color
+$tab-link-bg: palette(secondary, light) !default;
+
+/// Tab border radius
+/// @type Boolean
+$tab-radius: true !default;

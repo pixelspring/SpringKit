@@ -97,7 +97,7 @@ sassbase: base/_utilityclasses.scss
 
 <!-- Borders -->
 <div class="border">Full Border</div>
-<div class="border-top3">Border-top</div>
+<div class="border-top">Border-top</div>
 <div class="border-right">Border-right</div>
 <div class="border-bottom">Border-bottom</div>
 <div class="border-left">Border-left</div>

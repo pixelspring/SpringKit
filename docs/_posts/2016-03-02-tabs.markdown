@@ -1,0 +1,104 @@
+---
+layout: post
+title:  "Tabs"
+date:   2016-03-02 15:31:56 +0000
+categories: components
+sassbase: components/_tabs.scss
+---
+
+<div class="row column">
+    <p class="lead-text">Tabs use <a href="https://github.com/cferdinandi/tabby">Tabby.js</a> for js functionality and are styled.</p>
+</div>
+
+<div class="row column">
+
+    <ul data-tabs class="tabs">
+        <li><a data-tab href="#tab1">Tab 1</a></li>
+        <li><a data-tab href="#tab2">Tab 2</a></li>
+        <li><a data-tab href="#tab3">Tab 3</a></li>
+    </ul>
+
+    <div data-tabs-content>
+        <div data-tabs-pane class="tabs-pane active" id="tab1">
+            <p><strong>Tab 1</strong></p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        </div>
+        <div data-tabs-pane class="tabs-pane" id="tab2">
+            <p><strong>Tab 2</strong></p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>        </div>
+        <div data-tabs-pane class="tabs-pane" id="tab3">
+            <p><strong>Tab 3</strong></p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="row column">
+    <h2>Sass Configuration:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>$tab-bg-color</td>
+                <td>Color</td>
+                <td><code>white</code></td>
+                <td>Tab active item &amp; content background color</td>
+            </tr>
+            <tr>
+                <td>$tab-link-color</td>
+                <td>Color</td>
+                <td><code>black</code></td>
+                <td>Tab navigation link color</td>
+            </tr>
+            <tr>
+                <td>$tab-link-bg</td>
+                <td>Color</td>
+                <td><code>palette(secondary, light)</code></td>
+                <td>Tab navigation background color</td>
+            </tr>
+            <tr>
+                <td>$tab-radius</td>
+                <td>Boolean</td>
+                <td><code>True</code></td>
+                <td>Tab border radius</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="row column">
+<h4>Example Code:</h4>
+{% highlight html %}
+<!-- Tab Navigation: -->
+<nav>
+    <ul data-tabs class="tabs">
+        <li><a data-tab href="#tab1">Tab 1</a></li>
+        <li><a data-tab href="#tab2">Tab 2</a></li>
+        <li><a data-tab href="#tab3">Tab 3</a></li>
+    </ul>
+</nav>
+<!-- Tab Content: -->
+<div data-tabs-content>
+    <div data-tabs-pane class="tabs-pane active" id="tab1">
+        <h4>Tab 1</h4>
+        <p>Tab Content 1</p>
+    </div>
+    <div data-tabs-pane class="tabs-pane" id="tab2">
+        <h4>Tab 2</h4
+        <p>Tab Content 2</p>
+    </div>
+    <div data-tabs-pane class="tabs-pane" id="tab3">
+        <h4>Tab 3</h4>
+        <p>Tab Content 3</p>
+    </div>
+</div>
+{% endhighlight %}
+</div>
