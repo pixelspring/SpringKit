@@ -15,6 +15,7 @@ sassbase: base/_utilityclasses.scss
         <li>Image Helpers</li>
         <li>Visibility</li>
         <li>Z-Index</li>
+        <li>Borders</li>
     </ul>
 </div>
 
@@ -93,5 +94,12 @@ sassbase: base/_utilityclasses.scss
 .z3 { z-index: 3 }
 .z4 { z-index: 4 }
 .z5 { z-index: 5 }
+
+<!-- Borders -->
+<div class="border">Full Border</div>
+<div class="border-top3">Border-top</div>
+<div class="border-right">Border-right</div>
+<div class="border-bottom">Border-bottom</div>
+<div class="border-left">Border-left</div>
 {% endhighlight %}
 </div>
