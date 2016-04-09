@@ -2,5 +2,13 @@
   "name": "SpringKit",
   "version": "0.0.1",
   "description": "CSS Framework",
-  "author": "Mike Seaby <mike@pixelspring.co.uk"
+  "author": "Mike Seaby <mike@pixelspring.co.uk",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3"
+  },
+  "license": "MIT"
 }

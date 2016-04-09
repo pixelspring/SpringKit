@@ -29,11 +29,8 @@
 @import "components/_cards.scss";
 @import "components/_indicators.scss";
 @import "components/_labels.scss";
-// @import "components/_topmenu.scss"; // TODO: Breakpoints
-// @import "components/_sidebar.scss"; // TODO: Breakpoints
 @import "components/_pagination.scss";
 @import "components/_scrollbars.scss";
-
 @import "components/_tabs.scss";
 
 
@@ -41,55 +38,3 @@
 // @import "vendor/animate/animate.scss";
 // @import "vendor/brand-colors/brand-colors.scss";
 // @import "vendor/sass-mq/_mq.scss";
-
-
-
-
-
-// ------------------------------------------------
-// DEMO / DEBUG:
-// ------------------------------------------------
-
-.example .row,
-.example .rowcolumn {
-    background: lightgray;
-    margin-bottom: 15px;
-}
-
-.grid-example {
-    background: tomato;
-    text-align: center;
-    border-radius: $global-radius;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    height: 40px;
-    line-height: 40px;
-}
-
-.color-example {
-    padding: 30px;
-    width: 16.6666666667%;
-    float: left;
-    text-align: center;
-}
-
-.example-primary-light    {background: palette(primary, light);}
-.example-secondary-light  {background: palette(secondary, light);}
-.example-success-light    {background: palette(success, light);}
-.example-warning-light    {background: palette(warning, light);}
-.example-danger-light     {background: palette(danger, light);}
-.example-info-light       {background: palette(info, light);}
-
-.example-primary    {background: palette(primary);}
-.example-secondary  {background: palette(secondary);}
-.example-success    {background: palette(success);}
-.example-warning    {background: palette(warning);}
-.example-danger     {background: palette(danger);}
-.example-info       {background: palette(info);}
-
-.example-primary-dark    {background: palette(primary, dark);}
-.example-secondary-dark  {background: palette(secondary, dark);}
-.example-success-dark    {background: palette(success, dark);}
-.example-warning-dark    {background: palette(warning, dark);}
-.example-danger-dark     {background: palette(danger, dark);}
-.example-info-dark       {background: palette(info, dark);}
