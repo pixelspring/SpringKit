@@ -7,8 +7,10 @@ var filesize = require('gulp-size');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 
-
-gulp.task('workflow', function () {
+// ------------------------------------------------
+// Sass Compilation:
+// ------------------------------------------------
+gulp.task('sass', function () {
 
     gulp.src('./sass/main.scss')
         .pipe(sass().on('error', sass.logError))
@@ -34,13 +36,22 @@ gulp.task('workflow', function () {
 
 });
 
+// ------------------------------------------------
+// JavaScript:
+// ------------------------------------------------
 gulp.task('javascript', function() {
+
     gulp.src('./js/app.js')
         .pipe(uglify())
         .pipe(gulp.dest('./js/min/'));
+
 });
 
+
+// ------------------------------------------------
+// Watchers:
+// ------------------------------------------------
 gulp.task('default', function () {
-    gulp.watch('./sass/**/*.scss', ['workflow']);
+    gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./js/**/*.js', ['javascript']);
 });
