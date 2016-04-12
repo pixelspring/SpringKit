@@ -5,7 +5,7 @@
 
         <ul class="main-nav">
             {% for category in site.categories %}
-                <li class="category-title"><a name="{{ category | first }}">{{ category | first }}</a></li>
+                <li class="category-title">{{ category | first }}</li>
 
                 {% for posts in category %}
                     {% for post in posts reversed %}

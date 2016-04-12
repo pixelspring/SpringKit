@@ -1,34 +1,46 @@
 /* Documentation Specific CSS Styles */
 
 .site-aside {
-    background: #f9fafb;
+    background: #0D0D0F;
     padding: 20px 0;
-    width: 200px;
+    width: 180px;
     position: fixed;
     height: 100vh;
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow: auto;
 }
 
-    .site-title {
+    .site-aside li {
+        margin: 0;
+    }
+
+    a.site-title {
         margin-top: 2rem;
-        font-size: 20px;
+        font-size: 18px;
     }
 
-    .site-aside a {
-        text-decoration: none;
-        padding: 0 8px 0 16px;
-        display: block;
-    }
-
-    .category-title a {
-        color: #157998;
-        border-top: 1px solid #cccccc;
+    .category-title {
+        color: white;
         padding-top: 15px;
+        padding-left: 16px;
         text-transform: uppercase;
         font-size: 65%;
     }
 
+    .site-aside a {
+        text-decoration: none;
+        padding: 4px 8px 4px 16px;
+        display: block;
+        font-size: 14px;
+    }
+
+    .site-aside a:hover {
+        color: white;
+        background: #2D2D2D;
+    }
+
     .post-title a {}
+
 
 
 
@@ -38,7 +50,7 @@
 }
 
 .page-wrap {
-    margin-left: 200px;
+    margin-left: 180px;
     /* padding: 0 50px; */
 }
 
