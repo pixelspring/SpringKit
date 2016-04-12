@@ -8,7 +8,13 @@ var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 
 // ------------------------------------------------
-// Sass Compilation:
+// Sass:
+// ------------------------------------------------
+// (1)  Compile Sass
+// (2)  Add vendor prefixes w/autoprefixer
+// (3)  Display filesize
+// (4)  Minify with css-nano
+// (5)  Display Minified filesize
 // ------------------------------------------------
 gulp.task('sass', function () {
 
@@ -39,10 +45,20 @@ gulp.task('sass', function () {
 // ------------------------------------------------
 // JavaScript:
 // ------------------------------------------------
+// (1)  Compress with Uglify
+// ------------------------------------------------
 gulp.task('javascript', function() {
 
     gulp.src('./js/app.js')
+        .pipe(filesize({
+            showFiles: true,
+            title: 'Pre Ugly: '
+        }))
         .pipe(uglify())
+        .pipe(filesize({
+            showFiles: true,
+            title: 'Uglified: '
+        }))
         .pipe(gulp.dest('./js/min/'));
 
 });
