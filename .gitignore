@@ -1,5 +1,4 @@
 config.codekit
-/sassdoc
 /node_modules
 
 *.sublime-workspace
