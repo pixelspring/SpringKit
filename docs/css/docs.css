@@ -69,7 +69,20 @@
     }
 
 
+/* Individual Docs: */
+.post-header {
+    margin-bottom: 32px;
+}
 
+    h1.post-title {
+        border-bottom: 3px solid lightgray;
+        padding-bottom: 16px;
+        width: 100%;
+    }
+
+
+
+/* Footer */
 .site-footer {
     background: #f9fafb;
     padding: 20px 0;
@@ -77,10 +90,7 @@
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-h1.post-title {
-    border-bottom: 3px solid lightgray;
-    width: 100%;
-}
+
 
 /* Syntax Highlighting */
 figure.highlight {
