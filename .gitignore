@@ -3,3 +3,5 @@ config.codekit
 
 *.sublime-workspace
 *.sublime-project
+
+_site/
