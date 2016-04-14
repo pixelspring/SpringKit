@@ -204,6 +204,19 @@ $blockquote-bg:         $ghost;
 
 // ------------------------------------------------
 
+/// Accordion Variables
+
+/// Set content of accordion show
+/// @type String
+$accordion-show-content: "+";
+
+/// Set content of accordion hide
+/// @type String
+$accordion-hide-content: "-";
+
+
+// ------------------------------------------------
+
 /// Alert Variables
 
 /// Set border on alerts, coloured to match alert type
@@ -213,6 +226,7 @@ $alert-border: false;
 /// Use Rounded alerts
 /// @type Boolean
 $alert-radius: true;
+
 
 // ------------------------------------------------
 
