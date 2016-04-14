@@ -10,7 +10,6 @@ markdown: kramdown
 
 # Server
 source:       docs
-destination:  _gh_pages
 
 # Site settings
 title:        SpringKit Docs

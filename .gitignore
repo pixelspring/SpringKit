@@ -18,4 +18,3 @@ config.codekit
 
 # Doc files to ignore
 _site/
-_gh_pages
