@@ -18,3 +18,6 @@ config.codekit
 
 # Doc files to ignore
 _site/
+
+# Scratchpad/Testing Files
+index.html
