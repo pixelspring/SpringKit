@@ -7,5 +7,8 @@ SpringKit is a collection of front-end basics & components, written in Sass.
 Docs for SpringKit can be found here: [SpringKit Documentation Site](https://springkit.pixelspring.co.uk)
 
 ### Usage
-SpringKit in in a very much alpha state right now and things will change + break a lot.
+>SpringKit in in a very much alpha state right now and things will change + break a lot.
 
+* Clone the repo: `git clone https://github.com/pixelspring/springkit.git`
+* Install dependencies with: `npm install`
+* Run the Gulpfile: `gulp`
