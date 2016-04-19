@@ -4,3 +4,99 @@
 //
 // ------------------------------------------------
 
+$navbar-height: 60px !default;
+
+$navbar-font-stack: $font-stack-header !default;
+
+$navbar-font-size: 16px !default;
+
+$navbar-link-color: black !default;
+
+$navbar-bg: #efefef !default;
+
+$navbar-bg-hover: #cccccc !default;
+
+$navbar-current-bg: #dddddd !default;
+
+
+.navbar {
+    background: $navbar-bg;
+    font-family: $navbar-font-stack;
+    height: $navbar-height;
+}
+
+.navbar-right {
+    float: right;
+}
+
+.navbar ul {
+    margin: 0;
+}
+
+.navbar ul a {
+    display: block;
+    color: $navbar-link-color;
+    text-decoration:none;
+    font-size: $navbar-font-size;
+    line-height: $navbar-height;;
+    padding: 0 15px;
+}
+
+
+.navbar .has-dropdown > a:after {
+    content: "+";
+    padding-left: 10px;
+    float: right;
+}
+
+.navbar ul li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li.current-menu-item {
+    background: $navbar-current-bg;
+}
+
+.navbar ul li:hover {
+    background: $navbar-bg-hover;
+}
+
+.navbar ul ul {
+    // Use 'visibility', as display can't be transitioned
+    visibility: hidden;
+    transition: 0.4s ease;
+
+    position: absolute;
+    top: 100%;
+
+    left: 0; // Direction of dropdown relative to parent
+
+    background:#fff;
+    padding: 0;
+}
+
+.navbar ul ul li {
+    float: none;
+    min-width: 200px;
+    white-space: nowrap;
+    background: $navbar-bg;
+}
+
+.navbar ul ul a {
+    line-height: 120%;
+    padding: 10px 15px;
+}
+
+.navbar ul ul ul {
+    top: 0;
+    left: 100%
+}
+
+.navbar ul li:hover > ul {
+    // Use 'visibility', as display can't be transitioned
+    visibility: visible;
+    transition-delay: 0.4s;
+}
