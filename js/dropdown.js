@@ -2,7 +2,7 @@
 // DROPDOWN.JS
 // ------------------------------------------------
 //
-// (1) Get list of all elements that are dropdown triggers
+// (1) Get a list of all elements that are dropdown triggers
 // (2) Add click + blur event listeners
 // (3) Onclick add "open" to the target element's class names / remove if exists
 // (4) Onblur remove "open" from the target element's class names
@@ -48,9 +48,9 @@ function closeDropdown(event) {
 // Set event listeners for dropdown menus
 var dropdownList = document.querySelectorAll('[data-toggle=dropdown]');
 
-for (var k = 0, dropdown, lenk = dropdownList.length; k < lenk; k++) {
-    dropdown = dropdownList[k];
-    dropdown.setAttribute('tabindex', '0'); // Fix to make onblur work in Chrome
+for (var ddlc = 0, dropdown, lenk = dropdownList.length; ddlc < lenk; ddlc++) {
+    dropdown = dropdownList[ddlc];
+    dropdown.setAttribute('tabindex', '0'); // Make onblur work in Chrome
     dropdown.onclick = openDropdown;
     dropdown.onblur = closeDropdown;
 }
