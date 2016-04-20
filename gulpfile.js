@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
+var concat = require('gulp-concat');
 var cssnano = require('gulp-cssnano');
 var filesize = require('gulp-size');
 var sass = require('gulp-sass');
@@ -49,12 +50,17 @@ gulp.task('sass', function () {
 // ------------------------------------------------
 gulp.task('javascript', function() {
 
-    gulp.src('./js/app.js')
+    gulp.src('./js/**.js')
         .pipe(filesize({
             showFiles: true,
             title: 'Pre Ugly: '
         }))
-        .pipe(uglify())
+        .pipe(uglify({
+            mangle: {
+                toplevel: true
+            }
+        }))
+        .pipe(concat('main.min.js'))
         .pipe(filesize({
             showFiles: true,
             title: 'Uglified: '
