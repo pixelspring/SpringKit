@@ -10,17 +10,22 @@
 
 /// Set border on alerts
 /// @type Boolean
-$alert-border: false!default;
+$alert-border: false !default;
 
 /// Use Rounded alerts
 /// @type Boolean
-$alert-radius: true!default;
+$alert-radius: true !default;
+
+/// Set alerts padding
+/// @type Number
+$alert-padding: 1.4rem !default;
 
 
 
 .alert {
     padding: 1.4rem;
     margin: 0 0 $line-height 0;
+    position: relative;
 
     background: $ghost;
     font-family: $font-stack-header;
@@ -88,4 +93,12 @@ $alert-radius: true!default;
         @if $alert-border {
             border: 1px palette(danger, dark) solid;
         }
+}
+
+.dismiss-alert {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: $alert-padding;
+    color: black;
 }
