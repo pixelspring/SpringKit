@@ -286,6 +286,24 @@ $card-header-bg: $gainsboro;
 /// @type Color
 $card-footer-bg: $gainsboro;
 
+
+
+// ------------------------------------------------
+
+/// Dropdown Variables
+
+/// Set min-width of dropdown
+/// @type Number
+$dropdown-menu-min-width: 160px;
+
+/// Set background color of dropdown
+/// @type Color
+$dropdown-menu-bg: white;
+
+/// Set padding on active dropdown links
+/// @type Number
+$dropdown-menu-link-padding: 8px;
+
 // ------------------------------------------------
 
 /// Scrollbar Variables
