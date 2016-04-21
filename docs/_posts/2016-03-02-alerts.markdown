@@ -7,7 +7,7 @@ sassbase: components/_alerts.scss
 ---
 
 <div class="row column">
-    <p class="lead-text">Alerts are available in a range of styles. They span 100% width.</p>
+    <p class="lead-text">Alerts are available in a range of styles and span 100% width of their containing element. They can be dismissed with javascript</p>
 </div>
 
 <div class="row column">
@@ -25,7 +25,7 @@ sassbase: components/_alerts.scss
         Info alert
     </div>
     <div class="alert success">
-        Success alert
+        <a class="dismiss-alert" data-dismiss="alert">&#10006;</a>TITLE:<br>This is a success alert that can be dismissed
     </div>
     <div class="alert warning">
         Warning alert
@@ -56,6 +56,12 @@ sassbase: components/_alerts.scss
                 <td>Set border on alerts</td>
             </tr>
             <tr>
+                <td>$alert-padding</td>
+                <td>Number</td>
+                <td><code>1.4rem</code></td>
+                <td>Set alerts padding</td>
+            </tr>
+            <tr>
                 <td>$alert-radius</td>
                 <td>true</td>
                 <td><code>White</code></td>
@@ -72,7 +78,12 @@ sassbase: components/_alerts.scss
 <div class="alert primary"><!-- Primary alert --></div>
 <div class="alert secondary"><!-- Secondary alert --></div>
 <div class="alert info"><!-- Info alert --></div>
-<div class="alert success"><!-- Success alert --></div>
+
+<!-- Success alert, dismissable -->
+<div class="alert success">
+    <a class="dismiss-alert" data-dismiss="alert">&#10006;</a>Success alert
+</div>
+
 <div class="alert warning"><!-- Warning alert --></div>
 <div class="alert danger"><!-- Danger alert --></div>
 {% endhighlight %}
