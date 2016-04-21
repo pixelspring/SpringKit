@@ -57,7 +57,7 @@ gulp.task('javascript', function() {
         }))
         .pipe(uglify({
             mangle: {
-                toplevel: true
+                toplevel: false
             }
         }))
         .pipe(concat('main.min.js'))
