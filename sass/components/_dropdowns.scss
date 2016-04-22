@@ -29,6 +29,11 @@ $dropdown-menu-link-padding: 8px !default;
 
 .dropdown-toggle {}
 
+.dropdown-toggle:after {
+    content: "\2716"; // \271A;
+    padding-left: 10px;
+}
+
 .dropdown-toggle:focus {
     outline: 0;
 }
