@@ -15,7 +15,7 @@
     }
 
     a.site-title {
-        margin-top: 2rem;
+        margin-top: 1rem;
         font-size: 18px;
     }
 
@@ -29,7 +29,7 @@
 
     .site-aside a {
         text-decoration: none;
-        padding: 4px 8px 4px 16px;
+        padding: 2px 8px 2px 16px;
         display: block;
         font-size: 14px;
     }
@@ -40,8 +40,6 @@
     }
 
     .post-title a {}
-
-
 
 
 .row {
@@ -88,6 +86,20 @@
     padding: 20px 0;
     margin-top: 40px;
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+@media screen and (max-width: 639px) {
+
+    .site-aside {
+        width: 0px;
+    }
+
+    .page-wrap {
+        margin-left: 0px;
+    }
+
 }
 
 
