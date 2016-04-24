@@ -128,6 +128,13 @@ q:after    { content: '”'}
 q q:before { content: '‘'}
 q q:after  { content: '’'}
 
+// Mark:
+// ------------------------------------------------
+mark {
+    background: yellow;
+    color: black;
+}
+
 // Blockquotes:
 // ------------------------------------------------
 blockquote {
