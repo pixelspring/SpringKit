@@ -10,17 +10,21 @@
 
 /// Font Families
 
-/// Sets the Font stack for headers
+/// Set the Font stack for headers
 /// @type List
 $font-stack-header: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-/// Sets the Font stack for body text
+/// Set the Font stack for body text
 /// @type List
 $font-stack-body: 	"Merriweather", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-/// Sets the Font stack for code elements
+/// Set the Font stack for code elements
 /// @type List
 $font-stack-code: 	"Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+
+/// Set the Font stack for system specific typographu
+/// @type List
+$font-stack-system: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
 
 // ------------------------------------------------
 
