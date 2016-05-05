@@ -16,6 +16,5 @@ Docs for SpringKit can be found here: [SpringKit Documentation Site](https://spr
 * Run the Gulpfile: `gulp`
 
 ##### Building Docs with Jekyll:
-* `cd docs`
 * `jekyll serve`
 * Visit `http://127.0.0.1:4000`
