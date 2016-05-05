@@ -103,6 +103,69 @@
 }
 
 
+/* Color Examples */
+.color-example {
+  padding: 30px;
+  width: 20%;
+  width: 16.6666666667%;
+  float: left;
+  text-align: center; }
+
+.example-primary-light {
+  background: #44CCF7; }
+
+.example-secondary-light {
+  background: #ECEBEB; }
+
+.example-success-light {
+  background: #d5ecd9; }
+
+.example-warning-light {
+  background: #f1c40f; }
+
+.example-danger-light {
+  background: #f8d5d8; }
+
+.example-info-light {
+  background: #D5EAF8; }
+
+.example-primary {
+  background: #1EAEDB; }
+
+.example-secondary {
+  background: #e7e7e7; }
+
+.example-success {
+  background: #6cbc7a; }
+
+.example-warning {
+  background: #f39c12; }
+
+.example-danger {
+  background: #e2525e; }
+
+.example-info {
+  background: #8CCFFB; }
+
+.example-primary-dark {
+  background: #157998; }
+
+.example-secondary-dark {
+  background: #D0CECE; }
+
+.example-success-dark {
+  background: #449754; }
+
+.example-warning-dark {
+  background: #d35400; }
+
+.example-danger-dark {
+  background: #c6212f; }
+
+.example-info-dark {
+  background: #1F9FF3; }
+
+
 
 /* Syntax Highlighting */
 figure.highlight {
