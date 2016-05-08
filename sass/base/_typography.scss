@@ -61,6 +61,14 @@ $blockquote-border:     5px solid $gainsboro!default; // Left border
 /// @type Color
 $blockquote-bg:         $ghost!default;
 
+/// Define selected text bg color
+/// @type Color
+$selection-bg:         dodgerblue!default;
+
+/// Define selected text color
+/// @type Color
+$selection-color:      $white!default;
+
 
 
 html {
@@ -243,4 +251,11 @@ hr {
     clear:          both;
     margin:         $line-height 0;
     height:         0;
+}
+
+// Text Selection:
+// ------------------------------------------------
+::selection {
+    background-color: $selection-bg;
+    color: $selection-color;
 }
