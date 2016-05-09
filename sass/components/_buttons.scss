@@ -8,25 +8,25 @@
 /// @group buttons
 ////
 
-// /// Use Rounded buttons
-// /// @type Boolean
-// $button-radius: true!default;
-//
-// /// Success button color
-// /// @type Color
-// $button-success-color: darken($success-color, 30)!default;
-//
-// /// Warning button color
-// /// @type Color
-// $button-warning-color: darken($warning-color, 30)!default;
-//
-// /// Info button color
-// /// @type Color
-// $button-info-color: darken($info-color, 30)!default;
-//
-// /// Danger button color
-// /// @type Color
-// $button-danger-color: darken($danger-color, 30)!default;
+/// Use Rounded buttons
+/// @type Boolean
+$button-radius: true!default;
+
+// Success button color
+/// @type Color
+$button-success-color: palette(success)!default;
+
+/// Warning button color
+/// @type Color
+$button-warning-color: palette(warning)!default;
+
+/// Info button color
+/// @type Color
+$button-info-color: palette(info)!default;
+
+/// Danger button color
+/// @type Color
+$button-danger-color: palette(danger)!default;
 
 
 // Basic Buttons
