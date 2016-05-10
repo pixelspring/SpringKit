@@ -24,11 +24,20 @@ $root-background-color: white;
 /// Controls the default page cursor (default: default)
 $root-cursor: default;
 
+/// Controls the page text line height inherited by all elements (default: 1.5)
+$root-line-height: 1.5;
+
 /// Controls the page text size inherited by all elements (default: 100%)
 $root-font-size: 100%;
 
-/// Controls the page text line height inherited by all elements (default: 1.5)
-$root-line-height: 1.5;
+/// Controls the page font inherited by all elements (default: sans-serif)
+$root-font-family: sans-serif;
+
+/// Controls the font used by markup elements (code, kbd, pre, samp) (default: monospace)
+$monospace-font-family: monospace;
+
+// Controls how background images are repeated on all elements (default: no-repeat)
+$background-repeat: no-repeat;
 
 
 

@@ -226,8 +226,14 @@ ul.inline-list {
 
 // Code
 // ------------------------------------------------
-code {
+code,
+kbd,
+pre,
+samp {
     font-family: $font-stack-code;
+}
+
+code {
     padding: .2rem .5rem;
     margin: 0 .2rem;
     font-size: 90%;
@@ -258,4 +264,5 @@ hr {
 ::selection {
     background-color: $selection-bg;
     color: $selection-color;
+    text-shadow: none;
 }

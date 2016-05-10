@@ -123,7 +123,18 @@ input[type="range"] {
 
 
 select {
+    -moz-appearance: none;    // Firefox 40+
+    -webkit-appearance: none; // Chrome 45+
+
     appearance: menulist;
+
+    &::-ms-expand {
+        display: none;        // Edge 12+, Internet Explorer 11-
+    }
+
+    &::-ms-value {
+        color: currentColor;  // Edge 12+, Internet Explorer 11-
+    }
 }
 
 
