@@ -348,6 +348,36 @@ $dropdown-menu-bg: white;
 /// @type Number
 $dropdown-menu-link-padding: 8px;
 
+
+
+// ------------------------------------------------
+
+/// Navbar Variables
+
+/// Set height of main navbar
+$navbar-height: 60px;
+
+/// Set the font for the navbar
+$navbar-font-stack: $font-stack-header;
+
+/// Set the font size of the navbar
+$navbar-font-size: 16px;
+
+/// Define the color of links on the navbar
+$navbar-link-color: black;
+
+/// Set the background color of the navbar
+$navbar-bg: #efefef;
+
+/// Set the background hover color of navbar links
+$navbar-bg-hover: #cccccc;
+
+/// Set the color of the .current-menu-item link
+$navbar-current-bg: #dddddd;
+
+
+
+
 // ------------------------------------------------
 
 /// Scrollbar Variables
