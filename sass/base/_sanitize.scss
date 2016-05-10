@@ -334,17 +334,3 @@ table {
 textarea {
 	resize: if(variable-exists(textarea-resize), $textarea-resize, vertical);
 }
-
-// specify the background color, font color, and drop shadow of text selections
-
-::-moz-selection {
-	background-color: if(variable-exists(selection-background-color), $selection-background-color, #b3d4fc); // required when declaring ::selection
-	color: if(variable-exists(selection-color), $selection-color, #ffffff);
-	text-shadow: if(variable-exists(selection-text-shadow), $selection-text-shadow, none);
-}
-
-::selection {
-	background-color: if(variable-exists(selection-background-color), $selection-background-color, #b3d4fc); // required when declaring ::selection
-	color: if(variable-exists(selection-color), $selection-color, #ffffff);
-	text-shadow: if(variable-exists(selection-text-shadow), $selection-text-shadow, none);
-}
