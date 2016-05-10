@@ -8,6 +8,31 @@
 /// @group helpers
 ////
 
+
+// ------------------------------------------------
+/// Root definitions:
+
+/// Controls the page box model inherited by all elements (default: border-box)
+$root-box-sizing: border-box;
+
+/// Controls the page text color inherited by all elements (default: #ffffff)
+$root-color: #000000;
+
+/// Controls the page background color (default: #ffffff)
+$root-background-color: white;
+
+/// Controls the default page cursor (default: default)
+$root-cursor: default;
+
+/// Controls the page text size inherited by all elements (default: 100%)
+$root-font-size: 100%;
+
+/// Controls the page text line height inherited by all elements (default: 1.5)
+$root-line-height: 1.5;
+
+
+
+
 /// Font Families
 
 /// Set the Font stack for headers
