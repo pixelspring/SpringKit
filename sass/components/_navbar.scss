@@ -4,19 +4,34 @@
 //
 // ------------------------------------------------
 
-$navbar-height: 60px !default;
+////
+/// The navbar provides a navigation bar used for primary navigation at the top of the screen
+/// @group navbar
+////
 
-$navbar-font-stack: $font-stack-header !default;
+/// Set height of main navbar
+$navbar-height: 60px!default;
 
-$navbar-font-size: 16px !default;
+/// Set the font for the navbar
+$navbar-font-stack: $font-stack-header!default;
 
-$navbar-link-color: black !default;
+/// Set the font size of the navbar
+$navbar-font-size: 16px!default;
 
-$navbar-bg: #efefef !default;
+/// Define the color of links on the navbar
+$navbar-link-color: black!default;
 
-$navbar-bg-hover: #cccccc !default;
+/// Set the background color of the navbar
+$navbar-bg: #efefef!default;
 
-$navbar-current-bg: #dddddd !default;
+/// Set the background hover color of navbar links
+$navbar-bg-hover: #cccccc!default;
+
+/// Set the color of the .current-menu-item link
+$navbar-current-bg: #dddddd!default;
+
+
+
 
 
 .navbar {
