@@ -31,6 +31,7 @@ $navbar-current-bg: #dddddd !default;
 
 .navbar ul {
     margin: 0;
+    list-style: none;
 }
 
 .navbar ul a {
@@ -72,7 +73,7 @@ $navbar-current-bg: #dddddd !default;
     position: absolute;
     top: 100%;
 
-    left: 0; // Direction of dropdown relative to parent
+    right: 0; // Direction of dropdown relative to parent
 
     background:#fff;
     padding: 0;
