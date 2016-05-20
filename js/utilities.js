@@ -24,11 +24,13 @@ function skToggleClass(element, className){
 }
 
 // Usage:
+/*
 document.getElementById('toggleButton').addEventListener('click', function() {
 
     skToggleClass(document.getElementById('elementToToggle'), 'added-class');
 
 });
+*/
 
 
 
