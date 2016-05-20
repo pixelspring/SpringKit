@@ -1,0 +1,91 @@
+// ------------------------------------------------
+//  NAVBARSIMPLE.SCSS:
+//
+//
+// ------------------------------------------------
+
+////
+/// The navbar provides a navigation bar used for primary navigation at the top of the screen
+/// @group navbar
+////
+
+/*
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {margin:0;}
+ul.navbarsimple {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.navbarsimple li {float: left;}
+
+ul.navbarsimple li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.navbarsimple li a:hover {background-color: #111;}
+
+ul.navbarsimple li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.navbarsimple li:not(:first-child) {display: none;}
+  ul.navbarsimple li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.navbarsimple.responsive {position: relative;}
+  ul.navbarsimple.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.navbarsimple.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.navbarsimple.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+</style>
+</head>
+<body>
+
+<ul class="navbarsimple">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="navTog()">☰</a>
+  </li>
+</ul>
+
+
+<script>
+function navTog() {
+    document.getElementsByClassName("navbarsimple")[0].classList.toggle("responsive");
+}
+</script>
+
+</body>
+</html>
+
+*/
