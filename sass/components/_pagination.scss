@@ -50,6 +50,7 @@ $pagination-radius: true!default;
     color: $font-color;
     display: block;
     padding: $pagination-padding;
+    text-decoration: none;
     @if pagination-radius {
         border-radius: $global-radius/2;
     }
