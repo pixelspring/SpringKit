@@ -1,0 +1,38 @@
+// ------------------------------------------------
+// IMAGE HOVER CAPTIONS:
+//
+// ------------------------------------------------
+
+////
+/// Image Hover Captions
+/// @group TBD
+////
+
+/*
+<figure class="image-hover-caption">
+    <img src="/image.png">
+    <figcaption>
+        Content to show on hover
+    </figcaption>
+    <a href="#"></a>
+</figure>
+*/
+
+
+/// Var Description
+/// @type VarType
+$varName: varValue!default;
+
+
+
+
+
+.image-hover-caption {
+
+    img {}
+
+    figcaption {}
+
+    a {}
+
+}
