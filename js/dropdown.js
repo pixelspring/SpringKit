@@ -9,20 +9,22 @@
 //
 // ------------------------------------------------
 
-/*
-<div class="dropdown">
-
-    <a id="dropdownMenu1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-        <li><a role="menuitem" href="#">Link 1</a></li>
-        <li><a role="menuitem" href="#">Link 2</a></li>
-        <li><a role="menuitem" href="#">Link 3</a></li>
-        <li><a role="menuitem" href="#">Link 4</a></li>
-    </ul>
-
-</div>
-*/
+/**
+ * @example
+ *
+ * <div class="dropdown">
+ *
+ *     <a id="dropdownMenu1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+ *
+ *     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+ *         <li><a role="menuitem" href="#">Link 1</a></li>
+ *         <li><a role="menuitem" href="#">Link 2</a></li>
+ *         <li><a role="menuitem" href="#">Link 3</a></li>
+ *         <li><a role="menuitem" href="#">Link 4</a></li>
+ *     </ul>
+ *
+ * </div>
+ */
 
 // Show a dropdown menu
 function openDropdown(event) {
