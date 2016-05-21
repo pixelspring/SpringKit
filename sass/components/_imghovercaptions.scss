@@ -1,0 +1,90 @@
+// ------------------------------------------------
+// IMAGE HOVER CAPTIONS:
+//
+// ------------------------------------------------
+
+////
+/// Image Hover Captions
+/// @group TBD
+////
+
+/*
+<figure class="image-hover-caption">
+    <img src="/image.png">
+    <figcaption>
+        Content to show on hover
+    </figcaption>
+    <a href="#">Link Text that's hidden with opacity:0</a>
+</figure>
+*/
+
+
+
+/// Set the background when hovered
+/// @type Color
+$image-hover-caption-bg: palette(primary) !default;
+
+/// Set the text color when hovered
+/// @type Color
+$image-hover-caption-color: white !default;
+
+
+
+
+
+@mixin image-hover-caption {
+
+    position: relative;
+    display: inline-block;
+    margin: 0px;
+    max-width: 100%;
+    overflow: hidden;
+    backface-visibility: hidden; // Hide back face in preperation for spiffy 3d effects
+
+    img {
+        transition: all 0.5s ease;
+        vertical-align: top;
+        max-width: 100%;
+        opacity: 1;
+    }
+
+    figcaption {
+        transition: all 0.5s ease;
+        background: $image-hover-caption-bg;
+        margin: 0;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: $image-hover-caption-color;
+        opacity: 0;
+        font-style: normal;
+    }
+
+    a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        opacity: 0;
+    }
+
+
+    &:hover {
+        img {
+            opacity: 0;
+        }
+        figcaption {
+            opacity: 1;
+        }
+    }
+
+}
+
+.image-hover-caption {
+    @include image-hover-caption;
+}
