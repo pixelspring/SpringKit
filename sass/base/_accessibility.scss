@@ -12,7 +12,9 @@
 
 
 
-// Screen Reader Text
+/// @name sr-only
+/// Visually hides content but remains accessible to screen reader users
+
 @mixin sr-only {
     position: absolute;
     width: 1px;
@@ -26,4 +28,42 @@
 
 .sr-only {
     @include sr-only;
+}
+
+
+
+/// @name show-on-focus
+
+/// Visually hides content until focussed
+/// For elements other than anchors & form elements,
+/// use in conjunction with tabindex, to allow them
+/// to recieve keyboard focus
+
+/// @example
+///   <div class="show-me-when-focused" tabindex="0">
+///     <p>This content is visible on focus</p>
+///   </div>
+
+/// @link http://webaim.org/techniques/keyboard/tabindex
+
+@mixin show-on-focus {
+
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+
+    &:focus {
+        position: static;
+        width: auto;
+        height: auto;
+    }
+
+}
+
+.show-on-focus {
+    @include show-on-focus;
 }
