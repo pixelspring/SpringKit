@@ -33,7 +33,6 @@
 
 
 /// @name show-on-focus
-
 /// Visually hides content until focussed
 /// For elements other than anchors & form elements,
 /// use in conjunction with tabindex, to allow them
@@ -65,6 +64,8 @@
 }
 
 
+/// @name sk-accessibility
+/// Output predefined accessibility classes
 
 @mixin sk-accessibility {
 
