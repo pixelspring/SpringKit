@@ -72,4 +72,6 @@ $card-footer-bg: $gainsboro!default;
     }
 }
 
-@include card;
+@mixin sk-card {
+    @include card;
+}

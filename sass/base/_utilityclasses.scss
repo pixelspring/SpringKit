@@ -4,104 +4,108 @@
 // ------------------------------------------------
 
 
-// Floats:
-// ------------------------------------------------
-.fleft {
-    float: left !important;
+@mixin sk-utilityclasses {
+
+    // Floats:
+    // ------------------------------------------------
+    .fleft {
+        float: left !important;
+    }
+
+    .fright {
+        float: right !important;
+    }
+
+    // Rounding:
+    // ------------------------------------------------
+    .radius {
+        border-radius: $global-radius;
+    }
+
+    .rounded {
+        border-radius: $rounded;
+    }
+
+    // Text-Align:
+    // ------------------------------------------------
+    .text-left {
+        text-align: left !important;
+    }
+
+    .text-right {
+        text-align: right !important;
+    }
+
+    .text-centered {
+        text-align: center !important;
+    }
+
+    .text-justify {
+        text-align: justify !important;
+    }
+
+    // Image Helpers:
+    // ------------------------------------------------
+    .image-left {
+        float: left !important;
+        margin: 0 $line-height $line-height 0;
+    }
+
+    .image-right {
+        float: right !important;
+        margin: 0  0 $line-height $line-height;
+    }
+
+    .image-centered {
+        text-align: center !important;
+    }
+
+    .image-bordered {
+        border: $border;
+    }
+
+    // Visibility:
+    // ------------------------------------------------
+
+    .hidden {
+        display: none;
+        visibility: hidden !important;
+    }
+
+    .hide-text {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .disabled {
+        cursor: not-allowed;
+    }
+
+
+    // Z-Index:
+    // ------------------------------------------------
+    .z1 { z-index: 1 }
+    .z2 { z-index: 2 }
+    .z3 { z-index: 3 }
+    .z4 { z-index: 4 }
+    .z5 { z-index: 5 }
+
+
+    // Borders:
+    // ------------------------------------------------
+
+    // Vars:
+    $border-width: 1px !default;
+    $border-color: $border-color !default;
+    $border-style: solid !default;
+    $border: $border-width $border-color $border-style !default;
+    $border-radius: $global-radius !default;
+
+    .border        { border: $border !important; }
+    .border-top    { border-top: $border !important; }
+    .border-right  { border-right: $border !important; }
+    .border-bottom { border-bottom: $border !important; }
+    .border-left   { border-left: $border !important; }
+
 }
-
-.fright {
-    float: right !important;
-}
-
-// Rounding:
-// ------------------------------------------------
-.radius {
-    border-radius: $global-radius;
-}
-
-.rounded {
-    border-radius: $rounded;
-}
-
-// Text-Align:
-// ------------------------------------------------
-.text-left {
-    text-align: left !important;
-}
-
-.text-right {
-    text-align: right !important;
-}
-
-.text-centered {
-    text-align: center !important;
-}
-
-.text-justify {
-    text-align: justify !important;
-}
-
-// Image Helpers:
-// ------------------------------------------------
-.image-left {
-    float: left !important;
-    margin: 0 $line-height $line-height 0;
-}
-
-.image-right {
-    float: right !important;
-    margin: 0  0 $line-height $line-height;
-}
-
-.image-centered {
-    text-align: center !important;
-}
-
-.image-bordered {
-    border: $border;
-}
-
-// Visibility:
-// ------------------------------------------------
-
-.hidden {
-    display: none;
-    visibility: hidden !important;
-}
-
-.hide-text {
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.disabled {
-    cursor: not-allowed;
-}
-
-
-// Z-Index:
-// ------------------------------------------------
-.z1 { z-index: 1 }
-.z2 { z-index: 2 }
-.z3 { z-index: 3 }
-.z4 { z-index: 4 }
-.z5 { z-index: 5 }
-
-
-// Borders:
-// ------------------------------------------------
-
-// Vars:
-$border-width: 1px !default;
-$border-color: $border-color !default;
-$border-style: solid !default;
-$border: $border-width $border-color $border-style !default;
-$border-radius: $global-radius !default;
-
-.border        { border: $border !important; }
-.border-top    { border-top: $border !important; }
-.border-right  { border-right: $border !important; }
-.border-bottom { border-bottom: $border !important; }
-.border-left   { border-left: $border !important; }

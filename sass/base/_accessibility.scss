@@ -15,6 +15,10 @@
 /// @name sr-only
 /// Visually hides content but remains accessible to screen reader users
 
+/// @example
+///   <a class="sr-only" href="#mainContent">Skip to main content</a>
+
+
 @mixin sr-only {
     position: absolute;
     width: 1px;
@@ -26,14 +30,9 @@
     border: 0;
 }
 
-.sr-only {
-    @include sr-only;
-}
-
 
 
 /// @name show-on-focus
-
 /// Visually hides content until focussed
 /// For elements other than anchors & form elements,
 /// use in conjunction with tabindex, to allow them
@@ -64,6 +63,18 @@
 
 }
 
-.show-on-focus {
-    @include show-on-focus;
+
+/// @name sk-accessibility
+/// Output predefined accessibility classes
+
+@mixin sk-accessibility {
+
+    .sr-only {
+        @include sr-only;
+    }
+
+     .show-on-focus {
+        @include show-on-focus;
+    }
+
 }

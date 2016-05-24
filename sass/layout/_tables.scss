@@ -8,51 +8,55 @@
 /// @group tables
 ////
 
-table {
-    width: 100%;
-    // border: $border;
-}
+@mixin sk-tables {
 
-th,
-tf {
-    font-family: $font-stack-header;
-    font-size: $small-size;
-    text-transform: uppercase;
-}
+    table {
+        width: 100%;
+        // border: $border;
+    }
 
-th,
-td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid $border-color;
-}
+    th,
+    tf {
+        font-family: $font-stack-header;
+        font-size: $small-size;
+        text-transform: uppercase;
+    }
 
-th:first-child,
-td:first-child {
-    padding-left: 0;
-}
+    th,
+    td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid $border-color;
+    }
 
-th:last-child,
-td:last-child {
-    padding-right: 0;
-}
+    th:first-child,
+    td:first-child {
+        padding-left: 0;
+    }
 
-// Table Caption:
+    th:last-child,
+    td:last-child {
+        padding-right: 0;
+    }
 
-table caption {
-    text-transform: uppercase;
-    color: $jumbo;
-    // font-size: 1.2rem;
-    text-align: left;
-}
+    // Table Caption:
+
+    table caption {
+        text-transform: uppercase;
+        color: $jumbo;
+        // font-size: 1.2rem;
+        text-align: left;
+    }
 
 
-// Table Row Striping:
-tbody tr:nth-child(odd) {
-    background-color: palette(secondary, light);
-}
+    // Table Row Striping:
+    tbody tr:nth-child(odd) {
+        background-color: palette(secondary, light);
+    }
 
-// Table Row Hover:
-tbody tr:hover {
-    background-color: $highlight-color;
+    // Table Row Hover:
+    tbody tr:hover {
+        background-color: $highlight-color;
+    }
+
 }
