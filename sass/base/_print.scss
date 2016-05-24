@@ -10,126 +10,130 @@
 //  (6) Tables
 // ------------------------------------------------
 
-@media print {
+@mixin sk-printclasses {
 
-    // BASE:
-    // Set up some base styles for the printed page
-    // --------------------------------------------
-    @page {
-        margin: 1cm;
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster */
-        font-size: 14pt;
-        line-height: 1.45;
+    @media print {
+
+        // BASE:
+        // Set up some base styles for the printed page
+        // --------------------------------------------
+        @page {
+            margin: 1cm;
+            background: transparent !important;
+            color: #000 !important; /* Black prints faster */
+            font-size: 14pt;
+            line-height: 1.45;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-shadow: none !important;
+            text-shadow: none !important;
+        }
+
+
+        // VISIBILITY:
+        // Add elements that should not be printed here
+        // --------------------------------------------
+        .no-print,
+        .alert,
+        .button,
+        .pagination,
+        .loading-indicator,
+        nav {
+            display:none;
+        }
+
+
+        // TYPOGRAPHY:
+        // Redefine type to print-friendly values
+        // --------------------------------------------
+        h1,h2,h3,h4,h5,h6 { page-break-after:avoid; }
+        h1 {font-size:19pt;}
+        h2 {font-size:17pt;}
+        h3 {font-size:15pt;}
+        h4,h5,h6 {font-size:14pt;}
+
+        // ORPHANS:
+        // In typography terms, an orphan is the first line of a paragraph that is left behind
+        // on the old page while the paragraph continues on the next.
+        // The orphan property controls the minimum number of lines of a paragraph that can
+        // be left on the old page.
+        p, h2, h3 {
+            orphans: 3; widows: 3;
+        }
+
+        code { font: 12pt Courier, monospace; }
+        blockquote { margin: 1.2em; padding: 1em;  font-size: 12pt; }
+        hr { background-color: #ccc; }
+
+
+        // LINKS:
+        // Control output of links & show URLS
+        // --------------------------------------------
+        a:link,
+        a:visited {
+            background: transparent;
+            font-weight: 700;
+            text-decoration: underline;
+            color: steelblue;
+        }
+
+        // Display the URL after the link text:
+        a:link[href^="http://"]:after,
+        a[href^="http://"]:visited:after {
+            content: " (" attr(href) ") ";
+            font-size: 90%;
+        }
+        abbr[title]:after {
+            content: " (" attr(title) ")";
+        }
+
+
+        a[href^="http://"] {
+            color: steelblue;
+        }
+
+        // Don't show linked images
+        a[href$=".jpg"]:after,
+        a[href$=".jpeg"]:after,
+        a[href$=".gif"]:after,
+        a[href$=".png"]:after {
+            content: " (" attr(href) ") "; display:none;
+        }
+
+        // Don't show links that are fragment identifiers,
+        // or use the 'javascript:' pseudo protocol
+        a[href^="#"]:after,
+        a[href^="javascript:"]:after {
+            content: "";
+        }
+
+
+        // Images
+        // --------------------------------------------
+        img {
+            float: left;
+            margin: 1em 1.5em 1.5em 0;
+            max-width: 100% !important;
+        }
+        a img {
+            border: none;
+        }
+
+
+        // Tables
+        // --------------------------------------------
+        table { margin: 1px; text-align:left; }
+        th { border-bottom: 1px solid #333;  font-weight: bold; }
+        td { border-bottom: 1px solid #333; }
+        th,td { padding: 4px 10px 4px 0; }
+        tfoot { font-style: italic; }
+        caption { background: #fff; margin-bottom:2em; text-align:left; }
+        thead {display: table-header-group;}
+        img,tr {page-break-inside: avoid;}
+
     }
-
-    *,
-    *:before,
-    *:after {
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-
-    // VISIBILITY:
-    // Add elements that should not be printed here
-    // --------------------------------------------
-    .no-print,
-    .alert,
-    .button,
-    .pagination,
-    .loading-indicator,
-    nav {
-        display:none;
-    }
-
-
-    // TYPOGRAPHY:
-    // Redefine type to print-friendly values
-    // --------------------------------------------
-    h1,h2,h3,h4,h5,h6 { page-break-after:avoid; }
-    h1 {font-size:19pt;}
-    h2 {font-size:17pt;}
-    h3 {font-size:15pt;}
-    h4,h5,h6 {font-size:14pt;}
-
-    // ORPHANS:
-    // In typography terms, an orphan is the first line of a paragraph that is left behind
-    // on the old page while the paragraph continues on the next.
-    // The orphan property controls the minimum number of lines of a paragraph that can
-    // be left on the old page.
-    p, h2, h3 {
-        orphans: 3; widows: 3;
-    }
-
-    code { font: 12pt Courier, monospace; }
-    blockquote { margin: 1.2em; padding: 1em;  font-size: 12pt; }
-    hr { background-color: #ccc; }
-
-
-    // LINKS:
-    // Control output of links & show URLS
-    // --------------------------------------------
-    a:link,
-    a:visited {
-        background: transparent;
-        font-weight: 700;
-        text-decoration: underline;
-        color: steelblue;
-    }
-
-    // Display the URL after the link text:
-    a:link[href^="http://"]:after,
-    a[href^="http://"]:visited:after {
-        content: " (" attr(href) ") ";
-        font-size: 90%;
-    }
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-
-    a[href^="http://"] {
-        color: steelblue;
-    }
-
-    // Don't show linked images
-    a[href$=".jpg"]:after,
-    a[href$=".jpeg"]:after,
-    a[href$=".gif"]:after,
-    a[href$=".png"]:after {
-        content: " (" attr(href) ") "; display:none;
-    }
-
-    // Don't show links that are fragment identifiers,
-    // or use the 'javascript:' pseudo protocol
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-
-    // Images
-    // --------------------------------------------
-    img {
-        float: left;
-        margin: 1em 1.5em 1.5em 0;
-        max-width: 100% !important;
-    }
-    a img {
-        border: none;
-    }
-
-
-    // Tables
-    // --------------------------------------------
-    table { margin: 1px; text-align:left; }
-    th { border-bottom: 1px solid #333;  font-weight: bold; }
-    td { border-bottom: 1px solid #333; }
-    th,td { padding: 4px 10px 4px 0; }
-    tfoot { font-style: italic; }
-    caption { background: #fff; margin-bottom:2em; text-align:left; }
-    thead {display: table-header-group;}
-    img,tr {page-break-inside: avoid;}
 
 }
