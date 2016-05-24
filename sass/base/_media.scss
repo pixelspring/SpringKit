@@ -5,45 +5,48 @@
 // ------------------------------------------------
 
 
-// ------------------------------------------------
-// IMAGES:
-// ------------------------------------------------
+@mixin sk-media {
 
-// Basic Image:
-// ------------------------------------------------
-img {
-  max-width: 100%;
-  height: auto;
+    // ------------------------------------------------
+    // IMAGES:
+    // ------------------------------------------------
+
+    // Basic Image:
+    // ------------------------------------------------
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    figure {
+        margin-bottom: $line-height;
+    }
+
+    figcaption {
+        margin: .3rem 0;
+        font-size: $small-size;
+        font-style: italic;
+    }
+
+    // Image Thumbnails:
+    // ------------------------------------------------
+    .th {
+        line-height: 0;
+        display: inline-block;
+        border: solid 4px transparent;
+        max-width: 100%;
+        box-shadow: 0 0 0 1px $border-color;
+    }
+
+    .th:hover,
+    .th:focus {
+        box-shadow: 0 0 0 1px palette(primary);
+    }
+
+
+
+    // ------------------------------------------------
+    // VIDEO:
+    // ------------------------------------------------
+
 }
-
-figure {
-    margin-bottom: $line-height;
-}
-
-figcaption {
-    margin: .3rem 0;
-    font-size: $small-size;
-    font-style: italic;
-}
-
-// Image Thumbnails:
-// ------------------------------------------------
-.th {
-    line-height: 0;
-    display: inline-block;
-    border: solid 4px transparent;
-    max-width: 100%;
-    box-shadow: 0 0 0 1px $border-color;
-}
-
-.th:hover,
-.th:focus {
-    box-shadow: 0 0 0 1px palette(primary);
-}
-
-
-
-// ------------------------------------------------
-// VIDEO:
-// ------------------------------------------------
-
