@@ -35,30 +35,32 @@ $breadcrumb-seperator: ">"!default;
 
 
 
-@mixin breadcrumb {}
+@mixin sk-breadcrumbs {
 
-.breadcrumb {
-    padding: $breadcrumb-padding;
-    margin-bottom: $line-height;
-    list-style: none;
-    background-color: $breadcrumb-bg-color;
-    font-size: $breadcrumb-size;
+    .breadcrumb {
+        padding: $breadcrumb-padding;
+        margin-bottom: $line-height;
+        list-style: none;
+        background-color: $breadcrumb-bg-color;
+        font-size: $breadcrumb-size;
 
-    @if $breadcrumb-radius {
-        border-radius: $global-radius;
+        @if $breadcrumb-radius {
+            border-radius: $global-radius;
+        }
     }
-}
 
-.breadcrumb > li {
-    display: inline-block;
-}
+    .breadcrumb > li {
+        display: inline-block;
+    }
 
-.breadcrumb > li + li:before {
-    padding: 0 5px;
-    color: $breadcrumb-seperator-color;
-    content: $breadcrumb-seperator;
-}
+    .breadcrumb > li + li:before {
+        padding: 0 5px;
+        color: $breadcrumb-seperator-color;
+        content: $breadcrumb-seperator;
+    }
 
-.breadcrumb > .active {
-    color: $breadcrumb-active-color;
+    .breadcrumb > .active {
+        color: $breadcrumb-active-color;
+    }
+
 }

@@ -52,6 +52,10 @@ $button-group-radius: true!default;
 
 
 /// Container Div:
-.button-group {
-    @include button-group;
+@mixin sk-buttongroup {
+
+    .button-group {
+        @include button-group;
+    }
+
 }
