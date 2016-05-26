@@ -33,88 +33,16 @@ $navbar-current-bg: #dddddd!default;
 
 
 
+@mixin navbar {
 
-.navbar {
-    background: $navbar-bg;
-    font-family: $navbar-font-stack;
-}
+    .navbar {
+        background: $navbar-bg;
+        font-family: $navbar-font-stack;
+    }
 
-.navbar ul {
-    margin: 0;
-    list-style: none;
-}
-
-.navbar a {
-    display: block;
-    color: $navbar-link-color;
-    text-decoration:none;
-    font-size: $navbar-font-size;
-    line-height: $navbar-height;
-
-    width: 100%;
-    border-top: 1px solid red;
-}
-
-.navbar .has-dropdown > a:after {
-    content: "+";
-    padding-left: 10px;
-    float: right;
-}
-
-.navbar ul li.current-menu-item {
-    background: $navbar-current-bg;
-}
-
-.navbar ul li:hover {
-    background: $navbar-bg-hover;
-}
-
-.navbar ul ul {
-    visibility: hidden;
-
-    position: absolute;
-    top: 100%;
-
-    right: 0; // Direction of dropdown relative to parent
-
-    background:#fff;
-    padding: 0;
-}
-
-.navbar ul ul li {
-    float: none;
-    min-width: 200px;
-    white-space: nowrap;
-    background: $navbar-bg;
-}
-
-.navbar ul ul a {
-    line-height: 120%;
-}
-
-.navbar ul ul ul {
-    top: 0;
-    left: 100%
-}
-
-.navbar ul li:hover > ul {
-    visibility: visible;
-}
-
-
-
-
-
-
-
-
-
-
-
-@include breakpoint(medium) {
-
-    .navbar-right {
-        float: right;
+    .navbar ul {
+        margin: 0;
+        list-style: none;
     }
 
     .navbar a {
@@ -122,22 +50,16 @@ $navbar-current-bg: #dddddd!default;
         color: $navbar-link-color;
         text-decoration:none;
         font-size: $navbar-font-size;
-        line-height: $navbar-height;;
-        padding: 0 15px;
-    }
+        line-height: $navbar-height;
 
+        width: 100%;
+        border-top: 1px solid red;
+    }
 
     .navbar .has-dropdown > a:after {
         content: "+";
         padding-left: 10px;
         float: right;
-    }
-
-    .navbar ul li {
-        position: relative;
-        float: left;
-        margin: 0;
-        padding: 0;
     }
 
     .navbar ul li.current-menu-item {
@@ -149,9 +71,7 @@ $navbar-current-bg: #dddddd!default;
     }
 
     .navbar ul ul {
-        // Use 'visibility', as display can't be transitioned
         visibility: hidden;
-        transition: 0.4s ease;
 
         position: absolute;
         top: 100%;
@@ -171,7 +91,6 @@ $navbar-current-bg: #dddddd!default;
 
     .navbar ul ul a {
         line-height: 120%;
-        padding: 10px 15px;
     }
 
     .navbar ul ul ul {
@@ -180,9 +99,97 @@ $navbar-current-bg: #dddddd!default;
     }
 
     .navbar ul li:hover > ul {
-        // Use 'visibility', as display can't be transitioned
         visibility: visible;
-        transition-delay: 0.4s;
     }
 
+
+
+
+
+
+
+
+
+
+
+    @include breakpoint(medium) {
+
+        .navbar-right {
+            float: right;
+        }
+
+        .navbar a {
+            display: block;
+            color: $navbar-link-color;
+            text-decoration:none;
+            font-size: $navbar-font-size;
+            line-height: $navbar-height;;
+            padding: 0 15px;
+        }
+
+
+        .navbar .has-dropdown > a:after {
+            content: "+";
+            padding-left: 10px;
+            float: right;
+        }
+
+        .navbar ul li {
+            position: relative;
+            float: left;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li.current-menu-item {
+            background: $navbar-current-bg;
+        }
+
+        .navbar ul li:hover {
+            background: $navbar-bg-hover;
+        }
+
+        .navbar ul ul {
+            // Use 'visibility', as display can't be transitioned
+            visibility: hidden;
+            transition: 0.4s ease;
+
+            position: absolute;
+            top: 100%;
+
+            right: 0; // Direction of dropdown relative to parent
+
+            background:#fff;
+            padding: 0;
+        }
+
+        .navbar ul ul li {
+            float: none;
+            min-width: 200px;
+            white-space: nowrap;
+            background: $navbar-bg;
+        }
+
+        .navbar ul ul a {
+            line-height: 120%;
+            padding: 10px 15px;
+        }
+
+        .navbar ul ul ul {
+            top: 0;
+            left: 100%
+        }
+
+        .navbar ul li:hover > ul {
+            // Use 'visibility', as display can't be transitioned
+            visibility: visible;
+            transition-delay: 0.4s;
+        }
+
+    }
+
+}
+
+@mixin sk-navbar {
+    @include navbar;
 }

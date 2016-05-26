@@ -23,22 +23,29 @@ $scrollbar-background-color: slategray!default;
 $scrollbar-size: 8px!default;
 
 
+@mixin scrollbars {
 
-::-webkit-scrollbar {
-    width:  $scrollbar-size;
-    height: $scrollbar-size;
+    ::-webkit-scrollbar {
+        width:  $scrollbar-size;
+        height: $scrollbar-size;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: $scrollbar-foreground-color;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: $scrollbar-background-color;
+    }
+
+    // For Internet Explorer
+    body {
+        scrollbar-face-color: $scrollbar-foreground-color;
+        scrollbar-track-color: $scrollbar-background-color;
+    }
+
 }
 
-::-webkit-scrollbar-thumb {
-    background: $scrollbar-foreground-color;
-}
-
-::-webkit-scrollbar-track {
-    background: $scrollbar-background-color;
-}
-
-// For Internet Explorer
-body {
-    scrollbar-face-color: $scrollbar-foreground-color;
-    scrollbar-track-color: $scrollbar-background-color;
+@mixin sk-scrollbars {
+    @include scrollbars;
 }

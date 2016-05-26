@@ -50,61 +50,74 @@ $loading-indicator-bg-color: palette(primary);
 
 
 // Progress element:
-progress {
-    appearance: none;
-    background-color: $progress-bg-color;
-    width: 100%;
-    height: $progress-bar-height;
-    margin-bottom: $line-height;
+@mixin progressbar {
 
-    @if $progress-bar-border {
-        border: $border;
+    progress {
+        appearance: none;
+        background-color: $progress-bg-color;
+        width: 100%;
+        height: $progress-bar-height;
+        margin-bottom: $line-height;
+
+        @if $progress-bar-border {
+            border: $border;
+        }
+
+        @if $progress-bar-radius {
+            border-radius: $global-radius;
+        }
+
+    }
+    progress::-webkit-progress-bar {
+        background-color: $progress-bg-color;
+
+        @if $progress-bar-radius {
+            border-radius: $global-radius;
+        }
+    }
+    progress::-webkit-progress-value {
+        background: palette(primary);
+
+        @if $progress-bar-radius {
+            border-radius: $global-radius;
+        }
+    }
+    progress::-moz-progress-bar {
+        background: palette(primary);
+
+        @if $progress-bar-radius {
+            border-radius: $global-radius;
+        }
     }
 
-    @if $progress-bar-radius {
-        border-radius: $global-radius;
-    }
-
-}
-progress::-webkit-progress-bar {
-    background-color: $progress-bg-color;
-
-    @if $progress-bar-radius {
-        border-radius: $global-radius;
-    }
-}
-progress::-webkit-progress-value {
-    background: palette(primary);
-
-    @if $progress-bar-radius {
-        border-radius: $global-radius;
-    }
-}
-progress::-moz-progress-bar {
-    background: palette(primary);
-
-    @if $progress-bar-radius {
-        border-radius: $global-radius;
-    }
 }
 
 
 
 // Loading Indicator
-.loading-indicator {
-    width: $loading-indicator-width;
-    height: $loading-indicator-height;
-    border-radius: $loading-indicator-border-radius;
-    margin: 0 auto;
-    background-color: $loading-indicator-bg-color;
-    animation: loading-indicator-scaleout 1.0s infinite ease-in-out;
+@mixin loading-indicator {
+
+    .loading-indicator {
+        width: $loading-indicator-width;
+        height: $loading-indicator-height;
+        border-radius: $loading-indicator-border-radius;
+        margin: 0 auto;
+        background-color: $loading-indicator-bg-color;
+        animation: loading-indicator-scaleout 1.0s infinite ease-in-out;
+    }
+
+    @keyframes loading-indicator-scaleout {
+        0% {
+            transform: scale(0);
+        } 100% {
+            transform: scale(1.0);
+            opacity: 0;
+        }
+    }
+
 }
 
-@keyframes loading-indicator-scaleout {
-    0% {
-        transform: scale(0);
-    } 100% {
-        transform: scale(1.0);
-        opacity: 0;
-    }
+@mixin sk-indicators {
+    @include progressbar;
+    @include loading-indicator;
 }

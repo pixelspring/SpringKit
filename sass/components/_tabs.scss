@@ -10,84 +10,91 @@ $tab-link-color: black !default;
 $tab-link-bg: palette(secondary, light) !default;
 $tab-radius: true !default;
 
-.tabs {
-    list-style: none;
-    margin: 0;
-    @include clearfix;
-}
+@mixin tabs {
 
-.tabs li {
-    display: inline;
-}
-
-.tabs li a {
-    color: $tab-link-color;
-    background: $tab-link-bg;
-    font-family: $font-stack-header;
-    text-decoration: none;
-
-    float: left;
-    position: relative;
-    display: block;
-
-    padding: 10px 20px;
-
-    margin-left: -1px;
-    left: 1px;
-    bottom: -1px;
-
-    border-top: $border;
-    border-right: $border;
-    border-left: $border;
-}
-
-.tabs li a.active {
-    border-bottom: 1px solid $tab-bg-color;
-    background: $tab-bg-color;
-}
-
-.tabs li a:hover:not(.active) {
-    background: $link-color;
-}
-
-//  Hides tab content if javascript is enabled
-.js-tabby .tabs-pane {
-    display: none;
-    visibility: hidden;
-}
-
-// Show tab content when active class is added.
-// This class is added via javascript.
-.tabs-pane.active {
-    display: block;
-    visibility: visible;
-}
-
-
-[data-tabs-content] {
-    margin-bottom: $line-height;
-}
-
-[data-tabs-pane] {
-    border: $border;
-    padding: 10px 20px;
-    background: $tab-bg-color;
-}
-
-@if tab-radius {
-
-    .tabs li:first-child a {
-        border-top-left-radius: $global-radius;
+    .tabs {
+        list-style: none;
+        margin: 0;
+        @include clearfix;
     }
 
-    .tabs li:last-child a {
-        border-top-right-radius: $global-radius;
+    .tabs li {
+        display: inline;
+    }
+
+    .tabs li a {
+        color: $tab-link-color;
+        background: $tab-link-bg;
+        font-family: $font-stack-header;
+        text-decoration: none;
+
+        float: left;
+        position: relative;
+        display: block;
+
+        padding: 10px 20px;
+
+        margin-left: -1px;
+        left: 1px;
+        bottom: -1px;
+
+        border-top: $border;
+        border-right: $border;
+        border-left: $border;
+    }
+
+    .tabs li a.active {
+        border-bottom: 1px solid $tab-bg-color;
+        background: $tab-bg-color;
+    }
+
+    .tabs li a:hover:not(.active) {
+        background: $link-color;
+    }
+
+    //  Hides tab content if javascript is enabled
+    .js-tabby .tabs-pane {
+        display: none;
+        visibility: hidden;
+    }
+
+    // Show tab content when active class is added.
+    // This class is added via javascript.
+    .tabs-pane.active {
+        display: block;
+        visibility: visible;
+    }
+
+
+    [data-tabs-content] {
+        margin-bottom: $line-height;
     }
 
     [data-tabs-pane] {
-        border-top-right-radius: $global-radius;
-        border-bottom-right-radius: $global-radius;
-        border-bottom-left-radius: $global-radius;
+        border: $border;
+        padding: 10px 20px;
+        background: $tab-bg-color;
     }
 
+    @if tab-radius {
+
+        .tabs li:first-child a {
+            border-top-left-radius: $global-radius;
+        }
+
+        .tabs li:last-child a {
+            border-top-right-radius: $global-radius;
+        }
+
+        [data-tabs-pane] {
+            border-top-right-radius: $global-radius;
+            border-bottom-right-radius: $global-radius;
+            border-bottom-left-radius: $global-radius;
+        }
+
+    }
+
+}
+@mixin sk-tabs {
+    @include tabs;
 }
