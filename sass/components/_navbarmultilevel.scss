@@ -44,161 +44,170 @@ $navbar-mobile-nav-toggle-color: white!default;
 
 
 
-// Outer navigation wrapper
-.navbar {
-    height: $navbar-height;
-    background: $navbar-bg;
-    // border-bottom: $border; // TODO
-}
+@mixin navbar {
 
-// Logo and branding
-.branding {
-    position: absolute;
-    float: left;
-    line-height: $navbar-height;
-
-    a,
-    a:visited {
-        color: $navbar-link-color;
-        text-decoration: none;
+    // Outer navigation wrapper
+    .navbar {
+        height: $navbar-height;
+        background: $navbar-bg;
+        // border-bottom: $border; // TODO
     }
-}
 
-// Container with no padding for navbar
-.navbar-container {}
+    // Logo and branding
+    .branding {
+        position: absolute;
+        float: left;
+        line-height: $navbar-height;
 
-// Navigation
-.navbar nav {
-
-    float: right;
-
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-
-        li {
-            float: left;
-            position: relative;
-            padding: 0;
-            margin: 0;
-
-            a,
-            a:visited {
-                display: block;
-                padding: 0 20px;
-                line-height: $navbar-height;
-                background: $navbar-bg;
-                color: $navbar-link-color;
-                text-decoration: none;
-
-                &:hover {
-                    background: $navbar-bg-hover;
-                    color: $navbar-link-color;
-                }
-
-                &:not(:only-child):after {
-                    padding-left: 4px;
-                    content: ' ▾';
-                }
-
-            } // Dropdown list
-
-            ul li {
-                min-width: 200px;
-                a {
-                    padding: 0 20px;
-                    line-height: $navbar-dd-height;
-                }
-            }
-
+        a,
+        a:visited {
+            color: $navbar-link-color;
+            text-decoration: none;
         }
     }
-}
 
-// ------------------------------------------------
-// Dropdown list - binds to JS toggle event
-// ------------------------------------------------
-.nav-dropdown {
-    position: absolute;
-    display: none;
-    z-index: 1;
+    // Container with no padding for navbar
+    .navbar-container {}
 
-    &.active {
-        display: block;
-    }
-}
-
-
-
-
-// ------------------------------------------------
-// Mobile navigation
-// ------------------------------------------------
-
-// Binds to JS Toggle
-.nav-mobile {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: $navbar-mobile-nav-toggle-bg;
-    height: $navbar-height;
-
-    a {
-        color: $navbar-mobile-nav-toggle-color;
-        padding: 0 15px;
-    }
-}
-
-@include breakpoint(small only) {
-    // Nav Text visible on mobile only
-    .nav-mobile {
-        display: block;
-    }
-
+    // Navigation
     .navbar nav {
-        width: 100%;
-        padding: $navbar-height 0 15px;
+
+        float: right;
 
         ul {
-            display: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
 
             li {
-                float: none;
+                float: left;
+                position: relative;
+                padding: 0;
+                margin: 0;
 
-                a {
-                    padding: 15px;
-                    line-height: 20px;
+                a,
+                a:visited {
+                    display: block;
+                    padding: 0 20px;
+                    line-height: $navbar-height;
+                    background: $navbar-bg;
+                    color: $navbar-link-color;
+                    text-decoration: none;
+
+                    &:hover {
+                        background: $navbar-bg-hover;
+                        color: $navbar-link-color;
+                    }
+
+                    &:not(:only-child):after {
+                        padding-left: 4px;
+                        content: ' ▾';
+                    }
+
+                } // Dropdown list
+
+                ul li {
+                    min-width: 200px;
+                    a {
+                        padding: 0 20px;
+                        line-height: $navbar-dd-height;
+                    }
                 }
 
-                ul li a {
-                    padding-left: 30px;
-                }
             }
         }
     }
+
+    // ------------------------------------------------
+    // Dropdown list - binds to JS toggle event
+    // ------------------------------------------------
     .nav-dropdown {
-        position: static;
+        position: absolute;
+        display: none;
+        z-index: 1;
+
+        &.active {
+            display: block;
+        }
     }
 
-    .nav-list {
-        &.active {display: block;}
+
+
+
+    // ------------------------------------------------
+    // Mobile navigation
+    // ------------------------------------------------
+
+    // Binds to JS Toggle
+    .nav-mobile {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: $navbar-mobile-nav-toggle-bg;
+        height: $navbar-height;
+
+        a {
+            color: $navbar-mobile-nav-toggle-color;
+            padding: 0 15px;
+        }
     }
 
+    @include breakpoint(small only) {
+        // Nav Text visible on mobile only
+        .nav-mobile {
+            display: block;
+        }
+
+        .navbar nav {
+            width: 100%;
+            padding: $navbar-height 0 15px;
+
+            ul {
+                display: none;
+
+                li {
+                    float: none;
+
+                    a {
+                        padding: 15px;
+                        line-height: 20px;
+                    }
+
+                    ul li a {
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
+        .nav-dropdown {
+            position: static;
+        }
+
+        .nav-list {
+            &.active {display: block;}
+        }
+
+
+    }
+
+
+
+
+    @include breakpoint(medium) {
+        .nav-list {
+            display: block !important;
+        }
+    }
+
+    #nav-toggle {
+        line-height: $navbar-height;
+        text-decoration: none;
+    }
 
 }
 
 
-
-
-@include breakpoint(medium) {
-    .nav-list {
-        display: block !important;
-    }
-}
-
-#nav-toggle {
-    line-height: $navbar-height;
-    text-decoration: none;
+@mixin sk-navbar {
+    @include navbar;
 }

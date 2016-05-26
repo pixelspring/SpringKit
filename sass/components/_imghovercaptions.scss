@@ -34,57 +34,61 @@ $image-hover-caption-color: white !default;
 
 @mixin image-hover-caption {
 
-    position: relative;
-    display: inline-block;
-    margin: 0px;
-    max-width: 100%;
-    overflow: hidden;
-    backface-visibility: hidden; // Hide back face in preperation for spiffy 3d effects
-
-    img {
-        transition: all 0.5s ease;
-        vertical-align: top;
+    .image-hover-caption {
+        position: relative;
+        display: inline-block;
+        margin: 0px;
         max-width: 100%;
-        opacity: 1;
-    }
-
-    figcaption {
-        transition: all 0.5s ease;
-        background: $image-hover-caption-bg;
-        margin: 0;
-        padding: 10px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        color: $image-hover-caption-color;
-        opacity: 0;
-        font-style: normal;
-    }
-
-    a {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 1;
-        opacity: 0;
-    }
+        overflow: hidden;
+        backface-visibility: hidden; // Hide back face in preperation for spiffy 3d effects
 
 
-    &:hover {
         img {
-            opacity: 0;
-        }
-        figcaption {
+            transition: all 0.5s ease;
+            vertical-align: top;
+            max-width: 100%;
             opacity: 1;
         }
+
+        figcaption {
+            transition: all 0.5s ease;
+            background: $image-hover-caption-bg;
+            margin: 0;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: $image-hover-caption-color;
+            opacity: 0;
+            font-style: normal;
+        }
+
+        a {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            opacity: 0;
+        }
+
+
+        &:hover {
+            img {
+                opacity: 0;
+            }
+            figcaption {
+                opacity: 1;
+            }
+        }
+
     }
 
 }
 
-.image-hover-caption {
+@mixin sk-imagehovercaptions {
     @include image-hover-caption;
 }

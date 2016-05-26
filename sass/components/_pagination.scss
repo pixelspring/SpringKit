@@ -32,44 +32,51 @@ $pagination-padding: 3px 10px!default;
 $pagination-radius: true!default;
 
 
-.pagination {
-    margin-left: 0;
-    margin-bottom: $line-height;
-}
+@mixin pagination {
 
-.pagination::after {
-    clear: both;
-}
-
-.pagination li {
-    font-size: $pagination-font-size;
-    display: inline-block;
-}
-
-.pagination a {
-    color: $font-color;
-    display: block;
-    padding: $pagination-padding;
-    text-decoration: none;
-    @if pagination-radius {
-        border-radius: $global-radius/2;
+    .pagination {
+        margin-left: 0;
+        margin-bottom: $line-height;
     }
-}
 
-.pagination a:hover {
-    background: $pagination-hover-bg;
-    color: $pagination-hover-color;
-}
-
-.pagination .current {
-    padding: $pagination-padding;
-    background: $pagination-current-bg;
-    color: $pagination-current-color;
-    @if pagination-radius {
-        border-radius: $global-radius/2;
+    .pagination::after {
+        clear: both;
     }
-}
 
-.pagination.centered {
-    text-align: center;
+    .pagination li {
+        font-size: $pagination-font-size;
+        display: inline-block;
+    }
+
+    .pagination a {
+        color: $font-color;
+        display: block;
+        padding: $pagination-padding;
+        text-decoration: none;
+        @if pagination-radius {
+            border-radius: $global-radius/2;
+        }
+    }
+
+    .pagination a:hover {
+        background: $pagination-hover-bg;
+        color: $pagination-hover-color;
+    }
+
+    .pagination .current {
+        padding: $pagination-padding;
+        background: $pagination-current-bg;
+        color: $pagination-current-color;
+        @if pagination-radius {
+            border-radius: $global-radius/2;
+        }
+    }
+
+    .pagination.centered {
+        text-align: center;
+    }
+
+}
+@mixin sk-pagination {
+    @include pagination;
 }

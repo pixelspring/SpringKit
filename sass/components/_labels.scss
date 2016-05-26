@@ -27,8 +27,10 @@ $label-padding: 0.2em 0.5rem !default;
 /// @type Number
 $label-radius: $global-radius !default;
 
+
+
 /// Generates base styles for a label.
-@mixin label {
+@mixin labelbase {
     // display: inline-block;
     padding: $label-padding;
     font-size: $label-font-size;
@@ -39,17 +41,43 @@ $label-radius: $global-radius !default;
     vertical-align: baseline;
 }
 
+@mixin label {
+    .label {
+        @include labelbase;
 
-.label {
-    @include label;
-
-    background: $label-background;
-    color: $label-color;
+        background: $label-background;
+        color: $label-color;
+    }
 }
 
-.label-primary      {background: palette(primary);}
-.label-secondary    {background: palette(secondary);}
-.label-success      {background: palette(success);}
-.label-warning      {background: palette(warning);}
-.label-danger       {background: palette(danger);}
-.label-info         {background: palette(info);}
+// Modifiers:
+@mixin label-primary {
+    .label-primary      {background: palette(primary);}
+}
+@mixin label-secondary {
+    .label-secondary    {background: palette(secondary);}
+}
+@mixin label-success {
+    .label-success      {background: palette(success);}
+}
+@mixin label-warning {
+    .label-warning      {background: palette(warning);}
+}
+@mixin label-danger {
+    .label-danger       {background: palette(danger);}
+}
+@mixin label-info {
+    .label-info         {background: palette(info);}
+}
+
+
+@mixin sk-labels {
+    @inclde labelbase;
+    @include label;
+    @include label-primary;
+    @include label-secondary;
+    @include label-success;
+    @include label-warning;
+    @include label-danger;
+    @include label-info;
+}
