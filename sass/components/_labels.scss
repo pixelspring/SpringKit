@@ -72,7 +72,7 @@ $label-radius: $global-radius !default;
 
 
 @mixin sk-labels {
-    @inclde labelbase;
+    // @include labelbase;
     @include label;
     @include label-primary;
     @include label-secondary;
