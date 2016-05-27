@@ -37,7 +37,7 @@ for (var x = 0; x < dropdownTrigger.length; x++) {
 
     // Toggle dropdowns onclick
     dropdownTrigger[x].onclick = function() {
-        var subMenu = this.parentNode.getElementsByClassName("nav-dropdown")[0];
+        var subMenu = this.parentNode.getElementsByClassName("dropdown-menu-content")[0];
         if (subMenu.classList.contains('active')) {
             subMenu.classList.remove("active");
         } else {
@@ -47,7 +47,7 @@ for (var x = 0; x < dropdownTrigger.length; x++) {
 
     // Close dropdowns onblur
     dropdownTrigger[x].onblur = function() {
-        var subMenu = this.parentNode.getElementsByClassName("nav-dropdown")[0];
+        var subMenu = this.parentNode.getElementsByClassName("dropdown-menu-content")[0];
         if (subMenu.classList.contains('active')) {
             subMenu.classList.remove("active");
         }
