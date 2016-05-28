@@ -246,6 +246,20 @@ $selection-color:      $white;
 $selection-bg:         dodgerblue;
 
 
+
+// ------------------------------------------------
+/// Z-Index definitions:
+/// @type Map
+
+$zindex: (
+  modal     : 9000,
+  overlay   : 8000,
+  dropdown  : 7000,
+  header    : 6000,
+  footer    : 5000
+);
+
+
 // ------------------------------------------------
 
 /// Accordion Variables
@@ -342,7 +356,15 @@ $dropdown-menu-min-width: 160px;
 
 /// Set background color of dropdown
 /// @type Color
-$dropdown-menu-bg: white;
+$dropdown-link-color: white;
+
+/// Set background color of dropdown
+/// @type Color
+$dropdown-menu-bg: palette(primary, dark);
+
+/// Set background hover color of dropdown
+/// @type Color
+$dropdown-menu-hover-bg: palette(primary, light);
 
 /// Set padding on active dropdown links
 /// @type Number
