@@ -12,18 +12,16 @@
 /**
  * @example
  *
- * <div class="dropdown">
- *
- *     <a id="dropdownMenu1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
- *
- *     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
- *         <li><a role="menuitem" href="#">Link 1</a></li>
- *         <li><a role="menuitem" href="#">Link 2</a></li>
- *         <li><a role="menuitem" href="#">Link 3</a></li>
- *         <li><a role="menuitem" href="#">Link 4</a></li>
- *     </ul>
- *
- * </div>
+ * <ul class="dropdown-menu">
+ *     <li class="dropdown-menu-toggle" data-toggle="dropdown">
+ *         <a href="#">Dropdown Link</a>
+ *         <ul class="dropdown-menu-content">
+ *             <li><a role="menuitem" href="#">Linkylink</a></li>
+ *             <li><a role="menuitem" href="#">Linkylink</a></li>
+ *             <li><a role="menuitem" href="#">Linkylink</a></li>
+ *         </ul>
+ *     </li>
+ * </ul>
  */
 
 
