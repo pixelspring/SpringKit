@@ -25,6 +25,8 @@
  */
 
 
+"use strict";
+
 // Set event listeners for dropdown menus
 var dropdownTrigger = document.querySelectorAll("[data-toggle=dropdown] a");
 
