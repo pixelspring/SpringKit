@@ -15,72 +15,76 @@ $dropdown-menu-min-width: 160px !default;
 
 /// Set background color of dropdown
 /// @type Color
-$dropdown-menu-bg: white !default;
+$dropdown-link-color: white !default;
+
+/// Set background color of dropdown
+/// @type Color
+$dropdown-menu-bg: palette(primary, dark) !default;
+
+/// Set background hover color of dropdown
+/// @type Color
+$dropdown-menu-hover-bg: palette(primary, light) !default;
 
 /// Set padding on active dropdown links
 /// @type Number
-$dropdown-menu-link-padding: 8px !default;
+$dropdown-menu-link-padding: $line-height/2 !default;
 
 
 @mixin dropdown {
 
-    .dropdown {
-        position: relative;
-    }
-
-    .dropdown-toggle {}
-
-    .dropdown-toggle:after {
-        content: "\2716"; // \271A;
-        padding-left: 10px;
-    }
-
-    .dropdown-toggle:focus {
-        outline: 0;
-    }
-
-    .dropdown-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1000;
-
-        display: none;
-
-        float: left;
+    .dropdown-menu ul {
+        padding: 0;
         margin: 0;
-        text-align: left;
-        list-style: none;
-        background-color: $dropdown-menu-bg;
-        border: $border;
-        border-radius: $global-radius;
-
-        min-width: $dropdown-menu-min-width;
 
     }
 
-    .dropdown-menu > li {
+    .dropdown-menu li {
+        display: inline-block;
+        position: relative;
         padding: 0;
         margin: 0;
     }
+        .dropdown-menu-toggle a {
+            background: palette(primary);
+            text-decoration: none;
+            color: $dropdown-link-color;
+        }
+            .dropdown-menu-toggle > a:after {
+                padding-left: 1rem;
+                content: '▾';
+                float: right;
+            }
 
-    .dropdown-menu > li > a {
+
+    .dropdown-menu a {
         display: block;
         padding: $dropdown-menu-link-padding;
     }
 
-    // Hover state of opened menu links
-    .dropdown-menu > li > a:hover,
-    .dropdown-menu > li > a:focus {
-        color: white;
-        text-decoration: none;
-        background-color: palette(primary);
-    }
 
-
-    .open > .dropdown-menu {
-        display: block;
+    // The menu items that actually drop down:
+    .dropdown-menu-content {
+        position: absolute;
+        display: none;
+        z-index: map-get($zindex, dropdown);
+        width: 100%;
     }
+        .dropdown-menu-content li {
+            display: block;
+            min-width: $dropdown-menu-min-width;
+            border-top: 1px solid $border-color;
+        }
+            .dropdown-menu-content a {
+                background: $dropdown-menu-bg;
+            }
+
+            .dropdown-menu-content a:hover {
+                background: $dropdown-menu-hover-bg;
+            }
+                .dropdown-menu-content.active {
+                    display: block;
+                }
+
 
 }
 

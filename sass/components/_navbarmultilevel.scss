@@ -53,7 +53,7 @@ $navbar-mobile-nav-toggle-color: white!default;
         // border-bottom: $border; // TODO
     }
 
-    // Logo and branding
+    // Logo and branding, on l/h side of navbar
     .branding {
         position: absolute;
         float: left;
@@ -69,7 +69,7 @@ $navbar-mobile-nav-toggle-color: white!default;
     // Container with no padding for navbar
     .navbar-container {}
 
-    // Navigation
+    // Navigation links, on r/h side of navbar
     .navbar nav {
 
         float: right;
@@ -101,7 +101,7 @@ $navbar-mobile-nav-toggle-color: white!default;
 
                     &:not(:only-child):after {
                         padding-left: 4px;
-                        content: ' ▾';
+                        content: '▾';
                     }
 
                 } // Dropdown list
@@ -121,6 +121,7 @@ $navbar-mobile-nav-toggle-color: white!default;
     // ------------------------------------------------
     // Dropdown list - binds to JS toggle event
     // ------------------------------------------------
+    /*
     .nav-dropdown {
         position: absolute;
         display: none;
@@ -130,13 +131,14 @@ $navbar-mobile-nav-toggle-color: white!default;
             display: block;
         }
     }
-
+    */
 
 
 
     // ------------------------------------------------
     // Mobile navigation
     // ------------------------------------------------
+
 
     // Binds to JS Toggle
     .nav-mobile {
@@ -152,6 +154,7 @@ $navbar-mobile-nav-toggle-color: white!default;
             padding: 0 15px;
         }
     }
+
 
     @include breakpoint(small only) {
         // Nav Text visible on mobile only
@@ -190,7 +193,6 @@ $navbar-mobile-nav-toggle-color: white!default;
 
 
     }
-
 
 
 
