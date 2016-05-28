@@ -46,11 +46,16 @@ $navbar-mobile-nav-toggle-color: white!default;
 
 @mixin navbar {
 
+    // Container with no padding for navbar
+    .navbar-container {
+        @include clearfix;
+        border-bottom: $border;
+    }
+
     // Outer navigation wrapper
     .navbar {
         height: $navbar-height;
         background: $navbar-bg;
-        // border-bottom: $border; // TODO
     }
 
     // Logo and branding, on l/h side of navbar
@@ -59,6 +64,7 @@ $navbar-mobile-nav-toggle-color: white!default;
         float: left;
         line-height: $navbar-height;
 
+
         a,
         a:visited {
             color: $navbar-link-color;
@@ -66,8 +72,6 @@ $navbar-mobile-nav-toggle-color: white!default;
         }
     }
 
-    // Container with no padding for navbar
-    .navbar-container {}
 
     // Navigation links, on r/h side of navbar
     .navbar nav {
@@ -119,39 +123,27 @@ $navbar-mobile-nav-toggle-color: white!default;
     }
 
     // ------------------------------------------------
-    // Dropdown list - binds to JS toggle event
-    // ------------------------------------------------
-    /*
-    .nav-dropdown {
-        position: absolute;
-        display: none;
-        z-index: 1;
-
-        &.active {
-            display: block;
-        }
-    }
-    */
-
-
-
-    // ------------------------------------------------
     // Mobile navigation
     // ------------------------------------------------
 
+     #nav-toggle {
+        line-height: $navbar-height;
+        text-decoration: none;
+    }
 
     // Binds to JS Toggle
     .nav-mobile {
         display: none;
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: $navbar-mobile-nav-toggle-bg;
-        height: $navbar-height;
 
         a {
             color: $navbar-mobile-nav-toggle-color;
             padding: 0 15px;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: $navbar-mobile-nav-toggle-bg;
+            height: $navbar-height;
         }
     }
 
@@ -202,10 +194,7 @@ $navbar-mobile-nav-toggle-color: white!default;
         }
     }
 
-    #nav-toggle {
-        line-height: $navbar-height;
-        text-decoration: none;
-    }
+
 
 }
 
