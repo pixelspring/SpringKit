@@ -56,6 +56,7 @@ $navbar-mobile-nav-toggle-color: white!default;
     .navbar {
         height: $navbar-height;
         background: $navbar-bg;
+        margin-bottom: $line-height*2;
     }
 
     // Logo and branding, on l/h side of navbar
@@ -156,13 +157,14 @@ $navbar-mobile-nav-toggle-color: white!default;
 
         .navbar nav {
             width: 100%;
-            padding: $navbar-height 0 15px;
+            padding-top: $navbar-height;
 
             ul {
                 display: none;
 
                 li {
                     float: none;
+                    border-top: $border;
 
                     a {
                         padding: 15px;
