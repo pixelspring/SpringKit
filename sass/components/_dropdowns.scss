@@ -15,141 +15,76 @@ $dropdown-menu-min-width: 160px !default;
 
 /// Set background color of dropdown
 /// @type Color
-$dropdown-menu-bg: white !default;
+$dropdown-link-color: white !default;
+
+/// Set background color of dropdown
+/// @type Color
+$dropdown-menu-bg: palette(primary, dark) !default;
+
+/// Set background hover color of dropdown
+/// @type Color
+$dropdown-menu-hover-bg: palette(primary, light) !default;
 
 /// Set padding on active dropdown links
 /// @type Number
-$dropdown-menu-link-padding: 8px !default;
+$dropdown-menu-link-padding: $line-height/2 !default;
 
 
 @mixin dropdown {
 
-    .dropdown-menu {
+    .dropdown-menu ul {
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .dropdown-menu li {
+        display: inline-block;
         position: relative;
-    }
-
-    .dropdown-menu-toggle a {
-        background: palette(primary);
-        text-decoration: none;
-        color: white;
-    }
-
-    .dropdown-menu-toggle > a:after {
-        padding-left: 4px;
-        content: '▾';
-        float: right;
-    }
-
-    .dropdown-menu ul {
-        list-style: none;
         padding: 0;
         margin: 0;
     }
-        .dropdown-menu li {
-            padding: 0;
-            margin: 0;
+        .dropdown-menu-toggle a {
+            background: palette(primary);
+            text-decoration: none;
+            color: $dropdown-link-color;
         }
-            .dropdown-menu li a {
-                display: block;
-                padding: 1rem;
-                line-height: 1;
-            }
-                .dropdown-menu li a:focus {
-                    outline: 0;
-                }
-
-
-
-    .dropdown-menu-content {
-        position: absolute;
-        z-index: 9999;
-        padding: 0;
-        margin: 0;
-        display: none;
-    }
-
-        .dropdown-menu-content li {
-             border-bottom: $border;
-        }
-
-            .dropdown-menu-content li a {
-                background: palette(primary, dark);
+            .dropdown-menu-toggle > a:after {
+                padding-left: 1rem;
+                content: '▾';
+                float: right;
             }
 
 
-
-    .dropdown-menu-content.active {
-        display: block;
-    }
-
-    /*
-    .dropdown-toggle {}
-
-    .dropdown-toggle:after {
-        // content: "\2716"; // \271A;
-        content: "▼";
-        padding-left: 10px;
-    }
-
-    .has-dropdown > a {
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-
-    .dropdown-toggle:focus {
-        outline: 0;
-    }
-
-    .dropdown-menu ul {
-        list-style: none;
-    }
-
-
-    */
-
-    /*.dropdown-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1000;
-
-        display: none;
-
-        float: left;
-        margin: 0;
-        text-align: left;
-        list-style: none;
-        background-color: $dropdown-menu-bg;
-        border: $border;
-        border-radius: $global-radius;
-
-        min-width: $dropdown-menu-min-width;
-
-    }
-
-    .dropdown-menu > li {
-        padding: 0;
-        margin: 0;
-    }
-
-    .dropdown-menu > li > a {
+    .dropdown-menu a {
         display: block;
         padding: $dropdown-menu-link-padding;
     }
 
-    // Hover state of opened menu links
-    .dropdown-menu > li > a:hover,
-    .dropdown-menu > li > a:focus {
-        color: white;
-        text-decoration: none;
-        background-color: palette(primary);
-    }
 
-
-    .active > .dropdown-menu {
-        display: block;
+    // The menu items that actually drop down:
+    .dropdown-menu-content {
+        position: absolute;
+        display: none;
+        z-index: map-get($zindex, dropdown);
+        width: 100%;
     }
-    */
+        .dropdown-menu-content li {
+            display: block;
+            min-width: $dropdown-menu-min-width;
+            border-top: 1px solid $border-color;
+        }
+            .dropdown-menu-content a {
+                background: $dropdown-menu-bg;
+            }
+
+            .dropdown-menu-content a:hover {
+                background: $dropdown-menu-hover-bg;
+            }
+                .dropdown-menu-content.active {
+                    display: block;
+                }
+
 
 }
 
