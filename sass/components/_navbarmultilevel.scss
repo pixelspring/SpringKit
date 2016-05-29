@@ -127,19 +127,18 @@ $navbar-mobile-nav-toggle-color: white!default;
     // Mobile navigation
     // ------------------------------------------------
 
+     // Binds to JS Toggle
      #nav-toggle {
         line-height: $navbar-height;
         text-decoration: none;
     }
 
-    // Binds to JS Toggle
     .nav-mobile {
         display: none;
 
         a {
             color: $navbar-mobile-nav-toggle-color;
-            padding: 0 15px;
-
+            padding: 0 1rem;
             position: absolute;
             top: 0;
             right: 0;
@@ -177,8 +176,10 @@ $navbar-mobile-nav-toggle-color: white!default;
                 }
             }
         }
-        .nav-dropdown {
-            position: static;
+
+        // Push menu items down with position:relative
+        .navbar .dropdown-menu-content {
+            position: relative;
         }
 
         .nav-list {
