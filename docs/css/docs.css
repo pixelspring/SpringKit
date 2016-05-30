@@ -10,6 +10,10 @@
     overflow: auto;
 }
 
+    .site-aside ul {
+        list-style: none;
+    }
+
     .site-aside li {
         margin: 0;
     }
