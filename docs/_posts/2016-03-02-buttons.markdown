@@ -2,7 +2,7 @@
 layout: post
 title:  "Buttons"
 date:   2016-03-02 15:31:56 +0000
-categories: base
+categories: components
 sassbase: components/_buttons.scss
 ---
 
