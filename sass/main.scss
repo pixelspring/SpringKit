@@ -34,6 +34,7 @@
 @import "components/_imghovercaptions.scss";
 @import "components/_indicators.scss";
 @import "components/_labels.scss";
+@import "components/_modal.scss";
 // @import "components/_navbar.scss";
 @import "components/_navbarmultilevel.scss";
 @import "components/_pagination.scss";
@@ -72,6 +73,7 @@
 @include sk-imagehovercaptions;
 @include sk-indicators;
 @include sk-labels;
+@include sk-modal;
 @include sk-navbar;
 @include sk-pagination;
 @include sk-scrollbars;

@@ -1,0 +1,65 @@
+// ------------------------------------------------
+// MODALS:
+//
+// ------------------------------------------------
+
+////
+/// Modal Wondows
+/// @group modals
+////
+
+
+/// Set modal mask background
+/// @type Color
+$modal-mask-bg: rgba(0,0,0,0.4) !default;
+
+/// Set modal background
+/// @type Color
+$modal-bg: $root-background-color !default;
+
+/// Set modal radius
+/// @type Boolean
+$modal-radius: true !default;
+
+
+@mixin modal {
+
+
+    // Semi-opaque page background overlay:
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: map-get($zindex, modal);
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: $modal-mask-bg;
+    }
+
+    // Modal window:
+    .modal-content {
+        background-color: $modal-bg;
+        margin: 15% auto;
+        padding: 20px;
+        border: $border;
+        width: 80%;
+
+        @if modal-radius {
+            border-radius: $global-radius;
+        }
+    }
+
+    // Modal close button:
+    .modal-close {
+        float: right;
+        padding: 16px;
+    }
+
+
+}
+
+@mixin sk-modal {
+    @include modal;
+}
