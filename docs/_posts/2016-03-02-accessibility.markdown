@@ -11,43 +11,24 @@ sassbase: base/_accessibility.scss
 </div>
 
 <div class="row column">
-
+<code>.sr-only</code><br>
+Visually hides content but remains accessible to screen reader users
+<hr>
+<code>.show-on-focus</code><br>
+Visually hides content until focussed. For elements other than anchors &amp; form elements, use in conjunction with tabindex, to allow them to recieve keyboard focus
 </div>
 
-<!--
-<div class="row column">
-    <h2>Sass Configuration:</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Default</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>$accordion-show-content</td>
-                <td>String</td>
-                <td><code>"+"</code></td>
-                <td>Set content of accordion show</td>
-            </tr>
-            <tr>
-                <td>$accordion-hide-content</td>
-                <td>String</td>
-                <td><code>"-"</code></td>
-                <td>Set content of accordion hide</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
--->
+
 
 <div class="row column">
 <h4>Example Code:</h4>
 {% highlight html %}
 <!-- "Skip Navigation" Link, only visible to screen readers -->
 <a class="sr-only" href="#maincontent">Skip to main content</a>
+
+<!-- Visually hides content until focussed -->
+<div class="show-me-when-focused" tabindex="0">
+  <p>This content is visible on focus</p>
+</div>
 {% endhighlight %}
 </div>

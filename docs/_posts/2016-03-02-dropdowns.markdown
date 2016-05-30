@@ -13,7 +13,7 @@ sassbase: components/_dropdowns.scss
 <div class="row column">
     <ul class="dropdown-menu">
         <li class="dropdown-menu-toggle" data-toggle="dropdown">
-            <a href="#">DD</a>
+            <a href="#">Dropdown Menu</a>
             <ul class="dropdown-menu-content">
                 <li><a role="menuitem" href="#">Linkylink</a></li>
                 <li><a role="menuitem" href="#">Linkylink</a></li>
