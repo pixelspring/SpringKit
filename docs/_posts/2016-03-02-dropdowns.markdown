@@ -7,22 +7,20 @@ sassbase: components/_dropdowns.scss
 ---
 
 <div class="row column">
-    <p class="lead-text">Dropdowns are contextual toggle menus that drop down from their anchor link. They use dropdown.js for js functionality.</p>
+    <p class="lead-text">Dropdowns are contextual toggle menus that drop down from their anchor link. They can be used as standalone menus or within the navbar component.</p>
 </div>
 
 <div class="row column">
-    <div class="dropdown">
-
-        <a id="dropdownMenu" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-            <li><a role="menuitem" href="#">Link 1</a></li>
-            <li><a role="menuitem" href="#">Link 2</a></li>
-            <li><a role="menuitem" href="#">Link 3</a></li>
-            <li><a role="menuitem" href="#">Link 4</a></li>
-        </ul>
-
-    </div>
+    <ul class="dropdown-menu">
+        <li class="dropdown-menu-toggle" data-toggle="dropdown">
+            <a href="#">DD</a>
+            <ul class="dropdown-menu-content">
+                <li><a role="menuitem" href="#">Linkylink</a></li>
+                <li><a role="menuitem" href="#">Linkylink</a></li>
+                <li><a role="menuitem" href="#">Linkylink</a></li>
+            </ul>
+        </li>
+    </ul>
 </div>
 
 <div class="row column">
@@ -43,16 +41,29 @@ sassbase: components/_dropdowns.scss
                 <td><code>160px</code></td>
                 <td>Set min-width of dropdown</td>
             </tr>
+
+            <tr>
+                <td>$dropdown-link-color</td>
+                <td>Color</td>
+                <td><code>white</code></td>
+                <td>Set text color of dropdown</td>
+            </tr>
             <tr>
                 <td>$dropdown-menu-bg</td>
                 <td>Color</td>
-                <td><code>White</code></td>
+                <td><code>palette(primary, dark)</code></td>
                 <td>Set background color of dropdown</td>
+            </tr>
+            <tr>
+                <td>$dropdown-menu-hover-bg</td>
+                <td>Color</td>
+                <td><code>palette(primary, light)</code></td>
+                <td>Set background hover color of dropdown</td>
             </tr>
             <tr>
                 <td>$dropdown-menu-link-padding</td>
                 <td>Number</td>
-                <td><code>8px</code></td>
+                <td><code>$line-height/2</code></td>
                 <td>Set padding on active dropdown links</td>
             </tr>
         </tbody>
@@ -63,17 +74,15 @@ sassbase: components/_dropdowns.scss
 <h3>Example Code:</h3>
 {% highlight html %}
 <!-- Basic Dropdown menu -->
-<div class="dropdown">
-
-    <a id="dropdownMenu" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-        <li><a role="menuitem" href="#">Link 1</a></li>
-        <li><a role="menuitem" href="#">Link 2</a></li>
-        <li><a role="menuitem" href="#">Link 3</a></li>
-        <li><a role="menuitem" href="#">Link 4</a></li>
-    </ul>
-
-</div>
+<ul class="dropdown-menu">
+    <li class="dropdown-menu-toggle" data-toggle="dropdown">
+        <a href="#">Dropdown Menu</a>
+        <ul class="dropdown-menu-content">
+            <li><a role="menuitem" href="#">Linkylink</a></li>
+            <li><a role="menuitem" href="#">Linkylink</a></li>
+            <li><a role="menuitem" href="#">Linkylink</a></li>
+        </ul>
+    </li>
+</ul>
 {% endhighlight %}
 </div>
