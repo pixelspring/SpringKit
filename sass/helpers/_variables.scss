@@ -371,6 +371,22 @@ $dropdown-menu-hover-bg: palette(primary, light);
 $dropdown-menu-link-padding: 8px;
 
 
+// ------------------------------------------------
+
+/// Modal Variables
+
+/// Set modal mask background
+/// @type Color
+$modal-mask-bg: rgba(0,0,0,0.4);
+
+/// Set modal background
+/// @type Color
+$modal-bg: $root-background-color;
+
+/// Set modal radius
+/// @type Boolean
+$modal-radius: true;
+
 
 // ------------------------------------------------
 
