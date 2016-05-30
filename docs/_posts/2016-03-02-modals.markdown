@@ -1,0 +1,58 @@
+---
+layout: post
+title:  "Modals"
+date:   2016-03-02 15:31:56 +0000
+categories: components
+sassbase: components/_modals.scss
+---
+
+<div class="row column">
+    <p class="lead-text">Modal windows display content that blocks interaction from the main window, to focus the user on a specific task.</p>
+</div>
+
+
+<div class="row column">
+    <h2>Sass Configuration:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>$modal-mask-bg</td>
+                <td>Color</td>
+                <td><code>rgba(0,0,0,0.4)</code></td>
+                <td>Set modal mask background</td>
+            </tr>
+            <tr>
+                <td>$modal-bg</td>
+                <td>Color</td>
+                <td><code>$root-background-color</code></td>
+                <td>Set modal background</td>
+            </tr>
+            <tr>
+                <td>$modal-radius</td>
+                <td>Boolean</td>
+                <td><code>true</code></td>
+                <td>Set modal radius</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="row column">
+<h4>Example Code:</h4>
+{% highlight html %}
+<div id="modalWindow" class="modal">
+    <div class="modal-content">
+        <span class="modal-close">x</span>
+        <p>Modal content goes here</p>
+    </div>
+</div>
+{% endhighlight %}
+</div>
