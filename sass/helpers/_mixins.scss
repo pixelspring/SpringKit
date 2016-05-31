@@ -58,3 +58,33 @@
         }
     }
 }
+
+
+/// Force hardware Acceleration:
+/// Increase performance of webkit browsers animations/transitions
+/// @link https://codepad.co/snippet/B2dFL7fi
+@mixin forceHardwareAcceleration() {
+
+    // 3D rendering on GPU
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+
+    // fix chrome and safari flicker
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility   : hidden;
+    -ms-backface-visibility    : hidden;
+    backface-visibility        : hidden;
+    -webkit-perspective        : 1000;
+    -moz-perspective           : 1000;
+    -ms-perspective            : 1000;
+    perspective                : 1000;
+
+    // webkit-powered
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
