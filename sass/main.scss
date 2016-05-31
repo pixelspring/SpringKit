@@ -37,6 +37,7 @@
 @import "components/_modal.scss";
 // @import "components/_navbar.scss";
 @import "components/_navbarmultilevel.scss";
+@import "components/offcanvas.scss";
 @import "components/_pagination.scss";
 @import "components/_scrollbars.scss";
 @import "components/_tabs.scss";
@@ -75,6 +76,7 @@
 @include sk-labels;
 @include sk-modal;
 @include sk-navbar;
+@include sk-offcanvas;
 @include sk-pagination;
 @include sk-scrollbars;
 @include sk-tabs;
