@@ -27,30 +27,33 @@
 
 "use strict";
 
-// Set event listeners for dropdown menus
-var dropdownTrigger = document.querySelectorAll("[data-toggle=dropdown] a");
+document.addEventListener('DOMContentLoaded', function() {
 
-for (var x = 0; x < dropdownTrigger.length; x++) {
+    var dropdownTriggers = document.querySelectorAll('[data-toggle=dropdown] a');
 
-    // Make onblur work in Chrome / Safari
-    dropdownTrigger[x].setAttribute('tabindex', '0');
+    Array.prototype.forEach.call(dropdownTriggers, function(el, x){
 
-    // Toggle dropdowns onclick
-    dropdownTrigger[x].onclick = function() {
-        var subMenu = this.parentNode.getElementsByClassName("dropdown-menu-content")[0];
-        if (subMenu.classList.contains('active')) {
-            subMenu.classList.remove("active");
-        } else {
-            subMenu.classList.add("active");
+        // Make onblur work in Chrome / Safari
+        el.setAttribute('tabindex', '0');
+
+        // Toggle dropdowns onclick
+        el.onclick = function() {
+            var subMenu = this.parentNode.getElementsByClassName("dropdown-menu-content")[0];
+            if (subMenu.classList.contains('active')) {
+                subMenu.classList.remove("active");
+            } else {
+                subMenu.classList.add("active");
+            }
         }
-    }
 
-    // Close dropdowns onblur
-    dropdownTrigger[x].onblur = function() {
-        var subMenu = this.parentNode.getElementsByClassName("dropdown-menu-content")[0];
-        if (subMenu.classList.contains('active')) {
-            subMenu.classList.remove("active");
+        // Close dropdowns onblur
+        el.onblur = function() {
+            var subMenu = this.parentNode.getElementsByClassName("dropdown-menu-content")[0];
+            if (subMenu.classList.contains('active')) {
+                subMenu.classList.remove("active");
+            }
         }
-    }
 
-}
+    });
+
+}, false);

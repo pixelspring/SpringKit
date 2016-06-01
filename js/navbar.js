@@ -4,19 +4,23 @@
 
 "use strict";
 
-var navMobileToggle = document.getElementById('nav-toggle');
+document.addEventListener('DOMContentLoaded', function() {
 
-// Set tabindex
-navMobileToggle.setAttribute('tabindex', '0');
+    var navMobileToggle = document.getElementById('nav-toggle');
 
-// Toggle mobile menu:
-navMobileToggle.onclick = function() {
-    document.getElementById('nav-list').classList.toggle('active');
-};
+    // Set tabindex
+    navMobileToggle.setAttribute('tabindex', '0');
 
-// onblur:
-/*
-navMobileToggle.onblur = function() {
-    document.getElementById('nav-list').classList.toggle('active');
-};
-*/
+    // Toggle mobile menu:
+    navMobileToggle.onclick = function() {
+        document.getElementById('nav-list').classList.toggle('active');
+    };
+
+    // onblur:
+    /*
+    navMobileToggle.onblur = function() {
+        document.getElementById('nav-list').classList.toggle('active');
+    };
+    */
+
+}, false);

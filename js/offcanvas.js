@@ -4,15 +4,19 @@
 
 "use strict";
 
-var offCanvasToggle = document.querySelectorAll("[data-toggle=offcanvas]");
+document.addEventListener('DOMContentLoaded', function() {
 
-for (var x = 0; x < offCanvasToggle.length; x++) {
+    var offCanvasToggle = document.querySelectorAll("[data-toggle=offcanvas]");
 
-    offCanvasToggle[x].onclick = function() {
-        document.getElementById('offCanvas').classList.toggle('active');
-        container.classList.toggle('container-pushed');
-        offCanvasMask.classList.toggle('active');
-        document.body.classList.toggle('body-pushed');
+    for (var x = 0; x < offCanvasToggle.length; x++) {
+
+        offCanvasToggle[x].onclick = function() {
+            document.getElementById('offCanvas').classList.toggle('active');
+            container.classList.toggle('container-pushed');
+            offCanvasMask.classList.toggle('active');
+            document.body.classList.toggle('body-pushed');
+        }
+
     }
 
-}
+}, false);
