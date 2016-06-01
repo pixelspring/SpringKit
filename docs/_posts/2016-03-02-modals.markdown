@@ -10,6 +10,9 @@ sassbase: components/_modals.scss
     <p class="lead-text">Modal windows display content that blocks interaction from the main window, to focus the user on a specific task.</p>
 </div>
 
+<div class="row column">
+    <a class="button button-primary" id="openModal" href="#">Open Modal</a>
+</div>
 
 <div class="row column">
     <h2>Sass Configuration:</h2>
@@ -43,6 +46,13 @@ sassbase: components/_modals.scss
             </tr>
         </tbody>
     </table>
+</div>
+
+<div id="modalWindow" class="modal">
+    <div class="modal-content">
+        <span class="modal-close">x</span>
+        <p>Some example text in the Modal..</p>
+    </div>
 </div>
 
 <div class="row column">
