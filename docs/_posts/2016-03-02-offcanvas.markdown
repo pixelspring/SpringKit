@@ -2,7 +2,7 @@
 layout: post
 title:  "Offcanvas"
 date:   2016-03-02 15:31:56 +0000
-categories: components
+categories: navigation
 sassbase: components/_offcanvas.scss
 ---
 
