@@ -27,6 +27,9 @@ $navbar-link-color: black!default;
 /// Set the background color of the navbar
 $navbar-bg: #efefef!default;
 
+/// Set the background color of the navbar dropdowns
+$navbar-dropdown-bg: #dddddd!default;
+
 /// Set the background hover color of navbar links
 $navbar-bg-hover: #cccccc!default;
 
@@ -90,8 +93,7 @@ $navbar-mobile-nav-toggle-color: white!default;
                 padding: 0;
                 margin: 0;
 
-                a,
-                a:visited {
+                a {
                     display: block;
                     padding: 0 20px;
                     line-height: $navbar-height;
@@ -116,6 +118,7 @@ $navbar-mobile-nav-toggle-color: white!default;
                     a {
                         padding: 0 20px;
                         line-height: $navbar-dd-height;
+                        background: $navbar-dropdown-bg;
                     }
                 }
 
