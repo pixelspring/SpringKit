@@ -3,75 +3,51 @@ layout: post
 title:  "Navbar"
 date:   2016-03-02 15:31:56 +0000
 categories: components
-sassbase: components/_navbar.scss
+sassbase: components/_navbarmultilevel.scss
 ---
 
 <div class="row column">
-    <p class="lead-text">The Navbar component provides a 100% width bar with dropdown links on hover, suitable for main site navigation</p>
+    <p class="lead-text">The Navbar component provides a 100% width bar with dropdown links on hover, suitable for main site navigation. At mobile sizes it collapses to a multilevel dropdown. Dropdown functionality is provided by dropdown.js &amp; mobile toggle requires navbar.js</p>
 </div>
 
 <div class="row column">
-    <nav class="navbar" role="navigation">
-        <div class="row column">
-            <ul class="title">
-                <li><a href="">Navbar Title</a></li>
-            </ul>
 
-            <ul class="navbar-right">
-                <li class="current-menu-item"><a href="#">Current</a></li>
-
-                <li class="has-dropdown"><a href="#">Menu 1</a>
-                    <ul>
-                        <li><a href="#">Sub Menu 1</a></li>
-                        <li><a href="#">Sub Menu 2</a></li>
-                        <li><a href="#">Sub Menu 3</a></li>
-                        <li class="has-dropdown"><a href="#">Sub Menu 4</a>
-                            <ul>
-                                <li class="has-dropdown"><a href="#">Deep Menu 1</a>
-                                    <ul>
-                                        <li><a href="#">Sub Deep 1</a></li>
-                                        <li><a href="#">Sub Deep 2</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-dropdown"><a href="#">Sub Menu 5 longer</a>
-                            <ul>
-                                <li class="has-dropdown"><a href="#">Deep Menu 1</a>
-                                    <ul>
-                                        <li><a href="#">Sub Deep 1</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="has-dropdown"><a href="#">Menu 2</a>
-                    <ul>
-                        <li><a href="#">Sub Menu 1</a></li>
-                        <li><a href="#">Sub Menu 2</a></li>
-                        <li><a href="#">Sub Menu 3</a></li>
-                    </ul>
-                </li>
-
-                <li class="has-dropdown"><a href="#">Menu 3</a>
-                    <ul>
-                        <li><a href="#">Sub Menu 1</a></li>
-                        <li><a href="#">Sub Menu 2</a></li>
-                        <li><a href="#">Sub Menu 3</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="#">Menu 4</a></li>
-
-                <li><a href="#">Menu 5</a></li>
-
-                <li><a href="#">Menu 6</a></li>
-
-            </ul>
+    <section id="#navbar" class="navbar">
+    <div class="navbar-container">
+        <div class="branding">
+            <a href="#">Logo Here</a>
         </div>
-    </nav>
+        <nav>
+            <div class="nav-mobile"><a id="nav-toggle" href="#">Menu</a></div>
+
+            <ul id="nav-list" class="nav-list">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+
+                <li class="dropdown-menu-toggle" data-toggle="dropdown">
+                    <a href="#">Dropdown Link</a>
+                    <ul class="dropdown-menu-content">
+                        <li><a href="#">Linky</a></li>
+                        <li><a href="#">Linky</a></li>
+                        <li><a href="#">Linky</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Link 4</a></li>
+
+                <li class="dropdown-menu-toggle" data-toggle="dropdown">
+                    <a href="#">Dropdown Link</a>
+                    <ul class="dropdown-menu-content">
+                        <li><a href="#">Linky</a></li>
+                        <li><a href="#">Linky</a></li>
+                        <li><a href="#">Linky</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    </section>
+
 </div>
 
 
@@ -114,65 +90,38 @@ sassbase: components/_navbar.scss
 <h4>Example Code:</h4>
 {% highlight html %}
 <!-- Navbar: -->
-<nav class="navbar" role="navigation">
-    <div class="row column">
-
-        <!-- Title Link / Logo -->
-        <ul class="title">
-            <li><a href="">Navbar Title</a></li>
-        </ul>
-
-        <!-- R/H aligned links -->
-        <ul class="navbar-right">
-
-            <!-- Current Page Class -->
-            <li class="current-menu-item"><a href="#">Current</a></li>
-
-            <!-- Dropdown Menu -->
-            <li class="has-dropdown"><a href="#">Menu 1</a>
-                <ul>
-                    <li><a href="#">Sub Menu 1</a></li>
-                    <li><a href="#">Sub Menu 2</a></li>
-                    <li><a href="#">Sub Menu 3</a></li>
-
-                    <!-- Sub-Dropdown Menu -->
-                    <li class="has-dropdown"><a href="#">Sub Menu 4</a>
-                        <ul>
-                            <li class="has-dropdown"><a href="#">Deep Menu 1</a>
-                                <ul>
-                                    <li><a href="#">Sub Deep 1</a></li>
-                                    <li><a href="#">Sub Deep 2</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="has-dropdown"><a href="#">Menu 2</a>
-                <ul>
-                    <li><a href="#">Sub Menu 1</a></li>
-                    <li><a href="#">Sub Menu 2</a></li>
-                    <li><a href="#">Sub Menu 3</a></li>
-                </ul>
-            </li>
-
-            <li class="has-dropdown"><a href="#">Menu 3</a>
-                <ul>
-                    <li><a href="#">Sub Menu 1</a></li>
-                    <li><a href="#">Sub Menu 2</a></li>
-                    <li><a href="#">Sub Menu 3</a></li>
-                </ul>
-            </li>
-
-            <li><a href="#">Menu 4</a></li>
-
-            <li><a href="#">Menu 5</a></li>
-
-            <li><a href="#">Menu 6</a></li>
-
-        </ul>
+<div class="navbar-container">
+    <div class="branding">
+        <a href="#">Logo Here</a>
     </div>
-</nav>
+    <nav>
+        <div class="nav-mobile"><a id="nav-toggle" href="#">Menu</a></div>
+
+        <ul id="nav-list" class="nav-list">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+
+            <li class="dropdown-menu-toggle" data-toggle="dropdown">
+                <a href="#">Dropdown Link</a>
+                <ul class="dropdown-menu-content">
+                    <li><a href="#">Linky</a></li>
+                    <li><a href="#">Linky</a></li>
+                    <li><a href="#">Linky</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Link 4</a></li>
+
+            <li class="dropdown-menu-toggle" data-toggle="dropdown">
+                <a href="#">Dropdown Link</a>
+                <ul class="dropdown-menu-content">
+                    <li><a href="#">Linky</a></li>
+                    <li><a href="#">Linky</a></li>
+                    <li><a href="#">Linky</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
 {% endhighlight %}
 </div>
