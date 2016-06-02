@@ -8,19 +8,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var navMobileToggle = document.getElementById('nav-toggle');
 
-    // Set tabindex
-    navMobileToggle.setAttribute('tabindex', '0');
+    if ( navMobileToggle ) {
 
-    // Toggle mobile menu:
-    navMobileToggle.onclick = function() {
-        document.getElementById('nav-list').classList.toggle('active');
-    };
+        // Set tabindex
+        navMobileToggle.setAttribute('tabindex', '0');
 
-    // onblur:
-    /*
-    navMobileToggle.onblur = function() {
-        document.getElementById('nav-list').classList.toggle('active');
-    };
-    */
+        // Toggle mobile menu:
+        navMobileToggle.addEventListener('click', function() {
+            document.getElementById('nav-list').classList.toggle('active');
+        });
+
+    }
 
 }, false);

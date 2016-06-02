@@ -29,21 +29,30 @@ document.addEventListener('DOMContentLoaded', function() {
     var modalClose = document.getElementsByClassName("modal-close")[0];
 
 
+
     // Show the modal
-    modalOpen.onclick = function() {
-        modal.style.display = "block";
+    if ( modalOpen ) {
+        modalOpen.addEventListener('click', function() {
+            modal.style.display = "block";
+        });
     }
 
     // Close the modal via close link
-    modalClose.onclick = function() {
-        modal.style.display = "none";
+    if ( modalClose ) {
+        modalClose.addEventListener('click', function() {
+            modal.style.display = "none";
+        });
     }
 
     // Click outside of the modal to close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
+    if ( modal ) {
+        window.addEventListener('click', function() {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
     }
+
+
 
 }, false);
