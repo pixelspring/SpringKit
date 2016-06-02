@@ -12,7 +12,6 @@
 // Base
 @import "base/_sanitize.scss";
 @import "base/_typography.scss";
-@import "base/_media.scss";
 @import "base/_utilityclasses.scss";
 @import "base/_print.scss";
 @import "base/_accessibility.scss";
@@ -23,6 +22,16 @@
 @import "layout/_tables.scss";
 @import "layout/_visibility.scss";
 
+// Media
+@import "media/_media.scss";
+@import "media/_imghovercaptions.scss";
+
+// Navigation
+// @import "navigation/_navbar.scss";
+@import "navigation/_navbarmultilevel.scss";
+@import "navigation/offcanvas.scss";
+@import "navigation/_dropdowns.scss";
+
 // Components:
 @import "components/_accordions.scss";
 @import "components/_alerts.scss";
@@ -30,14 +39,9 @@
 @import "components/_buttongroups.scss";
 @import "components/_breadcrumbs.scss";
 @import "components/_cards.scss";
-@import "components/_dropdowns.scss";
-@import "components/_imghovercaptions.scss";
 @import "components/_indicators.scss";
 @import "components/_labels.scss";
 @import "components/_modal.scss";
-// @import "components/_navbar.scss";
-@import "components/_navbarmultilevel.scss";
-@import "components/offcanvas.scss";
 @import "components/_pagination.scss";
 @import "components/_scrollbars.scss";
 @import "components/_tabs.scss";
