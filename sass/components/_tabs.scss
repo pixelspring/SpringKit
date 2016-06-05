@@ -1,100 +1,122 @@
 // ------------------------------------------------
-// TABS:
-//
-// @todo: fix current nav highlighting before tab nav used
+// TABS.SCSS
 // ------------------------------------------------
 
 // Vars:
 $tab-bg-color: white !default;
-$tab-link-color: black !default;
-$tab-link-bg: palette(secondary, light) !default;
+$tab-link-color: palette(primary) !default;
+$tab-link-hover-color: palette(primary, dark) !default;
 $tab-radius: true !default;
+
 
 @mixin tabs {
 
     .tabs {
-        list-style: none;
-        margin: 0;
+
+        /* Clearfix */
         @include clearfix;
-    }
 
-    .tabs li {
-        display: inline;
-    }
-
-    .tabs li a {
-        color: $tab-link-color;
-        background: $tab-link-bg;
-        font-family: $font-stack-header;
-        text-decoration: none;
-
-        float: left;
-        position: relative;
-        display: block;
-
-        padding: 10px 20px;
-
-        margin-left: -1px;
-        left: 1px;
-        bottom: -1px;
-
-        border-top: $border;
-        border-right: $border;
-        border-left: $border;
-    }
-
-    .tabs li a.active {
-        border-bottom: 1px solid $tab-bg-color;
-        background: $tab-bg-color;
-    }
-
-    .tabs li a:hover:not(.active) {
-        background: $link-color;
-    }
-
-    //  Hides tab content if javascript is enabled
-    .js-tabby .tabs-pane {
-        display: none;
-        visibility: hidden;
-    }
-
-    // Show tab content when active class is added.
-    // This class is added via javascript.
-    .tabs-pane.active {
-        display: block;
-        visibility: visible;
-    }
-
-
-    [data-tabs-content] {
         margin-bottom: $line-height;
-    }
 
-    [data-tabs-pane] {
-        border: $border;
-        padding: 10px 20px;
-        background: $tab-bg-color;
-    }
+        @include breakpoint(medium down) {
+            border: $border;
 
-    @if tab-radius {
-
-        .tabs li:first-child a {
-            border-top-left-radius: $global-radius;
+            @if tab-radius {
+                border-radius: $global-radius;
+            }
         }
 
-        .tabs li:last-child a {
-            border-top-right-radius: $global-radius;
+        .tab {
+
+            @include breakpoint(medium) {
+                display: inline;
+            }
+
+            &:first-child .tab-button {
+                @if tab-radius {
+                    border-top-left-radius: $border-radius;
+                    border-top-right-radius: $border-radius;
+                }
+
+                @include breakpoint(medium down) {
+                    border-top: 0;
+                }
+
+            }
+
+            &:last-child .tab-button {
+                @include breakpoint(medium down) {
+                    @if tab-radius {
+                        border-bottom-left-radius: $border-radius;
+                        border-bottom-right-radius: $border-radius;
+                    }
+                }
+            }
+
+            &.active {
+                .tab-button {
+                    background-color: $tab-bg-color;
+                    color: $tab-link-hover-color;
+                    @include breakpoint(medium) {
+                        background-color: $tab-bg-color;
+                        border: $border;
+                        border-bottom-color: $tab-bg-color;
+                        margin-bottom: -1px;
+                    }
+                }
+                .tab-content {
+                    display: block;
+                }
+            }
         }
 
-        [data-tabs-pane] {
-            border-top-right-radius: $global-radius;
-            border-bottom-right-radius: $global-radius;
-            border-bottom-left-radius: $global-radius;
+        .tab-button {
+            font-family: $font-stack-header;
+            border-top: $border;
+            color: $tab-link-color;
+            display: block;
+            padding: ($line-height/2);
+            text-decoration: none;
+
+            @include breakpoint(medium) {
+                @if tab-radius {
+                    border-top-left-radius: $border-radius;
+                    border-top-right-radius: $border-radius;
+                }
+                border-top: 0;
+                display: inline-block;
+            }
+            &:hover {
+                color: $tab-link-hover-color;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+
+        // Actual content of the tab:
+        .tab-content {
+            background: $tab-bg-color;
+            display: none;
+            padding: $line-height;
+            width: 100%;
+
+            @include breakpoint(medium) {
+                border: $border;
+                float: left;
+
+                @if tab-radius {
+                    border-bottom-left-radius: $border-radius;
+                    border-bottom-right-radius: $border-radius;
+                    border-top-right-radius: $border-radius;
+                }
+            }
         }
 
     }
 
 }
+
 @mixin sk-tabs {
     @include tabs;
 }
