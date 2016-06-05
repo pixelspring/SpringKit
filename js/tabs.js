@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var tabButtonClass = 'tab-button';
     var activeClass = 'active';
 
-    // Activates the chosen tab and deactivates the rest
+    // Activate the chosen tab and deactivates the rest
     function activateTab(chosenTabElement) {
 
         var tabList = chosenTabElement.parentNode.querySelectorAll('.' + tabClass);
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // List of tabs for this tabbed container
         var tabList = tabbedContainer.querySelectorAll('.' + tabClass);
 
-        /* Make the first tab active when the page loads */
+        // Make the first tab active when the page loads
         activateTab(tabList[0]);
 
         // Activate tab when its link clicked
@@ -77,5 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+
+
 
 }, false);

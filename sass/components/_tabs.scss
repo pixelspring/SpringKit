@@ -13,7 +13,6 @@ $tab-radius: true !default;
 
     .tabs {
 
-        /* Clearfix */
         @include clearfix;
 
         margin-bottom: $line-height;
