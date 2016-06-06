@@ -33,7 +33,8 @@ $label-font-weight: bold!default;
         background: $form-bg;
     }
 
-    /* Removes awkard default styles on some inputs */
+    /* Removes awkward default platform specific styling on some inputs */
+    input,
     input[type="email"],
     input[type="search"],
     input[type="text"],
@@ -44,6 +45,7 @@ $label-font-weight: bold!default;
     // TODO:
     // input[type="reset"] button
 
+    input[type="text"],
     input[type="search"],
     input[type="email"],
     input[type="number"],
