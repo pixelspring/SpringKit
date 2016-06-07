@@ -61,12 +61,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show the modal window:
     function modalShow() {
         modal.style.display = "block";
+        modal.removeAttribute('aria-hidden');
         modalActive = true;
     }
 
     // Dismiss the modal window:
     function modalDismiss() {
         modal.style.display = "none";
+        modal.setAttribute('aria-hidden', 'true');
         modalActive = false;
     }
 
