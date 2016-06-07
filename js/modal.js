@@ -28,31 +28,46 @@ document.addEventListener('DOMContentLoaded', function() {
     var modalOpen = document.getElementById("openModal");
     var modalClose = document.getElementsByClassName("modal-close")[0];
 
+    var modalActive;
 
 
-    // Show the modal
+    // Listen for click on "show modal" link
     if ( modalOpen ) {
-        modalOpen.addEventListener('click', function() {
-            modal.style.display = "block";
-        });
+        modalOpen.addEventListener('click', modalShow, false);
     }
 
-    // Close the modal via close link
+    // Listen for click on "close modal" link
     if ( modalClose ) {
-        modalClose.addEventListener('click', function() {
-            modal.style.display = "none";
-        });
+        modalClose.addEventListener('click', modalDismiss, false);
     }
 
     // Click outside of the modal to close it
     if ( modal ) {
         window.addEventListener('click', function() {
-            if (event.target == modal) {
-                modal.style.display = "none";
+            if (event.target === modal) {
+                modalDismiss();
             }
         });
+
+        window.addEventListener('keydown', function () {
+            if (modalActive && event.keyCode === 27) {
+                event.preventDefault();
+                modalDismiss();
+            }
+        });
+
     }
 
+    // Show the modal window:
+    function modalShow() {
+        modal.style.display = "block";
+        modalActive = true;
+    }
 
+    // Dismiss the modal window:
+    function modalDismiss() {
+        modal.style.display = "none";
+        modalActive = false;
+    }
 
 }, false);
