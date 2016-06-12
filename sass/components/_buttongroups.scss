@@ -27,6 +27,10 @@ $button-group-radius: true!default;
 
     .button:not(:first-child) {
         border-left: 1px solid $root-background-color;
+
+        &:hover {
+            border-left: 1px solid $root-background-color;
+        }
     }
 
     /// If button-radius, apply border-radius to first & last buttons only
