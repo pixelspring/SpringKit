@@ -58,7 +58,6 @@ $label-font-weight: bold!default;
     input[type="month"],
     input[type="url"],
     input[type="password"],
-    input[type="range"],
     input[type="color"],
     textarea,
     select {
@@ -89,6 +88,10 @@ $label-font-weight: bold!default;
     input[type="range"] {
         padding: 6px 0;
         cursor: ew-resize;
+        border: none;
+        width: 100%;
+        margin-bottom: $line-height;
+        appearance: slider-horizontal;
     }
 
     // Input Validication Indicators
