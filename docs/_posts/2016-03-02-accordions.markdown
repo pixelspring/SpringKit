@@ -7,43 +7,51 @@ sassbase: components/_accordions.scss
 ---
 
 <div class="row column">
-    <p class="lead-text">Accordions are components that expand and collapse (hide/show) content. They use <a href="https://github.com/cferdinandi/houdini">Houdini.js</a> for js functionality.</p>
+    <p class="lead-text">Accordions are components that expand and collapse (hide/show) content.</p>
 </div>
 
-<div class="row column">
+<div class="row">
 
-    <!-- SECTION 1 -->
-    <a class="collapse-toggle active" data-collapse="#section1" data-group="accordion" href="#">
-        Accordion Section 1
-        <span class="collapse-text-show"></span>
-        <span class="collapse-text-hide"></span>
-    </a>
-        <div class="collapse active" id="section1">
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
-        </div>
+    <div class="medium-4 columns">
+        <dl class="accordion">
+            <dt class="accordion-panel-toggle" data-toggle="accordion">Section 1</dt>
+            <dd class="accordion-panel" role="tabpanel">Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</dd>
 
-    <!-- SECTION 2 -->
-    <a class="collapse-toggle" data-collapse="#section2" data-group="accordion" href="#">
-        Accordion Section 2
-        <span class="collapse-text-show"></span>
-        <span class="collapse-text-hide"></span>
-    </a>
-        <div class="collapse" id="section2">
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
-        </div>
+            <dt class="accordion-panel-toggle" data-toggle="accordion">Section 2</dt>
+            <dd class="accordion-panel" role="tabpanel">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</dd>
 
-    <!-- SECTION 3 -->
-    <a class="collapse-toggle" data-collapse="#section3" data-group="accordion" href="#">
-        Accordion Section 3
-        <span class="collapse-text-show"></span>
-        <span class="collapse-text-hide"></span>
-    </a>
-        <div class="collapse" id="section3">
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
-        </div>
+            <dt class="accordion-panel-toggle" data-toggle="accordion">Section 3</dt>
+            <dd class="accordion-panel" role="tabpanel">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</dd>
+        </dl>
+    </div>
+
+    <div class="medium-4 columns">
+        <dl class="accordion">
+            <dt class="accordion-panel-toggle" data-toggle="accordion">Section 1</dt>
+            <dd class="accordion-panel" role="tabpanel">Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</dd>
+
+            <dt class="accordion-panel-toggle" data-toggle="accordion">Section 2</dt>
+            <dd class="accordion-panel" role="tabpanel">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</dd>
+
+            <dt class="accordion-panel-toggle" data-toggle="accordion">Section 3</dt>
+            <dd class="accordion-panel" role="tabpanel">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</dd>
+        </dl>
+    </div>
+
+    <div class="medium-4 columns">
+        <dl class="accordion">
+            <dt class="accordion-panel-toggle" data-toggle="accordion">Section 1</dt>
+            <dd class="accordion-panel" role="tabpanel">Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</dd>
+
+            <dt class="accordion-panel-toggle" data-toggle="accordion">Section 2</dt>
+            <dd class="accordion-panel" role="tabpanel">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</dd>
+
+            <dt class="accordion-panel-toggle" data-toggle="accordion">Section 3</dt>
+            <dd class="accordion-panel" role="tabpanel">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</dd>
+        </dl>
+    </div>
 
 </div>
-
 
 <div class="row column">
     <h2>Sass Configuration:</h2>
@@ -76,16 +84,12 @@ sassbase: components/_accordions.scss
 <div class="row column">
 <h4>Example Code:</h4>
 {% highlight html %}
-<!-- Section 1 Toggle -->
-<a class="collapse-toggle active" data-collapse="#sec1" data-group="accordion" href="#">
-    Accordion Section 1
-    <span class="collapse-text-show"></span>
-    <span class="collapse-text-hide"></span>
-</a>
-
-<!-- Section 1 Content -->
-<div class="collapse active" id="sec1">
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
-</div>
+<!-- Accordion DL -->
+<dl class="accordion">
+    <!-- Accordion Toggle -->
+    <dt class="accordion-panel-toggle" data-toggle="accordion">Section Title</dt>
+    <!-- Accordion Panel -->
+    <dd class="accordion-panel" role="tabpanel">Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</dd>
+</dl>
 {% endhighlight %}
 </div>
