@@ -7,32 +7,35 @@ sassbase: components/_tabs.scss
 ---
 
 <div class="row column">
-    <p class="lead-text">Tabs use <a href="https://github.com/cferdinandi/tabby">Tabby.js</a> for js functionality and are styled.</p>
+    <p class="lead-text">Tabs are containers that show content panes when its menu item is selected</p>
 </div>
 
 <div class="row column">
 
-            <nav>
-                <ul data-tabs class="tabs">
-                    <li class="active"><a data-tab class="active" href="#tab1">Tab 1</a></li>
-                    <li><a data-tab href="#tab2">Tab 2</a></li>
-                    <li><a data-tab href="#tab3">Tab 3</a></li>
-                </ul>
-            </nav>
+    <div class="tabs">
 
-            <div data-tabs-content>
-                <div data-tabs-pane class="tabs-pane active" id="tab1">
-                    <h4>Tab 1</h4>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                </div>
-                <div data-tabs-pane class="tabs-pane" id="tab2">
-                    <h4>Tab 2</h4>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>        </div>
-                <div data-tabs-pane class="tabs-pane" id="tab3">
-                    <h4>Tab 3</h4>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                </div>
+        <div class="tab">
+            <a class="tab-button" href="#" role="tab">Tab One</a>
+            <div class="tab-content" role="tabpanel">
+                <h4>Tab Content One</h4>
             </div>
+        </div>
+
+        <div class="tab">
+            <a class="tab-button" href="#" role="tab">Tab Two</a>
+            <div class="tab-content" role="tabpanel">
+                <h4>Tab Content Two</h4>
+            </div>
+        </div>
+
+        <div class="tab">
+            <a class="tab-button" href="#" role="tab">Tab Three</a>
+            <div class="tab-content" role="tabpanel">
+                <h4>Tab Content Three</h4>
+            </div>
+        </div>
+
+    </div>
 
 </div>
 
@@ -61,16 +64,16 @@ sassbase: components/_tabs.scss
                 <td>Tab navigation link color</td>
             </tr>
             <tr>
-                <td>$tab-link-bg</td>
+                <td>$tab-link-hover-color</td>
                 <td>Color</td>
-                <td><code>palette(secondary, light)</code></td>
-                <td>Tab navigation background color</td>
+                <td><code>palette(primary, dark)</code></td>
+                <td>Tab link hover color</td>
             </tr>
             <tr>
                 <td>$tab-radius</td>
                 <td>Boolean</td>
                 <td><code>True</code></td>
-                <td>Tab border radius</td>
+                <td>Choose whether to add Tab border radius</td>
             </tr>
         </tbody>
     </table>
@@ -79,27 +82,23 @@ sassbase: components/_tabs.scss
 <div class="row column">
 <h4>Example Code:</h4>
 {% highlight html %}
-<!-- Tab Navigation: -->
-<nav>
-    <ul data-tabs class="tabs">
-        <li><a data-tab href="#tab1">Tab 1</a></li>
-        <li><a data-tab href="#tab2">Tab 2</a></li>
-        <li><a data-tab href="#tab3">Tab 3</a></li>
-    </ul>
-</nav>
-<!-- Tab Content: -->
-<div data-tabs-content>
-    <div data-tabs-pane class="tabs-pane active" id="tab1">
-        <h4>Tab 1</h4>
-        <p>Tab Content 1</p>
+<!-- Tab Container -->
+<div class="tabs">
+    <!-- Tab 1 -->
+    <div class="tab">
+        <!-- Tab Toggle -->
+        <a class="tab-button" href="#" role="tab">Tab One</a>
+        <!-- Tab Panel -->
+        <div class="tab-content" role="tabpanel">
+            <h4>Tab Content One</h4>
+        </div>
     </div>
-    <div data-tabs-pane class="tabs-pane" id="tab2">
-        <h4>Tab 2</h4
-        <p>Tab Content 2</p>
-    </div>
-    <div data-tabs-pane class="tabs-pane" id="tab3">
-        <h4>Tab 3</h4>
-        <p>Tab Content 3</p>
+
+    <div class="tab">
+        <a class="tab-button" href="#" role="tab">Tab Two</a>
+        <div class="tab-content" role="tabpanel">
+            <h4>Tab Content Two</h4>
+        </div>
     </div>
 </div>
 {% endhighlight %}
