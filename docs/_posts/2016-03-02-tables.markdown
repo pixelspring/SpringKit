@@ -7,7 +7,7 @@ sassbase: layout/_tables.scss
 ---
 
 <div class="row column">
-    <p class="lead-text">Tables. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    <p class="lead-text">Tables present tabular data grouped into rows, with optional caption, header and footer</p>
 </div>
 
 <div class="row column">
@@ -54,13 +54,112 @@ sassbase: layout/_tables.scss
                 <td>Somewhere</td>
             </tr>
         </tbody>
+        <tfoot>
+            <tf>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Location</th>
+            </tf>
+        </tfoot>
     </table>
 
+</div>
+
+<div class="row column">
+    <h2>Sass Configuration:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>$table-caption-color</td>
+                <td>Color</td>
+                <td><code>$root-color</code></td>
+                <td>Define color of table contents</td>
+            </tr>
+            <tr>
+                <td>$table-row-striping</td>
+                <td>Boolean</td>
+                <td><code>true</code></td>
+                <td>Use "zebra-striping" on tables</td>
+            </tr>
+            <tr>
+                <td>$table-row-striping-bg</td>
+                <td>#f9f9f9</td>
+                <td><code>Color</code></td>
+                <td>Set the color of even rows when striping active</td>
+            </tr>
+            <tr>
+                <td>$table-row-hover</td>
+                <td>true</td>
+                <td><code>Boolean</code></td>
+                <td>Change bg color of rows when hovered</td>
+            </tr>
+            <tr>
+                <td>$table-row-hover-bg</td>
+                <td>palette(info, light)</td>
+                <td><code>Color</code></td>
+                <td>Sets the bg color of rows when hovered</td>
+            </tr>
+            <tr>
+                <td>$table-row-striping-bg</td>
+                <td>#f9f9f9</td>
+                <td><code>Color</code></td>
+                <td>Set teh color of even rows when striping active</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
 <div class="row column">
 <h4>Example Code:</h4>
 {% highlight html %}
 <!-- Tables: -->
+<table>
+<caption>Table Caption</caption>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Sex</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Dave Rave</td>
+            <td>29</td>
+            <td>Male</td>
+            <td>Townsville</td>
+        </tr>
+        <tr>
+            <td>Fenella Wibblet</td>
+            <td>31</td>
+            <td>Female</td>
+            <td>Ladytown</td>
+        </tr>
+        <tr>
+            <td>Dwayne Johnson</td>
+            <td>41</td>
+            <td>Male</td>
+            <td>Bogtown</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tf>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Sex</th>
+            <th>Location</th>
+        </tf>
+    </tfoot>
+</table>
 {% endhighlight %}
 </div>

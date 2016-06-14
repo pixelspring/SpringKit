@@ -436,22 +436,48 @@ $scrollbar-background-color: slategray;
 /// @type Number
 $scrollbar-size: 8px;
 
+
 // ------------------------------------------------
 
 /// Tab Variables
 
 /// Tab active item & content background color
 /// @type Color
-$tab-bg-color: white !default;
+$tab-bg-color: white;
 
 /// Tab navigation link color
 /// @type Color
-$tab-link-color: black !default;
+$tab-link-color: black;
 
 /// Tab navigation background color
 /// @type Color
-$tab-link-bg: palette(secondary, light) !default;
+$tab-link-bg: palette(secondary, light);
 
 /// Tab border radius
 /// @type Boolean
-$tab-radius: true !default;
+$tab-radius: true;
+
+
+// ------------------------------------------------
+
+/// Table Variables
+
+/// Table Caption Color
+/// @type Color
+$table-caption-color: $root-color;
+
+/// Table Row Striping
+/// @type Boolean
+$table-row-striping: true;
+
+/// Table Row Striping BG Color
+/// @type Color
+$table-row-striping-bg: #f9f9f9;
+
+/// Table Row Hover
+/// @type Boolean
+$table-row-hover: true;
+
+/// Table Row Hover Color
+/// @type Color
+$table-row-hover-color: palette(info, light) !default;

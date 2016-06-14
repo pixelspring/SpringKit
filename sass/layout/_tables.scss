@@ -8,7 +8,28 @@
 /// @group tables
 ////
 
-@mixin sk-tables {
+/// Table Caption Color
+/// @type Color
+$table-caption-color: $root-color !default;
+
+/// Table Row Striping
+/// @type Boolean
+$table-row-striping: true !default;
+
+/// Table Row Striping BG Color
+/// @type Color
+$table-row-striping-bg: #f9f9f9 !default;
+
+
+/// Table Row Hover
+/// @type Boolean
+$table-row-hover: true !default;
+
+/// Table Row Hover Color
+/// @type Color
+$table-row-hover-bg: palette(info, light) !default;
+
+@mixin tables {
 
     table {
         width: 100%;
@@ -40,23 +61,31 @@
     }
 
     // Table Caption:
-
     table caption {
+        font-family: $font-stack-header;
         text-transform: uppercase;
-        color: $jumbo;
+        color: $table-caption-color;
         // font-size: 1.2rem;
         text-align: left;
     }
 
 
     // Table Row Striping:
-    tbody tr:nth-child(odd) {
-        background-color: palette(secondary, light);
+    @if $table-row-striping {
+        tbody tr:nth-child(odd) {
+            background-color: $table-row-striping-bg;
+        }
     }
 
     // Table Row Hover:
-    tbody tr:hover {
-        background-color: $highlight-color;
+    @if $table-row-hover {
+        tbody tr:hover {
+            background-color: $table-row-hover-bg;
+        }
     }
 
+}
+
+@mixin sk-tables {
+    @include tables;
 }
