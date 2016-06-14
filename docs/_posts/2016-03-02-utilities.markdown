@@ -8,15 +8,22 @@ sassbase: base/_utilityclasses.scss
 
 <div class="row column">
     <p class="lead-text">Utilities are small helper classes, available in the following categories:</p>
-    <ul>
-        <li>Floats</li>
-        <li>Rounding</li>
-        <li>Text-Align</li>
-        <li>Image Helpers</li>
-        <li>Visibility</li>
-        <li>Z-Index</li>
-        <li>Borders</li>
-    </ul>
+
+    <h3>Floats</h3>
+    <p>Float element to left or right</p>
+    <h3>Rounding</h3>
+    <p>Apply radius or rounded for rounded corners</p>
+    <h3>Text-Align</h3>
+    <p>Align text to left center or right</p>
+    <h3>Image Helpers</h3>
+    <p>Align images to left, center, right and add border</p>
+    <h3>Visibility</h3>
+    <p>Hide text or elements</p>
+    <h3>Z-Index</h3>
+    <p>Apply z-index to element</p>
+    <h3>Borders</h3>
+    <p>Apply full border or t/r/b/l borders individually</p>
+
 </div>
 
 <div class="row column">
