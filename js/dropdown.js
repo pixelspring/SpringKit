@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 var subMenu = this.parentNode.getElementsByClassName("dropdown-menu-content")[0];
 
+                // Add/remove active class
                 if (subMenu.classList.contains('active')) {
                     subMenu.classList.remove("active");
                 } else {
