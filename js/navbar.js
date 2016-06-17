@@ -14,8 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
         navMobileToggle.setAttribute('tabindex', '0');
 
         // Toggle mobile menu:
-        navMobileToggle.addEventListener('click', function() {
+        navMobileToggle.addEventListener('click', function(e) {
             document.getElementById('nav-list').classList.toggle('active');
+            e.preventDefault();
         });
 
     }
