@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+        // Close with escape keypress
         window.addEventListener('keydown', function () {
             if (modalActive && event.keyCode === 27) {
                 event.preventDefault();
@@ -59,10 +60,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Show the modal window:
-    function modalShow() {
+    function modalShow(e) {
         modal.style.display = "block";
         modal.removeAttribute('aria-hidden');
         modalActive = true;
+        event.preventDefault();
     }
 
     // Dismiss the modal window:
