@@ -39,7 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
             el.setAttribute('tabindex', '0');
 
             // Toggle dropdowns on click
-            el.addEventListener('click', function() {
+            el.addEventListener('click', function(e) {
+
+                e.preventDefault();
 
                 var subMenu = this.parentNode.getElementsByClassName("dropdown-menu-content")[0];
 
