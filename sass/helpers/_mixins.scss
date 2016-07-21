@@ -29,6 +29,12 @@
     }
 }
 
+/// Transition Mixin:
+///
+@mixin transition {
+    transition: all 0.3s;
+}
+
 /// Debug Mixin:
 ///
 /// Can pass color if wanted, defaults to blue.

@@ -89,6 +89,12 @@ $black      :     #000000;
 /// Multidimensional Color map used for buttons, callouts, links, etc.
 /// @type Map
 $color-palettes: (
+    'baselink': (
+        'base':   #1EAEDB,
+        'light':  #44CCF7,
+        'dark':   #157998
+        ),
+
     'primary': (
         'base':   #1EAEDB,
         'light':  #44CCF7,
@@ -128,7 +134,7 @@ $color-palettes: (
 
 /// Link Color ($primary)
 /// @type Color
-$link-color:        palette(primary); //$primary-color;
+$link-color:        palette(primary);
 
 /// Font Color, used for body text
 /// @type Color
