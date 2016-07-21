@@ -12,6 +12,10 @@
 /// @type Boolean
 $button-radius: true!default;
 
+// Base button color
+/// @type Color
+$button-base-color: palette(baselink)!default;
+
 // Success button color
 /// @type Color
 $button-success-color: palette(success)!default;
@@ -29,26 +33,25 @@ $button-info-color: palette(info)!default;
 $button-danger-color: palette(danger)!default;
 
 
-// Basic Buttons
-@mixin button {
+// Base Button
+@mixin button-base {
 
     .button,
     button,
     input[type="submit"],
     input[type="reset"],
     input[type="button"] {
+
         font-family: $font-stack-header;
         display: inline-block;
-        background-color: transparent;
-        @if $button-radius {
-            border-radius: $global-radius;
-        }
-        color: #555;
+
+        color: #FFF;
+        background: palette(baselink);
+
         text-align: center;
         font-size: 0.7rem;
         text-decoration: none;
         cursor: pointer;
-        border: 1px solid #bbb;
         height: 38px;
         line-height: 38px;
         padding: 0 30px;
@@ -58,13 +61,20 @@ $button-danger-color: palette(danger)!default;
         box-sizing: border-box;
         margin-bottom: $line-height;
 
+        @include transition;
+
+        @if $button-radius {
+            border-radius: $global-radius;
+        }
+
         &:hover,
         &:focus {
-            border: 1px solid #000000;
-            color: #000000;
-            font-weight: bold;
+            background-color: palette(baselink, dark);
+            border-color: palette(baselink, dark);
+            color: #FFF;
             outline: 0;
         }
+
     }
 
 }
@@ -186,15 +196,34 @@ $button-danger-color: palette(danger)!default;
 
 }
 
+// Outline Buttons
+@mixin button-outline {
+
+    .button-outline {
+        background-color: transparent;
+        color: #555;
+        border: 1px solid #bbb;
+
+        &:hover,
+        &:focus {
+            border: 1px solid #000000;
+            color: white;
+            background-color: #000000;
+        }
+    }
+
+}
+
 
 // Pregenerated style export:
 @mixin sk-buttons {
 
-    @include button;
+    @include button-base;
     @include button-primary;
     @include button-success;
     @include button-warning;
     @include button-danger;
     @include button-info;
+    @include button-outline;
 
 }

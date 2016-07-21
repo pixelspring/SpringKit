@@ -33,6 +33,14 @@ $button-group-radius: true!default;
         }
     }
 
+    .button-outline:not(:first-child) {
+        border-left: none;
+
+        &:hover {
+            border-left: none;
+        }
+    }
+
     /// If button-radius, apply border-radius to first & last buttons only
     @if $button-radius {
 
