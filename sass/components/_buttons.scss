@@ -75,6 +75,11 @@ $button-danger-color: palette(danger)!default;
             outline: 0;
         }
 
+        &:active {
+            background-color: palette(baselink, light);
+            color: black;
+        }
+
     }
 
 }
@@ -96,6 +101,11 @@ $button-danger-color: palette(danger)!default;
             background-color: palette(primary, dark);
             border-color: palette(primary, dark);
             color: #FFF;
+        }
+
+        &:active {
+            background-color: palette(primary, light);
+            color: black;
         }
 
     }
@@ -122,6 +132,11 @@ $button-danger-color: palette(danger)!default;
             color: #FFF;
         }
 
+        &:active {
+            background-color: palette(success, light);
+            color: black;
+        }
+
     }
 }
 
@@ -144,6 +159,11 @@ $button-danger-color: palette(danger)!default;
             background-color: palette(warning, dark);
             border-color: palette(warning, dark);
             color: #FFF;
+        }
+
+        &:active {
+            background-color: palette(warning, light);
+            color: black;
         }
 
     }
@@ -169,6 +189,11 @@ $button-danger-color: palette(danger)!default;
             color: #FFF;
         }
 
+        &:active {
+            background-color: palette(danger, light);
+            color: black;
+        }
+
     }
 
 }
@@ -190,6 +215,11 @@ $button-danger-color: palette(danger)!default;
             background-color: palette(info, dark);
             border-color: palette(info, dark);
             color: #FFF;
+        }
+
+        &:active {
+            background-color: palette(info, light);
+            color: black;
         }
 
     }
