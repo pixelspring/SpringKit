@@ -1,0 +1,87 @@
+---
+layout: post
+title:  "Usage"
+date:   2016-03-02 15:31:56 +0000
+categories: usage
+---
+
+<div class="row column">
+
+    <h3>Quick Start</h3>
+    <ul>
+        <li>Clone the repo: <code>git clone https://github.com/pixelspring/springkit.git</code></li>
+        <li>Install dependencies with: <code>npm install</code></li>
+        <li>Build with the Gulpfile: <code>gulp</code></li>
+    </ul>
+
+    <h3>Structure:</h3>
+{% highlight html %}
+    springkit/
+    ├── css/
+    │   ├── main.css
+    └── js/
+        ├── accordion.js
+        ├── alert.js
+        ├── classList.js
+        ├── dropdown.js
+        ├── modal.js
+        ├── navbar.js
+        ├── tabs.js
+        ├── utilities.js
+    └── sass/
+        ├── base/
+            └── accessibility.scss
+            └── print.scss
+            └── sanitize.scss
+            └── typography.scss
+            └── utilityclasses.scss
+        ├── components/
+            └── accordions.scss
+            └── alerts.scss
+            └── breadcrumbs.scss
+            └── buttongroups.scss
+            └── buttons.scss
+            └── cards.scss
+            └── labels.scss
+            └── modal.scss
+            └── pagination.scss
+            └── scrollbars.scss
+            └── sidebar.scss
+            └── tabs.scss
+        ├── helpers/
+            └── functions.scss
+            └── mixins.scss
+            └── variables.scss
+        ├── layout/
+            └── grid/
+            └── forms.scss
+            └── tables.scss
+            └── visibility.scss
+        ├── media/
+            └── imghovercaptions.scss
+            └── media.scss
+        ├── navigation/
+            └── dropdowns.scss
+            └── navbar.scss
+            └── navbarmultilevel.scss
+            └── navbarsimple.scss
+            └── offcanvas.scss
+        ├── vendor/
+            └── animate/
+            └── brand-colors/
+        └── docs/
+        └── gulpfile.js
+        └── package.json
+{% endhighlight %}
+
+    <h3>Semantic Usage:</h3>
+    <p>Coming Soon</p>
+
+</div>
+
+<!--
+<div class="row column">
+{% highlight html %}
+{% endhighlight %}
+</div>
+-->
