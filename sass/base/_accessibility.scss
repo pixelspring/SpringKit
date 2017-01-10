@@ -64,6 +64,19 @@
 }
 
 
+/// @name hidden
+/// Adds fallback for < IE 10 not supporting the hidden tag
+
+/// @example
+///   <p class="hidden" hidden aria-hidden="true">Hidden content</p>
+///   <input type="hidden">...
+
+
+@mixin hidden {
+    display: none;
+}
+
+
 /// @name sk-accessibility
 /// Output predefined accessibility classes
 
@@ -73,8 +86,13 @@
         @include sr-only;
     }
 
-     .show-on-focus {
+    .show-on-focus {
         @include show-on-focus;
+    }
+
+    *[hidden],
+    [aria-hidden] {
+       @include hidden;
     }
 
 }
