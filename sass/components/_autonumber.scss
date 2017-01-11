@@ -1,0 +1,58 @@
+// ------------------------------------------------
+// AUTONUMBER:
+//
+// ------------------------------------------------
+
+// Autonumber Variables:
+
+/// Set a character before the number
+/// @type String
+$autonumber-pre-num: ""!default;
+
+/// Set a character after the number
+/// @type String
+$autonumber-post-num: ""!default;
+
+/// Set the counter style
+/// @type String
+/// Suggested values: decimal | decimal-leading-zero | lower-roman | upper-roman | lower-greek | lower-latin | upper-latin | armenian | georgian | lower-alpha | upper-alpha
+$autonumber-numberstyle: "decimal"!default;
+
+/// Set the counters font size:
+/// @type String
+$autonumber-counter-size: 32px!default;
+
+/// Set the number section background
+/// @type String
+$autonumber-number-bg: #eee!default;
+
+/// Set the content section background
+/// @type String
+$autonumber-content-bg: #ddd!default;
+
+
+@mixin autoNumber() {
+
+	$counterID: unique-id(); // Create a unique identifier to allow multiple uses of autonumber
+	counter-increment: $counterID;
+	background: $autonumber-number-bg;
+	margin: 10px;
+
+ 	&::before  {
+    	counter-increment: $counterID 0;
+		content: $autonumber-pre-num counter($counterID, #{$autonumber-numberstyle,}) $autonumber-post-num ;
+		padding: 10px;
+		position: absolute;
+		font-size: $autonumber-counter-size;
+    }
+
+    .content {
+        background: $autonumber-content-bg;  
+        margin-left : 40px;
+    }
+}
+
+
+.sk-numbered-div {
+    @include autoNumber;
+}
