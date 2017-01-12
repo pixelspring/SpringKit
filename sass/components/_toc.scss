@@ -1,0 +1,72 @@
+// ------------------------------------------------
+// TOC:
+//
+// ------------------------------------------------
+
+// TOC Variables:
+
+/// Set the list style
+/// @type String
+$toc-list-style: none;
+
+/// Set contents before the number
+/// @type String
+$toc-prefix-pre-num: "(Item ";
+
+/// Set contents after the number
+/// @type String
+$toc-prefix-post-num: ")";
+
+/// Set the number seperator character
+/// @type String
+$toc-prefix-seperator-character: ".";
+
+/// Set the prefix color
+/// @type String
+$toc-prefix-color: palette(secondary, dark);
+
+/// Set the prefix font size
+/// @type String
+$toc-prefix-font-size: 0.8em;
+
+/// Set the toc main font size
+/// @type String
+$toc-main-font-size: 1rem;
+
+/// Set the prefix subitem font size
+/// @type String
+$toc-sub-font-size:  0.8rem;
+
+
+@mixin toc {
+  
+	$counterID: unique-id();
+
+	ol,
+	ul {
+		counter-reset: $counterID;
+		margin: 0 0 0 1rem;
+	}
+
+	li {
+		counter-increment: $counterID;
+		list-style-type: $toc-list-style;
+		font-size: $toc-main-font-size;
+
+		li { font-size: $toc-sub-font-size; }
+
+	}
+  
+	li:before {
+		content: $toc-prefix-pre-num counters($counterID, $toc-prefix-seperator-character) $toc-prefix-post-num;
+		text-transform: uppercase;
+		margin-right: 1.5rem;
+		font-size: $toc-prefix-font-size;
+		color: $toc-prefix-color;
+    } 
+  
+}
+
+@mixin sk-toc {
+    .sk-toc {@include toc;}
+}

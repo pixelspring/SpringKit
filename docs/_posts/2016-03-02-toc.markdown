@@ -1,0 +1,131 @@
+---
+layout: post
+title:  "TOC"
+date:   2016-03-02 15:31:56 +0000
+categories: components
+sassbase: components/_toc.scss
+---
+
+<div class="row column">
+    <p class="lead-text">TOC is a component that converts Unordered/Ordered lists to a numbered table of contents</p>
+</div>
+
+<div class="row column">
+    <ul class="sk-toc">
+      <li><a href="">Intro</a></li>
+      <li><a href="">Topic 1</a>
+        <ul>
+          <li><a href="">Subtopic</a>
+            <ul>
+              <li><a href="">Sub-Subtopic</a></li>
+            </ul>
+          </li>
+          <li><a href="">Subtopic</a></li>
+          <li><a href="">Subtopic</a></li>
+        </ul>
+      </li>
+      <li><a href="">Topic 2</a>
+        <ul>
+          <li><a href="">Subtopic</a></li>
+          <li><a href="">Subtopic</a></li>    
+        </ul>
+      </li>
+      <li><a href="">Topic 3</a></li>
+    </ul>
+</div>
+
+<div class="row column">
+    <h2>Sass Configuration:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>$toc-list-style</td>
+                <td>String</td>
+                <td><code>none</code></td>
+                <td>Set the list style</td>
+            </tr>
+            <tr>
+                <td>$toc-prefix-pre-num</td>
+                <td>String</td>
+                <td><code>"(Item "</code></td>
+                <td>Set contents before the number</td>
+            </tr>
+
+            <tr>
+                <td>$toc-prefix-post-num</td>
+                <td>String</td>
+                <td><code>")"</code></td>
+                <td>Set contents after the number</td>
+            </tr>
+            <tr>
+                <td>$toc-prefix-seperator-character</td>
+                <td>String</td>
+                <td><code>"."</code></td>
+                <td>Set the number seperator character</td>
+            </tr>
+            <tr>
+                <td>$toc-prefix-color</td>
+                <td>Color</td>
+                <td><code>palette(secondary, dark)</code></td>
+                <td>Set the prefix color</td>
+            </tr>
+
+            <tr>
+                <td>$toc-prefix-font-size</td>
+                <td>String</td>
+                <td><code>0.8em</code></td>
+                <td>Set the prefix font size</td>
+            </tr>
+            <tr>
+                <td>$toc-main-font-size</td>
+                <td>String</td>
+                <td><code>1rem</code></td>
+                <td>Set the toc main font size</td>
+            </tr>
+            <tr>
+                <td>$toc-sub-font-size</td>
+                <td>String</td>
+                <td><code>0.8rem</code></td>
+                <td>Set the prefix subitem font size</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="row column">
+<h4>Example Code:</h4>
+{% highlight html %}
+<ul class="toc">
+  <li><a href="">Intro</a></li>
+  <li><a href="">Topic</a>
+    <ul>
+      <li><a href="">Subtopic</a>
+        <ul>
+          <li><a href="">Sub-Subtopic</a></li>
+          <li><a href="">Sub-Subtopic</a></li>
+          <li><a href="">Sub-Subtopic</a></li>
+        </ul>
+      </li>
+      <li><a href="">Subtopic</a></li>
+      <li><a href="">Subtopic</a></li>
+    </ul>
+  </li>
+  <li><a href="">Topic</a>
+    <ul>
+      <li><a href="">Subtopic</a></li>
+      <li><a href="">Subtopic</a></li>
+      <li><a href="">Subtopic</a></li>      
+    </ul>
+  </li>
+  <li><a href="">Closing</a></li>
+</ul>
+{% endhighlight %}
+</div>

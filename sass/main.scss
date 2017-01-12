@@ -46,6 +46,7 @@
 @import "components/_pagination.scss";
 @import "components/_scrollbars.scss";
 @import "components/_tabs.scss";
+@import "components/_toc.scss";
 
 
 // Vendor
@@ -87,3 +88,4 @@
 @include sk-scrollbars;
 @include sk-tabs;
 @include sk-tables;
+@include sk-toc;
