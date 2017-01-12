@@ -11,30 +11,28 @@ sassbase: components/_autonumber.scss
 </div>
 
 <div class="row">
-    <div class="small-6 columns">
 
-        <div class="sk-numbered-div ">
-            <div class="content">
-                <h3>Title</h3>
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
-            </div>
+    <div class="sk-numbered-div ">
+        <div class="content">
+            <h3>Title</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
         </div>
-
-        <div class="sk-numbered-div ">
-            <div class="content">
-                <h3>Title</h3>
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
-            </div>
-        </div>
-
-        <div class="sk-numbered-div ">
-            <div class="content">
-                <h3>Title</h3>
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
-            </div>
-        </div>
-      
     </div>
+
+    <div class="sk-numbered-div ">
+        <div class="content">
+            <h3>Title</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+        </div>
+    </div>
+
+    <div class="sk-numbered-div ">
+        <div class="content">
+            <h3>Title</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+        </div>
+    </div>
+      
 </div>
 
 <div class="row column">
@@ -65,13 +63,13 @@ sassbase: components/_autonumber.scss
             <tr>
                 <td>$autonumber-numberstyle</td>
                 <td>String</td>
-                <td><code>#eee</code></td>
+                <td><code>"decimal"</code></td>
                 <td>Set the counter style</td>
             </tr>
             <tr>
                 <td>$autonumber-number-bg</td>
                 <td>Color</td>
-                <td><code>""</code></td>
+                <td><code>#eee</code></td>
                 <td>Set the number section background</td>
             </tr>
             <tr>

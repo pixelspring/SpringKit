@@ -20,7 +20,7 @@ $autonumber-numberstyle: "decimal"!default;
 
 /// Set the counters font size:
 /// @type String
-$autonumber-counter-size: 32px!default;
+$autonumber-counter-size: 2rem!default;
 
 /// Set the number section background
 /// @type String
@@ -36,19 +36,18 @@ $autonumber-content-bg: #ddd!default;
 	$counterID: unique-id(); // Create a unique identifier to allow multiple uses of autonumber
 	counter-increment: $counterID;
 	background: $autonumber-number-bg;
-	margin: 10px;
 
  	&::before  {
     	counter-increment: $counterID 0;
 		content: $autonumber-pre-num counter($counterID, #{$autonumber-numberstyle,}) $autonumber-post-num ;
-		padding: 10px;
+		padding: 0.5rem 1rem;
 		position: absolute;
 		font-size: $autonumber-counter-size;
     }
 
     .content {
         background: $autonumber-content-bg;  
-        margin-left : 40px;
+        margin-left: 3rem;
     }
 }
 
