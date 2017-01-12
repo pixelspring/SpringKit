@@ -53,6 +53,7 @@ $autonumber-content-bg: #ddd!default;
 }
 
 
-.sk-numbered-div {
+
+@mixin sk-autonumber {
     @include autoNumber;
 }

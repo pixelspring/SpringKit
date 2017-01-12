@@ -35,6 +35,7 @@
 // Components:
 @import "components/_accordions.scss";
 @import "components/_alerts.scss";
+@import "components/_autonumber.scss";
 @import "components/_buttons.scss";
 @import "components/_buttongroups.scss";
 @import "components/_breadcrumbs.scss";
@@ -70,6 +71,7 @@
 // Component Exports:
 @include sk-accordions;
 @include sk-alerts;
+@include sk-autoNumber;
 @include sk-breadcrumbs;
 @include sk-buttongroup;
 @include sk-buttons;
