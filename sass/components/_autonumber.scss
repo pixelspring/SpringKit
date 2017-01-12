@@ -55,5 +55,5 @@ $autonumber-content-bg: #ddd!default;
 
 
 @mixin sk-autonumber {
-    @include autoNumber;
+    .sk-numbered-div {@include autoNumber;}
 }
