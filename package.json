@@ -12,12 +12,13 @@
     "gulp-sass": "^2.3.1",
     "gulp-size": "^2.1.0",
     "gulp-uglify": "^1.5.3",
-    "snyk": "^1.42.6"
+    "snyk": "^1.83.0"
   },
   "license": "MIT",
   "scripts": {
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepublish": "npm run snyk-protect",
+    "prepare": "npm run snyk-protect"
   },
   "snyk": true
 }
