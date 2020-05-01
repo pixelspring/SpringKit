@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.1
+version: v1.14.1
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -12,3 +12,8 @@ patch:
         patched: '2017-10-11T11:22:22.319Z'
     - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
         patched: '2017-10-11T11:22:22.319Z'
+  SNYK-JS-LODASH-567746:
+    - gulp-sass > node-sass > sass-graph > lodash:
+        patched: '2020-05-01T07:30:44.916Z'
+    - gulp-sass > node-sass > gaze > globule > lodash:
+        patched: '2020-05-01T07:30:44.916Z'
